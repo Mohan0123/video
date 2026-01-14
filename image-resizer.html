@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <link rel="canonical" href="https://viptool.online/image-resizer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Image Resizer. Resize JPG, PNG, and WEBP images to specific dimensions (pixels) or percentage. Fast, secure, and preserves quality. No upload required.">
+    <meta name="keywords" content="image resizer, resize photo online, change image size, pixel converter, reduce photo size, social media image resizer, crop image">
+    <meta name="author" content="Image Resizer Tool">
+    <meta name="robots" content="index, follow">
+    <title>Free Image Resizer Tool - Resize Photos Online Instantly</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section tool-wrapper">
+            <div class="drop-zone" id="drop-zone">
+                <input type="file" id="file-input" accept="image/png, image/jpeg, image/webp" style="display: none;">
+                <div class="drop-icon">ðŸ“·</div>
+                <p><strong>Click to Upload Image</strong></p>
+                <p style="font-size: 0.9rem; color: #64748b;">or drag and drop here (JPG, PNG, WEBP)</p>
+            </div>
+
+            <div class="controls-area" id="controls-area">
+                <div class="input-group">
+                    <label for="width-input">Width (px)</label>
+                    <input type="number" id="width-input" placeholder="Width">
+                </div>
+                <div class="input-group">
+                    <label for="height-input">Height (px)</label>
+                    <input type="number" id="height-input" placeholder="Height">
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="aspect-ratio" checked>
+                    <label for="aspect-ratio" style="margin-bottom: 0; cursor: pointer;">Lock Aspect Ratio</label>
+                </div>
+                <button class="action-btn" id="resize-btn" onclick="processResize()">Resize Image</button>
+            </div>
+
+            <p class="error-msg" id="error-msg"></p>
+
+            <div id="result-area">
+                <h3>Resized Image Ready!</h3>
+                <p id="size-info" class="file-info"></p>
+                <div class="preview-container">
+                    <img id="preview-image" class="preview-img" alt="Resized Preview">
+                </div>
+                <button id="download-btn" class="download-btn">Download Image</button>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section">
+            <h2>How to Resize Images Online</h2>
+            <ol>
+                <li><strong>Upload:</strong> Click the upload box or drag your image file onto the screen.</li>
+                <li><strong>Set Dimensions:</strong> Enter your desired Width or Height in pixels. If "Lock Aspect Ratio" is checked, the other dimension updates automatically.</li>
+                <li><strong>Resize:</strong> Click the "Resize Image" button to process your photo.</li>
+                <li><strong>Download:</strong> Preview the result and click "Download Image" to save it to your device.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Why Use Our Image Resizer?</h2>
+            <ul>
+                <li><strong>Fast & Free:</strong> No waiting queues, no subscription fees. Resize unlimited images.</li>
+                <li><strong>Privacy First:</strong> Your photos are processed <strong>in your browser</strong>. They are never uploaded to any server.</li>
+                <li><strong>High Quality:</strong> Advanced algorithms ensure your images stay sharp even after resizing.</li>
+                <li><strong>Mobile Friendly:</strong> Works perfectly on iPhones, Android phones, tablets, and desktops.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>The Importance of Correct Image Sizing</h2>
+            <p>In the world of web development and digital marketing, image size matters more than you might think. Using an <strong>Image Resizer</strong> is essential for optimizing website performance and ensuring professional presentation on social media platforms.</p>
+
+            <h3>Improve Website Loading Speed</h3>
+            <p>One of the biggest factors slowing down websites is large, unoptimized images. If you upload a 4000px wide photo to a blog post that only displays at 800px, the browser still has to download the massive file. This hurts your Core Web Vitals and SEO rankings. By resizing images to the exact display dimensions, you significantly reduce file size and improve page load speed.</p>
+
+            <h3>Social Media Optimization</h3>
+            <p>Every social media platform has specific dimension requirements. Instagram prefers 1080x1080 for square posts, while YouTube thumbnails need to be 1280x720. Uploading the wrong size can lead to awkward cropping or pixelated images. Our tool allows you to input these exact numbers to ensure your content looks crisp and professional everywhere.</p>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this image resizer free? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, this tool is 100% free to use. You can resize as many images as you like without any hidden costs.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Are my photos safe? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Absolutely. We use client-side processing, meaning your images never leave your device.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Can I resize specifically for Instagram? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes. Simply enter 1080 for the width and height.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: 30/12/2025</strong></p>
+            <p>Your privacy is critically important to us. This Privacy Policy outlines the types of personal information that is received and collected by this website and how it is used.</p>
+            <p><strong>1. Data Processing:</strong> This Image Resizer operates entirely client-side. The images you select are processed within your web browser's memory. We do not upload, store, or share your images on any server.</p>
+            <p><strong>2. Cookies:</strong> We may use cookies to improve user experience. You can disable cookies in your browser settings.</p>
+            <p><strong>3. Third-Party Ads (Google AdSense):</strong> We use third-party advertising companies to serve ads when you visit our website.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By accessing this website, you are agreeing to be bound by these website Terms and Conditions of Use.</p>
+            <p><strong>1. Use License:</strong> Permission is granted to use the Image Resizer tool for personal or commercial use.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>The Image Resizer tool is provided for informational and utility purposes only. While we strive to ensure the accuracy and reliability of the tool, we cannot guarantee that the results will meet your specific requirements in every instance.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        // DOM Elements
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const controlsArea = document.getElementById('controls-area');
+        const widthInput = document.getElementById('width-input');
+        const heightInput = document.getElementById('height-input');
+        const aspectRatioCheckbox = document.getElementById('aspect-ratio');
+        const resizeBtn = document.getElementById('resize-btn');
+        const resultArea = document.getElementById('result-area');
+        const previewImage = document.getElementById('preview-image');
+        const downloadBtn = document.getElementById('download-btn');
+        const errorMsg = document.getElementById('error-msg');
+        const sizeInfo = document.getElementById('size-info');
+
+        // State
+        let originalImage = new Image();
+        let originalFile = null;
+        let aspectRatio = 0;
+        let currentDataUrl = null;
+
+        // --- Event Listeners ---
+
+        // File Selection
+        dropZone.addEventListener('click', () => fileInput.click());
+        fileInput.addEventListener('change', handleFileSelect);
+
+        // Drag & Drop
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            if (e.dataTransfer.files.length) {
+                fileInput.files = e.dataTransfer.files;
+                handleFileSelect();
+            }
+        });
+
+        // Input Logic (Aspect Ratio)
+        widthInput.addEventListener('input', () => {
+            if (aspectRatioCheckbox.checked && aspectRatio) {
+                heightInput.value = Math.round(widthInput.value / aspectRatio);
+            }
+        });
+
+        heightInput.addEventListener('input', () => {
+            if (aspectRatioCheckbox.checked && aspectRatio) {
+                widthInput.value = Math.round(heightInput.value * aspectRatio);
+            }
+        });
+
+        // Download Click (FIXED LOGIC)
+        downloadBtn.addEventListener('click', downloadImage);
+
+        // --- Functions ---
+
+        function handleFileSelect() {
+            const file = fileInput.files[0];
+            if (!file) return;
+
+            if (!file.type.match('image.*')) {
+                showError("Please select a valid image file (JPG, PNG, WEBP).");
+                return;
+            }
+
+            originalFile = file;
+            errorMsg.style.display = 'none';
+            resultArea.style.display = 'none';
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                originalImage.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        originalImage.onload = function() {
+            aspectRatio = originalImage.width / originalImage.height;
+            widthInput.value = originalImage.width;
+            heightInput.value = originalImage.height;
+            controlsArea.classList.add('active');
+            dropZone.querySelector('p strong').textContent = `Loaded: ${originalFile.name}`;
+            controlsArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        };
+
+        function processResize() {
+            const w = parseInt(widthInput.value);
+            const h = parseInt(heightInput.value);
+
+            if (!w || !h || w <= 0 || h <= 0) {
+                showError("Please enter valid positive numbers.");
+                return;
+            }
+
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = w;
+            canvas.height = h;
+
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = 'high';
+            ctx.drawImage(originalImage, 0, 0, w, h);
+
+            let mimeType = originalFile.type;
+            if(mimeType === 'image/jpg') mimeType = 'image/jpeg';
+
+            // Generate Data URL (Sync)
+            currentDataUrl = canvas.toDataURL(mimeType, 0.92);
+
+            previewImage.src = currentDataUrl;
+            sizeInfo.textContent = `New Size: ${w} x ${h} pixels`;
+            resultArea.style.display = 'block';
+            resultArea.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // FIXED DOWNLOAD FUNCTION (Blob Conversion)
+        function downloadImage() {
+            if(!currentDataUrl) return;
+
+            // Convert Base64 DataURL to Blob manually
+            const byteString = atob(currentDataUrl.split(',')[1]);
+            const mimeString = currentDataUrl.split(',')[0].split(':')[1].split(';')[0];
+            const ab = new ArrayBuffer(byteString.length);
+            const ia = new Uint8Array(ab);
+            for (let i = 0; i < byteString.length; i++) {
+                ia[i] = byteString.charCodeAt(i);
+            }
+            const blob = new Blob([ab], {type: mimeString});
+            
+            // Create Blob URL
+            const url = URL.createObjectURL(blob);
+            
+            // Naming
+            const nameParts = originalFile.name.split('.');
+            const ext = nameParts.pop();
+            const name = nameParts.join('.');
+            const fileName = `${name}-resized.${ext}`;
+
+            // Trigger Download
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Cleanup
+            setTimeout(() => URL.revokeObjectURL(url), 100);
+        }
+
+        function showError(msg) {
+            errorMsg.textContent = msg;
+            errorMsg.style.display = 'block';
+        }
+
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const toggle = el.querySelector('.faq-toggle');
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+                toggle.textContent = '+';
+            } else {
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    if(i.querySelector('.faq-toggle')) i.querySelector('.faq-toggle').textContent = '+';
+                });
+                item.classList.add('active');
+                toggle.textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

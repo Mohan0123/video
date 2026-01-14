@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free EMI Calculator by VIP Tool. Instantly calculate Equal Monthly Installments (EMI) for Home Loans, Car Loans, and Personal Loans with accurate interest breakdowns.">
+    <title>EMI Calculator - Calculate Home, Car & Personal Loan EMI | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "EMI Calculator",
+      "url": "https://viptool.online/emi-calculator",
+      "description": "Calculate Equated Monthly Installments (EMI) for loans. Features amortization summary, total interest calculation, and mobile-friendly interface.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "EMI Calculator"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is EMI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EMI stands for Equated Monthly Installment. It is a fixed payment amount made by a borrower to a lender at a specified date each calendar month."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How is EMI calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The mathematical formula for calculating EMI is: E = P x r x (1+r)^n / ((1+r)^n - 1), where P is Principal Loan Amount, r is monthly interest rate, and n is loan tenure in months."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this calculator accurate for bank loans?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, this calculator uses the standard reducing balance formula used by most banks and financial institutions for home, car, and personal loans."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does the EMI change during the tenure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Typically, EMI remains constant for fixed-rate loans. For floating-rate loans, the EMI amount may change if the interest rate fluctuates."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I use this for a mortgage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. This tool works perfectly for mortgages, housing loans, auto loans, and student loans."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <h1>EMI Calculator</h1>
+    <p class="subtitle">Accurate Loan EMI, Total Interest, and Payment Breakdown</p>
+
+    <div class="tool-wrapper">
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="principal">Loan Amount (Principal)</label>
+                <div class="input-with-addon">
+                    <span class="input-addon">â‚¹</span>
+                    <input type="number" id="principal" class="input-field" placeholder="e.g. 500000">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="interest">Interest Rate (Annual %)</label>
+                <div class="input-with-addon">
+                    <span class="input-addon">%</span>
+                    <input type="number" id="interest" class="input-field" placeholder="e.g. 8.5" step="0.1">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="tenure">Loan Tenure</label>
+                <div class="input-with-addon" style="border-radius: 6px;">
+                    <input type="number" id="tenure" class="input-field" placeholder="e.g. 5" style="border-radius: 6px 0 0 6px; border-right:none;">
+                    <div class="toggle-group" style="background: #e9ecef; border:1px solid #dee2e6; border-radius: 0 6px 6px 0; padding: 5px;">
+                        <button class="toggle-btn active" id="btn-years" onclick="setTenureMode('years')">Yr</button>
+                        <button class="toggle-btn" id="btn-months" onclick="setTenureMode('months')">Mo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-action" onclick="calculateEMI()">Calculate EMI</button>
+        <button class="btn-action btn-reset" onclick="resetCalculator()">Reset</button>
+
+        <div id="result-section">
+            <div class="result-cards">
+                <div class="res-card main">
+                    <div class="res-label">Monthly EMI</div>
+                    <div class="res-value" id="out-emi">0</div>
+                </div>
+                <div class="res-card interest">
+                    <div class="res-label">Total Interest</div>
+                    <div class="res-value" id="out-interest">0</div>
+                </div>
+                <div class="res-card total">
+                    <div class="res-label">Total Payment</div>
+                    <div class="res-value" id="out-total">0</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label style="text-align:center;">Payment Break-up</label>
+                <div class="simple-bar-chart">
+                    <div class="bar-principal" id="bar-p" style="width: 50%"></div>
+                    <div class="bar-interest" id="bar-i" style="width: 50%"></div>
+                </div>
+                <div class="legend">
+                    <div class="legend-item"><span class="dot" style="background:var(--primary-color)"></span> Principal</div>
+                    <div class="legend-item"><span class="dot" style="background:#ffc107"></span> Interest</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="related-tools-block">
+        <div class="related-heading">Explore Related Tools</div>
+        <div class="related-grid">
+            <a href="https://viptool.online/gst-calculator" class="related-btn">GST Calculator</a>
+            <a href="https://viptool.online/simple-interest-calculator" class="related-btn">Simple Interest Calculator</a>
+            <a href="https://viptool.online/age-calculator" class="related-btn">Age Calculator</a>
+            <a href="https://viptool.online/percentage-calculator" class="related-btn">Percentage Calculator</a>
+            <a href="https://viptool.online/salary-calculator" class="related-btn">Salary Calculator</a>
+            <a href="https://viptool.online/word-counter" class="related-btn">Word Counter</a>
+        </div>
+    </div>
+
+    <div class="ad-slot">
+        Advertisement
+    </div>
+
+    <div class="content-area">
+        <h2>How to Use the VIP Tool EMI Calculator</h2>
+        <p>Planning a loan can be stressful, but calculating your repayment shouldn't be. The VIP Tool EMI Calculator is designed to give you instant clarity on your financial commitments. Here is a simple guide:</p>
+        <ol>
+            <li><strong>Enter Loan Amount:</strong> Input the total principal amount you intend to borrow.</li>
+            <li><strong>Interest Rate:</strong> Enter the annual interest rate offered by your bank or lender.</li>
+            <li><strong>Tenure:</strong> Specify how long you will take to repay the loan. You can toggle between "Years" and "Months" for precision.</li>
+            <li><strong>Calculate:</strong> Click the button to see your Monthly Installment (EMI), Total Interest Payable, and the Total Repayment amount.</li>
+        </ol>
+
+        <h2>Why Use an EMI Calculator?</h2>
+        <p>Before taking a <a href="https://viptool.online/tools" style="color:var(--primary-color)">Home Loan</a>, Car Loan, or Personal Loan, it is crucial to understand how much money will leave your pocket every month. This tool helps you:</p>
+        <ul>
+            <li><strong>Plan Your Budget:</strong> Ensure the EMI fits within your monthly income.</li>
+            <li><strong>Compare Loans:</strong> Quickly check how different interest rates affect your repayment.</li>
+            <li><strong>Prepayment Strategy:</strong> Understand the ratio of principal to interest to decide on prepayments.</li>
+        </ul>
+
+        <h3>Factors Affecting Your EMI</h3>
+        <p>Your Equated Monthly Installment depends on three primary factors:</p>
+        <ul>
+            <li><strong>Principal (P):</strong> The higher the loan amount, the higher the EMI.</li>
+            <li><strong>Rate of Interest (R):</strong> A higher interest rate increases your monthly payout and total interest cost.</li>
+            <li><strong>Tenure (N):</strong> A longer tenure reduces your monthly EMI but increases the total interest paid over the life of the loan. Conversely, a shorter tenure increases EMI but saves on interest.</li>
+        </ul>
+
+        <div class="ad-slot">
+            Advertisement
+        </div>
+
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        
+        <h3>1. What is the formula for EMI calculation?</h3>
+        <p>The standard formula used is: <br><strong>E = [P x R x (1+R)^N] / [(1+R)^N - 1]</strong><br>
+        Where E is EMI, P is Principal, R is monthly interest rate, and N is the number of months.</p>
+
+        <h3>2. Does this calculator work for all banks?</h3>
+        <p>Yes, this calculator uses the universal reducing balance method used by major banks in India (like SBI, HDFC, ICICI) and globally.</p>
+
+        <h3>3. Does the EMI include prepayment charges?</h3>
+        <p>No, this tool calculates the standard schedule. Prepayment charges, processing fees, and other hidden costs are not included in the EMI figure.</p>
+
+        <hr style="margin: 40px 0; border:0; border-top:1px solid #eee;">
+
+        <div id="legal">
+            <h3>Privacy Policy</h3>
+            <p>Your financial privacy is important to us. The VIP Tool EMI Calculator runs entirely in your browser. We do not transmit, store, or save your loan details on any server. Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to your website or other websites.</p>
+
+            <h3>Terms & Conditions</h3>
+            <p>By using this tool, you acknowledge that the results are estimates provided for informational purposes only. Actual loan terms may vary based on your lender's policies, credit score, and processing fees. VIP Tool is not liable for any financial decisions made based on these calculations.</p>
+
+            <h3>Disclaimer</h3>
+            <p>This tool is provided "as-is" without warranties of any kind. VIP Tool is not a financial institution or advisor. Please consult a qualified financial advisor or your bank for official loan quotes.</p>
+        </div>
+    </div>
+
+    
+</div>
+
+<script>
+    let tenureMode = 'years'; // Default
+
+    function setTenureMode(mode) {
+        tenureMode = mode;
+        const btnY = document.getElementById('btn-years');
+        const btnM = document.getElementById('btn-months');
+        
+        if(mode === 'years') {
+            btnY.classList.add('active');
+            btnM.classList.remove('active');
+        } else {
+            btnM.classList.add('active');
+            btnY.classList.remove('active');
+        }
+    }
+
+    function calculateEMI() {
+        // Get Inputs
+        const principal = parseFloat(document.getElementById('principal').value);
+        const rateAnnual = parseFloat(document.getElementById('interest').value);
+        let tenure = parseFloat(document.getElementById('tenure').value);
+
+        // Validation
+        if (!principal || !rateAnnual || !tenure || principal <= 0 || rateAnnual <= 0 || tenure <= 0) {
+            alert("Please enter valid positive numbers for all fields.");
+            return;
+        }
+
+        // Convert Tenure to Months if needed
+        let numberOfMonths = tenureMode === 'years' ? tenure * 12 : tenure;
+
+        // Monthly Interest Rate
+        const rateMonthly = rateAnnual / 12 / 100;
+
+        // Formula: E = P * r * (1+r)^n / ((1+r)^n - 1)
+        const emi = (principal * rateMonthly * Math.pow(1 + rateMonthly, numberOfMonths)) / (Math.pow(1 + rateMonthly, numberOfMonths) - 1);
+
+        // Total Payment and Interest
+        const totalPayment = emi * numberOfMonths;
+        const totalInterest = totalPayment - principal;
+
+        // Display Results
+        document.getElementById('out-emi').innerText = formatCurrency(emi);
+        document.getElementById('out-interest').innerText = formatCurrency(totalInterest);
+        document.getElementById('out-total').innerText = formatCurrency(totalPayment);
+
+        // Update Visual Bar
+        const percentPrincipal = (principal / totalPayment) * 100;
+        const percentInterest = (totalInterest / totalPayment) * 100;
+
+        document.getElementById('bar-p').style.width = percentPrincipal + "%";
+        document.getElementById('bar-i').style.width = percentInterest + "%";
+
+        // Show Section
+        document.getElementById('result-section').style.display = 'block';
+        
+        // Scroll slightly
+        document.getElementById('result-section').scrollIntoView({behavior: 'smooth', block: 'nearest'});
+    }
+
+    function formatCurrency(num) {
+        // Using Generic formatting but adding â‚¹ symbol as requested by context of typical EMI users in this region
+        // Can also be generic. Let's use Intl.NumberFormat for "en-IN" since context implies Indian Users ("Audience: Students... Indian users").
+        return num.toLocaleString('en-IN', {
+            style: 'currency',
+            currency: 'INR',
+            maximumFractionDigits: 0
+        });
+    }
+
+    function resetCalculator() {
+        document.getElementById('principal').value = '';
+        document.getElementById('interest').value = '';
+        document.getElementById('tenure').value = '';
+        document.getElementById('result-section').style.display = 'none';
+    }
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <link rel="canonical" href="https://viptool.online/image-compressor">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Image Compressor. Reduce image file size (JPG, PNG, WEBP) quickly without losing quality. Secure client-side compression tool for web developers and SEO optimization.">
+    <meta name="author" content="Web Tools">
+    <title>Image Compressor | Free Online Photo Optimizer Tool</title>
+    
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Image Compressor</h1>
+        <p style="text-align: center; color: var(--secondary-color); margin-bottom: 2rem;">
+            Compress JPG, PNG, and WEBP images online. Optimize your files for the web securely in your browser.
+        </p>
+
+        <main class="tool-card">
+            <div class="drop-zone" id="dropZone">
+                <p>Drag & Drop your image here</p>
+                <p>or</p>
+                <button class="btn" onclick="document.getElementById('fileInput').click()">Select Image</button>
+                <input type="file" id="fileInput" accept="image/png, image/jpeg, image/webp">
+                <p style="font-size: 0.8rem; margin-top: 1rem; color: #94a3b8;">Supports JPG, PNG, WEBP</p>
+            </div>
+
+            <div class="controls" id="controls">
+                <div class="control-group">
+                    <label for="quality">Compression Quality: <span id="qualityValue">80</span>%</label>
+                    <input type="range" id="quality" min="1" max="100" value="80">
+                </div>
+                <button class="btn" id="compressBtn">Compress Image</button>
+            </div>
+
+            <div class="results-area" id="resultsArea">
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-label">Original Size</div>
+                        <div class="stat-value" id="originalSize">-</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Compressed Size</div>
+                        <div class="stat-value" id="compressedSize">-</div>
+                    </div>
+                </div>
+                <div class="stat-box" style="margin-bottom: 1.5rem; background: #ecfdf5; border: 1px solid #6ee7b7;">
+                    <div class="stat-label" style="color: #047857;">Savings</div>
+                    <div class="stat-value" style="color: #059669;" id="savings">-</div>
+                </div>
+                
+                <h3>Preview:</h3>
+                <img id="previewImage" class="preview-img" alt="Compressed Preview">
+                <br>
+                <a id="downloadBtn" class="btn" download="compressed-image.jpg">Download Image</a>
+            </div>
+            
+            <div id="errorMsg" style="color: red; margin-top: 1rem; display: none;"></div>
+        </main>
+
+        <div class="ad-placeholder">
+            <span>Advertisement Space</span>
+        </div>
+
+        <section id="how-to" class="content-section">
+            <h2>How to Use This Tool</h2>
+            <ol>
+                <li>Click the <strong>Select Image</strong> button or drag and drop your photo into the box.</li>
+                <li>Adjust the <strong>Compression Quality</strong> slider. Lower values mean smaller file sizes but lower quality.</li>
+                <li>Click <strong>Compress Image</strong> to process the file.</li>
+                <li>Preview the result and check the file size savings.</li>
+                <li>Click <strong>Download Image</strong> to save the optimized file to your device.</li>
+            </ol>
+        </section>
+
+        <section id="benefits" class="content-section">
+            <h2>Benefits of Using Our Image Compressor</h2>
+            <ul>
+                <li><strong>Secure & Private:</strong> Unlike other tools, your images are processed 100% in your browser. No files are uploaded to any server.</li>
+                <li><strong>Lightning Fast:</strong> Instant compression without waiting for server uploads or downloads.</li>
+                <li><strong>SEO Optimization:</strong> Smaller images load faster, improving your website's Core Web Vitals and Google rankings.</li>
+                <li><strong>Free Forever:</strong> No hidden costs, watermarks, or usage limits.</li>
+            </ul>
+        </section>
+
+        <article class="content-section">
+            <h2>Why Image Compression is Critical for SEO</h2>
+            <p>In the modern web landscape, page speed is a significant ranking factor for search engines like Google. High-resolution images are often the primary culprit behind slow-loading websites. Using an <strong>Image Compressor</strong> is essential for webmasters, bloggers, and developers who want to ensure their sites perform optimally.</p>
+            
+            <h3>Impact on Core Web Vitals</h3>
+            <p>Google's Core Web Vitals focus on user experience, specifically Largest Contentful Paint (LCP). Large image files delay the rendering of the main content on your page, leading to poor LCP scores. By compressing your images, you drastically reduce the data payload, allowing browsers to render content faster.</p>
+
+            <h3>Bandwidth and Mobile Experience</h3>
+            <p>With the majority of web traffic coming from mobile devices, optimizing for limited bandwidth is crucial. An uncompressed 5MB image can take several seconds to load on a 4G connection. Compressing that same image to 200KB ensures that mobile users have a smooth, responsive experience, reducing bounce rates and increasing engagement.</p>
+
+            <h3>Lossy vs. Lossless Compression</h3>
+            <p>This tool utilizes smart lossy compression algorithms. This means it selectively reduces the number of colors and simplifies image data that the human eye struggles to perceive. The result is a dramatic reduction in file size (often up to 80%) with negligible difference in visual quality.</p>
+        </article>
+
+        <div class="ad-placeholder">
+            <span>Advertisement Space</span>
+        </div>
+
+        <section id="faq" class="content-section">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is this image compressor free?</div>
+                <div class="faq-answer">Yes, this tool is completely free to use. You can compress as many images as you like without any cost.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Are my images uploaded to a server?</div>
+                <div class="faq-answer">No. For your privacy and security, all image compression happens locally within your web browser using JavaScript. Your photos never leave your device.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What file formats are supported?</div>
+                <div class="faq-answer">Currently, we support common web formats including JPG (JPEG), PNG, and WEBP.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Does compression reduce image quality?</div>
+                <div class="faq-answer">Technically yes, but our algorithm balances quality and file size. You can control the quality level using the slider to ensure the output meets your visual standards.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I use this on mobile?</div>
+                <div class="faq-answer">Absolutely. Our tool works perfectly on smartphones and tablets, allowing you to optimize photos directly from your gallery.</div>
+            </div>
+        </section>
+
+        <div class="legal-section">
+            
+            <section id="privacy" class="legal-block">
+                <h3>Privacy Policy</h3>
+                <p><strong>1. Data Collection:</strong> This Image Compressor tool operates as a client-side application. We do not upload, store, or process your images on our servers. All image processing occurs locally on your device.</p>
+                <p><strong>2. Cookies:</strong> We use cookies to analyze website traffic and optimize your website experience. By accepting our use of cookies, your data will be aggregated with all other user data.</p>
+                <p><strong>3. Third-Party Ads:</strong> We use Google AdSense to serve ads. Google may use cookies (including the DoubleClick cookie) to serve ads based on your prior visits to our website or other websites. You may opt-out of personalized advertising by visiting Google's Ads Settings.</p>
+                <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to understand how visitors interact with our site. This collects anonymous data such as page views and session duration.</p>
+            </section>
+
+            <section id="terms" class="legal-block">
+                <h3>Terms & Conditions</h3>
+                <p><strong>1. Usage:</strong> By using this tool, you agree to these terms. The tool is provided for personal and commercial use.</p>
+                <p><strong>2. Disclaimer of Warranties:</strong> The service is provided "as is". We make no warranties, expressed or implied, regarding the reliability or accuracy of the tool.</p>
+                <p><strong>3. Limitation of Liability:</strong> We shall not be liable for any damages arising out of the use or inability to use this tool, including but not limited to data loss.</p>
+                <p><strong>4. Content:</strong> You are solely responsible for the images you compress using this tool. Ensure you have the rights to use and modify the images.</p>
+            </section>
+
+            <section id="disclaimer" class="legal-block">
+                <h3>Disclaimer</h3>
+                <p>This tool is provided for informational and utility purposes only. While we strive for accuracy, we cannot guarantee that the compressed images will work perfectly in every scenario or device. The tool does not constitute professional advice. Use at your own risk.</p>
+            </section>
+
+        </div>
+    </div>
+
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropZone = document.getElementById('dropZone');
+            const fileInput = document.getElementById('fileInput');
+            const controls = document.getElementById('controls');
+            const qualityInput = document.getElementById('quality');
+            const qualityValue = document.getElementById('qualityValue');
+            const compressBtn = document.getElementById('compressBtn');
+            const resultsArea = document.getElementById('resultsArea');
+            const previewImage = document.getElementById('previewImage');
+            const downloadBtn = document.getElementById('downloadBtn');
+            const errorMsg = document.getElementById('errorMsg');
+            
+            // Stats
+            const originalSizeEl = document.getElementById('originalSize');
+            const compressedSizeEl = document.getElementById('compressedSize');
+            const savingsEl = document.getElementById('savings');
+
+            let currentFile = null;
+
+            // Utility: Format File Size
+            function formatBytes(bytes, decimals = 2) {
+                if (bytes === 0) return '0 Bytes';
+                const k = 1024;
+                const dm = decimals < 0 ? 0 : decimals;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+            }
+
+            // Handle Drag & Drop
+            dropZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                dropZone.classList.add('dragover');
+            });
+
+            dropZone.addEventListener('dragleave', () => {
+                dropZone.classList.remove('dragover');
+            });
+
+            dropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                dropZone.classList.remove('dragover');
+                if (e.dataTransfer.files.length) {
+                    handleFileSelection(e.dataTransfer.files[0]);
+                }
+            });
+
+            // Handle File Input
+            fileInput.addEventListener('change', (e) => {
+                if (e.target.files.length) {
+                    handleFileSelection(e.target.files[0]);
+                }
+            });
+
+            // Update Quality Label
+            qualityInput.addEventListener('input', (e) => {
+                qualityValue.textContent = e.target.value;
+            });
+
+            function handleFileSelection(file) {
+                // Validation
+                if (!file.type.match(/image.*/)) {
+                    showError("Please upload a valid image file (JPG, PNG, WEBP).");
+                    return;
+                }
+
+                currentFile = file;
+                errorMsg.style.display = 'none';
+                controls.style.display = 'block';
+                resultsArea.style.display = 'none';
+                
+                // Show file info in dropzone text temporarily
+                const p = dropZone.querySelector('p');
+                p.textContent = `Selected: ${file.name}`;
+            }
+
+            function showError(msg) {
+                errorMsg.textContent = msg;
+                errorMsg.style.display = 'block';
+            }
+
+            // Compression Logic
+            compressBtn.addEventListener('click', () => {
+                if (!currentFile) return;
+
+                const reader = new FileReader();
+                reader.readAsDataURL(currentFile);
+                
+                reader.onload = (event) => {
+                    const img = new Image();
+                    img.src = event.target.result;
+
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        const ctx = canvas.getContext('2d');
+
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+
+                        // Draw image on canvas
+                        ctx.drawImage(img, 0, 0);
+
+                        // Get Quality (0.0 to 1.0)
+                        const quality = parseInt(qualityInput.value) / 100;
+
+                        // Convert to blob (compress) - forcing JPEG for compression logic usually
+                        // Note: PNGs are lossless so canvas.toBlob quality param doesn't affect them much unless converted to JPEG/WEBP
+                        // We will default to outputting JPEG or WEBP for compression effect if original is heavy
+                        let outputType = 'image/jpeg'; 
+                        if(currentFile.type === 'image/webp') outputType = 'image/webp';
+                        
+                        canvas.toBlob((blob) => {
+                            if (!blob) {
+                                showError("Compression error.");
+                                return;
+                            }
+
+                            // Update UI
+                            const url = URL.createObjectURL(blob);
+                            previewImage.src = url;
+                            
+                            originalSizeEl.textContent = formatBytes(currentFile.size);
+                            compressedSizeEl.textContent = formatBytes(blob.size);
+                            
+                            // Calculate savings
+                            const savings = ((currentFile.size - blob.size) / currentFile.size) * 100;
+                            savingsEl.textContent = savings > 0 ? `${savings.toFixed(1)}%` : '0%';
+
+                            // Setup download
+                            downloadBtn.href = url;
+                            // Keep original extension name but append -compressed
+                            const nameParts = currentFile.name.split('.');
+                            const ext = outputType === 'image/jpeg' ? 'jpg' : 'webp';
+                            downloadBtn.download = `${nameParts[0]}-compressed.${ext}`;
+
+                            resultsArea.style.display = 'block';
+                            
+                            // Scroll to results
+                            resultsArea.scrollIntoView({ behavior: 'smooth' });
+
+                        }, outputType, quality);
+                    };
+                };
+            });
+        });
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

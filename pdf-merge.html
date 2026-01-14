@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free PDF Merge Tool by VIP Tool. Combine multiple PDF files into one document instantly. Secure, client-side merging with no file uploads to servers.">
+    <title>Merge PDF Files Online - Free PDF Combiner | VIP Tool</title>
+    
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PDF Merge Tool",
+      "url": "https://viptool.online/pdf-merge",
+      "description": "Merge multiple PDF files into a single document directly in your browser. Fast, free, and secure.",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "PDF Merge"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is it safe to merge PDFs here?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, absolutely. This tool runs entirely in your browser. Your PDF files are never uploaded to any server, ensuring 100% privacy."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How many files can I combine?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is no strict limit, but performance depends on your device's memory. You can comfortably merge dozens of files at once."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does this tool work on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, VIP Tool's PDF Merge is fully responsive and works on smartphones, tablets, and desktop computers."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this service free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, merging PDFs on VIP Tool is completely free with no watermarks or hidden costs."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I rearrange the files?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Currently, files are merged in the order they are selected. We are working on a drag-and-drop reordering feature for future updates."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Merge PDF Files</h1>
+        <p class="subtitle">Combine multiple PDF documents into a single file securely in your browser.</p>
+
+        <div class="vip-ad-section">
+            </div>
+
+        <div class="tool-card">
+            
+            <div class="file-drop-area">
+                <span class="file-msg">Click to select PDF files or Drag & Drop here</span>
+                <input type="file" id="pdfInput" accept="application/pdf" multiple onchange="handleFileSelect(event)">
+            </div>
+
+            <div class="file-list" id="fileListContainer">
+                </div>
+
+            <div id="action-area" style="display:none;">
+                <button class="action-btn btn-primary" onclick="mergePdfs()">
+                    <span class="spinner" id="loadingSpinner"></span>Merge PDFs
+                </button>
+                <button class="action-btn btn-reset" onclick="resetTool()">Reset</button>
+            </div>
+
+            <div id="download-area" style="display:none; margin-top:20px;">
+                <p style="color:var(--success-color); font-weight:bold; margin-bottom:10px;">Success! Your PDF is ready.</p>
+                <button class="action-btn btn-success" id="downloadBtn">Download Merged PDF</button>
+            </div>
+
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/jpg-to-pdf" class="related-link-item">JPG to PDF Converter</a>
+                <a href="https://viptool.online/image-compressor" class="related-link-item">Image Compressor</a>
+                <a href="https://viptool.online/word-counter" class="related-link-item">Word Counter</a>
+                <a href="https://viptool.online/character-counter" class="related-link-item">Character Counter</a>
+                <a href="https://viptool.online/age-calculator" class="related-link-item">Age Calculator</a>
+                <a href="https://viptool.online/percentage-calculator" class="related-link-item">Percentage Calculator</a>
+            </div>
+        </section>
+
+        <div class="vip-ad-section">
+            </div>
+
+        <div class="content-section">
+            <h2>How to Merge PDF Files Online</h2>
+            <p>Combining multiple PDF documents into a single file is easy with VIP Tool. Follow these simple steps:</p>
+            <ol style="margin-left: 20px; margin-bottom: 20px;">
+                <li><strong>Select Files:</strong> Click the upload area or drag and drop your PDF files. You can select multiple files at once.</li>
+                <li><strong>Review:</strong> See the list of selected files to ensure you have everything you need.</li>
+                <li><strong>Merge:</strong> Click the "Merge PDFs" button. Our tool processes the files instantly.</li>
+                <li><strong>Download:</strong> Click "Download Merged PDF" to save your new document.</li>
+            </ol>
+
+            <h2>Why Use Our PDF Merger?</h2>
+            <p>Managing multiple PDF files can be cluttered and confusing. Whether you are a student compiling assignments or a professional organising reports, our <strong>PDF Combiner</strong> simplifies your workflow.</p>
+            <ul>
+                <li><strong>Client-Side Security:</strong> Unlike other tools, we do not upload your sensitive documents to any server. All processing happens locally on your device.</li>
+                <li><strong>Fast & Free:</strong> No waiting queues, no sign-ups, and no limits on the number of times you can use the tool.</li>
+                <li><strong>High Quality:</strong> The merged PDF retains the original quality of your documents.</li>
+            </ul>
+
+            <div class="vip-ad-section">
+                </div>
+
+            <h2>Secure PDF Combining</h2>
+            <p>Privacy is our top priority. Most online PDF tools upload your files to a cloud server to process them. This creates a risk for confidential data. VIP Tool utilizes advanced browser technologies to merge files without them ever leaving your computer or phone. This makes it the safest choice for <a href="https://viptool.online/tools" style="color:var(--primary-color);">merging legal or personal documents</a>.</p>
+
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <h3>1. Is there a file size limit?</h3>
+            <p>Since the processing is done on your device, the limit depends on your device's memory (RAM). Most modern devices can handle large files easily.</p>
+
+            <h3>2. Can I merge PDF files on iPhone or Android?</h3>
+            <p>Yes! This tool is fully compatible with mobile browsers. You can select files from your phone's storage and merge them instantly.</p>
+
+            <h3>3. Do I need to install software?</h3>
+            <p>No software installation is required. This is a web-based tool that works in Chrome, Firefox, Safari, and Edge.</p>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, we prioritize your privacy. This PDF Merge tool operates entirely on the client-side. We do not collect, store, or transmit your files. Google AdSense and Analytics are used on this page to serve ads and monitor traffic; they may use cookies in accordance with their own privacy policies.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>This tool is provided for informational and utility purposes "as is". VIP Tool does not guarantee that the tool will meet your requirements or that the operation will be uninterrupted or error-free. Users are responsible for the content of the files they process.</p>
+
+                <h3>Disclaimer</h3>
+                <p>VIP Tool is not responsible for any data loss or corruption that may occur during the merging process, although such instances are extremely rare. Please ensure you have backups of your original files.</p>
+            </div>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    let selectedFiles = [];
+
+    async function handleFileSelect(event) {
+        const files = Array.from(event.target.files);
+        if (files.length === 0) return;
+
+        // Add new files to array
+        selectedFiles = [...selectedFiles, ...files];
+        updateFileList();
+        
+        // Show action area
+        document.getElementById('action-area').style.display = 'block';
+        document.getElementById('download-area').style.display = 'none';
+    }
+
+    function updateFileList() {
+        const container = document.getElementById('fileListContainer');
+        container.innerHTML = '';
+        
+        if (selectedFiles.length > 0) {
+            container.style.display = 'block';
+            selectedFiles.forEach((file, index) => {
+                const div = document.createElement('div');
+                div.className = 'file-item';
+                div.innerHTML = `
+                    <span>ðŸ“„ ${file.name}</span>
+                    <span style="font-size:0.8rem; color:#666;">(${(file.size/1024/1024).toFixed(2)} MB)</span>
+                `;
+                container.appendChild(div);
+            });
+        } else {
+            container.style.display = 'none';
+        }
+    }
+
+    async function mergePdfs() {
+        if (selectedFiles.length < 2) {
+            alert("Please select at least 2 PDF files to merge.");
+            return;
+        }
+
+        const btn = document.querySelector('.btn-primary');
+        const spinner = document.getElementById('loadingSpinner');
+        
+        // UI Loading State
+        btn.disabled = true;
+        btn.style.opacity = '0.7';
+        spinner.style.display = 'inline-block';
+
+        try {
+            const { PDFDocument } = PDFLib;
+            const mergedPdf = await PDFDocument.create();
+
+            for (const file of selectedFiles) {
+                const arrayBuffer = await file.arrayBuffer();
+                const pdf = await PDFDocument.load(arrayBuffer);
+                const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
+                copiedPages.forEach((page) => mergedPdf.addPage(page));
+            }
+
+            const mergedPdfFile = await mergedPdf.save();
+            const blob = new Blob([mergedPdfFile], { type: 'application/pdf' });
+            const url = URL.createObjectURL(blob);
+
+            // Setup download button
+            const downloadBtn = document.getElementById('downloadBtn');
+            downloadBtn.onclick = function() {
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `merged-document-${Date.now()}.pdf`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            };
+
+            // Show success area
+            document.getElementById('download-area').style.display = 'block';
+            document.getElementById('action-area').style.display = 'none';
+
+        } catch (error) {
+            console.error(error);
+            alert("An error occurred while merging. Please ensure valid PDF files are selected.");
+        } finally {
+            // Reset Loading State
+            btn.disabled = false;
+            btn.style.opacity = '1';
+            spinner.style.display = 'none';
+        }
+    }
+
+    function resetTool() {
+        selectedFiles = [];
+        document.getElementById('pdfInput').value = '';
+        updateFileList();
+        document.getElementById('action-area').style.display = 'none';
+        document.getElementById('download-area').style.display = 'none';
+    }
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

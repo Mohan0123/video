@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Use our free Online Colour Picker Tool to find the perfect color codes. Convert HEX to RGB, RGB to HSL, and generate color palettes instantly for web design. Fast, free, and accurate.">
+<title>Free Online Colour Picker Tool - VIP Tool</title>
+
+<link rel="canonical" href="[https://viptool.online/colour-picker-tool](https://viptool.online/colour-picker-tool)">
+
+<script async src="[https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS](https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS)"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SWZKBP3TTS');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "[https://schema.org](https://schema.org)",
+  "@type": "WebApplication",
+  "name": "Colour Picker Tool",
+  "url": "[https://viptool.online/colour-picker-tool](https://viptool.online/colour-picker-tool)",
+  "description": "A professional online colour picker tool to generate HEX, RGB, and HSL color codes for designers and developers.",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "All",
+  "publisher": {
+    "@type": "Organization",
+    "name": "VIP Tool",
+    "url": "[https://viptool.online](https://viptool.online)"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "[https://schema.org](https://schema.org)",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "[https://viptool.online](https://viptool.online)"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Tools",
+    "item": "[https://viptool.online/#tools](https://viptool.online/#tools)"
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Colour Picker Tool"
+  }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "[https://schema.org](https://schema.org)",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How do I use this Colour Picker Tool?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Simply click on the color input box to open the selector, choose your desired color, and the tool will automatically generate the corresponding HEX, RGB, and HSL codes."
+    }
+  }, {
+    "@type": "Question",
+    "name": "Is this tool free to use?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, the VIP Tool Colour Picker is 100% free for all students, professionals, and developers."
+    }
+  }, {
+    "@type": "Question",
+    "name": "Can I convert HEX to RGB here?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Absolutely. When you select a color or type in a HEX code, the RGB and HSL values are calculated instantly."
+    }
+  }, {
+    "@type": "Question",
+    "name": "Does this tool work on mobile devices?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, our tool is fully responsive and works perfectly on smartphones, tablets, and desktop computers."
+    }
+  }, {
+    "@type": "Question",
+    "name": "Do you store my color data?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. All processing happens locally in your browser. We do not collect or store any of your input data."
+    }
+  }]
+}
+</script>
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+<div class="container">
+    
+    <div class="ad-container" id="ad-top">
+        </div>
+
+    <main class="tool-card">
+        <h1>Colour Picker Tool</h1>
+        <p class="short-desc">Pick any color, convert between formats, and generate palettes instantly.</p>
+
+        <div id="tool-interface">
+            <div class="color-display" id="colorDisplay" style="background-color: #007bff;">
+                <input type="color" id="colorInput" value="#007bff">
+            </div>
+            
+            <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #888;">Click circle to change color</p>
+
+            <div class="input-group">
+                <span class="input-label">HEX</span>
+                <input type="text" class="input-value" id="hexOutput" value="#007bff" readonly>
+                <button class="btn-copy" onclick="copyToClipboard('hexOutput')">Copy</button>
+            </div>
+
+            <div class="input-group">
+                <span class="input-label">RGB</span>
+                <input type="text" class="input-value" id="rgbOutput" value="rgb(0, 123, 255)" readonly>
+                <button class="btn-copy" onclick="copyToClipboard('rgbOutput')">Copy</button>
+            </div>
+
+            <div class="input-group">
+                <span class="input-label">HSL</span>
+                <input type="text" class="input-value" id="hslOutput" value="hsl(211, 100%, 50%)" readonly>
+                <button class="btn-copy" onclick="copyToClipboard('hslOutput')">Copy</button>
+            </div>
+        </div>
+
+        <div class="related-tools">
+            <div class="related-title">Explore Related Tools</div>
+            <div class="tools-grid">
+                <a href="/gradient-generator" class="tool-link">Gradient Generator</a>
+                <a href="/image-resizer" class="tool-link">Image Resizer</a>
+                <a href="/word-counter" class="tool-link">Word Counter</a>
+                <a href="/qr-code-generator" class="tool-link">QR Generator</a>
+                <a href="/password-generator" class="tool-link">Password Gen</a>
+                <a href="/age-calculator" class="tool-link">Age Calculator</a>
+            </div>
+        </div>
+
+    </main>
+
+    <div class="ad-container" id="ad-mid">
+        </div>
+
+    <section class="content-section">
+        <h2>How to Use the VIP Tool Colour Picker</h2>
+        <p>Using our <strong>Colour Picker Tool</strong> is intuitive and straightforward. Whether you are a web designer needing an exact HEX code or a student learning about color models, this tool is designed for you.</p>
+        <ol>
+            <li><strong>Click the Circle:</strong> Tap on the large colored circle at the top of the tool. This opens your device's native color selection interface.</li>
+            <li><strong>Select Your Color:</strong> Drag your cursor or finger to choose the exact shade you need.</li>
+            <li><strong>View Codes:</strong> As soon as you select a color, the tool automatically calculates and displays the <strong>HEX</strong>, <strong>RGB</strong>, and <strong>HSL</strong> values.</li>
+            <li><strong>Copy:</strong> Click the "Copy" button next to any value to instantly copy it to your clipboard.</li>
+        </ol>
+
+        <h2>Benefits of Using This Tool</h2>
+        <p>Colors are the foundation of digital design. Having a reliable converter and picker is essential for maintaining consistency across projects.</p>
+        <ul>
+            <li><strong>Instant Conversion:</strong> No need for manual calculations. Get RGB and HSL values from a HEX code instantly.</li>
+            <li><strong>Cross-Browser Compatible:</strong> Works seamlessly on Chrome, Firefox, Safari, and Edge.</li>
+            <li><strong>Privacy Focused:</strong> Unlike other tools that track your usage, VIP Tool processes everything in your browser.</li>
+            <li><strong>Lightweight:</strong> The page loads instantly with no heavy frameworks, ensuring a smooth experience even on slow connections.</li>
+        </ul>
+
+        <h3>Understanding Color Formats</h3>
+        <p><strong>HEX (Hexadecimal):</strong> The most common format for web design, starting with a hashtag (#) followed by six characters (e.g., #FFFFFF for white).</p>
+        <p><strong>RGB (Red, Green, Blue):</strong> Defines colors by the intensity of red, green, and blue light. Used widely in screen displays and CSS (e.g., rgb(255, 255, 255)).</p>
+        <p><strong>HSL (Hue, Saturation, Lightness):</strong> A more intuitive way to describe color, often used by designers to adjust shades without changing the fundamental color.</p>
+
+        <p>For more utility tools, check out our <a href="/image-resizer" style="color:var(--primary-color)">Image Resizer</a> or <a href="/word-counter" style="color:var(--primary-color)">Word Counter</a>.</p>
+    </section>
+
+    <div class="ad-container" id="ad-bottom">
+        </div>
+
+    <section class="content-section">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <div class="faq-item">
+            <div class="faq-question">Is the Colour Picker Tool free?</div>
+            <div class="faq-answer">Yes, this tool is completely free to use for personal and commercial projects.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Can I use this on my phone?</div>
+            <div class="faq-answer">Absolutely. The interface is optimized for mobile touchscreens.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">What is the difference between HEX and RGB?</div>
+            <div class="faq-answer">They represent the same color but in different formats. HEX is a base-16 code used primarily in HTML/CSS, while RGB uses decimal numbers (0-255) to represent Red, Green, and Blue channels.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Do I need to install any software?</div>
+            <div class="faq-answer">No, this is a web-based tool. You can access it directly from your browser without downloading anything.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Is my data secure?</div>
+            <div class="faq-answer">Yes. We do not store or transmit the colors you pick. All functionality runs locally on your device.</div>
+        </div>
+    </section>
+
+    <section class="legal-section">
+        <h2>Privacy Policy</h2>
+        <p>At VIP Tool ([https://viptool.online](https://viptool.online)), we prioritize your privacy. This Colour Picker Tool operates entirely on the client-side (in your browser). We do not collect, store, or transmit any personal data or input values to our servers.</p>
+        <p><strong>Cookies & Third-Party Services:</strong> We use Google Analytics (Measurement ID: G-SWZKBP3TTS) to understand website traffic. Google Analytics may use cookies. We also display ads via Google AdSense, which may use cookies to serve personalized ads based on your visits to this and other websites. You can manage your ad preferences via Google's Ad Settings.</p>
+        
+        <h2>Terms and Conditions</h2>
+        <p>By using this tool, you agree that it is provided "as is" without warranty of any kind. VIP Tool allows you to use this software for free but reserves the right to modify or discontinue the service at any time. You are responsible for ensuring that your use of the generated data complies with your local laws.</p>
+
+        <h2>Disclaimer</h2>
+        <p>The results provided by this Colour Picker Tool are for informational and design purposes only. While we strive for accuracy, VIP Tool cannot be held liable for any discrepancies in color reproduction across different screens, printers, or devices. This tool is not affiliated with any government entity.</p>
+    </section>
+
+</div>
+
+
+
+<script>
+    // --- Tool Logic ---
+    document.addEventListener('DOMContentLoaded', () => {
+        const colorInput = document.getElementById('colorInput');
+        const colorDisplay = document.getElementById('colorDisplay');
+        const hexOutput = document.getElementById('hexOutput');
+        const rgbOutput = document.getElementById('rgbOutput');
+        const hslOutput = document.getElementById('hslOutput');
+
+        function hexToRgb(hex) {
+            // Remove # if present
+            hex = hex.replace(/^#/, '');
+            const bigint = parseInt(hex, 16);
+            const r = (bigint >> 16) & 255;
+            const g = (bigint >> 8) & 255;
+            const b = bigint & 255;
+            return { r, g, b };
+        }
+
+        function rgbToHsl(r, g, b) {
+            r /= 255;
+            g /= 255;
+            b /= 255;
+            const max = Math.max(r, g, b);
+            const min = Math.min(r, g, b);
+            let h, s, l = (max + min) / 2;
+
+            if (max === min) {
+                h = s = 0; // achromatic
+            } else {
+                const d = max - min;
+                s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+                switch (max) {
+                    case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                    case g: h = (b - r) / d + 2; break;
+                    case b: h = (r - g) / d + 4; break;
+                }
+                h /= 6;
+            }
+            return {
+                h: Math.round(h * 360),
+                s: Math.round(s * 100),
+                l: Math.round(l * 100)
+            };
+        }
+
+        function updateValues(hex) {
+            // Update display background
+            colorDisplay.style.backgroundColor = hex;
+            
+            // Update HEX Input
+            hexOutput.value = hex;
+
+            // Update RGB
+            const rgb = hexToRgb(hex);
+            rgbOutput.value = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+
+            // Update HSL
+            const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+            hslOutput.value = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`;
+        }
+
+        // Event Listener for Input
+        colorInput.addEventListener('input', (e) => {
+            updateValues(e.target.value);
+        });
+
+        // Initial call
+        updateValues(colorInput.value);
+
+        // --- Copy Functionality ---
+        window.copyToClipboard = function(elementId) {
+            const copyText = document.getElementById(elementId);
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+            navigator.clipboard.writeText(copyText.value).then(() => {
+                const btn = copyText.nextElementSibling;
+                const originalText = btn.innerText;
+                btn.innerText = "Copied!";
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        };
+
+        // --- Ad Visibility Logic ---
+        // Checks if ad containers have actual AdSense content (ins tags or script outputs)
+        // If empty, they remain hidden via CSS. If content detected, show them.
+        const adContainers = document.querySelectorAll('.ad-container');
+        adContainers.forEach(container => {
+            // Start observer to detect if AdSense injects code
+            const observer = new MutationObserver(() => {
+                if (container.innerHTML.trim().length > 0 && container.querySelector('ins, iframe, script')) {
+                    container.setAttribute('data-has-ad', 'true');
+                }
+            });
+            observer.observe(container, { childList: true, subtree: true });
+            
+            // Initial check in case code is static
+            if (container.querySelector('ins, iframe')) {
+                container.setAttribute('data-has-ad', 'true');
+            }
+        });
+    });
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

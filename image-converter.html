@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <link rel="canonical" href="https://viptool.online/image-converter">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Image Converter Tool. Convert JPG, PNG, WEBP, and BMP images instantly in your browser. Fast, secure, and no software installation required.">
+    <meta name="keywords" content="image converter, png to jpg, jpg to png, webp converter, free online tool, image format changer, secure image tool">
+    <meta name="author" content="Image Converter Tool">
+    <meta name="robots" content="index, follow">
+    <title>Free Image Converter Tool - Convert PNG, JPG, WEBP Online</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            <span>Advertisement Space</span>
+        </div>
+
+        <section class="section tool-wrapper">
+            <div class="drop-zone" id="drop-zone">
+                <input type="file" id="file-input" accept="image/png, image/jpeg, image/webp, image/bmp" style="display: none;">
+                <p><strong>Click to Upload Image</strong></p>
+                <p style="font-size: 0.9rem; color: #666;">Supports PNG, JPG, WEBP, BMP</p>
+            </div>
+
+            <div class="controls">
+                <select id="format-select">
+                    <option value="image/jpeg">Convert to JPG</option>
+                    <option value="image/png">Convert to PNG</option>
+                    <option value="image/webp">Convert to WEBP</option>
+                </select>
+                <button class="btn-primary" onclick="convertImage()">Convert Now</button>
+            </div>
+
+            <p class="error-msg" id="error-msg"></p>
+
+            <div id="result-area">
+                <h3>Conversion Successful!</h3>
+                <div>
+                    <img id="preview-image" class="preview-img" alt="Converted Preview">
+                </div>
+                <button id="download-btn" class="download-btn">Download Image</button>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            <span>Advertisement Space</span>
+        </div>
+
+        <section class="section">
+            <h2>How to Use This Image Converter</h2>
+            <ol>
+                <li>Click the <strong>upload area</strong> to select an image from your device.</li>
+                <li>Select your desired <strong>output format</strong> (JPG, PNG, or WEBP) from the dropdown menu.</li>
+                <li>Click the <strong>"Convert Now"</strong> button.</li>
+                <li>Wait a moment for the processing to finish.</li>
+                <li>Click the <strong>"Download Image"</strong> button to save your file.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Benefits of Using Our Tool</h2>
+            <ul>
+                <li><strong>100% Free:</strong> No hidden costs or subscriptions.</li>
+                <li><strong>Secure & Private:</strong> All conversions happen in your browser using JavaScript. Your images are <strong>never uploaded</strong> to a server.</li>
+                <li><strong>Fast Performance:</strong> Instant conversion without waiting for uploads or downloads.</li>
+                <li><strong>No Installation:</strong> Works on any device (Mobile, Tablet, Desktop) without installing software.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Why Use an Online Image Converter?</h2>
+            <p>In the digital age, images are the cornerstone of web content, social media, and digital marketing. However, not all image formats are created equal. Different platforms and use cases require specific file types for optimal performance.</p>
+
+            <h3>The Importance of File Formats</h3>
+            <p><strong>JPEG (JPG)</strong> is the standard for photography. It offers high compression, meaning smaller file sizes which leads to faster website loading times. This format is ideal for blog posts and social media uploads where file size matters.</p>
+            <p><strong>PNG</strong> is the go-to format for graphics requiring transparency, such as logos and icons. While the file sizes are generally larger than JPEGs, they preserve the quality of text and sharp lines perfectly.</p>
+            <p><strong>WEBP</strong> is a modern image format that provides superior lossless and lossy compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster.</p>
+
+            <h3>Optimizing for SEO and Speed</h3>
+            <p>Google considers page load speed as a ranking factor. Large, unoptimized images are the number one cause of slow websites. By using our <strong>Image Converter</strong>, you can quickly switch formats to WebP or compressed JPEG to ensure your website remains lightning-fast, improving both user experience and search engine rankings.</p>
+            
+            <h3>Cross-Platform Compatibility</h3>
+            <p>Sometimes, specific software or websites only accept certain formats. For instance, some government portals may only accept JPEGs, while design tools might prefer PNGs. A reliable, browser-based converter ensures you are never stuck with an incompatible file type.</p>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this tool free to use? <span>+</span></div>
+                <div class="faq-answer">Yes, this Image Converter is completely free to use without any limitations.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Do you store my images? <span>+</span></div>
+                <div class="faq-answer">No. This tool operates entirely on the "client-side." This means your image never leaves your computer or phone; the conversion happens right inside your web browser.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">What formats can I convert? <span>+</span></div>
+                <div class="faq-answer">You can upload PNG, JPG, BMP, or WEBP files and convert them into PNG, JPG, or WEBP formats.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does image quality decrease? <span>+</span></div>
+                <div class="faq-answer">Converting to formats like JPEG is "lossy," so there might be a slight reduction in quality to save space. Converting to PNG is "lossless," preserving quality.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does it work on mobile? <span>+</span></div>
+                <div class="faq-answer">Yes, our website is fully responsive and works on iPhone, Android, tablets, and desktop computers.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: [Current Date]</strong></p>
+            <p>Your privacy is important to us. This Privacy Policy explains how we handle information.</p>
+            <p><strong>1. Data Collection:</strong> We do not collect, store, or transmit any images you upload. All processing is done locally on your device via the browser.</p>
+            <p><strong>2. Cookies:</strong> We may use cookies to improve user experience. You can disable cookies in your browser settings.</p>
+            <p><strong>3. Third-Party Ads (Google AdSense):</strong> We use third-party advertising companies to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you. If you would like more information about this practice and to know your choices about not having this information used by these companies, please visit Google's ad settings.</p>
+            <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to understand traffic trends. This data is anonymous.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> This tool is provided for personal and commercial use. You agree not to use it for any illegal activities.</p>
+            <p><strong>2. Liability:</strong> We are not responsible for any data loss or damages resulting from the use of this tool.</p>
+            <p><strong>3. Modifications:</strong> We reserve the right to modify or discontinue the service at any time without notice.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>The materials on this website are provided "as is". We make no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, we do not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        // UI Elements
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const errorMsg = document.getElementById('error-msg');
+        const resultArea = document.getElementById('result-area');
+        const previewImage = document.getElementById('preview-image');
+        const downloadBtn = document.getElementById('download-btn');
+        const formatSelect = document.getElementById('format-select');
+
+        let currentDataUrl = null;
+        let originalFileName = "";
+
+        // Event Listeners for Upload
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.style.borderColor = '#2563eb';
+            dropZone.style.backgroundColor = '#eff6ff';
+        });
+
+        dropZone.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            dropZone.style.borderColor = '#e2e8f0';
+            dropZone.style.backgroundColor = '#f1f5f9';
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.style.borderColor = '#e2e8f0';
+            dropZone.style.backgroundColor = '#f1f5f9';
+            
+            if (e.dataTransfer.files.length > 0) {
+                fileInput.files = e.dataTransfer.files;
+                handleFileSelect();
+            }
+        });
+
+        fileInput.addEventListener('change', handleFileSelect);
+
+        function handleFileSelect() {
+            const file = fileInput.files[0];
+            if (file) {
+                errorMsg.style.display = 'none';
+                dropZone.querySelector('p strong').textContent = `Selected: ${file.name}`;
+                originalFileName = file.name;
+            }
+        }
+
+        // Conversion Logic
+        function convertImage() {
+            const file = fileInput.files[0];
+            
+            // Validation
+            if (!file) {
+                showError("Please select an image file first.");
+                return;
+            }
+
+            if (!file.type.startsWith('image/')) {
+                showError("Invalid file type. Please upload an image.");
+                return;
+            }
+
+            const outputFormat = formatSelect.value;
+            const reader = new FileReader();
+
+            reader.onload = function(event) {
+                const img = new Image();
+                img.onload = function() {
+                    // Create Canvas
+                    const canvas = document.createElement('canvas');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    const ctx = canvas.getContext('2d');
+
+                    // Handle Transparency for JPG (Fill white background)
+                    if (outputFormat === 'image/jpeg') {
+                        ctx.fillStyle = '#FFFFFF';
+                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    }
+
+                    // Draw Image
+                    ctx.drawImage(img, 0, 0);
+
+                    // Convert to Data URL
+                    currentDataUrl = canvas.toDataURL(outputFormat, 0.9); // 0.9 Quality
+                    
+                    // Display Result
+                    previewImage.src = currentDataUrl;
+                    
+                    resultArea.style.display = 'block';
+                    
+                    // Scroll to result
+                    resultArea.scrollIntoView({ behavior: 'smooth' });
+                };
+                img.src = event.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        }
+
+        // Updated Download Function using Blobs (Fixes Mobile/Chrome issues)
+        downloadBtn.addEventListener('click', function() {
+            if(!currentDataUrl) return;
+
+            // Convert Base64 to Blob
+            const byteString = atob(currentDataUrl.split(',')[1]);
+            const mimeString = currentDataUrl.split(',')[0].split(':')[1].split(';')[0];
+            const ab = new ArrayBuffer(byteString.length);
+            const ia = new Uint8Array(ab);
+            for (let i = 0; i < byteString.length; i++) {
+                ia[i] = byteString.charCodeAt(i);
+            }
+            const blob = new Blob([ab], {type: mimeString});
+            
+            // Create download link
+            const url = URL.createObjectURL(blob);
+            const outputFormat = formatSelect.value;
+            const extension = outputFormat.split('/')[1];
+            const fileName = originalFileName.split('.')[0] + '-converted.' + extension;
+
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Cleanup
+            setTimeout(() => URL.revokeObjectURL(url), 100);
+        });
+
+        function showError(message) {
+            errorMsg.textContent = message;
+            errorMsg.style.display = 'block';
+            resultArea.style.display = 'none';
+        }
+
+        // FAQ Toggle Logic
+        function toggleFaq(element) {
+            const parent = element.parentElement;
+            const isOpen = parent.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-question span').textContent = '+';
+            });
+
+            // Open clicked if it wasn't open
+            if (!isOpen) {
+                parent.classList.add('active');
+                element.querySelector('span').textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

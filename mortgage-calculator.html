@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free Mortgage Calculator by VIP Tool. Estimate your monthly mortgage payments, total interest, and loan amortization. Accurate home loan calculator for USD, INR, EUR & GBP.">
+<title>Mortgage Calculator - Estimate Monthly Payments | VIP Tool</title>
+
+<script type="application/ld+json">
+{
+  "@context": "[https://schema.org](https://schema.org)",
+  "@type": "WebApplication",
+  "name": "Mortgage Calculator",
+  "url": "[https://viptool.online/mortgage-calculator](https://viptool.online/mortgage-calculator)",
+  "description": "Calculate monthly mortgage payments, total interest, and amortization schedules. Supports multiple currencies and loan terms.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript. HTML5.",
+  "author": {
+    "@type": "Organization",
+    "name": "VIP Tool"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "[https://schema.org](https://schema.org)",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "[https://viptool.online](https://viptool.online)"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Tools",
+    "item": "[https://viptool.online/tools](https://viptool.online/tools)"
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "name": "Mortgage Calculator"
+  }]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "[https://schema.org](https://schema.org)",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How is the monthly mortgage payment calculated?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The monthly payment is calculated using the standard amortization formula: M = P[r(1+r)^n]/[(1+r)^n - 1], where P is the principal loan amount, r is the monthly interest rate, and n is the number of months."
+    }
+  }, {
+    "@type": "Question",
+    "name": "Does this calculator include property taxes and insurance?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "This base calculator estimates Principal and Interest (P&I). Property taxes and insurance vary widely by location and should be added on top of this estimate for a complete picture."
+    }
+  }, {
+    "@type": "Question",
+    "name": "How does a down payment affect my mortgage?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A larger down payment reduces the principal loan amount. This lowers both your monthly payment and the total interest you will pay over the life of the loan."
+    }
+  }, {
+    "@type": "Question",
+    "name": "Is this tool free?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, the Mortgage Calculator on VIP Tool is 100% free to use for unlimited calculations."
+    }
+  }, {
+    "@type": "Question",
+    "name": "Can I use this for commercial loans?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, as long as the loan follows a standard amortization schedule with a fixed interest rate, this calculator works for both residential and commercial properties."
+    }
+  }]
+}
+</script>
+
+
+
+```
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+```
+<main>
+    <h1>Mortgage Calculator</h1>
+    <p class="subtitle">Estimate your monthly mortgage payments with our precise, fast, and free online calculator.</p>
+
+    <div class="tool-card">
+        
+        <div class="form-group">
+            <label for="currencySelect">Select Currency</label>
+            <select id="currencySelect" onchange="calculateMortgage()">
+                <option value="USD">USD ($) - United States Dollar</option>
+                <option value="INR">INR (â‚¹) - Indian Rupee</option>
+                <option value="EUR">EUR (â‚¬) - Euro</option>
+                <option value="GBP">GBP (Â£) - British Pound</option>
+                <option value="CAD">CAD ($) - Canadian Dollar</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <div class="col form-group">
+                <label for="loanAmount">Home Price / Loan Amount</label>
+                <input type="number" id="loanAmount" placeholder="e.g. 300000" min="0" step="1000">
+            </div>
+            <div class="col form-group">
+                <label for="downPayment">Down Payment</label>
+                <input type="number" id="downPayment" placeholder="e.g. 60000" min="0" step="1000">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="col form-group">
+                <label for="interestRate">Interest Rate (%)</label>
+                <input type="number" id="interestRate" placeholder="e.g. 4.5" min="0" max="100" step="0.01">
+            </div>
+            <div class="col form-group">
+                <label for="loanTerm">Loan Term (Years)</label>
+                <select id="loanTerm">
+                    <option value="30" selected>30 Years</option>
+                    <option value="25">25 Years</option>
+                    <option value="20">20 Years</option>
+                    <option value="15">15 Years</option>
+                    <option value="10">10 Years</option>
+                    <option value="5">5 Years</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn-primary" onclick="calculateMortgage()">Calculate Payment</button>
+            <button class="btn-secondary" onclick="resetForm()">Reset</button>
+        </div>
+
+        <div id="result-area">
+            <div class="result-grid">
+                <div class="result-box highlight-box">
+                    <div class="result-label">Monthly Payment</div>
+                    <div class="result-value" id="res-monthly">-</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-label">Total Principal</div>
+                    <div class="result-value" id="res-principal">-</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-label">Total Interest</div>
+                    <div class="result-value" id="res-interest">-</div>
+                </div>
+                <div class="result-box total-box">
+                    <div class="result-label">Total Amount Payable</div>
+                    <div class="result-value" id="res-total">-</div>
+                </div>
+            </div>
+            <p style="margin-top:15px; font-size:0.85rem; color:var(--text-light); text-align:center;">* Calculations are estimates for Principal & Interest only. Property taxes and insurance are not included.</p>
+        </div>
+    </div>
+
+    <section class="related-tools-section">
+            <div class="related-title">Related Tools You Might Need</div>
+            <div class="related-links">
+                <a href="https://viptool.online/fuel-cost-converter" class="related-link-item">Mileage Calculator</a>
+                <a href="https://viptool.online/speed-converter" class="related-link-item">Speed Converter</a>
+                <a href="https://viptool.online/distance-converter" class="related-link-item">Distance Converter</a>
+                <a href="https://viptool.online/gst-calculator" class="related-link-item">GST Calculator</a>
+                <a href="https://viptool.online/hourly-calculator" class="related-link-item">Hourly Calculator</a>
+                <a href="https://viptool.online/simple-interest-calculator" class="related-link-item">Simple Interest Calculator</a>
+            </div>
+        </section>
+
+    <div class="ad-placeholder">
+        <span>Advertisement</span>
+        </div>
+
+    <div class="content-section">
+        <h2>Understanding Your Mortgage Calculation</h2>
+        <p>Buying a home is one of the most significant financial decisions you will make. Using the <strong>VIP Tool Mortgage Calculator</strong> allows you to visualize your financial commitment before signing any papers. Whether you are looking for a standard 30-year fixed-rate loan or a shorter 15-year term, understanding the breakdown of Principal vs. Interest is crucial.</p>
+        
+        <p>Most home loans are amortized. This means your monthly payment remains the same, but the portion going towards interest decreases over time, while the portion paying down the principal increases. Our tool helps you estimate these costs instantly.</p>
+
+        <h3>Key Factors Affecting Your Mortgage</h3>
+        <ul>
+            <li><strong>Principal:</strong> The amount of money you borrow (Home Price minus Down Payment).</li>
+            <li><strong>Interest Rate:</strong> The annual percentage rate charged by the lender. Even a small difference (e.g., 0.5%) can save or cost you thousands over the life of the loan.</li>
+            <li><strong>Loan Term:</strong> The duration of the loan. Longer terms (30 years) generally have lower monthly payments but higher total interest costs compared to shorter terms (15 years).</li>
+        </ul>
+
+        <p>For more detailed financial planning, you might also find our <a href="[https://viptool.online/gst-calculator](https://viptool.online/gst-calculator)" style="color:var(--primary-color);">GST Calculator</a> and <a href="[https://viptool.online/percentage-calculator](https://viptool.online/percentage-calculator)" style="color:var(--primary-color);">Percentage Calculator</a> useful for calculating taxes and fees associated with property purchases.</p>
+
+        <div class="ad-placeholder">
+            <span>Advertisement</span>
+            </div>
+
+        <h2>How to Use This Tool</h2>
+        <ol>
+            <li><strong>Select Currency:</strong> Choose USD, INR, EUR, etc. to format the output correctly.</li>
+            <li><strong>Enter Home Price:</strong> Input the total cost of the property.</li>
+            <li><strong>Enter Down Payment:</strong> Input the cash amount you are paying upfront. The calculator will subtract this from the Home Price to find the Loan Amount.</li>
+            <li><strong>Set Interest Rate:</strong> Enter the annual interest rate offered by your lender.</li>
+            <li><strong>Select Term:</strong> Choose how many years you have to repay the loan.</li>
+            <li><strong>Calculate:</strong> Click the button to see your Monthly Payment, Total Interest, and Total Payable amount.</li>
+        </ol>
+
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        
+        <h3>1. What is included in the monthly payment result?</h3>
+        <p>The result provided is for Principal and Interest (P&I). It does not automatically include property taxes, homeowner's insurance, or private mortgage insurance (PMI), as these vary significantly by location.</p>
+
+        <h3>2. Should I choose a 15-year or 30-year mortgage?</h3>
+        <p>A 15-year mortgage typically has higher monthly payments but lower interest rates and significantly lower total interest costs. A 30-year mortgage has lower monthly payments, making it more affordable month-to-month, but costs more in interest over the long run.</p>
+
+        <h3>3. How accurate is this calculator?</h3>
+        <p>This calculator uses standard mathematical formulas for mortgage amortization. However, actual lender terms may vary slightly due to compounding intervals and specific fee structures.</p>
+
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+        <div id="legal">
+            <h3>Privacy Policy</h3>
+            <p>At VIP Tool, we value your privacy. This Mortgage Calculator runs entirely in your browser (client-side). We do not collect, store, or transmit your financial data, loan amounts, or personal information to any server. We use Google Analytics for site usage statistics and Google AdSense for advertising, which may use cookies.</p>
+
+            <h3>Terms & Conditions</h3>
+            <p>By using the VIP Tool Mortgage Calculator, you acknowledge that the results are estimates provided for educational and planning purposes only. They do not constitute a loan offer or a guarantee of lending terms.</p>
+
+            <h3>Disclaimer</h3>
+            <p>VIP Tool is not a financial institution, lender, or financial advisor. The figures provided by this tool are "as-is" and should not be considered professional financial or legal advice. Please consult with a qualified mortgage broker or financial advisor before making real estate decisions.</p>
+        </div>
+    </div>
+</main>
+
+
+
+
+</div>
+
+<script>
+function calculateMortgage() {
+// Inputs
+const homePrice = parseFloat(document.getElementById('loanAmount').value);
+const downPayment = parseFloat(document.getElementById('downPayment').value) || 0;
+const interestRate = parseFloat(document.getElementById('interestRate').value);
+const years = parseInt(document.getElementById('loanTerm').value);
+const currency = document.getElementById('currencySelect').value;
+
+```
+    // Validation
+    if (!homePrice || homePrice &lt;= 0) {
+        alert(&quot;Please enter a valid Home Price.&quot;);
+        return;
+    }
+    if (downPayment &gt;= homePrice) {
+        alert(&quot;Down payment cannot be equal to or greater than the Home Price.&quot;);
+        return;
+    }
+
+    // Calculation Variables
+    const principal = homePrice - downPayment;
+    const monthlyRate = (interestRate / 100) / 12;
+    const numberOfPayments = years * 12;
+
+    let monthlyPayment = 0;
+    let totalPayment = 0;
+    let totalInterest = 0;
+
+    // Formula: M = P [ i(1 + i)^n ] / [ (1 + i)^n â€“ 1 ]
+    if (interestRate === 0 || isNaN(interestRate)) {
+        // Simple division if 0% interest
+        monthlyPayment = principal / numberOfPayments;
+    } else {
+        monthlyPayment = principal * ( (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / (Math.pow(1 + monthlyRate, numberOfPayments) - 1) );
+    }
+
+    totalPayment = monthlyPayment * numberOfPayments;
+    totalInterest = totalPayment - principal;
+
+    // Update UI
+    document.getElementById(&#39;res-monthly&#39;).innerText = formatCurrency(monthlyPayment, currency);
+    document.getElementById(&#39;res-principal&#39;).innerText = formatCurrency(principal, currency);
+    document.getElementById(&#39;res-interest&#39;).innerText = formatCurrency(totalInterest, currency);
+    document.getElementById(&#39;res-total&#39;).innerText = formatCurrency(totalPayment, currency);
+
+    // Show Results
+    const resultArea = document.getElementById(&#39;result-area&#39;);
+    resultArea.style.display = &#39;block&#39;;
+    
+    // Scroll on mobile
+    if(window.innerWidth &lt; 600) {
+        resultArea.scrollIntoView({behavior: &#39;smooth&#39;});
+    }
+}
+
+function formatCurrency(num, currencyCode) {
+    // Localization logic
+    let locale = &#39;en-US&#39;; 
+    if (currencyCode === &#39;INR&#39;) locale = &#39;en-IN&#39;;
+    else if (currencyCode === &#39;EUR&#39;) locale = &#39;de-DE&#39;;
+    else if (currencyCode === &#39;GBP&#39;) locale = &#39;en-GB&#39;;
+    
+    return num.toLocaleString(locale, {
+        style: &#39;currency&#39;,
+        currency: currencyCode,
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+    });
+}
+
+function resetForm() {
+    document.getElementById(&#39;loanAmount&#39;).value = &#39;&#39;;
+    document.getElementById(&#39;downPayment&#39;).value = &#39;&#39;;
+    document.getElementById(&#39;interestRate&#39;).value = &#39;&#39;;
+    document.getElementById(&#39;loanTerm&#39;).value = &#39;30&#39;;
+    document.getElementById(&#39;result-area&#39;).style.display = &#39;none&#39;;
+    window.scrollTo({ top: 0, behavior: &#39;smooth&#39; });
+}
+</script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

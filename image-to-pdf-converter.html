@@ -1,0 +1,747 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Image to PDF converter online. Convert JPG, PNG, WEBP images to PDF instantly. No upload limits, 100% secure browser-based conversion tool.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="PDF Tools">
+    <title>Image to PDF - Free Online Image to PDF Converter Tool</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#tool">Converter Tool</a></li>
+            <li><a href="#how-to-use">How to Use</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Tool Description -->
+        <div class="card">
+            <h2 class="section-title">Free Online Image to PDF Converter</h2>
+            <p>Welcome to our free Image to PDF converter tool. Easily convert your JPG, PNG, WEBP, and other image formats to professional PDF documents in seconds. Our tool processes everything locally in your browser, ensuring complete privacy and security. No uploads to external servers, no file size limits, and no watermarks. Perfect for creating photo albums, document scans, presentations, and more.</p>
+        </div>
+
+        <!-- Ad Placeholder -->
+        <div class="ad-placeholder">
+            <!-- AdSense Ad Placeholder -->
+            <p>Advertisement Space</p>
+        </div>
+
+        <!-- Image to PDF Tool -->
+        <section id="tool" class="tool-section">
+            <h2 class="section-title">Convert Your Images to PDF</h2>
+            
+            <div class="instructions">
+                <h4>Quick Instructions:</h4>
+                <ol>
+                    <li>Click the upload area or drag and drop your images</li>
+                    <li>Arrange images in your preferred order</li>
+                    <li>Select page size and orientation options</li>
+                    <li>Click "Convert to PDF" to generate your document</li>
+                    <li>Download your PDF file instantly</li>
+                </ol>
+            </div>
+
+            <!-- Upload Zone -->
+            <div class="upload-zone" id="uploadZone">
+                <div class="upload-zone-icon">ðŸ“</div>
+                <h3>Drop Images Here or Click to Upload</h3>
+                <p>Supports JPG, PNG, WEBP, GIF, BMP formats</p>
+                <input type="file" id="fileInput" class="file-input" multiple accept="image/*">
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="imageCount">0</div>
+                    <div class="stat-label">Images Selected</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalSize">0 KB</div>
+                    <div class="stat-label">Total Size</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="pageCount">0</div>
+                    <div class="stat-label">PDF Pages</div>
+                </div>
+            </div>
+
+            <!-- Image Previews -->
+            <div class="image-preview-container" id="previewContainer">
+                <div class="empty-state" id="emptyState">
+                    <div class="empty-state-icon">ðŸ–¼ï¸</div>
+                    <p>No images selected yet</p>
+                </div>
+            </div>
+
+            <!-- Options Panel -->
+            <div class="options-panel">
+                <h4>PDF Options</h4>
+                <div class="option-group">
+                    <div class="option-item">
+                        <label for="pageSize">Page Size:</label>
+                        <select id="pageSize">
+                            <option value="a4">A4 (210 Ã— 297 mm)</option>
+                            <option value="letter">Letter (8.5 Ã— 11 in)</option>
+                            <option value="legal">Legal (8.5 Ã— 14 in)</option>
+                            <option value="fit">Fit to Image</option>
+                        </select>
+                    </div>
+                    <div class="option-item">
+                        <label for="orientation">Orientation:</label>
+                        <select id="orientation">
+                            <option value="portrait">Portrait</option>
+                            <option value="landscape">Landscape</option>
+                            <option value="auto">Auto-detect</option>
+                        </select>
+                    </div>
+                    <div class="option-item">
+                        <label for="margin">Margin:</label>
+                        <select id="margin">
+                            <option value="0">No Margin</option>
+                            <option value="10">Small (10px)</option>
+                            <option value="20" selected>Medium (20px)</option>
+                            <option value="40">Large (40px)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress -->
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-text" id="progressText">Processing images...</div>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="controls">
+                <button class="btn btn-primary" id="convertBtn" disabled>
+                    <span>ðŸ“„</span> Convert to PDF
+                </button>
+                <button class="btn btn-secondary" id="clearBtn">
+                    <span>ðŸ—‘ï¸</span> Clear All
+                </button>
+            </div>
+
+            <!-- Result Card -->
+            <div class="result-card" id="resultCard">
+                <h3>ðŸŽ‰ PDF Created Successfully!</h3>
+                <p style="margin:15px 0;color:#555;">Your PDF document is ready for download.</p>
+                <button class="btn btn-success" id="downloadBtn">
+                    <span>â¬‡ï¸</span> Download PDF
+                </button>
+            </div>
+        </section>
+
+        <!-- Ad Placeholder -->
+        <div class="ad-placeholder">
+            <!-- AdSense Ad Placeholder -->
+            <p>Advertisement Space</p>
+        </div>
+
+        <!-- How to Use Section -->
+        <section id="how-to-use" class="card">
+            <h2 class="section-title">How to Use Image to PDF Converter</h2>
+            <div class="content-section">
+                <h3>Step 1: Upload Your Images</h3>
+                <p>Click on the upload area or simply drag and drop your images directly into the designated zone. You can select multiple images at once by holding Ctrl (Windows) or Cmd (Mac) while selecting files. Our tool supports all major image formats including JPG, PNG, WEBP, GIF, and BMP.</p>
+                
+                <h3>Step 2: Arrange Your Images</h3>
+                <p>Once uploaded, you'll see previews of all your images. Each image is numbered to show its position in the final PDF. You can remove unwanted images by clicking the remove button that appears when hovering over each preview.</p>
+                
+                <h3>Step 3: Configure PDF Settings</h3>
+                <p>Choose your preferred page size (A4, Letter, Legal, or Fit to Image), orientation (Portrait, Landscape, or Auto-detect), and margin settings. These options allow you to customize how your images will appear in the final PDF document.</p>
+                
+                <h3>Step 4: Convert and Download</h3>
+                <p>Click the "Convert to PDF" button to start the conversion process. The tool will process each image and compile them into a single PDF file. Once complete, click "Download PDF" to save your document to your device.</p>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="card">
+            <h2 class="section-title">Benefits of Our Image to PDF Converter</h2>
+            <div class="content-section">
+                <ul>
+                    <li><strong>100% Free:</strong> No hidden charges, subscriptions, or premium features locked behind paywalls</li>
+                    <li><strong>Complete Privacy:</strong> All processing happens in your browser - images never leave your device</li>
+                    <li><strong>No File Limits:</strong> Convert as many images as you want without restrictions</li>
+                    <li><strong>No Registration:</strong> Start converting immediately without creating an account</li>
+                    <li><strong>Multiple Formats:</strong> Supports JPG, PNG, WEBP, GIF, BMP, and more image formats</li>
+                    <li><strong>Custom Settings:</strong> Choose page size, orientation, and margins to suit your needs</li>
+                    <li><strong>Fast Processing:</strong> Optimized algorithms ensure quick conversion even for large batches</li>
+                    <li><strong>Mobile Friendly:</strong> Works perfectly on smartphones, tablets, and desktop computers</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SEO Long Content Section -->
+        <section class="card">
+            <h2 class="section-title">Complete Guide to Converting Images to PDF</h2>
+            <div class="content-section">
+                <h3>Why Convert Images to PDF Format?</h3>
+                <p>PDF (Portable Document Format) has become the universal standard for sharing documents across different platforms and devices. Converting images to PDF offers numerous advantages including consistent display across all devices, smaller file sizes when combining multiple images, password protection capabilities, and professional presentation format. Whether you're creating a photo portfolio, compiling scanned documents, or preparing presentations, PDF format ensures your images look exactly as intended on any screen.</p>
+                
+                <h3>Common Use Cases for Image to PDF Conversion</h3>
+                <p>Our Image to PDF converter serves a wide range of practical applications. Students use it to compile assignment photos and scanned notes into organized study materials. Professionals convert product images, certificates, and reports for official documentation. Photographers create portfolios and proofs for clients. Real estate agents combine property photos into comprehensive listing documents. Travelers consolidate passport copies and travel documents for easy access. The versatility of PDF format makes it ideal for virtually any scenario where images need to be shared or archived.</p>
+                
+                <h3>Understanding Image Formats and Quality</h3>
+                <p>When converting images to PDF, understanding different image formats helps achieve optimal results. JPG (JPEG) files are best for photographs with many colors and gradients, offering good compression with acceptable quality loss. PNG files preserve transparency and work well for graphics, logos, and images requiring sharp edges. WEBP is a modern format offering superior compression while maintaining quality. Our converter intelligently handles all these formats, preserving maximum quality while creating efficient PDF files.</p>
+                
+                <h3>Browser-Based Conversion Technology</h3>
+                <p>Unlike traditional converters that require software installation or upload files to remote servers, our tool uses advanced browser technology to process images directly on your device. This approach ensures maximum privacy since your files never leave your computer. Modern JavaScript APIs enable powerful image processing capabilities right in your web browser, eliminating the need for downloads, installations, or trusting third-party servers with sensitive documents. This makes our tool perfect for converting confidential documents like ID cards, medical records, or financial statements.</p>
+                
+                <h3>Tips for Best PDF Output Quality</h3>
+                <p>For optimal results when converting images to PDF, start with high-resolution source images whenever possible. Use the appropriate page size setting based on your intended output - A4 for printing, or "Fit to Image" for digital viewing. Consider orientation settings to ensure images display correctly without unnecessary rotation. Apply consistent margins for a professional, uniform appearance throughout your document. When combining many images, organizing them in the correct order before conversion saves time and ensures a logical flow in your final PDF.</p>
+            </div>
+        </section>
+
+        <!-- Ad Placeholder -->
+        <div class="ad-placeholder">
+            <!-- AdSense Ad Placeholder -->
+            <p>Advertisement Space</p>
+        </div>
+
+        <!-- FAQs Section -->
+        <section id="faqs" class="card">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q1: Is this Image to PDF converter really free?</div>
+                <div class="faq-answer">Yes, our Image to PDF converter is completely free to use with no hidden charges. There are no premium features, no subscription requirements, and no limits on the number of conversions you can perform. We believe in providing useful tools that everyone can access.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q2: Are my images uploaded to your servers?</div>
+                <div class="faq-answer">No, absolutely not. All image processing happens entirely within your web browser using client-side JavaScript. Your images never leave your device, ensuring complete privacy and security. This is especially important for sensitive documents like ID cards, medical records, or confidential business materials.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q3: What image formats are supported?</div>
+                <div class="faq-answer">Our converter supports all major image formats including JPG/JPEG, PNG, WEBP, GIF, and BMP. These formats cover virtually all images you'll encounter from cameras, phones, screenshots, and web downloads. The tool automatically handles each format appropriately during conversion.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q4: Is there a limit on file size or number of images?</div>
+                <div class="faq-answer">There are no artificial limits imposed by our tool. However, since processing happens in your browser, very large batches or extremely high-resolution images may be limited by your device's available memory. For most typical use cases involving dozens of standard images, you won't encounter any issues.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q5: Can I change the order of images in my PDF?</div>
+                <div class="faq-answer">Currently, images are arranged in the order they are uploaded. To achieve a specific order, you can upload images in your desired sequence, or remove and re-add images as needed. Each image preview shows its position number for easy reference.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q6: What page sizes are available for the PDF output?</div>
+                <div class="faq-answer">We offer several page size options: A4 (standard international paper size), Letter (US standard), Legal (US legal documents), and Fit to Image (which automatically sizes each page to match the image dimensions). You can also choose between Portrait and Landscape orientations.</div>
+            </div>
+        </section>
+
+        <!-- Privacy Policy -->
+        <section id="privacy" class="card legal-section">
+            <h2 class="section-title">Privacy Policy</h2>
+            <div class="content-section">
+                <h3>Data Collection</h3>
+                <p>We do not collect, store, or transmit any personal data or images from users. All image processing and PDF generation occurs entirely within your web browser (client-side) and no files are ever uploaded to external servers.</p>
+                
+                <h3>Local Processing</h3>
+                <p>Your images are processed locally on your device using JavaScript. The generated PDF is created in your browser's memory and downloaded directly to your device. When you close or refresh the browser, all processed data is automatically cleared.</p>
+                
+                <h3>Cookies Usage</h3>
+                <p>This website may use essential cookies to ensure proper functionality and remember your preferences. These cookies do not track personal information or browsing behavior across other websites.</p>
+                
+                <h3>Third-Party Advertising</h3>
+                <p>We may display advertisements from third-party ad networks, including Google AdSense. These services may use cookies to serve ads based on your prior visits to this or other websites. You can opt out of personalized advertising by visiting Google's Ads Settings.</p>
+                
+                <h3>Analytics</h3>
+                <p>We may use analytics services to understand website traffic and usage patterns. This data is collected anonymously and does not identify individual users or access any of your files.</p>
+                
+                <h3>Future Services</h3>
+                <p>We may integrate additional services like Firebase in the future for enhanced features such as saving preferences. Any such integration will be reflected in an updated privacy policy with appropriate user consent mechanisms.</p>
+                
+                <h3>User Consent</h3>
+                <p>By using this website, you consent to this privacy policy. We recommend reviewing this policy periodically for any updates.</p>
+            </div>
+        </section>
+
+        <!-- Terms and Conditions -->
+        <section id="terms" class="card legal-section">
+            <h2 class="section-title">Terms and Conditions</h2>
+            <div class="content-section">
+                <h3>Acceptance of Terms</h3>
+                <p>By accessing and using this Image to PDF converter tool, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use this website.</p>
+                
+                <h3>Tool Usage</h3>
+                <p>This conversion tool is provided for personal and professional document creation purposes. Users are granted a non-exclusive, non-transferable license to use the tool for legitimate image to PDF conversion needs.</p>
+                
+                <h3>No Guarantees</h3>
+                <p>While we strive to provide accurate and reliable conversion results, we do not guarantee that the output will meet specific requirements or that the tool will be error-free under all circumstances.</p>
+                
+                <h3>Limitation of Liability</h3>
+                <p>We shall not be held liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use this tool. This includes, but is not limited to, data loss, corrupted files, or any other outcomes.</p>
+                
+                <h3>Data Loss</h3>
+                <p>We are not responsible for any loss of images, PDF files, or progress. Users are advised to maintain original copies of their images and verify PDF output before deleting source files.</p>
+                
+                <h3>Service Modifications</h3>
+                <p>We reserve the right to modify, suspend, or discontinue the conversion service at any time without prior notice. We are not liable for any modification, suspension, or discontinuation of the service.</p>
+                
+                <h3>Lawful Use</h3>
+                <p>Users agree to use this tool only for lawful purposes. Converting copyrighted images without permission or creating fraudulent documents is strictly prohibited.</p>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <section id="disclaimer" class="card legal-section">
+            <h2 class="section-title">Disclaimer</h2>
+            <div class="content-section">
+                <h3>As-Is Provision</h3>
+                <p>This Image to PDF converter tool is provided "as-is" without any warranties, express or implied. We make no representations or warranties regarding the accuracy, reliability, or completeness of the tool or its output.</p>
+                
+                <h3>Not a Professional Tool</h3>
+                <p>This is a free utility tool and is not intended to replace professional document management software. For critical business or legal documents, consider using certified professional tools with appropriate verification processes.</p>
+                
+                <h3>No Official Endorsement</h3>
+                <p>This tool is not affiliated with, endorsed by, or associated with any software company, standards organization, or official PDF certification body. Output files are created using standard PDF specifications.</p>
+                
+                <h3>User Responsibility</h3>
+                <p>Users are solely responsible for the images they convert and how they use the resulting PDF files. Ensure you have the right to convert and distribute any images before processing them through this tool.</p>
+                
+                <h3>Technical Variations</h3>
+                <p>PDF output may vary based on your device, browser, and image characteristics. Results may differ slightly between different browsers and operating systems.</p>
+            </div>
+        </section>
+
+        <!-- Ad Placeholder -->
+        <div class="ad-placeholder">
+            <!-- AdSense Ad Placeholder -->
+            <p>Advertisement Space</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    
+
+    <!-- JavaScript -->
+    <script>
+        // DOM Elements
+        const uploadZone = document.getElementById('uploadZone');
+        const fileInput = document.getElementById('fileInput');
+        const previewContainer = document.getElementById('previewContainer');
+        const emptyState = document.getElementById('emptyState');
+        const convertBtn = document.getElementById('convertBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const resultCard = document.getElementById('resultCard');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const imageCountEl = document.getElementById('imageCount');
+        const totalSizeEl = document.getElementById('totalSize');
+        const pageCountEl = document.getElementById('pageCount');
+
+        // State
+        let images = [];
+        let pdfBlob = null;
+
+        // Page sizes in points (1 inch = 72 points)
+        const PAGE_SIZES = {
+            a4: { width: 595.28, height: 841.89 },
+            letter: { width: 612, height: 792 },
+            legal: { width: 612, height: 1008 },
+            fit: null
+        };
+
+        // Upload zone events
+        uploadZone.addEventListener('click', () => fileInput.click());
+        
+        uploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadZone.classList.add('dragover');
+        });
+        
+        uploadZone.addEventListener('dragleave', () => {
+            uploadZone.classList.remove('dragover');
+        });
+        
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('dragover');
+            handleFiles(e.dataTransfer.files);
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+            fileInput.value = '';
+        });
+
+        // Handle file selection
+        function handleFiles(files) {
+            const validTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/bmp'];
+            
+            Array.from(files).forEach(file => {
+                if (validTypes.includes(file.type)) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        images.push({
+                            name: file.name,
+                            size: file.size,
+                            type: file.type,
+                            dataUrl: e.target.result
+                        });
+                        updateUI();
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+
+        // Update UI
+        function updateUI() {
+            // Update stats
+            imageCountEl.textContent = images.length;
+            pageCountEl.textContent = images.length;
+            
+            const totalBytes = images.reduce((sum, img) => sum + img.size, 0);
+            totalSizeEl.textContent = formatSize(totalBytes);
+            
+            // Update button state
+            convertBtn.disabled = images.length === 0;
+            
+            // Update preview
+            if (images.length === 0) {
+                emptyState.style.display = 'block';
+                previewContainer.innerHTML = '';
+                previewContainer.appendChild(emptyState);
+            } else {
+                emptyState.style.display = 'none';
+                renderPreviews();
+            }
+            
+            // Hide result card when images change
+            resultCard.style.display = 'none';
+            pdfBlob = null;
+        }
+
+        // Render image previews
+        function renderPreviews() {
+            previewContainer.innerHTML = '';
+            
+            images.forEach((img, index) => {
+                const item = document.createElement('div');
+                item.className = 'image-preview-item';
+                item.innerHTML = `
+                    <div class="image-number">${index + 1}</div>
+                    <img src="${img.dataUrl}" alt="${img.name}">
+                    <div class="image-info">${img.name}</div>
+                    <button class="remove-btn" data-index="${index}">Ã—</button>
+                `;
+                previewContainer.appendChild(item);
+            });
+            
+            // Add remove event listeners
+            document.querySelectorAll('.remove-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const index = parseInt(e.target.dataset.index);
+                    images.splice(index, 1);
+                    updateUI();
+                });
+            });
+        }
+
+        // Format file size
+        function formatSize(bytes) {
+            if (bytes === 0) return '0 KB';
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
+        }
+
+        // Convert to PDF
+        convertBtn.addEventListener('click', async () => {
+            if (images.length === 0) {
+                alert('Please add at least one image first!');
+                return;
+            }
+            
+            convertBtn.disabled = true;
+            progressContainer.style.display = 'block';
+            resultCard.style.display = 'none';
+            
+            try {
+                const pageSize = document.getElementById('pageSize').value;
+                const orientation = document.getElementById('orientation').value;
+                const margin = parseInt(document.getElementById('margin').value);
+                
+                pdfBlob = await generatePDF(images, pageSize, orientation, margin);
+                
+                progressContainer.style.display = 'none';
+                resultCard.style.display = 'block';
+                resultCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } catch (error) {
+                alert('Error creating PDF: ' + error.message);
+                progressContainer.style.display = 'none';
+            }
+            
+            convertBtn.disabled = false;
+        });
+
+        // Generate PDF
+        async function generatePDF(images, pageSizeType, orientation, margin) {
+            const pdfParts = [];
+            let objectNum = 1;
+            const objects = [];
+            
+            // Helper to add object
+            const addObject = (content) => {
+                objects.push({ num: objectNum, content });
+                return objectNum++;
+            };
+            
+            // Process images
+            const imageObjects = [];
+            const totalImages = images.length;
+            
+            for (let i = 0; i < images.length; i++) {
+                progressFill.style.width = ((i + 1) / totalImages * 100) + '%';
+                progressText.textContent = `Processing image ${i + 1} of ${totalImages}...`;
+                
+                const imgData = await processImage(images[i].dataUrl);
+                imageObjects.push(imgData);
+                
+                await new Promise(r => setTimeout(r, 50));
+            }
+            
+            progressText.textContent = 'Generating PDF...';
+            
+            // Catalog
+            const catalogNum = addObject('<< /Type /Catalog /Pages 2 0 R >>');
+            
+            // Pages placeholder (will be updated)
+            const pagesNum = addObject('');
+            
+            // Create pages
+            const pageNums = [];
+            const contentNums = [];
+            const imageResourceNums = [];
+            
+            for (let i = 0; i < imageObjects.length; i++) {
+                const imgData = imageObjects[i];
+                
+                // Determine page dimensions
+                let pageWidth, pageHeight;
+                
+                if (pageSizeType === 'fit') {
+                    pageWidth = imgData.width + margin * 2;
+                    pageHeight = imgData.height + margin * 2;
+                } else {
+                    const size = PAGE_SIZES[pageSizeType];
+                    if (orientation === 'landscape' || (orientation === 'auto' && imgData.width > imgData.height)) {
+                        pageWidth = size.height;
+                        pageHeight = size.width;
+                    } else {
+                        pageWidth = size.width;
+                        pageHeight = size.height;
+                    }
+                }
+                
+                // Calculate image placement
+                const availWidth = pageWidth - margin * 2;
+                const availHeight = pageHeight - margin * 2;
+                
+                let imgWidth = imgData.width;
+                let imgHeight = imgData.height;
+                
+                if (pageSizeType !== 'fit') {
+                    const scale = Math.min(availWidth / imgWidth, availHeight / imgHeight);
+                    imgWidth *= scale;
+                    imgHeight *= scale;
+                }
+                
+                const imgX = margin + (availWidth - imgWidth) / 2;
+                const imgY = margin + (availHeight - imgHeight) / 2;
+                
+                // Image XObject
+                const imgObjNum = addObject(
+                    `<< /Type /XObject /Subtype /Image /Width ${imgData.width} /Height ${imgData.height} ` +
+                    `/ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${imgData.data.length} >>\n` +
+                    `stream\n${imgData.data}\nendstream`
+                );
+                imageResourceNums.push(imgObjNum);
+                
+                // Content stream
+                const contentStream = `q ${imgWidth} 0 0 ${imgHeight} ${imgX} ${imgY} cm /Img${i} Do Q`;
+                const contentObjNum = addObject(
+                    `<< /Length ${contentStream.length} >>\nstream\n${contentStream}\nendstream`
+                );
+                contentNums.push(contentObjNum);
+                
+                // Page object
+                const pageObjNum = addObject(
+                    `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${pageWidth} ${pageHeight}] ` +
+                    `/Contents ${contentObjNum} 0 R /Resources << /XObject << /Img${i} ${imgObjNum} 0 R >> >> >>`
+                );
+                pageNums.push(pageObjNum);
+            }
+            
+            // Update pages object
+            objects[1].content = `<< /Type /Pages /Kids [${pageNums.map(n => n + ' 0 R').join(' ')}] /Count ${pageNums.length} >>`;
+            
+            // Build PDF
+            let pdf = '%PDF-1.4\n%Ã¢Ã£ÃÃ“\n';
+            const offsets = [];
+            
+            for (const obj of objects) {
+                offsets.push(pdf.length);
+                pdf += `${obj.num} 0 obj\n${obj.content}\nendobj\n`;
+            }
+            
+            const xrefOffset = pdf.length;
+            pdf += 'xref\n';
+            pdf += `0 ${objects.length + 1}\n`;
+            pdf += '0000000000 65535 f \n';
+            
+            for (const offset of offsets) {
+                pdf += offset.toString().padStart(10, '0') + ' 00000 n \n';
+            }
+            
+            pdf += 'trailer\n';
+            pdf += `<< /Size ${objects.length + 1} /Root 1 0 R >>\n`;
+            pdf += 'startxref\n';
+            pdf += xrefOffset + '\n';
+            pdf += '%%EOF';
+            
+            // Convert to blob
+            const bytes = new Uint8Array(pdf.length);
+            for (let i = 0; i < pdf.length; i++) {
+                bytes[i] = pdf.charCodeAt(i) & 0xff;
+            }
+            
+            return new Blob([bytes], { type: 'application/pdf' });
+        }
+
+        // Process image to get dimensions and JPEG data
+        function processImage(dataUrl) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    const maxDim = 1500;
+                    let width = img.width;
+                    let height = img.height;
+                    
+                    if (width > maxDim || height > maxDim) {
+                        const scale = Math.min(maxDim / width, maxDim / height);
+                        width *= scale;
+                        height *= scale;
+                    }
+                    
+                    canvas.width = width;
+                    canvas.height = height;
+                    
+                    const ctx = canvas.getContext('2d');
+                    ctx.fillStyle = '#FFFFFF';
+                    ctx.fillRect(0, 0, width, height);
+                    ctx.drawImage(img, 0, 0, width, height);
+                    
+                    const jpegDataUrl = canvas.toDataURL('image/jpeg', 0.85);
+                    const base64Data = jpegDataUrl.split(',')[1];
+                    const binaryData = atob(base64Data);
+                    
+                    resolve({
+                        width: Math.round(width),
+                        height: Math.round(height),
+                        data: binaryData
+                    });
+                };
+                img.src = dataUrl;
+            });
+        }
+
+        // Download PDF
+        downloadBtn.addEventListener('click', () => {
+            if (!pdfBlob) return;
+            
+            const url = URL.createObjectURL(pdfBlob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'converted-images.pdf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        });
+
+        // Clear all
+        clearBtn.addEventListener('click', () => {
+            images = [];
+            pdfBlob = null;
+            updateUI();
+            resultCard.style.display = 'none';
+            progressContainer.style.display = 'none';
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Initialize UI
+        updateUI();
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

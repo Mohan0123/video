@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Line Break Remover. Instantly remove line breaks, newlines, and carriage returns from your text. Perfect for code minification, data cleaning, and formatting text. Secure client-side processing.">
+    <meta name="keywords" content="line break remover, remove newlines, text formatter, remove enter key, one line converter, string cleaner, online text tool">
+    <meta name="author" content="Line Break Remover Tool">
+    <meta name="robots" content="index, follow">
+    <title>Line Break Remover - Free Online Text Formatting Tool</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="ad-slot">Advertisement Space</div>
+
+        <section class="tool-wrapper">
+            <div class="input-group">
+                <label for="input">Paste your text here:</label>
+                <textarea id="input" placeholder="Paste text with line breaks here...
+Example:
+Line 1
+Line 2
+Line 3"></textarea>
+            </div>
+
+            <div class="controls">
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="mode" value="nospace" checked> Remove (No Space)
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="mode" value="space"> Replace with Space
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="mode" value="comma"> Replace with Comma
+                    </label>
+                </div>
+                <button class="btn" onclick="processText()">Remove Line Breaks</button>
+            </div>
+
+            <div class="input-group">
+                <label for="output">Result:</label>
+                <textarea id="output" readonly placeholder="Result will appear here..."></textarea>
+            </div>
+
+            <button class="btn btn-secondary" onclick="copyText()">Copy to Clipboard</button>
+            <div id="message"></div>
+        </section>
+
+        <div class="ad-slot">Advertisement Space</div>
+
+        <section>
+            <h2>How to Use This Tool</h2>
+            <p>This Line Break Remover is designed to be simple and efficient. Follow these steps:</p>
+            <ol style="margin-left: 20px; margin-bottom: 20px;">
+                <li>Paste your text containing unwanted line breaks into the top box.</li>
+                <li>Choose your formatting option:
+                    <ul>
+                        <li><strong>Remove (No Space):</strong> Joins lines directly (e.g., "WordOneWordTwo").</li>
+                        <li><strong>Replace with Space:</strong> Adds a space between lines (e.g., "Word One Word Two").</li>
+                        <li><strong>Replace with Comma:</strong> Adds a comma and space (e.g., "Word One, Word Two").</li>
+                    </ul>
+                </li>
+                <li>Click the <strong>"Remove Line Breaks"</strong> button.</li>
+                <li>Copy the cleaned text from the bottom box using the "Copy" button.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Why Remove Line Breaks?</h2>
+            <p>Removing line breaks is a common task for developers, writers, and data analysts. Often, text copied from PDF documents, emails, or websites comes with awkward formatting where sentences are broken mid-way. This tool solves that problem instantly.</p>
+            
+            <h3>Key Benefits:</h3>
+            <ul>
+                <li><strong>Code Minification:</strong> Developers can flatten HTML, CSS, or SQL queries into a single line to save space or paste into terminal inputs.</li>
+                <li><strong>Data Cleaning:</strong> Analysts often need to convert column data (from Excel or Sheets) into comma-separated lists for database queries or arrays.</li>
+                <li><strong>Email Formatting:</strong> Fix text copied from PDFs that has hard returns at the end of every visual line, restoring it to fluid paragraph text.</li>
+                <li><strong>Privacy Focused:</strong> This tool runs entirely in your browser. Your text is never sent to a server.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Understanding Text Formatting and Control Characters</h2>
+            <p>In the world of computing, a "line break" isn't just empty space. It is represented by invisible control characters. Depending on the operating system, these can be a Line Feed (LF, \n), a Carriage Return (CR, \r), or both (CRLF, \r\n).</p>
+            
+            <p>Windows systems typically use Carriage Return + Line Feed, while Unix/Linux and macOS use just Line Feed. When you copy text between different environments, these characters can cause formatting issues. Our <strong>Line Break Remover</strong> tool uses JavaScript regular expressions to identify all variations of these control characters globally across your text string and replaces them according to your preference.</p>
+
+            <h3>Common Use Cases</h3>
+            <p><strong>1. SQL Queries:</strong> When you have a list of IDs in a spreadsheet column and need to use them in a <code>WHERE IN (...)</code> clause, you can paste the column here, select "Replace with Comma," and instantly get a valid comma-separated list.</p>
+            
+            <p><strong>2. JSON Strings:</strong> If you are trying to paste a multi-line string into a JSON value, line breaks will break the syntax. Removing them allows you to create a valid single-line string.</p>
+            
+            <p><strong>3. PDF Recovery:</strong> Copying text from older PDFs often results in "hard wrapping," where every line ends in a break. Using the "Replace with Space" option restores the natural flow of the paragraph.</p>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            
+            <div class="faq-item">
+                <span class="faq-question">Is this tool free to use?</span>
+                <p>Yes, this Line Break Remover is 100% free to use for unlimited conversions.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-question">Does this tool store my data?</span>
+                <p>No. All processing happens inside your web browser using JavaScript. No text is sent to our servers, ensuring complete privacy.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-question">Can I use this for code?</span>
+                <p>Absolutely. It is excellent for flattening CSS, JavaScript, or SQL code into a single line.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-question">Does it remove blank lines?</span>
+                <p>Yes, the tool treats blank lines as line breaks and will remove or replace them according to your selected setting.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-question">What is the difference between LF and CRLF?</span>
+                <p>LF (Line Feed) is used by Linux/Mac, while CRLF (Carriage Return + Line Feed) is used by Windows. This tool handles both types automatically.</p>
+            </div>
+        </section>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 1px solid #e5e7eb;">
+
+        <section id="privacy" class="legal-section">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: 30/12/2025</strong></p>
+            <p>Your privacy is important to us. This Privacy Policy explains how we handle your data when you use the Line Break Remover tool.</p>
+            <p><strong>1. Data Collection:</strong> This tool operates as a client-side application. The text you input is processed entirely within your web browser using JavaScript. We do not transmit, store, or save your input data on any server.</p>
+            <p><strong>2. Cookies:</strong> We may use cookies to improve user experience. Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to your website or other websites.</p>
+            <p><strong>3. Third-Party Advertising:</strong> We use Google AdSense to display advertisements. Google's use of advertising cookies enables it and its partners to serve ads to your users based on their visit to your sites and/or other sites on the Internet. Users may opt-out of personalized advertising by visiting Ad Settings.</p>
+            <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to collect anonymous usage data (e.g., page views, time on site) to improve our service.</p>
+        </section>
+
+        <section id="terms" class="legal-section">
+            <h3>Terms and Conditions</h3>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> This tool is provided for personal and professional use. You may not use this tool for any illegal activities.</p>
+            <p><strong>2. Disclaimer of Warranties:</strong> The service is provided "as is". We make no warranties regarding the accuracy or reliability of the output generated by the tool.</p>
+            <p><strong>3. Limitation of Liability:</strong> We shall not be liable for any damages arising out of the use or inability to use this tool.</p>
+            <p><strong>4. Modifications:</strong> We reserve the right to modify these terms at any time.</p>
+        </section>
+
+        <section id="disclaimer" class="legal-section">
+            <h3>Disclaimer</h3>
+            <p>The Line Break Remover tool is provided for informational and utility purposes only. While we strive for accuracy, automation tools may occasionally produce unexpected results depending on input encoding. Users should verify the output before using it in critical production environments. The website owner is not responsible for any data loss or formatting errors resulting from the use of this tool.</p>
+        </section>
+    </div>
+
+    
+
+    <script>
+        // CORE LOGIC
+        function processText() {
+            const input = document.getElementById('input').value;
+            const outputField = document.getElementById('output');
+            const message = document.getElementById('message');
+            
+            if (!input) {
+                message.textContent = "Please enter some text first.";
+                message.className = "error";
+                setTimeout(() => { message.textContent = ""; }, 3000);
+                return;
+            }
+
+            const mode = document.querySelector('input[name="mode"]:checked').value;
+            let result = "";
+
+            // Regex looks for \r\n, \n, or \r globally
+            const lineBreakRegex = /(\r\n|\n|\r)/gm;
+
+            if (mode === 'nospace') {
+                result = input.replace(lineBreakRegex, "");
+            } else if (mode === 'space') {
+                // Replace with space, but avoid double spaces if logic requires distinct handling
+                // Using simple replace with space here
+                result = input.replace(lineBreakRegex, " ");
+            } else if (mode === 'comma') {
+                result = input.replace(lineBreakRegex, ", ");
+            }
+
+            // Clean up potential double spaces created by replacement if originally there was trailing space
+            // result = result.replace(/\s\s+/g, ' '); 
+
+            outputField.value = result;
+            message.textContent = "Line breaks removed successfully!";
+            message.className = "success";
+            setTimeout(() => { message.textContent = ""; }, 3000);
+        }
+
+        function copyText() {
+            const outputField = document.getElementById('output');
+            const message = document.getElementById('message');
+
+            if (!outputField.value) {
+                message.textContent = "Nothing to copy yet.";
+                message.className = "error";
+                setTimeout(() => { message.textContent = ""; }, 3000);
+                return;
+            }
+
+            // Select text
+            outputField.select();
+            outputField.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy
+            try {
+                navigator.clipboard.writeText(outputField.value).then(() => {
+                    message.textContent = "Copied to clipboard!";
+                    message.className = "success";
+                    setTimeout(() => { message.textContent = ""; }, 3000);
+                });
+            } catch (err) {
+                // Fallback for older browsers
+                document.execCommand('copy');
+                message.textContent = "Copied to clipboard!";
+                message.className = "success";
+            }
+        }
+
+        // Auto-update copyright year
+        document.querySelector('.copyright').innerHTML = `&copy; ${new Date().getFullYear()} Line Break Remover. All rights reserved.`;
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

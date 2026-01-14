@@ -1,0 +1,4 @@
+python-telegram-bot==13.15
+PyPDF2
+pdf2image
+pillow

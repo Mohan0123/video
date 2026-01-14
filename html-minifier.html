@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online HTML Minifier tool by VIP Tool. Compress your HTML code, remove comments and whitespace to improve website load speed and SEO rankings.">
+    <meta name="keywords" content="html minifier, html compressor, minify html code, optimize website speed, html cleaner, online code tools">
+    <title>HTML Minifier - Compress & Optimize Code | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "HTML Minifier",
+      "url": "https://viptool.online/html-minifier",
+      "description": "A professional tool to minify HTML code by removing whitespace and comments, helping to reduce file size and increase website loading speed.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "HTML Minifier"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What does an HTML Minifier do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An HTML minifier compresses your code by removing unnecessary characters like spaces, newlines, and comments without affecting the functionality of the page."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does minifying HTML improve SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, minifying reduces file size, which leads to faster page load speeds. Google considers page speed as a ranking factor, so it helps with SEO."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is it safe to use this tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. This tool runs entirely in your browser (client-side). Your code is never sent to any server, ensuring total privacy."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does this tool remove comments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, by default, our HTML Minifier removes standard HTML comments to save maximum space."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this tool free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, VIP Tool provides this HTML Minifier completely free of charge for unlimited use."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="ad-section" id="ad-top">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <h1>HTML Minifier</h1>
+        <p class="subtitle">Compress your HTML code instantly. Remove whitespace, comments, and reduce file size for better SEO.</p>
+
+        <div class="tool-card">
+            <div class="editor-container">
+                
+                <div class="input-group">
+                    <label for="inputHtml">
+                        <span>Input HTML</span>
+                        <span id="inputSize">0 Bytes</span>
+                    </label>
+                    <textarea id="inputHtml" placeholder="Paste your HTML code here..."></textarea>
+                </div>
+
+                <div class="controls">
+                    <div class="options">
+                        <label style="font-weight: normal; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;">
+                            <input type="checkbox" id="removeComments" checked> Remove Comments
+                        </label>
+                    </div>
+                    <div class="action-btns">
+                        <button class="btn-primary" onclick="minifyHTML()">Minify Code</button>
+                        <button class="btn-reset" onclick="resetTool()">Reset</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="outputHtml">
+                        <span>Minified Output</span>
+                        <span id="outputSize">0 Bytes</span>
+                    </label>
+                    <textarea id="outputHtml" readonly placeholder="Minified code will appear here..."></textarea>
+                </div>
+                
+                <div class="stats-bar" id="statsBar" style="display: none;">
+                    <div class="stat-item">Original: <span id="statOriginal">0 B</span></div>
+                    <div class="stat-item">Minified: <span id="statMinified">0 B</span></div>
+                    <div class="stat-item">Savings: <span id="statSavings" style="color: var(--success-color);">0%</span></div>
+                </div>
+
+                <div style="text-align: right;">
+                    <button class="btn-secondary" onclick="copyOutput()">ðŸ“‹ Copy to Clipboard</button>
+                </div>
+
+            </div>
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Developer Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/css-minifier" class="related-link-item">CSS Minifier</a>
+                <a href="https://viptool.online/js-minifier" class="related-link-item">JS Minifier</a>
+                <a href="https://viptool.online/word-counter" class="related-link-item">Word Counter</a>
+                <a href="https://viptool.online/character-counter" class="related-link-item">Character Counter</a>
+                <a href="https://viptool.online/case-converter" class="related-link-item">Case Converter</a>
+                <a href="https://viptool.online/xml-formatter" class="related-link-item">XML Formatter</a>
+            </div>
+        </section>
+
+        <div class="ad-section" id="ad-mid">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <div class="content-section">
+            <h2>How to Use the HTML Minifier</h2>
+            <p>Optimizing your website's code is crucial for performance. Follow these simple steps to compress your HTML:</p>
+            <ol>
+                <li><strong>Paste Code:</strong> Copy your raw HTML code and paste it into the "Input HTML" box.</li>
+                <li><strong>Configure:</strong> Ensure the "Remove Comments" checkbox is selected if you want to strip out HTML comments (recommended for production).</li>
+                <li><strong>Minify:</strong> Click the <strong>Minify Code</strong> button. The tool will instantly process your code.</li>
+                <li><strong>Copy:</strong> The compressed code will appear in the output box. Click "Copy to Clipboard" and use it in your project.</li>
+            </ol>
+
+            <h2>Why Minify HTML Code?</h2>
+            <p>Minification is the process of removing unnecessary characters from source code without changing its functionality. Using a <a href="https://viptool.online/tools" style="color: var(--primary-color);">web developer tool</a> like this offers several benefits:</p>
+            <ul>
+                <li><strong>Faster Load Times:</strong> Smaller file sizes mean your website loads faster for visitors, improving User Experience (UX).</li>
+                <li><strong>Better SEO:</strong> Search engines like Google prioritize fast-loading websites. Minifying HTML is a standard technical SEO practice.</li>
+                <li><strong>Bandwidth Savings:</strong> Reduced data transfer lowers hosting costs and benefits users on mobile data connections.</li>
+            </ul>
+
+            <h3>Does this tool remove comments?</h3>
+            <p>Yes, by default, our tool removes standard HTML comments (<code>&lt;!-- comment --&gt;</code>). This significantly reduces file size as comments are for developers and not needed by the browser to render the page.</p>
+
+            <h2>Safe and Client-Side Processing</h2>
+            <p>Privacy is our priority. Unlike server-side compressors, the <strong>VIP Tool HTML Minifier</strong> runs entirely in your browser using JavaScript. This means your proprietary code is never uploaded to our servers or stored anywhere. You can safely minify sensitive code without worry.</p>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid var(--border-color);">
+            
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <h3>1. What is the difference between minification and compression?</h3>
+            <p>Minification removes characters (spaces, comments) from the code itself. Compression (like GZIP) compresses the file on the server level before sending it to the browser. Both should be used together for maximum speed.</p>
+
+            <h3>2. Will minifying break my website?</h3>
+            <p>Generally, no. However, if your code relies on specific whitespace (e.g., inside <code>&lt;pre&gt;</code> tags) or has missing semicolons in inline scripts, issues can occur. Always backup your original file before using minified code.</p>
+
+            <h3>3. Can I reverse the minification?</h3>
+            <p>Minification is destructive regarding formatting. While the code works the same, you will lose the readable indentation. You would need an "HTML Formatter" or "Beautifier" tool to make it readable again.</p>
+
+        </div>
+
+        <div class="ad-section" id="ad-bottom">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <div class="content-section" style="margin-top: 30px; background: #fafafa;">
+            <h3>Privacy Policy</h3>
+            <p>At VIP Tool, we value your privacy. This HTML Minifier operates solely on the client-side. We do not collect, save, or transmit any code you input. We use third-party services like Google AdSense and Google Analytics, which may use cookies to serve personalized ads and analyze traffic.</p>
+
+            <h3>Terms & Conditions</h3>
+            <p>This tool is provided "as is" without warranties of any kind. While we strive for accuracy, VIP Tool is not liable for any errors or damages resulting from the use of this tool. Users are responsible for testing minified code before deploying it to production.</p>
+
+            <h3>Disclaimer</h3>
+            <p>VIP Tool is not affiliated with any official software organizations. This is a free utility tool for developers and students.</p>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    // --- Minifier Logic ---
+    function minifyHTML() {
+        const input = document.getElementById('inputHtml').value;
+        const removeComments = document.getElementById('removeComments').checked;
+        
+        if (!input.trim()) {
+            alert("Please enter some HTML code first.");
+            return;
+        }
+
+        let output = input;
+
+        // 1. Remove Comments if checked
+        if (removeComments) {
+            output = output.replace(//g, "");
+        }
+
+        // 2. Remove whitespace between tags
+        // This regex looks for > followed by whitespace followed by <
+        output = output.replace(/>\s+</g, "><");
+
+        // 3. Normalize whitespace (optional but risky for <pre>, basic approach here)
+        // Safer approach: replace multiple spaces with single space, remove newlines
+        // Be careful with content inside tags.
+        // A safe client-side approach for general HTML:
+        output = output.replace(/\s{2,}/g, ' ')  // Collapse multiple spaces
+                       .replace(/\n/g, '')       // Remove newlines
+                       .replace(/>\s+</g, "><"); // Tighten tags again just in case
+
+        document.getElementById('outputHtml').value = output;
+        
+        updateStats(input.length, output.length);
+    }
+
+    // --- Stats Logic ---
+    function updateStats(original, minified) {
+        document.getElementById('statsBar').style.display = 'flex';
+        
+        document.getElementById('statOriginal').textContent = formatBytes(original);
+        document.getElementById('statMinified').textContent = formatBytes(minified);
+        
+        if (original > 0) {
+            const savings = ((original - minified) / original) * 100;
+            document.getElementById('statSavings').textContent = savings.toFixed(2) + "%";
+        } else {
+            document.getElementById('statSavings').textContent = "0%";
+        }
+    }
+
+    function formatBytes(bytes) {
+        if (bytes === 0) return '0 B';
+        const k = 1024;
+        const sizes = ['B', 'KB', 'MB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    // --- Utility Functions ---
+    function resetTool() {
+        document.getElementById('inputHtml').value = '';
+        document.getElementById('outputHtml').value = '';
+        document.getElementById('statsBar').style.display = 'none';
+        document.getElementById('inputSize').textContent = "0 Bytes";
+        document.getElementById('outputSize').textContent = "0 Bytes";
+    }
+
+    function copyOutput() {
+        const output = document.getElementById('outputHtml');
+        if (!output.value) return;
+        
+        output.select();
+        document.execCommand('copy'); // Fallback for older browsers
+        // Modern API
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(output.value);
+        }
+        
+        const btn = document.querySelector('button[onclick="copyOutput()"]');
+        const originalText = btn.innerText;
+        btn.innerText = "âœ… Copied!";
+        setTimeout(() => btn.innerText = originalText, 2000);
+    }
+
+    // --- Input Size Listener ---
+    document.getElementById('inputHtml').addEventListener('input', function() {
+        document.getElementById('inputSize').textContent = formatBytes(this.value.length);
+    });
+
+    // --- AdSense Auto-Visibility Logic ---
+    window.addEventListener('load', function() {
+        const adSections = document.querySelectorAll('.ad-section');
+        
+        adSections.forEach(section => {
+            // Observer to watch for ad injections
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (section.children.length > 1 || section.offsetHeight > 10) {
+                        section.classList.add('visible');
+                        observer.disconnect();
+                    }
+                });
+            });
+
+            observer.observe(section, { childList: true, subtree: true, attributes: true });
+
+            // Initial check
+            const ins = section.querySelector('ins');
+            if (ins && (ins.getAttribute('data-ad-status') === 'filled' || section.offsetHeight > 10)) {
+                section.classList.add('visible');
+            }
+        });
+    });
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

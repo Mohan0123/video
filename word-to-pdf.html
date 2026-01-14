@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Word to PDF Converter by VIP Tool. Convert DOCX to PDF with original fonts and high definition quality. Direct download.">
+    <title>Word to PDF Converter - HD & Original Fonts | VIP Tool</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Word to PDF Converter",
+      "url": "https://viptool.online/word-to-pdf",
+      "description": "Convert Microsoft Word (.docx) documents to PDF format directly in your browser. Maintains original font style and layout.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Word to PDF"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Does this tool keep the original fonts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we prioritize standard Microsoft fonts (Calibri, Arial, Times New Roman) to ensure the PDF looks as close to the original Word document as possible."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is the PDF high quality?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the tool generates PDFs at 300 DPI (High Definition) ensuring crisp text and clear images."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="ad-section" id="ad-top">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <h1>Word to PDF Converter (HD)</h1>
+        <p class="subtitle">Securely convert DOCX files to PDF. Preserves original layout and fonts.</p>
+
+        <div class="tool-card">
+            
+            <div class="upload-area" onclick="document.getElementById('docxInput').click()">
+                <input type="file" id="docxInput" class="file-input" accept=".docx" onchange="processFile(event)">
+                <div class="upload-label">
+                    ðŸ“‚ Click to Upload .docx File
+                </div>
+                <p style="font-size:0.9rem; color:#666; margin-top:10px;">or drag and drop here</p>
+            </div>
+
+            <div id="loading" style="display:none; color:var(--primary-color); font-weight:bold; margin:20px 0;">
+                Processing Document...<br>
+                <span style="font-size:0.8rem; color:#666;">Applying HD Styles...</span>
+            </div>
+
+            <div class="action-bar" id="actionBar">
+                <button class="btn-primary" id="downloadBtn" onclick="downloadPDF()">Download PDF File</button>
+                <button class="btn-secondary" onclick="resetTool()">Convert Another</button>
+            </div>
+
+            <div class="preview-container" id="previewContainer">
+                <div style="color:white; margin-bottom:10px; text-align:center;">Preview:</div>
+                <div class="document-page" id="documentOutput">
+                    </div>
+            </div>
+
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/pdf-to-word" class="related-link-item">PDF to Word Converter</a>
+                <a href="https://viptool.online/image-to-pdf" class="related-link-item">Image to PDF</a>
+                <a href="https://viptool.online/word-counter" class="related-link-item">Word Counter</a>
+                <a href="https://viptool.online/character-counter" class="related-link-item">Character Counter</a>
+                <a href="https://viptool.online/case-converter" class="related-link-item">Text Case Converter</a>
+                <a href="https://viptool.online/merge-pdf" class="related-link-item">Merge PDF</a>
+            </div>
+        </section>
+
+        <div class="ad-section" id="ad-mid">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <div class="content-section">
+            <h2>How to Convert Word to PDF with Original Fonts</h2>
+            <p>The VIP Tool HD Word to PDF Converter utilizes advanced rendering to ensure your document looks exactly like the original. We prioritize using standard fonts like <strong>Calibri</strong> and <strong>Arial</strong>.</p>
+            <ol>
+                <li><strong>Upload:</strong> Click the upload box and select your <code>.docx</code> file.</li>
+                <li><strong>Format:</strong> Our engine maps your document styles to an HD canvas (300 DPI).</li>
+                <li><strong>Download:</strong> Click "Download PDF File" to get a high-quality file.</li>
+            </ol>
+
+            <h2>Why Choose VIP Tool HD Converter?</h2>
+            <p>Most online converters create blurry text or lose your font choices. VIP Tool prioritizes <a href="https://viptool.online/privacy-policy" style="color:var(--primary-color);">quality and security</a>.</p>
+            <ul>
+                <li><strong>HD Text:</strong> We render PDFs at 300 DPI for crystal clear printing.</li>
+                <li><strong>Font Matching:</strong> We specifically style the output to match Microsoft Word's default look.</li>
+                <li><strong>Client-Side Security:</strong> Your files never leave your device.</li>
+            </ul>
+
+            <div class="ad-section" id="ad-bottom">
+                <div class="ad-label">Advertisement</div>
+                </div>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, user privacy is paramount. This Word to PDF tool operates entirely client-side. We do not collect, store, or transmit your files. Google AdSense and Analytics are used on this page to serve ads and monitor traffic.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>This tool is provided for informational and utility purposes. While we strive for accuracy, VIP Tool is not responsible for any formatting loss or errors during conversion. Users are responsible for verifying the final PDF output.</p>
+
+                <h3>Disclaimer</h3>
+                <p>VIP Tool is not affiliated with Microsoft. "Word" is a registered trademark of Microsoft Corporation. This tool is an independent utility.</p>
+            </div>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    // Logic to handle DOCX to HTML conversion
+    function processFile(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        document.getElementById('loading').style.display = 'block';
+        document.querySelector('.upload-area').style.display = 'none';
+
+        const reader = new FileReader();
+        reader.onload = function(loadEvent) {
+            const arrayBuffer = loadEvent.target.result;
+
+            // Convert DOCX to HTML
+            mammoth.convertToHtml({arrayBuffer: arrayBuffer})
+                .then(displayResult)
+                .catch(handleError);
+        };
+        reader.readAsArrayBuffer(file);
+    }
+
+    function displayResult(result) {
+        document.getElementById('loading').style.display = 'none';
+        const output = document.getElementById('documentOutput');
+        
+        // Inject HTML
+        output.innerHTML = result.value;
+        
+        // Show Controls
+        document.getElementById('actionBar').style.display = 'flex';
+        document.getElementById('previewContainer').style.display = 'block';
+    }
+
+    function handleError(err) {
+        document.getElementById('loading').style.display = 'none';
+        document.querySelector('.upload-area').style.display = 'block';
+        alert("Error reading file: " + err.message + ". Please ensure it is a valid .docx file.");
+    }
+
+    // HD PDF GENERATION LOGIC (Scale 3 + Smart Layout)
+    function downloadPDF() {
+        const element = document.getElementById('documentOutput');
+        const btn = document.getElementById('downloadBtn');
+        const originalText = btn.innerText;
+
+        btn.innerText = "Generating HD PDF...";
+        btn.disabled = true;
+
+        // Ensure images are fully loaded before generating PDF
+        const images = element.getElementsByTagName('img');
+        let loaded = 0;
+        
+        if(images.length === 0) {
+            executePrint();
+        } else {
+            for(let i=0; i<images.length; i++) {
+                if(images[i].complete) {
+                    loaded++;
+                    if(loaded === images.length) executePrint();
+                } else {
+                    images[i].onload = () => {
+                        loaded++;
+                        if(loaded === images.length) executePrint();
+                    };
+                }
+            }
+        }
+
+        function executePrint() {
+            const opt = {
+                margin:       [10, 10, 10, 10], 
+                filename:     'VIPTool_Document_HD.pdf',
+                image:        { type: 'jpeg', quality: 1.0 }, // Max Quality
+                html2canvas:  { 
+                    scale: 3, // 300 DPI for HD Text
+                    useCORS: true,
+                    letterRendering: true,
+                    scrollY: 0
+                },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                btn.innerText = originalText;
+                btn.disabled = false;
+            }).catch((err) => {
+                console.error(err);
+                alert("Error generating PDF. Please try again.");
+                btn.innerText = originalText;
+                btn.disabled = false;
+            });
+        }
+    }
+
+    function resetTool() {
+        document.getElementById('docxInput').value = '';
+        document.getElementById('documentOutput').innerHTML = '';
+        document.getElementById('actionBar').style.display = 'none';
+        document.getElementById('previewContainer').style.display = 'none';
+        document.querySelector('.upload-area').style.display = 'block';
+    }
+
+    // ADSENSE AUTO-VISIBILITY
+    window.addEventListener('load', function() {
+        const adSections = document.querySelectorAll('.ad-section');
+        adSections.forEach(section => {
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (section.children.length > 1 || section.offsetHeight > 20) {
+                        section.classList.add('visible');
+                        observer.disconnect(); 
+                    }
+                });
+            });
+            observer.observe(section, { childList: true, subtree: true, attributes: true });
+        });
+    });
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

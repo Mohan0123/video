@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <link rel="canonical" href="https://viptool.online/text-repeater">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Text Repeater Tool. Repeat text, emojis, and messages up to 10,000 times instantly. Copy and share to WhatsApp, Telegram, and social media. Fast, secure, and mobile-friendly.">
+    <meta name="robots" content="index, follow">
+    <title>Text Repeater Tool - Repeat Text & Emojis Instantly | Free Online Utility</title>
+    
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="ad-slot">
+            <p>Advertisement Space</p>
+        </div>
+
+        <section class="tool-card" id="tool">
+            <div class="input-group">
+                <label for="inputText">Enter Text to Repeat:</label>
+                <textarea id="inputText" placeholder="Type a word, sentence, or emoji here..."></textarea>
+                <p class="error-msg" id="inputError">Please enter some text to repeat.</p>
+            </div>
+
+            <div class="controls-row">
+                <div class="input-group">
+                    <label for="repeatCount">Repetitions (max 10,000):</label>
+                    <input type="number" id="repeatCount" value="10" min="1" max="10000">
+                </div>
+                <div class="input-group">
+                    <label for="separator">Separator:</label>
+                    <select id="separator">
+                        <option value="newline">New Line</option>
+                        <option value="space">Space</option>
+                        <option value="period">Period (.)</option>
+                        <option value="comma">Comma (,)</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button onclick="repeatText()" class="btn-primary">Repeat Text</button>
+                <button onclick="copyText()" class="btn-secondary">Copy Result</button>
+                <button onclick="clearFields()" class="btn-outline">Clear</button>
+            </div>
+
+            <div class="input-group output-wrapper">
+                <label for="outputText">Result:</label>
+                <textarea id="outputText" readonly placeholder="Repeated text will appear here..."></textarea>
+            </div>
+        </section>
+
+        <div class="ad-slot">
+            <p>Advertisement Space</p>
+        </div>
+
+        <article class="content-section">
+            <h2>How to Use the Text Repeater Tool</h2>
+            <ol>
+                <li><strong>Enter Your Text:</strong> Type the word, phrase, sentence, or emoji you want to duplicate in the first box.</li>
+                <li><strong>Set Repetitions:</strong> Choose how many times you want the text to be repeated (e.g., 100, 1000).</li>
+                <li><strong>Choose Separator:</strong> Decide if you want a new line, a space, or a comma between repetitions.</li>
+                <li><strong>Click Repeat:</strong> Hit the blue button to generate the output instantly.</li>
+                <li><strong>Copy & Share:</strong> Click "Copy Result" to save it to your clipboard and paste it anywhere!</li>
+            </ol>
+
+            <h3>Why Use a Text Repeater?</h3>
+            <p>A Text Repeater is a handy utility for various digital needs. While often used for fun, it serves practical purposes too:</p>
+            <ul>
+                <li><strong>Social Media Emphasis:</strong> Make your point stand out in comments or captions by repeating key phrases.</li>
+                <li><strong>Pranks & Fun:</strong> Send long message bombs to friends on WhatsApp or Telegram (responsibly!).</li>
+                <li><strong>Testing Data:</strong> Developers often use repeated strings to test how apps handle large amounts of text or overflow issues.</li>
+                <li><strong>Placeholder Text:</strong> Designers can generate filler text quickly without relying on standard Lorem Ipsum.</li>
+            </ul>
+
+            <h2>Benefits of Our Tool</h2>
+            <p>This online utility is designed to be fast, secure, and user-friendly. Unlike other tools that might crash your browser with heavy scripts, our text repeater is lightweight.</p>
+            <ul>
+                <li><strong>100% Free:</strong> No hidden costs or subscriptions.</li>
+                <li><strong>Client-Side Processing:</strong> Your text never leaves your browser. We prioritize your privacy.</li>
+                <li><strong>Mobile Compatible:</strong> Works perfectly on iPhones, Androids, Tablets, and Desktops.</li>
+                <li><strong>Emoji Support:</strong> Fully supports all emoji characters for fun messaging.</li>
+            </ul>
+        </article>
+
+        <section class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Is this tool free to use? <span>â–¼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes, this Text Repeater is completely free to use for personal and commercial purposes.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Is there a limit to how many times I can repeat text? <span>â–¼</span>
+                </div>
+                <div class="faq-answer">
+                    We have set a soft limit of 10,000 repetitions to prevent your browser from freezing. This is sufficient for almost all use cases.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Does this tool work on WhatsApp? <span>â–¼</span>
+                </div>
+                <div class="faq-answer">
+                    Yes! You can generate the text here, click the "Copy" button, and paste it directly into WhatsApp, Telegram, Instagram, or any other messaging app.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Do you save the text I type? <span>â–¼</span>
+                </div>
+                <div class="faq-answer">
+                    No. All processing happens locally in your web browser via JavaScript. No data is sent to our servers.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Can I repeat emojis? <span>â–¼</span>
+                </div>
+                <div class="faq-answer">
+                    Absolutely. The tool supports all Unicode characters, including emojis, special symbols, and foreign languages.
+                </div>
+            </div>
+        </section>
+
+        <section id="privacy" class="legal-section">
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated: 30/12/2025</strong></p>
+            
+            <h3>1. Information Collection</h3>
+            <p>This Text Repeater tool operates as a client-side application. We do not collect, store, or transmit any text you enter into the tool inputs to our servers. All data processing occurs locally on your device.</p>
+            
+            <h3>2. Cookies and Web Beacons</h3>
+            <p>Like any other website, we use 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+            
+            <h3>3. Google DoubleClick DART Cookie</h3>
+            <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy.</p>
+            
+            <h3>4. Third-Party Privacy Policies</h3>
+            <p>Our Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information.</p>
+        </section>
+
+        <section id="terms" class="legal-section">
+            <h2>Terms and Conditions</h2>
+            <p>By accessing this website, you agree to be bound by these website Terms and Conditions of Use, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.</p>
+            
+            <h3>1. Use License</h3>
+            <p>Permission is granted to use this tool for personal or commercial transitory viewing only. This is the grant of a license, not a transfer of title.</p>
+            
+            <h3>2. Usage Restrictions</h3>
+            <p>You agree not to use this tool for spamming, harassment, or creating content that violates the terms of service of third-party platforms (such as WhatsApp, Facebook, etc.). The user assumes full responsibility for how the generated content is used.</p>
+            
+            <h3>3. Modifications</h3>
+            <p>We may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.</p>
+        </section>
+
+        <section id="disclaimer" class="legal-section">
+            <h2>Disclaimer</h2>
+            <p>The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+            <p>Further, we do not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</p>
+        </section>
+
+    </main>
+
+    
+
+    <div id="toast">Text copied to clipboard!</div>
+
+    <script>
+        // DOM Elements
+        const inputEl = document.getElementById('inputText');
+        const countEl = document.getElementById('repeatCount');
+        const separatorEl = document.getElementById('separator');
+        const outputEl = document.getElementById('outputText');
+        const errorEl = document.getElementById('inputError');
+
+        // Main Repeat Function
+        function repeatText() {
+            const text = inputEl.value;
+            let count = parseInt(countEl.value);
+            const separatorType = separatorEl.value;
+
+            // Validation
+            if (!text) {
+                errorEl.style.display = 'block';
+                inputEl.focus();
+                return;
+            } else {
+                errorEl.style.display = 'none';
+            }
+
+            // Limit check
+            if (count > 10000) count = 10000;
+            if (count < 1) count = 1;
+
+            // Determine Separator
+            let separator = '';
+            switch (separatorType) {
+                case 'newline':
+                    separator = '\n';
+                    break;
+                case 'space':
+                    separator = ' ';
+                    break;
+                case 'period':
+                    separator = '. ';
+                    break;
+                case 'comma':
+                    separator = ', ';
+                    break;
+                default:
+                    separator = '';
+            }
+
+            // Generate Output
+            // Using Array.from for efficiency with large strings
+            let result = '';
+            if (separator === '') {
+                result = text.repeat(count);
+            } else {
+                result = Array(count).fill(text).join(separator);
+            }
+
+            outputEl.value = result;
+            
+            // Scroll to output
+            document.querySelector('.output-wrapper').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Copy Function
+        function copyText() {
+            const outputText = outputEl.value;
+            
+            if (!outputText) return;
+
+            // Select the text field
+            outputEl.select();
+            outputEl.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy using Clipboard API
+            navigator.clipboard.writeText(outputText).then(() => {
+                showToast();
+            }).catch(err => {
+                // Fallback
+                document.execCommand('copy');
+                showToast();
+            });
+        }
+
+        // Clear Function
+        function clearFields() {
+            inputEl.value = '';
+            outputEl.value = '';
+            countEl.value = 10;
+            errorEl.style.display = 'none';
+        }
+
+        // Toast Notification
+        function showToast() {
+            const toast = document.getElementById("toast");
+            toast.className = "show";
+            setTimeout(function(){ 
+                toast.className = toast.className.replace("show", ""); 
+            }, 3000);
+        }
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const parent = element.parentElement;
+            parent.classList.toggle('active');
+            
+            // Rotate arrow
+            const span = element.querySelector('span');
+            if (parent.classList.contains('active')) {
+                span.textContent = 'â–²';
+            } else {
+                span.textContent = 'â–¼';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

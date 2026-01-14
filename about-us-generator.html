@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free About Us Generator by VIP Tool. Create professional 'About Us' pages for your website, blog, or store. Get output in HTML code or Plain Text (Word format).">
+    <title>About Us Generator - Create Professional About Pages | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "About Us Generator",
+      "url": "https://viptool.online/about-us-generator",
+      "description": "Generate a professional 'About Us' page for your website instantly. Offers both HTML code and Plain Text output for MS Word.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "About Us Generator"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Can I get the About Us page in HTML?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our tool generates ready-to-use HTML code that you can paste directly into your website's source code or CMS."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I use this for MS Word?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, simply switch to the 'Plain Text' tab. This format is optimized for copying into Microsoft Word, Google Docs, or emails."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this generator free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the VIP Tool About Us Generator is 100% free to use."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Why is an About Us page important?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An About Us page builds trust with your visitors, explains your mission, and is often required for approval in ad networks like Google AdSense."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="ad-section" id="ad-top">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <h1>About Us Generator</h1>
+        <p class="subtitle">Create a professional "About Us" page for your website instantly. Get HTML and Word-ready text.</p>
+
+        <div class="tool-card">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="websiteName">Website Name</label>
+                    <input type="text" id="websiteName" placeholder="e.g. VIP Tool">
+                </div>
+                <div class="form-group">
+                    <label for="websiteType">Website Type</label>
+                    <select id="websiteType">
+                        <option value="Blog">Blog</option>
+                        <option value="Website">Website</option>
+                        <option value="E-commerce Store">E-commerce Store</option>
+                        <option value="Community">Community</option>
+                        <option value="Portfolio">Portfolio</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="niche">Specialty / Niche</label>
+                    <input type="text" id="niche" placeholder="e.g. Tech News, SEO Tools, Fashion">
+                </div>
+                <div class="form-group">
+                    <label for="email">Contact Email</label>
+                    <input type="email" id="email" placeholder="e.g. support@viptool.online">
+                </div>
+            </div>
+
+            <div class="action-bar">
+                <button class="btn-primary" onclick="generateAboutUs()">Generate About Us</button>
+                <button class="btn-secondary" onclick="resetForm()">Reset</button>
+            </div>
+
+            <div id="output-area">
+                <div class="tab-header">
+                    <button class="tab-btn active" id="tab-html" onclick="switchTab('html')">&lt;/&gt; HTML Code</button>
+                    <button class="tab-btn" id="tab-text" onclick="switchTab('text')">ðŸ“„ Plain Text (Word)</button>
+                </div>
+                
+                <textarea id="result-box" class="output-box" readonly placeholder="Your generated text will appear here..."></textarea>
+                
+                <div class="copy-row">
+                    <button class="btn-primary" onclick="copyToClipboard()">ðŸ“‹ Copy to Clipboard</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Legal Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/disclaimer-generator" class="related-link-item">Disclaimer Generator</a>
+                <a href="https://viptool.online/privacy-policy-generator" class="related-link-item">Privacy Policy Generator</a>
+                <a href="https://viptool.online/terms-and-conditions-generator" class="related-link-item">Terms & Conditions Generator</a>
+                <a href="https://viptool.online/sitemap-generator" class="related-link-item">XML Sitemap Generator</a>
+                <a href="https://viptool.online/robots.txt-generator" class="related-link-item">Robots.txt Generator</a>
+            </div>
+        </section>
+
+        <div class="ad-section" id="ad-mid">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <div class="content-section">
+            <h2>How to Use the About Us Generator</h2>
+            <p>Creating a compelling About Us page helps build trust with your audience and is often required for Google AdSense approval. We offer two output formats: HTML and Plain Text.</p>
+            <ol>
+                <li><strong>Enter Details:</strong> Fill in your Website Name, select the Website Type (e.g., Blog), your Niche (e.g., Tech News), and Contact Email.</li>
+                <li><strong>Generate:</strong> Click "Generate About Us".</li>
+                <li><strong>Choose Format:</strong>
+                    <ul>
+                        <li><strong>HTML Code:</strong> Use this for pasting directly into your website's source code or CMS (like WordPress Text editor).</li>
+                        <li><strong>Plain Text:</strong> Use this to copy and paste into <strong>MS Word</strong>, Google Docs, or a visual editor.</li>
+                    </ul>
+                </li>
+                <li><strong>Copy:</strong> Click "Copy to Clipboard" and use it on your site.</li>
+            </ol>
+
+            <h2>Why Your Website Needs an About Us Page</h2>
+            <p>An "About Us" page is one of the most visited pages on any website. It tells your visitors who you are and why they should trust you.</p>
+            <ul>
+                <li><strong>Builds Trust:</strong> Visitors are more likely to engage if they know who is behind the content.</li>
+                <li><strong>AdSense Requirement:</strong> Google checks for an About Us page to ensure the site is legitimate.</li>
+                <li><strong>Brand Identity:</strong> It allows you to share your mission and specialization (Niche).</li>
+            </ul>
+
+            <div class="ad-section" id="ad-bottom">
+                <div class="ad-label">Advertisement</div>
+                </div>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, user privacy is paramount. This About Us Generator operates entirely client-side. We do not collect, store, or transmit the data you enter. Google AdSense and Analytics are used on this page to serve ads and monitor traffic.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>This tool is provided "as-is" for informational purposes. The generated content is a template. VIP Tool is not responsible for how you use the generated text on your website.</p>
+
+                <h3>Disclaimer</h3>
+                <p>The content generated by this tool is a generic template. You should review and edit it to ensure it accurately reflects your specific business or website details.</p>
+            </div>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    let generatedHTML = "";
+    let generatedText = "";
+    let currentTab = "html";
+
+    function generateAboutUs() {
+        const websiteName = document.getElementById('websiteName').value.trim() || '[Website Name]';
+        const websiteType = document.getElementById('websiteType').value;
+        const niche = document.getElementById('niche').value.trim() || '[Niche/Topic]';
+        const email = document.getElementById('email').value.trim() || '[Email Address]';
+
+        if(document.getElementById('websiteName').value === "") {
+            alert("Please enter your Website Name.");
+            return;
+        }
+
+        // Generate HTML Version
+        generatedHTML = `<h2>About Us</h2>
+<p>Welcome to <strong>${websiteName}</strong>, your number one source for all things <strong>${niche}</strong>. We're dedicated to providing you the very best of ${niche}, with an emphasis on quality content, reliability, and user satisfaction.</p>
+
+<p>Founded in ${new Date().getFullYear()} by the ${websiteName} team, ${websiteName} has come a long way from its beginnings. When we first started out, our passion for ${niche} drove us to start this ${websiteType.toLowerCase()}.</p>
+
+<p>We hope you enjoy our ${websiteType === 'E-commerce Store' ? 'products' : 'content'} as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.</p>
+
+<p>Sincerely,<br>
+<strong>${websiteName}</strong></p>
+
+<h3>Contact Us</h3>
+<p>If you have any queries regarding the site, advertisement, or any other issue, please contact us at <strong>${email}</strong>.</p>`;
+
+        // Generate Plain Text Version (Better formatted for Word)
+        generatedText = `About Us
+
+Welcome to ${websiteName}, your number one source for all things ${niche}. We're dedicated to providing you the very best of ${niche}, with an emphasis on quality content, reliability, and user satisfaction.
+
+Founded in ${new Date().getFullYear()} by the ${websiteName} team, ${websiteName} has come a long way from its beginnings. When we first started out, our passion for ${niche} drove us to start this ${websiteType.toLowerCase()}.
+
+We hope you enjoy our ${websiteType === 'E-commerce Store' ? 'products' : 'content'} as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.
+
+Sincerely,
+${websiteName}
+
+Contact Us
+If you have any queries regarding the site, advertisement, or any other issue, please contact us at ${email}.`;
+
+        // Show result based on current tab
+        updateOutputBox();
+        document.getElementById('output-area').style.display = 'block';
+    }
+
+    function switchTab(type) {
+        currentTab = type;
+        
+        // Update Buttons
+        document.getElementById('tab-html').className = type === 'html' ? 'tab-btn active' : 'tab-btn';
+        document.getElementById('tab-text').className = type === 'text' ? 'tab-btn active' : 'tab-btn';
+        
+        // Update Content
+        updateOutputBox();
+    }
+
+    function updateOutputBox() {
+        const box = document.getElementById('result-box');
+        if (currentTab === 'html') {
+            box.value = generatedHTML;
+        } else {
+            box.value = generatedText;
+        }
+    }
+
+    function copyToClipboard() {
+        const box = document.getElementById('result-box');
+        box.select();
+        box.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(box.value).then(() => {
+            alert("Content copied to clipboard!");
+        }).catch(err => {
+            alert("Failed to copy. Please select manually.");
+        });
+    }
+
+    function resetForm() {
+        document.getElementById('websiteName').value = '';
+        document.getElementById('niche').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('output-area').style.display = 'none';
+        generatedHTML = "";
+        generatedText = "";
+        document.getElementById('result-box').value = "";
+    }
+
+    // AdSense Auto-Visibility Logic
+    window.addEventListener('load', function() {
+        const adSections = document.querySelectorAll('.ad-section');
+        adSections.forEach(section => {
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (section.children.length > 1 || section.offsetHeight > 20) {
+                        section.classList.add('visible');
+                        observer.disconnect(); 
+                    }
+                });
+            });
+            observer.observe(section, { childList: true, subtree: true, attributes: true });
+        });
+    });
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

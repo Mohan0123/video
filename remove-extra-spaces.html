@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online tool to remove extra spaces from text. Instantly clean up double spaces, tabs, and formatting errors. Perfect for coding, writing, and SEO.">
+    <meta name="keywords" content="remove extra spaces, text cleaner, remove whitespace, clean text online, SEO text tool, whitespace remover">
+    <meta name="author" content="Remove Extra Spaces Tool">
+    <meta name="robots" content="index, follow">
+    <title>Remove Extra Spaces - Free Online Text Cleaner Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Remove Extra Spaces",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "A free online tool to automatically remove extra spaces and standardize whitespace in text blocks."
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="ad-placeholder">Advertisement Space</div>
+
+        <section class="section tool-box" id="tool-interface">
+            <div class="input-group">
+                <label for="inputText">Paste your text here:</label>
+                <textarea id="inputText" placeholder="Paste text with extra    spaces,   tabs   or breaks here..."></textarea>
+                <div class="stats">
+                    <span id="charCountIn">Characters: 0</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-primary" onclick="removeSpaces()">Remove Extra Spaces</button>
+                <button class="btn btn-secondary" onclick="copyText()">Copy Result</button>
+                <button class="btn btn-outline" onclick="clearAll()">Clear</button>
+            </div>
+
+            <div class="input-group">
+                <label for="outputText">Cleaned Result:</label>
+                <textarea id="outputText" readonly placeholder="Your clean text will appear here..."></textarea>
+                <div class="stats">
+                    <span id="charCountOut">Characters: 0</span>
+                    <span id="statusMessage" style="color: var(--success-color); font-weight: bold; opacity: 0; transition: opacity 0.5s;">Copied!</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">Advertisement Space</div>
+
+        <article class="section">
+            <h2>How to Use This Tool</h2>
+            <ol>
+                <li><strong>Paste Text:</strong> Copy the text you want to clean and paste it into the top box.</li>
+                <li><strong>Click Process:</strong> Hit the "Remove Extra Spaces" button to execute the cleanup.</li>
+                <li><strong>Review:</strong> The tool will instantly merge multiple spaces into one and trim edges.</li>
+                <li><strong>Copy:</strong> Click "Copy Result" to add the clean text to your clipboard.</li>
+            </ol>
+        </article>
+
+        <article class="section">
+            <h2>Why Use an Extra Space Remover?</h2>
+            <ul>
+                <li><strong>Clean Code:</strong> Programmers can remove unnecessary whitespace to minify code or fix syntax errors.</li>
+                <li><strong>Better Formatting:</strong> Writers can fix accidental double-spacing in essays, emails, and articles.</li>
+                <li><strong>SEO Optimization:</strong> Search engines prefer clean content. Removing code bloat improves load speed.</li>
+                <li><strong>Data Processing:</strong> Analysts can normalize data entries before importing into Excel or SQL databases.</li>
+            </ul>
+        </article>
+
+        <article class="section">
+            <h2>The Importance of Text Hygiene in Digital Content</h2>
+            <p>In the digital age, text is the primary mode of communication. However, transferring text between different platforms (like PDF to Word, or websites to text editors) often results in formatting errors. The most common error is "extra spaces"â€”sequences of multiple space characters, tabs, or non-breaking spaces that disrupt the visual flow and technical structure of content.</p>
+            
+            <h3>Impact on SEO and User Experience</h3>
+            <p>Search Engine Optimization (SEO) isn't just about keywords; it's about the user experience. Large blocks of text with erratic spacing look unprofessional and are harder to read on mobile devices. Furthermore, excessive whitespace in HTML code increases the file size of a webpage, potentially slowing down load times. Since Google uses page speed as a ranking factor, keeping your text and code "lean" is essential.</p>
+
+            <h3>For Developers and Data Scientists</h3>
+            <p>For developers, extra spaces can cause strings to fail validation checks. "Hello World" is not the same as "Hello  World" in most programming languages. This tool acts as a sanitizer, ensuring that your string inputs are normalized before they are processed by your backend logic or database queries.</p>
+
+            <p>Whether you are a student formatting a thesis, a developer minifying code, or a content creator polishing a blog post, the <strong>Remove Extra Spaces</strong> tool provides a fast, client-side solution that guarantees your text is neat, professional, and ready for publication.</p>
+        </article>
+
+        <article class="section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">1. Is this tool free?</div>
+                <div class="faq-answer">Yes, this tool is 100% free to use for unlimited text processing.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">2. Does it remove line breaks?</div>
+                <div class="faq-answer">This specific mode focuses on horizontal spacing (multiple spaces become one). Line breaks remain unless they are composed entirely of empty whitespace.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">3. Is my data safe?</div>
+                <div class="faq-answer">Absolutely. The processing happens entirely in your browser using JavaScript. No text is sent to our servers.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">4. Can I use this on mobile?</div>
+                <div class="faq-answer">Yes, the design is fully responsive and works on smartphones and tablets.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">5. Does it remove tabs?</div>
+                <div class="faq-answer">Yes, tabs are converted into single spaces to ensure consistent formatting.</div>
+            </div>
+        </article>
+
+        <div class="ad-placeholder">Advertisement Space</div>
+
+        <section id="privacy" class="legal-section">
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated: 30/12/2025</strong></p>
+            <p>Your privacy is important to us. This Privacy Policy explains how "Remove Extra Spaces" collects, uses, and protects your information.</p>
+            <p><strong>1. Data Collection:</strong> We do not store any text you input into the tool on our servers. All processing is done client-side within your browser.</p>
+            <p><strong>2. Cookies:</strong> We may use cookies to analyze website traffic and optimize your website experience. Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to your website or other websites.</p>
+            <p><strong>3. Third-Party Advertising:</strong> We use Google AdSense to display ads. Google's use of advertising cookies enables it and its partners to serve ads to your users based on their visit to your sites and/or other sites on the Internet. Users may opt out of personalized advertising by visiting Ads Settings.</p>
+            <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to understand how visitors interact with our site. This data is anonymized and aggregate.</p>
+        </section>
+
+        <section id="terms" class="legal-section">
+            <h2>Terms and Conditions</h2>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> This tool is provided for personal and professional use. You agree not to use it for any illegal activities.</p>
+            <p><strong>2. Accuracy:</strong> While we strive for perfection, we do not guarantee that the tool will be error-free. The user is responsible for verifying the output.</p>
+            <p><strong>3. Liability:</strong> "Remove Extra Spaces" and its owners shall not be held liable for any damages or data loss resulting from the use of this tool.</p>
+            <p><strong>4. Modifications:</strong> We reserve the right to modify these terms at any time.</p>
+        </section>
+
+        <section id="disclaimer" class="legal-section">
+            <h2>Disclaimer</h2>
+            <p>The tools and content on this website are provided "as is" without any warranties, express or implied. This tool does not constitute professional advice. Use at your own risk.</p>
+        </section>
+
+    </main>
+
+    
+
+    <script>
+        // DOM Elements
+        const inputText = document.getElementById('inputText');
+        const outputText = document.getElementById('outputText');
+        const charCountIn = document.getElementById('charCountIn');
+        const charCountOut = document.getElementById('charCountOut');
+        const statusMessage = document.getElementById('statusMessage');
+
+        // Logic to remove extra spaces
+        function removeSpaces() {
+            const raw = inputText.value;
+            
+            if (!raw) {
+                alert("Please enter some text first.");
+                return;
+            }
+
+            // Regex: Replace regex for whitespace (\s+) with single space
+            // Also trim leading/trailing
+            // Note: \s includes tabs and newlines. 
+            // If we want to keep newlines but fix spacing on lines:
+            // return raw.replace(/[ \t]+/g, ' ').trim(); 
+            // But "Remove Extra Spaces" usually implies full normalization:
+            
+            const clean = raw.replace(/\s+/g, ' ').trim();
+
+            outputText.value = clean;
+            updateStats();
+        }
+
+        // Copy to clipboard
+        async function copyText() {
+            if (!outputText.value) return;
+            
+            try {
+                await navigator.clipboard.writeText(outputText.value);
+                showToast();
+            } catch (err) {
+                // Fallback for older browsers
+                outputText.select();
+                document.execCommand('copy');
+                showToast();
+            }
+        }
+
+        // Clear all fields
+        function clearAll() {
+            inputText.value = '';
+            outputText.value = '';
+            updateStats();
+        }
+
+        // Update character counts
+        function updateStats() {
+            charCountIn.textContent = `Characters: ${inputText.value.length}`;
+            charCountOut.textContent = `Characters: ${outputText.value.length}`;
+        }
+
+        // Show brief success message
+        function showToast() {
+            statusMessage.style.opacity = '1';
+            setTimeout(() => {
+                statusMessage.style.opacity = '0';
+            }, 2000);
+        }
+
+        // Event Listeners for real-time stats
+        inputText.addEventListener('input', updateStats);
+    </script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

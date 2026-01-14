@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Character Counter by VIP Tool. Real-time word count, character count (with and without spaces), sentence count, and reading time estimator. Perfect for SEO and social media.">
+    <title>Character Counter - Free Word & Letter Count Tool | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Character Counter",
+      "url": "https://viptool.online/character-counter",
+      "description": "A free online tool to count characters, words, sentences, and paragraphs in real-time. Includes reading time estimation.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Character Counter"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Does this tool count spaces?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our Character Counter provides two metrics: 'Characters (with spaces)' and 'Characters (no spaces)' so you can choose the one you need."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is there a limit to how much text I can check?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, you can paste as much text as your browser memory allows. The tool works efficiently even with long essays or articles."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is my text saved on your server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. VIP Tool prioritizes privacy. All calculations happen in your browser using JavaScript. No text is sent to our servers."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How is reading time calculated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We estimate reading time based on an average reading speed of 200 words per minute."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does it work for other languages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the character counter works with any language supported by Unicode, including Hindi, Spanish, French, and more."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Character Counter</h1>
+        <p class="subtitle">Instant real-time analysis: counts characters, words, sentences, and paragraphs.</p>
+
+        <div class="tool-card">
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-value" id="charCount">0</span>
+                    <span class="stat-label">Characters</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-value" id="wordCount">0</span>
+                    <span class="stat-label">Words</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-value" id="sentenceCount">0</span>
+                    <span class="stat-label">Sentences</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-value" id="paragraphCount">0</span>
+                    <span class="stat-label">Paragraphs</span>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <textarea id="textInput" placeholder="Type or paste your text here..." oninput="updateCounts()"></textarea>
+            </div>
+
+            <div class="secondary-stats">
+                <span><strong>No Spaces:</strong> <span id="noSpacesCount">0</span> chars</span>
+                <span style="border-left: 1px solid #ccc; margin: 0 10px; display: inline-block; height: 15px;"></span>
+                <span><strong>Est. Reading Time:</strong> <span id="readingTime">0</span> min</span>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn-outline" onclick="copyText()">Copy Text</button>
+                <button class="btn-secondary" onclick="clearText()">Clear All</button>
+            </div>
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/word-counter" class="related-link-item">Word Counter</a>
+                <a href="https://viptool.online/case-converter-tool" class="related-link-item">Text Case Converter</a>
+                <a href="https://viptool.online/line-break-remover" class="related-link-item">Remove Line Breaks</a>
+                <a href="https://viptool.online/reverse-text" class="related-link-item">Reverse Text Generator</a>
+                <a href="https://viptool.online/google-fonts-pairings" class="related-link-item">Font Pairings</a>
+                <a href="https://viptool.online/meta-tag-analyzer" class="related-link-item">Meta Tag Analyzer</a>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement
+        </div>
+
+        <div class="content-section">
+            <h2>How to Use the Character Counter</h2>
+            <p>The VIP Tool Character Counter is a seamless, browser-based utility designed for writers, students, and social media managers. Here is how to make the most of it:</p>
+            <ol style="margin-bottom: 20px;">
+                <li><strong>Input Text:</strong> Simply type or paste your content into the large text box above.</li>
+                <li><strong>Real-Time Analysis:</strong> Watch the numbers update instantly. You don't need to press any "Calculate" button.</li>
+                <li><strong>Analyze Details:</strong> Check specific metrics like character count (for tweets), word count (for essays), or sentence count (for readability).</li>
+                <li><strong>Copy or Clear:</strong> Use the action buttons to quickly copy your refined text to the clipboard or clear the field to start over.</li>
+            </ol>
+
+            <h2>Why is Character Counting Important?</h2>
+            <p>In the digital age, length matters. Whether you are crafting the perfect social media post or adhering to strict academic guidelines, knowing your exact counts is essential.</p>
+            
+            <h3>Social Media Limits</h3>
+            <p>Different platforms have different restrictions. Our tool helps you stay within limits:</p>
+            <ul>
+                <li><strong>X (Twitter):</strong> 280 characters limit.</li>
+                <li><strong>Instagram Bio:</strong> 150 characters limit.</li>
+                <li><strong>LinkedIn Headlines:</strong> 120 characters limit (for optimal visibility).</li>
+                <li><strong>Google SEO Titles:</strong> ~60 characters is the sweet spot.</li>
+                <li><strong>Meta Descriptions:</strong> 150-160 characters recommended.</li>
+            </ul>
+
+            <div class="ad-placeholder">
+                Advertisement
+            </div>
+
+            <h2>Features of VIP Tool Character Counter</h2>
+            <p>Unlike basic counters, our <a href="https://viptool.online/tools" style="color:var(--primary-color);">text analysis tools</a> offer deeper insights:</p>
+            <ul>
+                <li><strong>Privacy First:</strong> Your text is processed 100% in your browser. We never store or upload your content.</li>
+                <li><strong>Space Calculation:</strong> We provide counts both with and without spaces, which is crucial for certain submission forms.</li>
+                <li><strong>Reading Time:</strong> Get an estimate of how long it will take an average reader to finish your text (based on 200 WPM).</li>
+                <li><strong>Sentence & Paragraph Tracking:</strong> Helps you monitor the structure and flow of your writing.</li>
+            </ul>
+
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <h3>1. What is the difference between character count and word count?</h3>
+            <p>A "character" refers to any single letter, number, space, or punctuation mark. A "word" is a group of characters separated by spaces. For example, "VIP Tool" is 2 words and 8 characters (including the space).</p>
+
+            <h3>2. Does this tool count emojis?</h3>
+            <p>Yes, emojis are counted as characters. Note that some complex emojis may count as multiple characters due to how Unicode encoding works.</p>
+
+            <h3>3. Is there a limit to the text size?</h3>
+            <p>There is no hard limit imposed by our tool. You can paste entire book chapters or long essays, and the counter will process them instantly.</p>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, user privacy is paramount. This Character Counter operates exclusively on the client-side using JavaScript. No data entered into the text area is transmitted to, stored on, or processed by our servers. We use third-party services like Google Analytics for usage statistics and Google AdSense for advertising. These services may use cookies to personalize content and ads.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>By using this website, you agree to our terms. This tool is provided for informational and utility purposes. While we strive for accuracy, VIP Tool is not liable for any discrepancies in counts that may arise due to different encoding standards used by other platforms. Users are responsible for verifying their content before final submission to critical platforms.</p>
+
+                <h3>Disclaimer</h3>
+                <p>The Character Counter is provided "as-is" without any warranties. Results may vary slightly depending on browser interpretation of line breaks and special characters. VIP Tool is not affiliated with any social media platform mentioned.</p>
+            </div>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    function updateCounts() {
+        const text = document.getElementById('textInput').value;
+        
+        // Character Count (Length)
+        const charCount = text.length;
+        document.getElementById('charCount').innerText = charCount.toLocaleString();
+
+        // No Spaces Count
+        const noSpaces = text.replace(/\s/g, '').length;
+        document.getElementById('noSpacesCount').innerText = noSpaces.toLocaleString();
+
+        // Word Count
+        // Trim whitespace and split by spaces/newlines, filtering out empty strings
+        const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+        const wordCount = words.length;
+        document.getElementById('wordCount').innerText = wordCount.toLocaleString();
+
+        // Sentence Count
+        // Split by ., !, or ? followed by a space or end of string
+        // Simple regex approximation for sentences
+        const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0);
+        document.getElementById('sentenceCount').innerText = sentences.length.toLocaleString();
+
+        // Paragraph Count
+        // Split by newlines, filtering out empty lines
+        const paragraphs = text.split(/\n+/).filter(para => para.trim().length > 0);
+        document.getElementById('paragraphCount').innerText = paragraphs.length.toLocaleString();
+
+        // Reading Time Calculation
+        // Average reading speed ~200 words per minute
+        const readingTime = Math.ceil(wordCount / 200);
+        // Display "< 1" if less than a minute but has words
+        const timeDisplay = (wordCount > 0 && readingTime === 0) ? "< 1" : readingTime; 
+        document.getElementById('readingTime').innerText = timeDisplay;
+    }
+
+    function clearText() {
+        document.getElementById('textInput').value = '';
+        updateCounts(); // Reset counters
+        document.getElementById('textInput').focus();
+    }
+
+    function copyText() {
+        const text = document.getElementById('textInput');
+        text.select();
+        text.setSelectionRange(0, 99999); /* For mobile devices */
+        
+        if (text.value.length > 0) {
+            navigator.clipboard.writeText(text.value).then(() => {
+                alert("Text copied to clipboard!");
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+    }
+
+    // Initialize on load (in case browser caches input)
+    window.onload = updateCounts;
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

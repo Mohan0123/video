@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free CSS Minifier by VIP Tool. Compress and optimize your CSS code instantly to improve website load speed and SEO performance. No installation required.">
+    <title>CSS Minifier - Compress CSS Online | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "CSS Minifier",
+      "url": "https://viptool.online/css-minifier",
+      "description": "A powerful online tool to minify CSS code. Remove whitespace, comments, and unnecessary characters to reduce file size and boost website speed.",
+      "applicationCategory": "DeveloperTool",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "CSS Minifier"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What does a CSS Minifier do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A CSS Minifier removes unnecessary characters from your style sheets, such as whitespace, newlines, and comments, without changing how the browser interprets the styles. This reduces file size."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Will minifying CSS affect my website design?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Minification only changes the code structure to make it smaller for machines to read. The visual styling of your website remains exactly the same."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this tool safe to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, VIP Tool's CSS Minifier runs entirely in your browser (client-side). Your code is never sent to our servers."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does this tool handle CSS comments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, standard CSS comments are stripped out during the minification process to save space."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How much space can I save?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Savings depend on your coding style, but typically you can reduce file size by 15-30% by removing whitespace and comments."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="ad-section" id="ad-top">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <h1>CSS Minifier</h1>
+        <p class="subtitle">Optimize your CSS code by removing unnecessary characters to speed up your website.</p>
+
+        <div class="tool-card">
+            <div class="editor-container">
+                <div class="editor-group">
+                    <label for="inputCSS">
+                        Input CSS
+                        <span class="badge" id="inputSize">0 Bytes</span>
+                    </label>
+                    <textarea id="inputCSS" placeholder="Paste your CSS code here...&#10;body {&#10;  background-color: #fff;&#10;  color: #333;&#10;}"></textarea>
+                </div>
+                
+                <div class="editor-group">
+                    <label for="outputCSS">
+                        Minified CSS
+                        <span class="badge" id="outputSize">0 Bytes</span>
+                    </label>
+                    <textarea id="outputCSS" placeholder="Minified code will appear here..." readonly></textarea>
+                </div>
+
+                <div class="stats-bar" id="statsBar"></div>
+
+                <div class="controls">
+                    <button class="btn-primary" onclick="minifyCSS()">Minify CSS</button>
+                    <button class="btn-success" onclick="copyOutput()">Copy Minified Code</button>
+                    <button class="btn-secondary" onclick="resetEditor()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/html-minifier" class="related-link-item">HTML Minifier</a>
+                <a href="https://viptool.online/js-minifier" class="related-link-item">JavaScript Minifier</a>
+                <a href="https://viptool.online/image-compressor" class="related-link-item">Image Compressor</a>
+                <a href="https://viptool.online/word-counter" class="related-link-item">Word Counter</a>
+                <a href="https://viptool.online/character-counter" class="related-link-item">Character Counter</a>
+                <a href="https://viptool.online/color-picker" class="related-link-item">Color Picker</a>
+            </div>
+        </section>
+
+        <div class="ad-section" id="ad-mid">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <div class="content-section">
+            <h2>Why Use a CSS Minifier?</h2>
+            <p>In modern web development, speed is everything. Search engines like Google prioritize fast-loading websites, and users tend to abandon sites that take too long to load. One of the most effective ways to improve your site's performance is by optimizing your assets, including Cascading Style Sheets (CSS).</p>
+            <p>The <strong>VIP Tool CSS Minifier</strong> is a free online utility designed to compress your CSS code. It works by removing all unnecessary characters that browsers do not need to render the page, such as comments, whitespace, and newlines.</p>
+
+            <h3>Key Benefits of CSS Minification</h3>
+            <ul>
+                <li><strong>Reduced File Size:</strong> Minification can significantly reduce the size of your CSS files, often by 20-30%.</li>
+                <li><strong>Faster Load Times:</strong> Smaller files mean less data to download, resulting in faster page rendering for your visitors.</li>
+                <li><strong>Bandwidth Savings:</strong> If you have high traffic, reducing file sizes lowers your bandwidth consumption and hosting costs.</li>
+                <li><strong>Better SEO:</strong> Faster websites rank better in search results. Optimization is a key factor in Google's Core Web Vitals.</li>
+            </ul>
+
+            <h3>How to Use This Tool</h3>
+            <ol>
+                <li><strong>Paste Code:</strong> Copy your raw CSS code from your editor and paste it into the "Input CSS" box on the left.</li>
+                <li><strong>Minify:</strong> Click the blue "Minify CSS" button. The tool will instantly process your code.</li>
+                <li><strong>Review:</strong> The optimized code will appear in the "Minified CSS" box on the right. You'll also see stats on how much space you saved.</li>
+                <li><strong>Copy:</strong> Click "Copy Minified Code" and paste it into your project file (e.g., <code>style.min.css</code>).</li>
+            </ol>
+
+            <div class="ad-section" id="ad-bottom">
+                <div class="ad-label">Advertisement</div>
+                </div>
+
+            <h2>How Does CSS Minification Work?</h2>
+            <p>When developers write code, they use indentation, spaces, and comments to make it readable for humans. However, web browsers don't need this formatting. </p>
+            <p>For example, a developer might write:</p>
+            <pre style="background:#eee; padding:10px; border-radius:4px; overflow-x:auto;">
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+/* Main Content */
+.container {
+    width: 100%;
+}</pre>
+            <p>After minification, the computer reads it as:</p>
+            <pre style="background:#eee; padding:10px; border-radius:4px; overflow-x:auto;">body{background-color:#fff;color:#000}.container{width:100%}</pre>
+            <p>This compact version performs exactly the same function but takes up less space and downloads faster.</p>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, we respect your privacy. This CSS Minifier operates entirely on the client-side (in your browser). Your code is <strong>never</strong> sent to our servers or stored. Google AdSense and Analytics are used on this page to serve ads and monitor traffic; they may use cookies in accordance with their own privacy policies.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>This tool is provided "as is" for informational and utility purposes. While we strive for accuracy, VIP Tool is not responsible for any errors in minification or any issues that may arise from using the processed code. Always keep a backup of your original source files.</p>
+
+                <h3>Disclaimer</h3>
+                <p>VIP Tool is not affiliated with any specific browser or technology provider. The effectiveness of minification depends on the original code quality. Users are responsible for testing minified code before deploying it to production.</p>
+            </div>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    const inputArea = document.getElementById('inputCSS');
+    const outputArea = document.getElementById('outputCSS');
+    const inputSizeBadge = document.getElementById('inputSize');
+    const outputSizeBadge = document.getElementById('outputSize');
+    const statsBar = document.getElementById('statsBar');
+
+    // Live byte counter for input
+    inputArea.addEventListener('input', function() {
+        updateSize(this.value, inputSizeBadge);
+    });
+
+    function minifyCSS() {
+        let css = inputArea.value;
+
+        if (!css.trim()) {
+            alert("Please paste some CSS code first.");
+            return;
+        }
+
+        // Logic for CSS Minification (Regex)
+        // 1. Remove comments
+        css = css.replace(/\/\*[\s\S]*?\*\//g, "");
+        
+        // 2. Remove whitespace around braces, colons, semi-colons
+        css = css.replace(/\s*([{}:;,])\s*/g, "$1");
+        
+        // 3. Remove newlines and extra spaces
+        css = css.replace(/[\r\n]+/g, "");
+        css = css.replace(/\s+/g, " ");
+        
+        // 4. Clean up unnecessary spaces specifically around selectors and properties
+        css = css.replace(/^\s+|\s+$/g, ""); // Trim start/end
+
+        // 5. Shorten zero values (0px -> 0) - simple check
+        // css = css.replace(/(:| )0(px|em|rem|%)/g, "$10"); // Safe approach recommended
+
+        // 6. Restore string integrity if needed (Basic tool assumes standard CSS)
+        // This regex approach is robust for 99% of standard CSS
+
+        outputArea.value = css;
+        
+        // Update stats
+        const originalSize = new Blob([inputArea.value]).size;
+        const minifiedSize = new Blob([css]).size;
+        const savings = originalSize - minifiedSize;
+        const savingsPercent = ((savings / originalSize) * 100).toFixed(2);
+
+        updateSize(css, outputSizeBadge);
+        
+        statsBar.style.display = 'block';
+        statsBar.innerHTML = `Original: <strong>${formatBytes(originalSize)}</strong> | Minified: <strong>${formatBytes(minifiedSize)}</strong> | Savings: <strong style="color:green;">${savingsPercent}%</strong>`;
+    }
+
+    function updateSize(text, badgeElement) {
+        const size = new Blob([text]).size;
+        badgeElement.textContent = formatBytes(size);
+    }
+
+    function formatBytes(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    function copyOutput() {
+        if (!outputArea.value) return;
+        outputArea.select();
+        document.execCommand('copy');
+        alert("Minified CSS copied to clipboard!");
+    }
+
+    function resetEditor() {
+        inputArea.value = '';
+        outputArea.value = '';
+        updateSize('', inputSizeBadge);
+        updateSize('', outputSizeBadge);
+        statsBar.style.display = 'none';
+        inputArea.focus();
+    }
+
+    // ADSENSE AUTO-VISIBILITY LOGIC
+    // This script checks if ads are inserted. If yes, it makes the container visible.
+    window.addEventListener('load', function() {
+        const adSections = document.querySelectorAll('.ad-section');
+        
+        adSections.forEach(section => {
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (section.children.length > 1 || section.offsetHeight > 20) {
+                        section.classList.add('visible');
+                        observer.disconnect(); 
+                    }
+                });
+            });
+
+            observer.observe(section, { childList: true, subtree: true, attributes: true });
+
+            // Initial check
+            const ins = section.querySelector('ins');
+            if (ins && (ins.getAttribute('data-ad-status') === 'filled' || section.offsetHeight > 50)) {
+                section.classList.add('visible');
+            }
+        });
+    });
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

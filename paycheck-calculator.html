@@ -1,0 +1,432 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Paycheck Calculator by VIP Tool. Estimate your take-home pay per paycheck based on salary, frequency (weekly, bi-weekly, monthly), and tax rate.">
+    <title>Paycheck Calculator - Estimate Take-Home Pay | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Paycheck Calculator",
+      "url": "https://viptool.online/paycheck-calculator",
+      "description": "A free online tool to calculate estimated net pay per paycheck based on gross salary, pay frequency, and deductions.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Paycheck Calculator"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How does the Paycheck Calculator work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It takes your gross income (annual or hourly), applies your estimated tax rate and deductions, and divides the result by your pay frequency (e.g., bi-weekly or monthly)."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the difference between Gross and Net pay?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Gross pay is your total earnings before any taxes or deductions are removed. Net pay is your 'take-home' money after taxes, insurance, and other deductions."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I calculate bi-weekly paychecks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our tool supports Weekly, Bi-weekly (every 2 weeks), Semi-monthly (twice a month), and Monthly pay frequencies."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does this tool calculate exact taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, exact taxes depend on complex local laws (Federal, State, Municipal). This tool uses an 'Effective Tax Rate' percentage that you provide for an estimation."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is my salary data saved?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All calculations happen in your browser. VIP Tool does not store or transmit your financial data."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Paycheck Calculator</h1>
+        <p class="subtitle">Calculate your estimated take-home pay per paycheck based on your salary and frequency.</p>
+
+        <div class="tool-card">
+            
+            <div class="form-row">
+                <div class="col">
+                    <label for="currency">Currency</label>
+                    <select id="currency" onchange="updateLabels()">
+                        <option value="USD">USD ($)</option>
+                        <option value="INR">INR (â‚¹)</option>
+                        <option value="EUR">EUR (â‚¬)</option>
+                        <option value="GBP">GBP (Â£)</option>
+                        <option value="CAD">CAD ($)</option>
+                        <option value="AUD">AUD ($)</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="payFrequency">Pay Frequency</label>
+                    <select id="payFrequency">
+                        <option value="52">Weekly (52/year)</option>
+                        <option value="26" selected>Bi-Weekly (Every 2 weeks)</option>
+                        <option value="24">Semi-Monthly (Twice a month)</option>
+                        <option value="12">Monthly (12/year)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section-title">Income Details</div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="incomeType">Income Type</label>
+                    <select id="incomeType" onchange="toggleHourlyInput()">
+                        <option value="annual" selected>Annual Salary</option>
+                        <option value="hourly">Hourly Wage</option>
+                    </select>
+                </div>
+                
+                <div class="col" id="annualInputGroup">
+                    <label for="annualSalary">Annual Gross Pay</label>
+                    <input type="number" id="annualSalary" placeholder="e.g. 50000" min="0">
+                </div>
+
+                <div class="col" id="hourlyInputGroup" style="display:none;">
+                    <div style="display:flex; gap:10px;">
+                        <div style="flex:1;">
+                            <label for="hourlyRate">Hourly Rate</label>
+                            <input type="number" id="hourlyRate" placeholder="e.g. 25" min="0">
+                        </div>
+                        <div style="flex:1;">
+                            <label for="hoursPerWeek">Hours/Week</label>
+                            <input type="number" id="hoursPerWeek" value="40" min="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section-title">Taxes & Deductions (Estimates)</div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="taxRate">Effective Tax Rate (%)</label>
+                    <input type="number" id="taxRate" placeholder="e.g. 20" min="0" max="100" step="0.1">
+                    <small style="color:var(--text-light); font-size:0.8rem;">Est. Fed + State/Local Taxes</small>
+                </div>
+                <div class="col">
+                    <label for="deductions">Other Deductions (Per Paycheck)</label>
+                    <input type="number" id="deductions" placeholder="e.g. 50 (Insurance, 401k)" min="0">
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn-primary" onclick="calculatePaycheck()">Calculate Paycheck</button>
+                <button class="btn-secondary" onclick="resetForm()">Reset</button>
+            </div>
+
+            <div id="result-area">
+                <h3 class="result-header">Estimated Take-Home Pay</h3>
+                
+                <div class="paycheck-highlight">
+                    <div>Your Net Pay Per Paycheck:</div>
+                    <div class="paycheck-amount" id="res-netPay">$0.00</div>
+                    <div style="font-size:0.9rem; color:var(--text-light);" id="res-freqLabel">Bi-Weekly</div>
+                </div>
+
+                <table class="breakdown-table">
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th class="amount-col">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gross Pay</td>
+                            <td class="amount-col" id="res-gross">$0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Estimated Tax (<span id="res-taxRateDisplay">0</span>%)</td>
+                            <td class="amount-col negative" id="res-taxAmount">-$0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Other Deductions</td>
+                            <td class="amount-col negative" id="res-deductions">-$0.00</td>
+                        </tr>
+                        <tr style="background:#f9f9f9;">
+                            <td><strong>Net Pay</strong></td>
+                            <td class="amount-col" id="res-finalNet"><strong>$0.00</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/hourly-calculator" class="related-link-item">Hourly Calculator</a>
+                <a href="https://viptool.online/salary-converter" class="related-link-item">Salary Converter</a>
+                <a href="https://viptool.online/gst-calculator" class="related-link-item">GST Calculator</a>
+                <a href="https://viptool.online/percentage-calculator" class="related-link-item">Percentage Calculator</a>
+                <a href="https://viptool.online/age-calculator" class="related-link-item">Age Calculator</a>
+                <a href="https://viptool.online/character-counter" class="related-link-item">Character Counter</a>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement
+        </div>
+
+        <div class="content-section">
+            <h2>How to Use the Paycheck Calculator</h2>
+            <p>The VIP Tool Paycheck Calculator helps you estimate your actual take-home pay after taxes and deductions. Follow these simple steps:</p>
+            <ol style="margin-left: 20px; margin-bottom: 20px;">
+                <li><strong>Select Currency & Frequency:</strong> Choose your currency and how often you get paid (e.g., Bi-Weekly).</li>
+                <li><strong>Enter Income:</strong> Input either your Annual Salary or your Hourly Rate.</li>
+                <li><strong>Estimate Tax Rate:</strong> Enter an estimated percentage for taxes (combined Federal, State, and Local).</li>
+                <li><strong>Add Deductions:</strong> Enter any fixed amount deducted from each paycheck (like health insurance or retirement contributions).</li>
+                <li><strong>Calculate:</strong> Click the button to see your estimated Net Pay.</li>
+            </ol>
+
+            <h2>Why Calculate Net Pay?</h2>
+            <p>Knowing your Gross Salary (what the company pays) is different from your Net Salary (what hits your bank account). Using a <a href="https://viptool.online/tools" style="color:var(--primary-color);">Paycheck Calculator</a> is essential for:</p>
+            <ul>
+                <li><strong>Budgeting:</strong> Creating a realistic monthly budget based on actual cash flow.</li>
+                <li><strong>Job Offers:</strong> Comparing two job offers in different locations with different tax rates.</li>
+                <li><strong>Financial Goals:</strong> Determining how much you can save per paycheck.</li>
+            </ul>
+
+            <h3>Pay Frequency Explained</h3>
+            <p>It's important to select the correct frequency to get an accurate result:</p>
+            <ul>
+                <li><strong>Bi-Weekly:</strong> You get paid every two weeks (26 paychecks/year). This is very common.</li>
+                <li><strong>Semi-Monthly:</strong> You get paid twice a month, usually on the 15th and 30th (24 paychecks/year).</li>
+                <li><strong>Weekly:</strong> You get paid every week (52 paychecks/year).</li>
+                <li><strong>Monthly:</strong> You get paid once a month (12 paychecks/year).</li>
+            </ul>
+
+            <div class="ad-placeholder">
+                Advertisement
+            </div>
+
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <h3>1. Does this calculator include FICA or PF?</h3>
+            <p>You should include FICA (Social Security/Medicare) or PF (Provident Fund) in your "Effective Tax Rate" estimation or add them as a fixed sum in the "Deductions" field for better accuracy.</p>
+
+            <h3>2. Why is my paycheck different from the calculation?</h3>
+            <p>This tool provides an estimate. Actual paychecks vary based on exact tax bracket thresholds, pre-tax vs. post-tax deductions, overtime, and bonuses.</p>
+
+            <h3>3. Can I use this for freelance income?</h3>
+            <p>Yes. Enter your total expected freelance income as an "Annual Salary" and set the tax rate to include your self-employment taxes to estimate what you should set aside.</p>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, your financial privacy is paramount. This Paycheck Calculator functions entirely on the client-side using JavaScript. We do not collect, store, or transmit your salary, tax rates, or deduction data to any server. Google Analytics and AdSense may use cookies to analyze traffic and serve relevant ads.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>This tool is provided for informational and estimation purposes only. VIP Tool does not guarantee the accuracy of the results. It is not a substitute for professional accounting software or a payroll specialist. By using this tool, you agree to hold VIP Tool harmless from any decisions made based on these calculations.</p>
+
+                <h3>Disclaimer</h3>
+                <p>The results generated are estimates based on the user-provided "Effective Tax Rate." VIP Tool is not a tax advisor. Actual tax liability depends on your specific filing status, dependents, and local laws. Please consult a qualified professional for exact figures.</p>
+            </div>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    function toggleHourlyInput() {
+        const type = document.getElementById('incomeType').value;
+        const annualGroup = document.getElementById('annualInputGroup');
+        const hourlyGroup = document.getElementById('hourlyInputGroup');
+
+        if (type === 'annual') {
+            annualGroup.style.display = 'block';
+            hourlyGroup.style.display = 'none';
+        } else {
+            annualGroup.style.display = 'none';
+            hourlyGroup.style.display = 'block';
+        }
+    }
+
+    function calculatePaycheck() {
+        // Inputs
+        const currency = document.getElementById('currency').value;
+        const frequency = parseInt(document.getElementById('payFrequency').value);
+        const incomeType = document.getElementById('incomeType').value;
+        const taxRate = parseFloat(document.getElementById('taxRate').value) || 0;
+        const deductions = parseFloat(document.getElementById('deductions').value) || 0;
+
+        let annualGross = 0;
+
+        // 1. Calculate Annual Gross
+        if (incomeType === 'annual') {
+            annualGross = parseFloat(document.getElementById('annualSalary').value);
+        } else {
+            const hourly = parseFloat(document.getElementById('hourlyRate').value);
+            const hours = parseFloat(document.getElementById('hoursPerWeek').value);
+            if (!isNaN(hourly) && !isNaN(hours)) {
+                annualGross = hourly * hours * 52;
+            }
+        }
+
+        // Validation
+        if (isNaN(annualGross) || annualGross <= 0) {
+            alert("Please enter a valid salary amount.");
+            return;
+        }
+
+        // 2. Calculate Per Paycheck Gross
+        const grossPerCheck = annualGross / frequency;
+
+        // 3. Calculate Tax Per Paycheck
+        // Tax is usually calculated on gross
+        const taxPerCheck = grossPerCheck * (taxRate / 100);
+
+        // 4. Calculate Net
+        const netPerCheck = grossPerCheck - taxPerCheck - deductions;
+
+        // Display Results
+        document.getElementById('res-gross').innerText = formatCurrency(grossPerCheck, currency);
+        document.getElementById('res-taxAmount').innerText = '-' + formatCurrency(taxPerCheck, currency);
+        document.getElementById('res-deductions').innerText = '-' + formatCurrency(deductions, currency);
+        document.getElementById('res-finalNet').innerHTML = '<strong>' + formatCurrency(netPerCheck, currency) + '</strong>';
+        
+        document.getElementById('res-netPay').innerText = formatCurrency(netPerCheck, currency);
+        document.getElementById('res-taxRateDisplay').innerText = taxRate;
+        
+        // Update Label
+        const freqLabel = document.getElementById('payFrequency').options[document.getElementById('payFrequency').selectedIndex].text;
+        document.getElementById('res-freqLabel').innerText = freqLabel.split('(')[0].trim();
+
+        // Show Area
+        document.getElementById('result-area').style.display = 'block';
+        
+        // Scroll on mobile
+        if(window.innerWidth < 600) {
+            document.getElementById('result-area').scrollIntoView({behavior: 'smooth'});
+        }
+    }
+
+    function formatCurrency(num, currencyCode) {
+        let locale = 'en-US';
+        if (currencyCode === 'INR') locale = 'en-IN';
+        else if (currencyCode === 'EUR') locale = 'de-DE';
+        else if (currencyCode === 'GBP') locale = 'en-GB';
+        
+        // Prevent negative zero or super accurate decimals
+        if(num < 0) num = 0;
+
+        return num.toLocaleString(locale, {
+            style: 'currency',
+            currency: currencyCode,
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+    }
+
+    function resetForm() {
+        document.getElementById('annualSalary').value = '';
+        document.getElementById('hourlyRate').value = '';
+        document.getElementById('taxRate').value = '';
+        document.getElementById('deductions').value = '';
+        document.getElementById('result-area').style.display = 'none';
+        document.getElementById('incomeType').value = 'annual';
+        toggleHourlyInput();
+    }
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

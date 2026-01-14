@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online JSON Formatter and Validator. Beautify, minify, and debug your JSON code instantly. Secure client-side processing, syntax error detection, and easy copy functionality.">
+    <meta name="keywords" content="json formatter, json beautifier, json validator, json minifier, online json viewer, format json, debug json, free developer tools">
+    <meta name="author" content="JSON Formatter Tool">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Free Online JSON Formatter & Validator">
+    <meta property="og:description" content="Beautify and validate your JSON code instantly. 100% Free and Secure.">
+    <meta property="og:type" content="website">
+    <title>Free JSON Formatter - Beautify & Validate JSON Online</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section tool-wrapper">
+            
+            <div class="controls">
+                <button class="btn-primary" onclick="formatJSON()">Beautify / Format</button>
+                <button class="btn-secondary" onclick="minifyJSON()">Minify / Compress</button>
+                <button class="btn-secondary" onclick="copyOutput()">Copy Result</button>
+                <button class="btn-danger" onclick="clearAll()">Clear All</button>
+            </div>
+
+            <div id="error-display" class="status-msg error-msg"></div>
+            <div id="success-display" class="status-msg success-msg"></div>
+
+            <div class="editor-container">
+                <div class="editor-box">
+                    <div class="editor-label">
+                        <span>Input JSON</span>
+                        <span style="font-size: 0.8rem; font-weight: normal;">Paste raw JSON here</span>
+                    </div>
+                    <textarea id="json-input" placeholder='{"example": "paste your json here"}' spellcheck="false"></textarea>
+                </div>
+
+                <div class="editor-box">
+                    <div class="editor-label">
+                        <span>Output</span>
+                        <span style="font-size: 0.8rem; font-weight: normal;">Read-only</span>
+                    </div>
+                    <textarea id="json-output" placeholder="Result will appear here..." readonly spellcheck="false"></textarea>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section">
+            <h2>How to Use This JSON Formatter</h2>
+            <ol>
+                <li><strong>Paste Data:</strong> Copy your raw, unformatted JSON string and paste it into the left box labeled "Input JSON".</li>
+                <li><strong>Choose Action:</strong>
+                    <ul>
+                        <li>Click <strong>Beautify / Format</strong> to organize the JSON with proper indentation and spacing (Human readable).</li>
+                        <li>Click <strong>Minify / Compress</strong> to remove all whitespace and newlines (Machine readable/Compact).</li>
+                    </ul>
+                </li>
+                <li><strong>Validate:</strong> If there are errors in your JSON syntax, the tool will alert you immediately with an error message.</li>
+                <li><strong>Copy Result:</strong> Click "Copy Result" to copy the formatted code to your clipboard.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Why Use Our JSON Tool?</h2>
+            <ul>
+                <li><strong>100% Free:</strong> Unlimited usage with no hidden fees.</li>
+                <li><strong>Client-Side Processing:</strong> Your data never leaves your browser. We prioritize your privacy and security.</li>
+                <li><strong>Instant Validation:</strong> Quickly identify missing commas, unclosed brackets, or syntax errors.</li>
+                <li><strong>Dual Mode:</strong> Switch between "Beautify" mode for debugging and "Minify" mode for production deployment.</li>
+                <li><strong>Works Offline:</strong> Once the page is loaded, you don't need an internet connection to format your data.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>The Importance of JSON Formatting for Developers</h2>
+            <p>JSON (JavaScript Object Notation) has become the de facto standard for data exchange on the web. It is lightweight, language-independent, and easy for machines to parse. However, raw JSON returned from APIs or stored in databases is often "minified"â€”meaning all unnecessary whitespace, newlines, and indentation have been removed to save space.</p>
+            
+            <h3>Why Do You Need a JSON Formatter?</h3>
+            <p>While minified JSON is great for computers, it is nearly impossible for humans to read or debug. A single line of code stretching for thousands of characters makes it difficult to understand the data structure or find errors.</p>
+            <p>This is where our <strong>JSON Formatter</strong> comes in. It takes that dense block of text and transforms it into a structured, indented, and readable format. This process, often called "beautifying" or "pretty-printing," allows developers to quickly scan the data hierarchy, verify keys and values, and troubleshoot integration issues.</p>
+
+            <h3>Debugging API Responses</h3>
+            <p>Web developers frequently work with RESTful APIs or GraphQL endpoints. When an API returns an error or unexpected data, viewing the raw JSON response is the first step in debugging. By formatting this response, you can easily trace nested objects and arrays to pinpoint the exact location of the issue.</p>
+
+            <h3>Validating Data Integrity</h3>
+            <p>JSON is strict about syntax. A missing trailing comma, a single quote instead of a double quote, or an unclosed brace will cause parsers to fail. Our tool acts as a <strong>JSON Validator</strong>. Before you try to use the data in your application, you can paste it here to ensure it meets the standard JSON specifications. If it's invalid, the tool will tell you exactly why.</p>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this tool safe to use with sensitive data? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, absolutely. This tool runs entirely in your web browser using JavaScript. Your JSON data is <strong>never</strong> sent to our servers. It stays on your device, ensuring maximum privacy and security.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">What is the difference between Beautify and Minify? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer"><strong>Beautify</strong> adds indentation (spaces) and newlines to make the JSON readable for humans. <strong>Minify</strong> removes all extra characters to reduce the file size for faster transmission over the network.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Why am I getting an "Invalid JSON" error? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">This happens if your input violates JSON syntax rules. Common errors include trailing commas, using single quotes instead of double quotes for keys, or unclosed brackets. Our tool helps you catch these errors.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does this tool support large JSON files? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, it can handle relatively large JSON strings. However, performance depends on your device's memory since processing happens locally in your browser.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is it free? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, this JSON Formatter is 100% free for both personal and commercial use.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: 30/12/2025</strong></p>
+            <p>Your privacy is critically important to us. This Privacy Policy outlines how we handle your information.</p>
+            <p><strong>1. Data Handling:</strong> We do not collect, store, or transmit the JSON data you input into this tool. All processing occurs locally on your device (Client-Side) using JavaScript.</p>
+            <p><strong>2. Cookies:</strong> We use cookies to enhance user experience. You can choose to disable cookies through your browser settings.</p>
+            <p><strong>3. Third-Party Advertising:</strong> We use third-party advertising companies (such as Google AdSense) to serve ads when you visit our website. These companies may use aggregated information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you.</p>
+            <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to understand website traffic trends. This data is anonymous and aggregated.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> This tool is provided "as is" for informational and utility purposes. You agree to use it responsibly.</p>
+            <p><strong>2. Accuracy:</strong> While we strive for perfection, we cannot guarantee that the formatting or validation will always be 100% accurate in edge cases.</p>
+            <p><strong>3. Liability:</strong> We are not liable for any errors, data loss, or damages resulting from the use of this tool.</p>
+            <p><strong>4. Modifications:</strong> We reserve the right to modify these terms at any time.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, we do not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        // DOM Elements
+        const jsonInput = document.getElementById('json-input');
+        const jsonOutput = document.getElementById('json-output');
+        const errorDisplay = document.getElementById('error-display');
+        const successDisplay = document.getElementById('success-display');
+
+        /**
+         * Parses the input JSON.
+         * Returns the parsed object or false if invalid.
+         */
+        function parseInput() {
+            const raw = jsonInput.value.trim();
+            if (!raw) {
+                showError("Please enter some JSON to format.");
+                return false;
+            }
+            try {
+                const parsed = JSON.parse(raw);
+                hideError();
+                return parsed;
+            } catch (e) {
+                showError("Invalid JSON: " + e.message);
+                return false;
+            }
+        }
+
+        /**
+         * Formats (Beautifies) the JSON with 4 space indentation
+         */
+        function formatJSON() {
+            const parsed = parseInput();
+            if (parsed) {
+                jsonOutput.value = JSON.stringify(parsed, null, 4);
+                showSuccess("JSON formatted successfully!");
+            }
+        }
+
+        /**
+         * Minifies the JSON (Removes whitespace)
+         */
+        function minifyJSON() {
+            const parsed = parseInput();
+            if (parsed) {
+                jsonOutput.value = JSON.stringify(parsed);
+                showSuccess("JSON minified successfully!");
+            }
+        }
+
+        /**
+         * Copies output to clipboard
+         */
+        function copyOutput() {
+            if (!jsonOutput.value) {
+                showError("Nothing to copy!");
+                return;
+            }
+            
+            jsonOutput.select();
+            jsonOutput.setSelectionRange(0, 99999); /* For mobile devices */
+            
+            navigator.clipboard.writeText(jsonOutput.value).then(() => {
+                showSuccess("Copied to clipboard!");
+            }).catch(err => {
+                showError("Failed to copy.");
+            });
+        }
+
+        /**
+         * Clears all inputs and outputs
+         */
+        function clearAll() {
+            jsonInput.value = "";
+            jsonOutput.value = "";
+            hideError();
+            hideSuccess();
+        }
+
+        /**
+         * Helpers for messaging
+         */
+        function showError(msg) {
+            errorDisplay.textContent = msg;
+            errorDisplay.style.display = 'block';
+            successDisplay.style.display = 'none';
+        }
+
+        function hideError() {
+            errorDisplay.style.display = 'none';
+        }
+
+        function showSuccess(msg) {
+            successDisplay.textContent = msg;
+            successDisplay.style.display = 'block';
+            errorDisplay.style.display = 'none';
+            // Auto hide success message after 3 seconds
+            setTimeout(() => {
+                successDisplay.style.display = 'none';
+            }, 3000);
+        }
+
+        function hideSuccess() {
+            successDisplay.style.display = 'none';
+        }
+
+        /**
+         * Accordion Logic for FAQ
+         */
+        function toggleFaq(element) {
+            const parent = element.parentElement;
+            const isOpen = parent.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-toggle').textContent = '+';
+            });
+
+            // Open clicked if it wasn't open
+            if (!isOpen) {
+                parent.classList.add('active');
+                element.querySelector('.faq-toggle').textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,355 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free SIP Calculator by VIP Tool. Estimate the future value of your Systematic Investment Plan (SIP). Calculate mutual fund returns instantly.">
+    <title>SIP Calculator - Calculate Mutual Fund Returns | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "SIP Calculator",
+      "url": "https://viptool.online/sip-calculator",
+      "description": "Calculate the estimated returns on your monthly Mutual Fund SIP investments with the VIP Tool SIP Calculator.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SIP Calculator"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is a SIP Calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A SIP (Systematic Investment Plan) Calculator is an online tool that helps you estimate the returns on your mutual fund investments made through SIP over a specific period."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How does the SIP formula work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The SIP calculator uses the compound interest formula adapted for monthly contributions to determine the future value of your investments based on the expected annual return rate."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this calculator accurate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The calculator provides estimates based on the mathematical formula. However, actual mutual fund returns are subject to market risks and may vary."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I use this for goal planning?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, by adjusting the monthly investment amount and time period, you can determine how much you need to invest to achieve a specific financial goal."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this tool free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the SIP Calculator on VIP Tool is 100% free to use."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>SIP Calculator</h1>
+        <p class="subtitle">Plan your financial future. Calculate estimated returns on your monthly SIP investments.</p>
+
+        <div class="ad-section">
+            </div>
+
+        <div class="tool-card">
+            
+            <div class="input-group">
+                <label for="monthlyInvestment">Monthly Investment (â‚¹)</label>
+                <div class="range-wrapper">
+                    <input type="range" id="rangeInvestment" min="500" max="100000" step="500" value="5000" oninput="syncInputs('rangeInvestment', 'monthlyInvestment')">
+                    <input type="number" id="monthlyInvestment" value="5000" oninput="syncInputs('monthlyInvestment', 'rangeInvestment')">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="returnRate">Expected Return Rate (% p.a)</label>
+                <div class="range-wrapper">
+                    <input type="range" id="rangeRate" min="1" max="30" step="0.1" value="12" oninput="syncInputs('rangeRate', 'returnRate')">
+                    <input type="number" id="returnRate" value="12" oninput="syncInputs('returnRate', 'rangeRate')">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="timePeriod">Time Period (Years)</label>
+                <div class="range-wrapper">
+                    <input type="range" id="rangeTime" min="1" max="40" step="1" value="10" oninput="syncInputs('rangeTime', 'timePeriod')">
+                    <input type="number" id="timePeriod" value="10" oninput="syncInputs('timePeriod', 'rangeTime')">
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn-primary" onclick="calculateSIP()">Calculate</button>
+                <button class="btn-secondary" onclick="resetForm()">Reset</button>
+            </div>
+
+            <div id="result-area">
+                <div class="result-grid">
+                    <div class="result-box">
+                        <div class="result-label">Invested Amount</div>
+                        <div class="result-value" id="res-invested">â‚¹0</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Est. Returns</div>
+                        <div class="result-value" id="res-returns" style="color:var(--success-color)">â‚¹0</div>
+                    </div>
+                    <div class="result-box total-box">
+                        <div class="result-label">Total Value</div>
+                        <div class="result-value" id="res-total">â‚¹0</div>
+                    </div>
+                </div>
+
+                <div class="visual-bar-container">
+                    <div class="visual-bar-returns" id="visualBar"></div>
+                </div>
+                <div class="visual-legend">
+                    <div class="legend-item"><span class="dot" style="background:var(--chart-invested)"></span> Invested</div>
+                    <div class="legend-item"><span class="dot" style="background:var(--chart-returns)"></span> Returns</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Finance Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/gst-calculator" class="related-link-item">GST Calculator</a>
+                <a href="https://viptool.online/emi-calculator" class="related-link-item">EMI Calculator</a>
+                <a href="https://viptool.online/simple-interest-calculator" class="related-link-item">Simple Interest Calculator</a>
+                <a href="https://viptool.online/percentage-calculator" class="related-link-item">Percentage Calculator</a>
+                <a href="https://viptool.online/discount-calculator" class="related-link-item">Discount Calculator</a>
+                <a href="https://viptool.online/hourly-calculator" class="related-link-item">Hourly Calculator</a>
+            </div>
+        </section>
+
+        <div class="ad-section">
+            </div>
+
+        <div class="content-section">
+            <h2>How to Use the VIP Tool SIP Calculator</h2>
+            <p>Investing in Mutual Funds via SIP (Systematic Investment Plan) is one of the most effective ways to build wealth over time. Our tool simplifies the complex math for you.</p>
+            <ol>
+                <li><strong>Enter Monthly Investment:</strong> Input the amount you plan to invest every month (e.g., â‚¹5,000).</li>
+                <li><strong>Set Expected Rate of Return:</strong> Enter the annual interest rate you expect (e.g., 12% for equity funds).</li>
+                <li><strong>Choose Time Period:</strong> Select the number of years you intend to stay invested.</li>
+                <li><strong>Analyze Results:</strong> Click "Calculate" to see your total investment, estimated profit, and final maturity value.</li>
+            </ol>
+
+            <h2>Benefits of Using a SIP Calculator</h2>
+            <p>Using an <a href="https://viptool.online/tools" style="color:var(--primary-color);">online financial calculator</a> offers several advantages for your financial planning:</p>
+            <ul>
+                <li><strong>Goal Planning:</strong> Helps you determine how much to save monthly to reach a target (e.g., buying a car or retirement).</li>
+                <li><strong>Power of Compounding:</strong> Visualizes how small regular investments grow exponentially over long periods.</li>
+                <li><strong>Instant Analysis:</strong> Compare different scenarios by changing the investment amount or tenure instantly.</li>
+            </ul>
+
+            <h2>What is SIP?</h2>
+            <p>A Systematic Investment Plan (SIP) is a facility offered by mutual funds to investors to invest in a disciplined manner. Unlike a lumpsum investment, SIP allows you to invest fixed amounts at regular intervals (usually monthly). This approach helps in averaging out the cost of investment (Rupee Cost Averaging) and instills financial discipline.</p>
+
+            <h3>Formula Used</h3>
+            <p>The VIP Tool SIP calculator uses the following formula:</p>
+            <p style="background:#f8f9fa; padding:10px; border-radius:4px; font-family:monospace;">FV = P Ã— [ (1 + i)^n - 1 ] / i Ã— (1 + i)</p>
+            <p>Where:</p>
+            <ul>
+                <li><strong>FV:</strong> Future Value</li>
+                <li><strong>P:</strong> Monthly Investment Amount</li>
+                <li><strong>i:</strong> Periodic Rate of Interest (Annual Rate / 12 / 100)</li>
+                <li><strong>n:</strong> Total number of payments (Years Ã— 12)</li>
+            </ul>
+
+            <div class="ad-section">
+                </div>
+
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <h3>1. Does this calculator guarantee returns?</h3>
+            <p>No. The SIP calculator provides estimates based on the expected rate of return you input. Mutual fund investments are subject to market risks, and actual returns may vary.</p>
+
+            <h3>2. What is a good return rate for SIP?</h3>
+            <p>Historically, equity mutual funds in India have delivered 10% to 15% annual returns over the long term (5-10+ years). Debt funds typically offer lower but more stable returns (6% to 8%).</p>
+
+            <h3>3. Can I change the investment amount later?</h3>
+            <p>Yes, most mutual funds allow you to increase or decrease your SIP amount (Step-up SIP), or you can stop and start a new SIP.</p>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, your privacy is a priority. This SIP Calculator operates entirely on your device (client-side). We do not collect, store, or transmit your financial inputs to any server. We use Google AdSense to display advertisements and Google Analytics to monitor site traffic. These third-party services may use cookies in accordance with their privacy policies.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>This tool is provided for educational and informational purposes only. VIP Tool does not provide financial advice. Users should consult a certified financial planner before making investment decisions. We do not guarantee the accuracy of the calculations and accept no liability for any losses incurred based on these results.</p>
+
+                <h3>Disclaimer</h3>
+                <p>The results generated by this tool are indicative. VIP Tool is not affiliated with any government authority, bank, or mutual fund house. Use this tool at your own risk.</p>
+            </div>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    // Initialize
+    window.onload = function() {
+        calculateSIP();
+    };
+
+    function syncInputs(sourceId, targetId) {
+        document.getElementById(targetId).value = document.getElementById(sourceId).value;
+        // Auto-calculate on slide for better UX
+        calculateSIP();
+    }
+
+    function calculateSIP() {
+        // Get Inputs
+        const monthlyInvestment = parseFloat(document.getElementById('monthlyInvestment').value);
+        const annualRate = parseFloat(document.getElementById('returnRate').value);
+        const years = parseFloat(document.getElementById('timePeriod').value);
+
+        // Validation
+        if (isNaN(monthlyInvestment) || isNaN(annualRate) || isNaN(years) || monthlyInvestment <= 0 || years <= 0) {
+            return; // Exit silently or show error in UI if strictly needed, but inputs are controlled
+        }
+
+        // Logic
+        // Monthly Rate i
+        const i = (annualRate / 100) / 12;
+        // Total months n
+        const n = years * 12;
+
+        // Formula: P * [ (1+i)^n - 1 ] / i * (1+i)
+        const totalValue = monthlyInvestment * ( (Math.pow(1 + i, n) - 1) / i ) * (1 + i);
+        
+        const totalInvested = monthlyInvestment * n;
+        const estReturns = totalValue - totalInvested;
+
+        // Update UI Text
+        document.getElementById('res-invested').innerText = formatCurrency(totalInvested);
+        document.getElementById('res-returns').innerText = formatCurrency(estReturns);
+        document.getElementById('res-total').innerText = formatCurrency(totalValue);
+
+        // Update Visual Bar
+        // We want the bar to show the ratio of Returns vs Invested within the total
+        // The container is Invested Color (Grey), the inner div is Returns Color (Blue)
+        // Actually, let's make container grey (invested base) and fill overlay? 
+        // Better: Flex bar. 
+        // Let's calculate percentage of Returns in Total Value
+        let returnPercentage = (estReturns / totalValue) * 100;
+        if(returnPercentage < 0) returnPercentage = 0; // Prevent negative width if loss (rare in SIP logic but possible)
+        
+        document.getElementById('visualBar').style.width = returnPercentage + '%';
+        
+        // Show result area
+        document.getElementById('result-area').style.display = 'block';
+    }
+
+    function formatCurrency(num) {
+        return 'â‚¹' + Math.round(num).toLocaleString('en-IN');
+    }
+
+    function resetForm() {
+        document.getElementById('monthlyInvestment').value = 5000;
+        document.getElementById('rangeInvestment').value = 5000;
+        
+        document.getElementById('returnRate').value = 12;
+        document.getElementById('rangeRate').value = 12;
+        
+        document.getElementById('timePeriod').value = 10;
+        document.getElementById('rangeTime').value = 10;
+        
+        calculateSIP();
+    }
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

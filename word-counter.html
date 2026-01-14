@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <link rel="canonical" href="https://viptool.online/word-counter">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Word Counter Tool. Accurately count words, characters, sentences, paragraphs, and reading time in real-time. Perfect for SEO, social media, and academic writing.">
+    <meta name="keywords" content="word counter, character counter, letter count, sentence counter, online word count, seo tool, writing tool">
+    <meta name="author" content="Words Counter Tool">
+    <meta name="robots" content="index, follow">
+    <title>Free Online Word Counter Tool - Count Words & Characters Instantly</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="tool-card">
+            <h1>Free Online Word Counter Tool</h1>
+            <p class="tool-description">Instantly count words, characters, sentences, and paragraphs in real-time.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number" id="wordCount">0</span>
+                    <span class="stat-label">Words</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" id="charCount">0</span>
+                    <span class="stat-label">Characters</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" id="sentenceCount">0</span>
+                    <span class="stat-label">Sentences</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number" id="paraCount">0</span>
+                    <span class="stat-label">Paragraphs</span>
+                </div>
+            </div>
+
+            <textarea id="textInput" placeholder="Type or paste your text here to begin counting..."></textarea>
+            
+            <div class="action-bar">
+                <button class="btn btn-primary" id="copyBtn">Copy Text</button>
+                <button class="btn btn-outline" id="clearBtn">Clear Text</button>
+            </div>
+            
+            <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+                Estimated Reading Time: <span id="readingTime" style="font-weight: bold; color: var(--primary-color);">0</span> minutes
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            <span>Advertisement Space</span>
+        </div>
+
+        <section class="content-section" id="how-to">
+            <h2>How to Use This Tool</h2>
+            <ol style="margin-left: 1.5rem; margin-bottom: 1rem;">
+                <li><strong>Paste or Type:</strong> Simply click inside the large text box above and start typing, or paste your text from another document.</li>
+                <li><strong>View Results:</strong> Look at the statistics bar above the text box. The counters for words, characters, sentences, and paragraphs update instantly as you type.</li>
+                <li><strong>Analyze Reading Time:</strong> Check the bottom of the tool to see how long it would take an average reader to read your text.</li>
+                <li><strong>Copy or Clear:</strong> Use the "Copy Text" button to copy your content to the clipboard, or "Clear Text" to start fresh.</li>
+            </ol>
+        </section>
+
+        <section class="content-section">
+            <h2>Why Use a Word Counter?</h2>
+            <ul>
+                <li><strong>Social Media Limits:</strong> Stay within character limits for Twitter (X), Facebook, and Instagram bios.</li>
+                <li><strong>SEO Optimization:</strong> Write meta titles (60 chars) and meta descriptions (160 chars) perfectly.</li>
+                <li><strong>Academic Writing:</strong> Ensure your essays and assignments meet the minimum or maximum word count requirements.</li>
+                <li><strong>Content Creation:</strong> Bloggers can track article length to ensure depth and quality (usually 1,000+ words).</li>
+            </ul>
+        </section>
+
+        <div class="ad-placeholder">
+            <span>Advertisement Space</span>
+        </div>
+
+        <section class="content-section" id="about">
+            <h2>The Importance of Word Counting in Digital Content</h2>
+            <p>In the digital age, the length of your content matters more than ever. Whether you are a student, a professional writer, an SEO specialist, or a social media manager, keeping track of your word and character count is essential. Our <strong>Free Online Word Counter Tool</strong> is designed to help you write better and faster.</p>
+
+            <h3>Optimizing for Search Engines (SEO)</h3>
+            <p>Search engines like Google prioritize content that provides value. While there is no magic number for the perfect blog post length, comprehensive guides often range between 1,500 and 2,500 words. Conversely, meta tags require strict brevity. A meta title should be under 60 characters to avoid truncation in search results, while a meta description should be concise and under 160 characters. This tool helps you hit those targets precisely.</p>
+
+            <h3>Social Media Character Limits</h3>
+            <p>Each platform has its own rules. Twitter (now X) allows 280 characters. Instagram captions cut off after 2,200 characters, but the most important information should appear in the first 125 characters. Using a character counter ensures your message is conveyed clearly without awkward cut-offs.</p>
+
+            <h3>Improving Readability</h3>
+            <p>Beyond just counting, analyzing sentence and paragraph counts helps improve readability. Long, dense blocks of text are hard to read on screens. By breaking your content into shorter paragraphs and sentences, you improve user experience and keep readers engaged longer.</p>
+        </section>
+
+        <section class="content-section">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            
+            <div class="faq-item">
+                <span class="faq-question">Is this Word Counter tool free?</span>
+                <p>Yes, this tool is 100% free to use for unlimited times. There are no subscriptions or hidden fees.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-question">Does this tool save my text?</span>
+                <p>No. Your privacy is our priority. All calculations are done in your browser using JavaScript. No text is sent to our servers or stored in any database.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-question">How is reading time calculated?</span>
+                <p>We calculate reading time based on an average reading speed of 200 words per minute, which is the standard metric used by most platforms.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-question">Does it count spaces as characters?</span>
+                <p>The "Characters" count includes spaces and punctuation. This is the standard metric used for tweet limits and SMS messages.</p>
+            </div>
+
+            <div class="faq-item">
+                <span class="faq-question">Can I use this on mobile?</span>
+                <p>Absolutely. This website is fully responsive and works perfectly on smartphones, tablets, and desktop computers.</p>
+            </div>
+        </section>
+
+        <section id="privacy" class="legal-section">
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated: October 2023</strong></p>
+            <p>At Words Counter Tool, accessible from this website, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by us and how we use it.</p>
+            
+            <h3>Data Collection</h3>
+            <p>This tool operates entirely on the client-side (in your browser). We do not collect, store, or transmit the text you input into the tool to any server.</p>
+
+            <h3>Cookies and Web Beacons</h3>
+            <p>Like any other website, we use 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+
+            <h3>Google DoubleClick DART Cookie</h3>
+            <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy.</p>
+
+            <h3>Consent</h3>
+            <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+        </section>
+
+        <section id="terms" class="legal-section">
+            <h2>Terms and Conditions</h2>
+            <p>Welcome to Words Counter Tool!</p>
+            <p>These terms and conditions outline the rules and regulations for the use of our website. By accessing this website we assume you accept these terms and conditions. Do not continue to use this tool if you do not agree to take all of the terms and conditions stated on this page.</p>
+            
+            <h3>License</h3>
+            <p>Unless otherwise stated, Words Counter Tool and/or its licensors own the intellectual property rights for all material on this website. All intellectual property rights are reserved.</p>
+            
+            <h3>Disclaimer of Warranties</h3>
+            <p>The materials on this website are provided "as is". We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties. Furthermore, we do not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</p>
+        </section>
+
+        <section id="disclaimer" class="legal-section">
+            <h2>Disclaimer</h2>
+            <p>The information provided by Words Counter Tool on this website is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.</p>
+            <p>Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the site or reliance on any information provided on the site. Your use of the site and your reliance on any information on the site is solely at your own risk.</p>
+        </section>
+
+    </main>
+
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textInput = document.getElementById('textInput');
+            const wordCountEl = document.getElementById('wordCount');
+            const charCountEl = document.getElementById('charCount');
+            const sentenceCountEl = document.getElementById('sentenceCount');
+            const paraCountEl = document.getElementById('paraCount');
+            const readingTimeEl = document.getElementById('readingTime');
+            const copyBtn = document.getElementById('copyBtn');
+            const clearBtn = document.getElementById('clearBtn');
+
+            // Main Counting Logic
+            const updateStats = () => {
+                const text = textInput.value;
+                
+                // Character Count
+                const charCount = text.length;
+                
+                // Word Count (Split by whitespace and filter empty strings)
+                const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+                const wordCount = words.length;
+
+                // Sentence Count (Rough estimation using punctuation)
+                // Split by . ! ? followed by a space or end of string
+                const sentences = text.split(/[.!?]+(?=\s|$)/).filter(s => s.trim().length > 0);
+                const sentenceCount = sentences.length;
+
+                // Paragraph Count (Split by new lines)
+                const paragraphs = text.split(/\n/).filter(p => p.trim().length > 0);
+                const paraCount = paragraphs.length;
+
+                // Reading Time (Average 200 words per minute)
+                const readTime = Math.ceil(wordCount / 200);
+
+                // Update UI
+                charCountEl.innerText = charCount.toLocaleString();
+                wordCountEl.innerText = wordCount.toLocaleString();
+                sentenceCountEl.innerText = sentenceCount.toLocaleString();
+                paraCountEl.innerText = paraCount.toLocaleString();
+                readingTimeEl.innerText = readTime;
+            };
+
+            // Event Listeners
+            textInput.addEventListener('input', updateStats);
+
+            // Copy Button Logic
+            copyBtn.addEventListener('click', () => {
+                if (textInput.value.length > 0) {
+                    textInput.select();
+                    navigator.clipboard.writeText(textInput.value).then(() => {
+                        const originalText = copyBtn.innerText;
+                        copyBtn.innerText = "Copied!";
+                        copyBtn.style.background = "#059669"; // Green success color
+                        setTimeout(() => {
+                            copyBtn.innerText = originalText;
+                            copyBtn.style.background = ""; // Reset to CSS default
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                    });
+                }
+            });
+
+            // Clear Button Logic
+            clearBtn.addEventListener('click', () => {
+                if(confirm('Are you sure you want to clear the text?')) {
+                    textInput.value = '';
+                    updateStats();
+                }
+            });
+
+            // Initialize on load (incase of soft reload with preserved data)
+            updateStats();
+        });
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

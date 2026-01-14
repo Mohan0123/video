@@ -1,0 +1,367 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://viptool.online/robots.txt-generator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Robots.txt Generator Tool. Create SEO-optimized robots.txt files for your website instantly. Control search engine crawlers, manage sitemaps, and secure your directory access.">
+    <meta name="keywords" content="robots.txt generator, create robots.txt, seo tool, webmaster tools, robot exclusion standard, sitemap generator, allow disallow directives">
+    <meta name="author" content="Robots.txt Generator Tool">
+    <meta name="robots" content="index, follow">
+    <title>Free Robots.txt Generator - Create SEO Friendly Files Online</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section">
+            <h2 style="margin-top: 0;">Configure Your File</h2>
+            
+            <div class="tool-grid">
+                <div class="form-group full-width">
+                    <label for="default-access">Default All Robots (*)</label>
+                    <select id="default-access">
+                        <option value="allow">Allow All (Default)</option>
+                        <option value="disallow">Disallow All (Refuse all crawlers)</option>
+                    </select>
+                    <small class="small-help">Typically "Allow All" is recommended unless your site is private.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="crawl-delay">Crawl Delay (Seconds)</label>
+                    <select id="crawl-delay">
+                        <option value="">No Delay (Default)</option>
+                        <option value="5">5 Seconds</option>
+                        <option value="10">10 Seconds</option>
+                        <option value="20">20 Seconds</option>
+                        <option value="60">60 Seconds</option>
+                    </select>
+                    <small class="small-help">Slows down bots to save server resources.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="sitemap-url">Sitemap URL (Optional)</label>
+                    <input type="url" id="sitemap-url" placeholder="https://www.example.com/sitemap.xml">
+                    <small class="small-help">Helps search engines find your content.</small>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="disallow-paths">Disallow Directories (One per line)</label>
+                    <textarea id="disallow-paths" rows="4" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:6px;" placeholder="/admin/&#10;/private/&#10;/tmp/"></textarea>
+                    <small class="small-help">Paths you do NOT want search engines to visit.</small>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Specific Bot Restrictions (Optional)</label>
+                    <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 10px;">
+                        <input type="checkbox" id="block-google" style="width: auto;"> <label for="block-google" style="display:inline; margin:0;">Block Google Image Bot</label>
+                    </div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <input type="checkbox" id="block-yahoo" style="width: auto;"> <label for="block-yahoo" style="display:inline; margin:0;">Block Yahoo Slurp</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="generateRobots()">Create Robots.txt</button>
+                <button class="btn btn-secondary" onclick="resetForm()">Reset</button>
+            </div>
+
+            <div id="result-wrapper">
+                <label for="output-code" style="font-weight:600; display:block; margin-bottom:10px;">Your Generated Code:</label>
+                <textarea id="output-code" readonly></textarea>
+                
+                <div class="btn-group">
+                    <button class="btn btn-success" onclick="downloadRobots()">Download .txt File</button>
+                    <button class="btn btn-secondary" onclick="copyToClipboard()">Copy to Clipboard</button>
+                </div>
+                <div id="notification" class="notification"></div>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section">
+            <h2>How to Use This Robots.txt Generator</h2>
+            <ol>
+                <li><strong>Default Access:</strong> Choose whether you want to allow all bots to crawl your site (Standard) or block everyone (Private).</li>
+                <li><strong>Crawl Delay:</strong> (Optional) Set a delay if your server struggles with high traffic from bots. Most sites leave this as "No Delay".</li>
+                <li><strong>Sitemap:</strong> Paste the full URL to your XML sitemap. This is highly recommended for SEO.</li>
+                <li><strong>Disallow Paths:</strong> Enter specific folders you want to hide, like <code>/admin/</code> or <code>/login/</code>. Enter each path on a new line.</li>
+                <li><strong>Generate:</strong> Click the "Create Robots.txt" button to see your code.</li>
+                <li><strong>Download:</strong> Save the file and upload it to the root folder of your website (e.g., <code>www.yoursite.com/robots.txt</code>).</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Why Your Website Needs a Robots.txt File</h2>
+            <p>The <strong>robots.txt</strong> file is one of the most simple yet powerful files on a website. It lives in the root directory of your site and acts as a gatekeeper, giving instructions to search engine crawlers (like Googlebot, Bingbot, and Yahoo Slurp) about which pages they can and cannot request.</p>
+
+            <h3>Control Your SEO Crawl Budget</h3>
+            <p>Search engines have a "crawl budget"â€”a limit on how many pages they will crawl on your site within a given timeframe. If your site has thousands of auto-generated pages, duplicate content, or backend admin pages, you don't want Google wasting its budget there. By using this <strong>Robots.txt Generator</strong>, you can disallow these low-value pages, ensuring Google focuses its attention on your high-value content that you want to rank.</p>
+
+            <h3>Protect Sensitive Areas</h3>
+            <p>While a robots.txt file is not a security mechanism (hackers can ignore it), it keeps honest bots out of private areas. It prevents staging sites, admin dashboards, and script directories from showing up in public search results. </p>
+
+            <h3>Sitemap Discovery</h3>
+            <p>Including your Sitemap URL in the robots.txt file is a best practice. Even if you haven't submitted your sitemap via Google Search Console, the robots.txt file allows crawlers to discover your sitemap automatically when they visit your site.</p>
+
+            <h3>Syntax Matters</h3>
+            <p>One small typo in a robots.txt file can accidentally de-index your entire website from Google. That is why using an automated <strong>Robots.txt Generator</strong> is safer than writing the file manually. Our tool ensures the syntax for <code>User-agent</code>, <code>Disallow</code>, and <code>Allow</code> directives is formatted correctly according to the Robot Exclusion Standard.</p>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">What is a robots.txt file? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">It is a text file placed in the root directory of a website that tells search engine crawlers which pages or files they can or cannot request from your site.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Where should I upload the file? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">You must upload it to the main root folder of your hosting. It should be accessible via <code>https://yourdomain.com/robots.txt</code>.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does this tool support all search engines? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, this tool generates code using the standard "User-agent: *" directive, which applies to all major search engines including Google, Bing, Yahoo, and DuckDuckGo.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Can I edit the file later? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, it is just a plain text file. You can open it with Notepad or any code editor to make changes after downloading.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this tool free? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, this Robots.txt Generator is 100% free to use for personal and commercial websites.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: [Current Date]</strong></p>
+            <p>Your privacy is important to us. This Privacy Policy outlines how we handle data.</p>
+            <p><strong>1. Data Collection:</strong> This tool operates entirely on the "client-side" (in your browser). We do not store, save, or transmit the data you enter into the generator. Your sitemap URLs and paths remain private on your device.</p>
+            <p><strong>2. Cookies:</strong> We use cookies to enhance user experience. You can disable cookies in your browser settings.</p>
+            <p><strong>3. Third-Party Ads (Google AdSense):</strong> We use third-party advertising companies to serve ads. These companies may use aggregated information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you.</p>
+            <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to track general website usage statistics (e.g., number of visitors). This data is anonymized.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> This tool is provided for free for legitimate webmaster purposes. You agree not to use it for illegal activities.</p>
+            <p><strong>2. Liability:</strong> We are not responsible for any SEO ranking changes, de-indexing, or errors that may occur from using the generated robots.txt file. Users are responsible for verifying the code before uploading.</p>
+            <p><strong>3. Modifications:</strong> We reserve the right to modify or discontinue this service at any time.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>This tool is provided "as is" without any warranties, express or implied. While we strive to follow standard SEO protocols, search engine algorithms change frequently. We do not guarantee specific SEO results. Use this tool at your own risk. Always test your robots.txt file in Google Search Console after uploading.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        // DOM Elements
+        const defaultAccess = document.getElementById('default-access');
+        const crawlDelay = document.getElementById('crawl-delay');
+        const sitemapUrl = document.getElementById('sitemap-url');
+        const disallowPaths = document.getElementById('disallow-paths');
+        const blockGoogle = document.getElementById('block-google');
+        const blockYahoo = document.getElementById('block-yahoo');
+        const outputCode = document.getElementById('output-code');
+        const notification = document.getElementById('notification');
+
+        // Function to Generate Robots.txt
+        function generateRobots() {
+            let result = "";
+
+            // 1. General User Agent
+            result += "User-agent: *\n";
+            
+            // Default Access
+            if (defaultAccess.value === 'disallow') {
+                result += "Disallow: /\n";
+            } else {
+                // Crawl Delay
+                if (crawlDelay.value) {
+                    result += `Crawl-delay: ${crawlDelay.value}\n`;
+                }
+
+                // Disallow Paths (Split by new line)
+                const paths = disallowPaths.value.split('\n');
+                let hasDisallow = false;
+                
+                paths.forEach(path => {
+                    const cleanPath = path.trim();
+                    if (cleanPath) {
+                        // Ensure path starts with / if not present (optional, but good practice)
+                        const finalPath = cleanPath.startsWith('/') ? cleanPath : '/' + cleanPath;
+                        result += `Disallow: ${finalPath}\n`;
+                        hasDisallow = true;
+                    }
+                });
+
+                // Standard allow is implied, but usually we just list disallows. 
+                // If user put nothing in disallow and allowed all, strict standard is empty Disallow
+                // But for clarity often people use Disallow: (empty) which means Allow All
+                if (!hasDisallow && defaultAccess.value === 'allow') {
+                    // result += "Disallow: \n"; // Optional: Explicitly say nothing is disallowed
+                }
+            }
+
+            result += "\n";
+
+            // 2. Specific Bots (If checked)
+            if (blockGoogle.checked) {
+                result += "User-agent: Googlebot-Image\n";
+                result += "Disallow: /\n\n";
+            }
+
+            if (blockYahoo.checked) {
+                result += "User-agent: Slurp\n";
+                result += "Disallow: /\n\n";
+            }
+
+            // 3. Sitemap
+            if (sitemapUrl.value.trim()) {
+                result += `Sitemap: ${sitemapUrl.value.trim()}\n`;
+            }
+
+            // Output result
+            outputCode.value = result.trim();
+            
+            // Scroll to result
+            document.getElementById('result-wrapper').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Reset Form
+        function resetForm() {
+            document.querySelectorAll('input, textarea, select').forEach(el => {
+                if(el.type === 'checkbox') el.checked = false;
+                else el.value = '';
+            });
+            defaultAccess.value = 'allow'; // Reset select to default
+            outputCode.value = '';
+        }
+
+        // Copy to Clipboard
+        function copyToClipboard() {
+            if (!outputCode.value) {
+                showNotification("Generate code first!", true);
+                return;
+            }
+            outputCode.select();
+            document.execCommand("copy");
+            showNotification("Code copied to clipboard!", false);
+        }
+
+        // Download File (Blob Method)
+        function downloadRobots() {
+            if (!outputCode.value) {
+                showNotification("Generate code first!", true);
+                return;
+            }
+            
+            const text = outputCode.value;
+            const blob = new Blob([text], { type: "text/plain" });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "robots.txt";
+            document.body.appendChild(a);
+            a.click();
+            
+            // Cleanup
+            setTimeout(() => {
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            }, 0);
+        }
+
+        // Notification Helper
+        function showNotification(msg, isError) {
+            notification.textContent = msg;
+            notification.style.display = 'block';
+            notification.style.backgroundColor = isError ? '#fee2e2' : '#d1fae5';
+            notification.style.color = isError ? '#991b1b' : '#065f46';
+            
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        // FAQ Toggle
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const toggle = el.querySelector('.faq-toggle');
+            
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+                toggle.textContent = '+';
+            } else {
+                // Close others
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    const t = i.querySelector('.faq-toggle');
+                    if(t) t.textContent = '+';
+                });
+                item.classList.add('active');
+                toggle.textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

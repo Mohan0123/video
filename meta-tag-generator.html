@@ -1,0 +1,357 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Meta Tag Generator Tool. Create SEO-friendly meta title, description, keywords, robots, and viewport tags instantly to boost your website rankings.">
+    <meta name="keywords" content="meta tag generator, seo tool, meta description generator, title tag maker, free seo tools, html meta tags, robots tag generator">
+    <meta name="author" content="Meta Tag Generator Tool">
+    <meta name="robots" content="index, follow">
+    <title>Free Meta Tag Generator - Create SEO Tags Instantly</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section tool-wrapper">
+            <form id="meta-form" onsubmit="event.preventDefault(); generateMetaTags();">
+                <div class="form-grid">
+                    
+                    <div class="form-group full-width">
+                        <label for="site-title">Site Title *</label>
+                        <input type="text" id="site-title" placeholder="e.g., Best Online Shoes Store - Buy Sneakers" required>
+                        <small>Recommended length: 50-60 characters.</small>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="site-description">Site Description *</label>
+                        <textarea id="site-description" rows="3" placeholder="e.g., Shop the latest collection of sneakers at the best prices. Free shipping on all orders." required></textarea>
+                        <small>Recommended length: 150-160 characters.</small>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="site-keywords">Keywords (Comma separated)</label>
+                        <input type="text" id="site-keywords" placeholder="e.g., sneakers, shoes, footwear, running">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="site-robots">Robots Indexing</label>
+                        <select id="site-robots">
+                            <option value="index, follow">Index, Follow (Default)</option>
+                            <option value="noindex, follow">NoIndex, Follow</option>
+                            <option value="index, nofollow">Index, NoFollow</option>
+                            <option value="noindex, nofollow">NoIndex, NoFollow</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="site-charset">Character Set</label>
+                        <select id="site-charset">
+                            <option value="UTF-8">UTF-8 (Recommended)</option>
+                            <option value="ISO-8859-1">ISO-8859-1</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="site-language">Language</label>
+                        <select id="site-language">
+                            <option value="en">English (en)</option>
+                            <option value="es">Spanish (es)</option>
+                            <option value="fr">French (fr)</option>
+                            <option value="de">German (de)</option>
+                            <option value="hi">Hindi (hi)</option>
+                            <option value="zh">Chinese (zh)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="site-author">Author Name</label>
+                        <input type="text" id="site-author" placeholder="e.g., John Doe">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="site-viewport">Viewport (Mobile Responsive)</label>
+                        <select id="site-viewport">
+                            <option value="width=device-width, initial-scale=1.0">Standard Mobile Responsive (Default)</option>
+                            <option value="no-viewport">None (Not Recommended)</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="action-btn">Generate Meta Tags</button>
+            </form>
+
+            <p class="error-msg" id="error-msg"></p>
+
+            <div id="result-area">
+                <div class="result-header">
+                    <h3>Your Generated Code</h3>
+                    <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+                </div>
+                <textarea id="output-code" class="code-block" readonly></textarea>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">Paste this code inside the <code>&lt;head&gt;</code> section of your HTML file.</p>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section">
+            <h2>How to Use This Meta Tag Generator</h2>
+            <ol>
+                <li><strong>Enter Site Title:</strong> Write a concise and catchy title for your webpage. This appears in search results and browser tabs.</li>
+                <li><strong>Write Description:</strong> Provide a summary of your page content. Keep it under 160 characters for best SEO results.</li>
+                <li><strong>Add Keywords:</strong> Input relevant keywords separated by commas (optional, but good for context).</li>
+                <li><strong>Select Settings:</strong> Choose your robot crawling preferences, language, and character set.</li>
+                <li><strong>Generate:</strong> Click the "Generate Meta Tags" button.</li>
+                <li><strong>Copy & Paste:</strong> Copy the generated HTML code and paste it between the <code>&lt;head&gt;</code> and <code>&lt;/head&gt;</code> tags of your website.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Benefits of Using Meta Tags</h2>
+            <ul>
+                <li><strong>Better SEO Rankings:</strong> Proper Title and Description tags help search engines understand your content.</li>
+                <li><strong>Higher Click-Through Rate (CTR):</strong> A compelling description entices users to click on your link in Google search results.</li>
+                <li><strong>Mobile Optimization:</strong> The viewport tag ensures your site renders correctly on mobile devices.</li>
+                <li><strong>Control Crawlers:</strong> Robots tags tell search engines whether to index a page or follow links.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Why Meta Tags Are Crucial for SEO Success</h2>
+            <p>In the competitive world of digital marketing, On-Page SEO is the foundation of a successful website. Meta tags are snippets of text that describe a page's content; the meta tags don't appear on the page itself, but only in the page's source code. They are essentially little content descriptors that help tell search engines what a web page is about.</p>
+
+            <h3>The Power of the Title Tag</h3>
+            <p>The <code>&lt;title&gt;</code> tag is arguably the most important meta tag. It is the first thing a user sees in the search engine results pages (SERPs). A well-optimized title tag should include your primary keyword and be compelling enough to encourage clicks. Our <strong>Meta Tag Generator</strong> helps you format this correctly to ensure it meets standard web practices.</p>
+
+            <h3>Meta Descriptions: Your Digital Sales Pitch</h3>
+            <p>While Google has stated that meta descriptions are not a direct ranking factor, they are critical for user experience. The meta description acts as "organic ad text." If your description is relevant and appealing, users are more likely to click on your link over competitors. This increased Click-Through Rate (CTR) can indirectly boost your rankings over time.</p>
+
+            <h3>Robots and Viewport Tags</h3>
+            <p>Technical SEO is just as important as content. The <code>viewport</code> tag is essential in today's mobile-first indexing world. Without it, mobile browsers will render the page as if it were on a desktop, leading to a poor user experience. Similarly, the <code>robots</code> tag gives you control over how Googlebot interacts with your page, preventing duplicate content issues or keeping private pages out of the index.</p>
+            
+            <p>Using a reliable <strong>Meta Tag Generator</strong> ensures that you don't miss these critical HTML elements, making your site compliant with modern web standards and search engine guidelines.</p>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">What are meta tags? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Meta tags are snippets of text that describe a page's content. They don't appear on the page itself but are in the page's source code, communicating with search engines.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Are meta keywords still relevant for SEO? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Most major search engines like Google no longer use meta keywords as a ranking factor due to past abuse (keyword stuffing). However, they can still be useful for some smaller search engines or internal organizational systems.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">How long should my meta description be? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">It is generally recommended to keep meta descriptions between 150 and 160 characters. If they are too long, search engines may truncate them in the results.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Where do I paste the generated code? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">You should paste the generated code inside the <code>&lt;head&gt;</code> section of your HTML document, typically near the top.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this tool free? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, this Meta Tag Generator is 100% free to use for personal and commercial projects.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: [Current Date]</strong></p>
+            <p>Your privacy is important to us. This Privacy Policy explains how we handle information.</p>
+            <p><strong>1. Data Collection:</strong> This tool operates entirely on the "client-side". We do not store, save, or transmit the data you enter into the form. Everything happens in your browser.</p>
+            <p><strong>2. Cookies:</strong> We may use cookies to improve user experience. You can disable cookies in your browser settings.</p>
+            <p><strong>3. Third-Party Ads (Google AdSense):</strong> We use third-party advertising companies to serve ads. These companies may use information about your visits to provide advertisements about goods and services of interest to you.</p>
+            <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to understand traffic trends. This data is anonymous.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> This tool is provided for personal and commercial use. You agree not to use it for illegal activities.</p>
+            <p><strong>2. Liability:</strong> We are not responsible for any errors in the generated code or any impact it may have on your website's rankings.</p>
+            <p><strong>3. Modifications:</strong> We reserve the right to modify the service at any time.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>The materials on this website are provided "as is". We make no warranties, expressed or implied, regarding the accuracy or reliability of the tool. SEO is a complex field, and using meta tags alone does not guarantee high rankings. Users are responsible for verifying the generated code before implementation.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        // DOM Elements
+        const form = document.getElementById('meta-form');
+        const outputCode = document.getElementById('output-code');
+        const resultArea = document.getElementById('result-area');
+        const errorMsg = document.getElementById('error-msg');
+
+        function generateMetaTags() {
+            // Get values
+            const title = document.getElementById('site-title').value.trim();
+            const description = document.getElementById('site-description').value.trim();
+            const keywords = document.getElementById('site-keywords').value.trim();
+            const robots = document.getElementById('site-robots').value;
+            const charset = document.getElementById('site-charset').value;
+            const language = document.getElementById('site-language').value;
+            const author = document.getElementById('site-author').value.trim();
+            const viewport = document.getElementById('site-viewport').value;
+
+            // Validation
+            if (!title || !description) {
+                showError("Please fill in the Site Title and Description fields.");
+                return;
+            }
+
+            errorMsg.style.display = 'none';
+
+            // Build Code String
+            let code = `\n`;
+            code += `<meta charset="${charset}">\n`;
+            
+            if (viewport !== 'no-viewport') {
+                code += `<meta name="viewport" content="${viewport}">\n`;
+            }
+
+            code += `<title>${escapeHtml(title)}</title>\n`;
+            code += `<meta name="description" content="${escapeHtml(description)}">\n`;
+
+            if (keywords) {
+                code += `<meta name="keywords" content="${escapeHtml(keywords)}">\n`;
+            }
+
+            code += `<meta name="robots" content="${robots}">\n`;
+            
+            if (author) {
+                code += `<meta name="author" content="${escapeHtml(author)}">\n`;
+            }
+
+            // Add Language attribute hint (comment)
+            code += ``;
+
+            // Display Result
+            outputCode.value = code;
+            resultArea.style.display = 'block';
+            
+            // Scroll to result
+            resultArea.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Helper to escape HTML characters to prevent XSS issues in display
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+        }
+
+        function copyCode() {
+            outputCode.select();
+            outputCode.setSelectionRange(0, 99999); // Mobile support
+            
+            try {
+                navigator.clipboard.writeText(outputCode.value).then(() => {
+                    const btn = document.querySelector('.copy-btn');
+                    const originalText = btn.textContent;
+                    btn.textContent = 'Copied!';
+                    btn.style.backgroundColor = '#059669';
+                    
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.style.backgroundColor = ''; // Reset to CSS default
+                    }, 2000);
+                });
+            } catch (err) {
+                console.error('Failed to copy', err);
+            }
+        }
+
+        function showError(message) {
+            errorMsg.textContent = message;
+            errorMsg.style.display = 'block';
+        }
+
+        // Accordion Logic
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const toggle = el.querySelector('.faq-toggle');
+            
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+                toggle.textContent = '+';
+            } else {
+                // Close others
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    const t = i.querySelector('.faq-toggle');
+                    if(t) t.textContent = '+';
+                });
+                item.classList.add('active');
+                toggle.textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

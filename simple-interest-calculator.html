@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Simple Interest Calculator by VIP Tool. Quickly calculate interest earned and total maturity amount on savings or loans. Accurate financial tool for students and professionals.">
+    <title>Simple Interest Calculator - Calculate Interest Online | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Simple Interest Calculator",
+      "url": "https://viptool.online/simple-interest-calculator",
+      "description": "A free online tool to calculate simple interest based on principal amount, rate of interest, and time period.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Simple Interest Calculator"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is the formula for Simple Interest?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The formula for simple interest is SI = (P Ã— R Ã— T) / 100, where P is the Principal amount, R is the Rate of interest per year, and T is the Time in years."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How is Simple Interest different from Compound Interest?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simple interest is calculated only on the principal amount, whereas compound interest is calculated on the principal plus the accumulated interest from previous periods."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I calculate interest for months?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our calculator allows you to select the time period in either Years or Months. If you select months, the tool automatically converts it for the formula."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this tool free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the Simple Interest Calculator on VIP Tool is 100% free to use for unlimited calculations."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is the result accurate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the tool uses standard mathematical formulas to ensure high precision. However, always consult with a bank or financial institution for exact loan or deposit figures."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Simple Interest Calculator</h1>
+        <p class="subtitle">Quickly calculate interest earned and total maturity amount on your investments or loans.</p>
+
+        <div class="tool-card">
+            <div class="form-row">
+                <div class="col form-group">
+                    <label for="principal">Principal Amount (P)</label>
+                    <input type="number" id="principal" placeholder="e.g. 5000" min="0" step="any">
+                </div>
+                <div class="col form-group">
+                    <label for="rate">Annual Interest Rate (R)</label>
+                    <div class="input-group">
+                        <input type="number" id="rate" placeholder="e.g. 5" min="0" step="0.01">
+                        <span class="input-group-text">%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col form-group">
+                    <label for="time">Time Period (T)</label>
+                    <input type="number" id="time" placeholder="e.g. 2" min="0" step="any">
+                </div>
+                <div class="col form-group">
+                    <label for="periodUnit">Period Unit</label>
+                    <select id="periodUnit">
+                        <option value="years">Years</option>
+                        <option value="months">Months</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn-primary" onclick="calculateInterest()">Calculate Interest</button>
+                <button class="btn-secondary" onclick="resetForm()">Reset</button>
+            </div>
+
+            <div id="result-area">
+                <h3>Calculation Results</h3>
+                <div class="result-grid">
+                    <div class="result-box">
+                        <div class="result-label">Interest Earned</div>
+                        <div class="result-value" id="res-interest">0.00</div>
+                    </div>
+                    <div class="result-box total-box">
+                        <div class="result-label">Total Amount (Principal + Interest)</div>
+                        <div class="result-value" id="res-total">0.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Finance & Math Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/compound-interest-calculator" class="related-link-item">Compound Interest Calculator</a>
+                <a href="https://viptool.online/percentage-calculator" class="related-link-item">Percentage Calculator</a>
+                <a href="https://viptool.online/gst-calculator" class="related-link-item">GST Calculator</a>
+                <a href="https://viptool.online/emi-calculator" class="related-link-item">EMI Calculator</a>
+                <a href="https://viptool.online/age-calculator" class="related-link-item">Age Calculator</a>
+                <a href="https://viptool.online/discount-calculator" class="related-link-item">Discount Calculator</a>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <div class="content-section">
+            <h2>How to Use the Simple Interest Calculator</h2>
+            <p>Our <strong>Simple Interest Calculator</strong> is designed to be intuitive and fast. Whether you are calculating returns on a fixed deposit or estimating interest on a loan, follow these simple steps:</p>
+            <ol style="margin-left: 20px; margin-bottom: 25px;">
+                <li><strong>Enter Principal:</strong> Input the initial amount of money (P) you are investing or borrowing.</li>
+                <li><strong>Enter Rate:</strong> Input the annual interest rate (R) in percentage. Do not include the % symbol.</li>
+                <li><strong>Enter Time:</strong> Input the duration for the interest calculation.</li>
+                <li><strong>Select Unit:</strong> Choose whether the time entered is in "Years" or "Months".</li>
+                <li><strong>Calculate:</strong> Click the "Calculate Interest" button to see the interest earned and the final total amount instantly.</li>
+            </ol>
+
+            <h2>What is Simple Interest?</h2>
+            <p>Simple interest is a quick method of calculating the interest charge on a loan or the interest earned on a deposit. Unlike compound interest, simple interest is calculated only on the initial principal amount.</p>
+            
+            <h3>The Simple Interest Formula</h3>
+            <p>The standard mathematical formula used by this tool is:</p>
+            <blockquote style="background:#f8f9fa; padding:15px; border-left:4px solid var(--primary-color); font-family:monospace; margin-bottom:20px;">
+                SI = (P Ã— R Ã— T) / 100
+            </blockquote>
+            <ul>
+                <li><strong>P</strong> = Principal Amount (The initial money)</li>
+                <li><strong>R</strong> = Rate of Interest per annum (%)</li>
+                <li><strong>T</strong> = Time Period (in Years)</li>
+            </ul>
+            <p>If you select "Months" in our tool, we automatically convert the time to years (Time / 12) before applying the formula.</p>
+
+            <h2>Benefits of Using VIP Tool</h2>
+            <p>Calculating interest manually can be prone to errors, especially when dealing with large numbers or decimal interest rates. The <a href="https://viptool.online/simple-interest-calculator" style="color:var(--primary-color);">VIP Tool Simple Interest Calculator</a> ensures accuracy and speed. It is helpful for:</p>
+            <ul>
+                <li><strong>Students:</strong> Quickly solving math homework problems.</li>
+                <li><strong>Investors:</strong> Estimating returns on bonds or fixed deposits.</li>
+                <li><strong>Borrowers:</strong> Understanding the cost of short-term loans.</li>
+            </ul>
+
+            <div class="ad-placeholder">
+                Advertisement Space
+            </div>
+
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <h3>1. Does this calculator work for days?</h3>
+            <p>Currently, this calculator supports Years and Months. To calculate for days, you can convert your days into a fraction of a year (Days / 365) and enter that value in the "Time" field while selecting "Years".</p>
+
+            <h3>2. What is the difference between Simple and Compound Interest?</h3>
+            <p>Simple interest is calculated on the principal amount only. Compound interest is calculated on the principal amount <em>plus</em> the interest that has accumulated over previous periods. Compound interest grows faster over time.</p>
+
+            <h3>3. Can I use this for bank loan calculations?</h3>
+            <p>Yes, you can use it for estimates. However, banks often use specific day-count conventions or compound interest methods. This tool provides a mathematical simple interest figure.</p>
+
+            <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, we value your privacy. This Simple Interest Calculator functions entirely within your browser (client-side). We do not collect, save, or transmit the financial data you input. We may use third-party services like Google Analytics and Google AdSense, which utilize cookies to analyze traffic and serve personalized advertisements.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>By using this website, you acknowledge that the tools are provided for informational and educational purposes only. While we strive for accuracy, VIP Tool cannot be held liable for any financial losses or errors resulting from the use of this calculator. Always verify financial data with a professional institution.</p>
+
+                <h3>Disclaimer</h3>
+                <p>This tool is provided "as-is" without warranties of any kind. It is not intended to be a substitute for professional financial advice. The results generated are estimates based on the inputs provided by the user.</p>
+            </div>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    function calculateInterest() {
+        // Get Inputs
+        const principal = parseFloat(document.getElementById('principal').value);
+        const rate = parseFloat(document.getElementById('rate').value);
+        let time = parseFloat(document.getElementById('time').value);
+        const unit = document.getElementById('periodUnit').value;
+
+        // Validation
+        if (isNaN(principal) || isNaN(rate) || isNaN(time)) {
+            alert("Please fill in all fields with valid numbers.");
+            return;
+        }
+
+        if (principal < 0 || rate < 0 || time < 0) {
+            alert("Values cannot be negative.");
+            return;
+        }
+
+        // Convert Months to Years if necessary
+        if (unit === 'months') {
+            time = time / 12;
+        }
+
+        // Formula: SI = (P * R * T) / 100
+        const interest = (principal * rate * time) / 100;
+        const totalAmount = principal + interest;
+
+        // Display Results (Formatted)
+        document.getElementById('res-interest').innerText = formatNumber(interest);
+        document.getElementById('res-total').innerText = formatNumber(totalAmount);
+
+        // Show Result Area
+        document.getElementById('result-area').style.display = 'block';
+
+        // Scroll to result on mobile
+        if(window.innerWidth < 600) {
+            document.getElementById('result-area').scrollIntoView({behavior: 'smooth'});
+        }
+    }
+
+    // Helper to format numbers with commas
+    function formatNumber(num) {
+        return num.toLocaleString(undefined, {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+    }
+
+    function resetForm() {
+        document.getElementById('principal').value = '';
+        document.getElementById('rate').value = '';
+        document.getElementById('time').value = '';
+        document.getElementById('periodUnit').value = 'years';
+        document.getElementById('result-area').style.display = 'none';
+    }
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

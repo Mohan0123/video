@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <link rel="canonical" href="https://viptool.online/url-encoder-decoder">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online URL Encoder / Decoder Tool. Convert text to URL-encoded format or decode URL-encoded strings instantly. Secure, fast, and developer-friendly.">
+    <meta name="keywords" content="url encoder, url decoder, percent encoding, uri encoder, decode url online, free seo tool, developer tools, string converter">
+    <meta name="author" content="URL Encoder / Decoder Tool">
+    <meta name="robots" content="index, follow">
+    <title>URL Encoder / Decoder - Free Online Tool</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            <span>Advertisement Space</span>
+        </div>
+
+        <section class="section tool-wrapper">
+            <div class="input-group">
+                <label for="input-text">Enter Text / URL to Process:</label>
+                <textarea id="input-text" placeholder="Paste your URL or text here... (e.g. https://example.com/search?q=hello world)"></textarea>
+                <div class="error-msg" id="error-msg">Error: Unable to decode. The text might be malformed.</div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-primary" onclick="processText('encode')">Encode URL</button>
+                <button class="btn btn-primary" onclick="processText('decode')">Decode URL</button>
+                <button class="btn btn-secondary" onclick="clearAll()">Clear All</button>
+            </div>
+
+            <div class="input-group">
+                <label for="output-text">Result:</label>
+                <textarea id="output-text" readonly placeholder="Result will appear here..."></textarea>
+                <div class="action-bar">
+                    <span class="copy-feedback" id="copy-feedback">Copied to clipboard!</span>
+                    <button class="btn btn-success" onclick="copyToClipboard()">Copy Result</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            <span>Advertisement Space</span>
+        </div>
+
+        <section class="section">
+            <h2>How to Use This Tool</h2>
+            <ol>
+                <li><strong>Input:</strong> Paste the text or URL you want to convert into the top box.</li>
+                <li><strong>Select Action:</strong>
+                    <ul>
+                        <li>Click <strong>Encode URL</strong> to convert special characters into percent-encoded format (e.g., space becomes %20).</li>
+                        <li>Click <strong>Decode URL</strong> to convert encoded characters back to readable text.</li>
+                    </ul>
+                </li>
+                <li><strong>Copy:</strong> Your result appears instantly in the bottom box. Click "Copy Result" to use it.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Benefits of Our URL Encoder/Decoder</h2>
+            <ul>
+                <li><strong>100% Free:</strong> No hidden costs, subscriptions, or limits.</li>
+                <li><strong>Client-Side Security:</strong> All processing happens in your browser using JavaScript. Your data is <strong>never</strong> sent to our servers.</li>
+                <li><strong>Developer Friendly:</strong> Essential for fixing broken links, debugging API queries, and preparing UTM parameters.</li>
+                <li><strong>Fast & Responsive:</strong> Works instantly on mobile phones, tablets, and desktop computers.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>What is URL Encoding and Why Do We Need It?</h2>
+            <p>URL encoding, officially known as <strong>percent-encoding</strong>, is a mechanism for encoding information in a Uniform Resource Identifier (URI). Characters that are allowable in a URI are either reserved or unreserved. Reserved characters are those that have special meaning (like the slash <code>/</code> or the question mark <code>?</code>), while unreserved characters have no such meaning.</p>
+
+            <h3>The Problem with Special Characters</h3>
+            <p>URLs can only be sent over the Internet using the ASCII character-set. Since URLs often contain characters outside the ASCII set, the URL has to be converted into a valid ASCII format. URL encoding replaces unsafe ASCII characters with a "%" followed by two hexadecimal digits.</p>
+            <p>For example, URLs cannot contain spaces. URL encoding normally replaces a space with a plus (<code>+</code>) sign or with <code>%20</code>.</p>
+
+            <h3>When to Use Encoding vs. Decoding</h3>
+            <p><strong>Encoding:</strong> You should encode a string when placing it inside a URL query parameter. For example, if you are passing a user's email address or a search query like "hello & world" in a URL, the ampersand (&) must be encoded to avoid breaking the URL structure.</p>
+            <p><strong>Decoding:</strong> You decode a string when you want to read the actual content of a URL parameter. If you receive a URL like <code>search?q=hello%20world</code>, decoding it reveals the original query: "hello world".</p>
+
+            <h3>Common Encoded Characters</h3>
+            <ul>
+                <li>Space becomes <code>%20</code></li>
+                <li>! becomes <code>%21</code></li>
+                <li>" becomes <code>%22</code></li>
+                <li># becomes <code>%23</code></li>
+                <li>$ becomes <code>%24</code></li>
+                <li>& becomes <code>%26</code></li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this tool safe to use? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, absolutely. This tool runs entirely in your web browser using JavaScript. We do not store, record, or transmit any data you enter.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">What is the difference between encodeURI and encodeURIComponent? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">This tool uses <code>encodeURIComponent</code> logic, which encodes special characters including: , / ? : @ & = + $ #. This ensures the string is safe to include as a specific query parameter within a larger URL.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Why do I get an error when decoding? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">This usually happens if the text contains a "%" symbol that is not followed by two hexadecimal digits, making it an invalid encoded sequence.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this tool free? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, this URL Encoder / Decoder is completely free to use for personal and commercial purposes.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does it work on mobile? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, the design is fully responsive and works perfectly on iOS and Android devices.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: [Current Date]</strong></p>
+            <p>Your privacy is important to us. This Privacy Policy explains how we handle information.</p>
+            <p><strong>1. Data Collection:</strong> We do not collect, store, or transmit any data you input into the tool. All processing is done locally on your device.</p>
+            <p><strong>2. Cookies:</strong> We may use cookies to improve user experience. You can disable cookies in your browser settings.</p>
+            <p><strong>3. Third-Party Ads (Google AdSense):</strong> We use third-party advertising companies to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you.</p>
+            <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to understand traffic trends. This data is anonymous.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> This tool is provided for personal and commercial use. You agree not to use it for illegal activities.</p>
+            <p><strong>2. Liability:</strong> We are not responsible for any errors or damages resulting from the use of this tool.</p>
+            <p><strong>3. Modifications:</strong> We reserve the right to modify or discontinue the service at any time without notice.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>The materials on this website are provided "as is". We make no warranties, expressed or implied, regarding the accuracy or reliability of the tool. Users are responsible for verifying the output before using it in critical applications. We accept no liability for any loss or damage caused by reliance on this tool.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        // DOM Elements
+        const inputText = document.getElementById('input-text');
+        const outputText = document.getElementById('output-text');
+        const errorMsg = document.getElementById('error-msg');
+        const copyFeedback = document.getElementById('copy-feedback');
+
+        // Core Processing Function
+        function processText(action) {
+            const text = inputText.value;
+            errorMsg.style.display = 'none'; // Reset error
+            outputText.value = ''; // Reset output
+
+            if (!text) {
+                return; // Do nothing if empty
+            }
+
+            try {
+                if (action === 'encode') {
+                    // Using encodeURIComponent to safely encode all special chars
+                    outputText.value = encodeURIComponent(text);
+                } else if (action === 'decode') {
+                    // Using decodeURIComponent
+                    // We replace + with space first because decodeURIComponent doesn't handle '+' as space automatically in some contexts, 
+                    // though strictly URL encoding uses %20. Some legacy systems use +. 
+                    // Standard approach for tools: decodeURIComponent(text).
+                    // If text contains malformed sequences, it throws URIError.
+                    outputText.value = decodeURIComponent(text);
+                }
+            } catch (e) {
+                // Handle Malformed URI sequences
+                errorMsg.style.display = 'block';
+                outputText.value = "Error: Invalid input for decoding.";
+                console.error(e);
+            }
+        }
+
+        // Clear Function
+        function clearAll() {
+            inputText.value = '';
+            outputText.value = '';
+            errorMsg.style.display = 'none';
+            copyFeedback.style.display = 'none';
+        }
+
+        // Copy to Clipboard
+        function copyToClipboard() {
+            if (!outputText.value || outputText.value.startsWith("Error:")) return;
+
+            navigator.clipboard.writeText(outputText.value).then(() => {
+                copyFeedback.style.display = 'inline';
+                setTimeout(() => {
+                    copyFeedback.style.display = 'none';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+
+        // FAQ Accordion Logic
+        function toggleFaq(element) {
+            const parent = element.parentElement;
+            const isOpen = parent.classList.contains('active');
+            
+            // Close all first
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-toggle').textContent = '+';
+            });
+
+            // Toggle current
+            if (!isOpen) {
+                parent.classList.add('active');
+                element.querySelector('.faq-toggle').textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

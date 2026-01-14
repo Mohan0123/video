@@ -1,0 +1,353 @@
+﻿,<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online PNG to JPG Converter. Convert transparent PNG images to JPEG format instantly. Fast, secure, and maintains high quality. No software installation needed.">
+    <meta name="keywords" content="png to jpg, convert png to jpg, png to jpeg converter, image converter, free online tool, change image format, reduce image size">
+    <meta name="author" content="PNG to JPG Tool">
+    <meta name="robots" content="index, follow">
+    <title>Free PNG to JPG Converter - Convert Images Online Instantly</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section tool-wrapper">
+            <div class="drop-zone" id="drop-zone">
+                <input type="file" id="file-input" accept="image/png" style="display: none;">
+                <div class="drop-icon">ðŸ–¼ï¸</div>
+                <p><strong>Click to Upload PNG</strong></p>
+                <p style="font-size: 0.9rem; color: #64748b;">or drag and drop file here</p>
+            </div>
+
+            <div class="controls-area" id="controls-area">
+                <div class="quality-slider-container">
+                    <label for="quality">JPG Quality: <span id="quality-value">90</span>%</label>
+                    <input type="range" id="quality" min="10" max="100" value="90" style="width: 100%; margin-top: 5px;">
+                </div>
+                <button class="action-btn" id="convert-btn" onclick="processConversion()">Convert to JPG</button>
+            </div>
+
+            <p class="error-msg" id="error-msg"></p>
+
+            <div id="result-area">
+                <h3>Conversion Successful!</h3>
+                <p id="size-info" class="file-info"></p>
+                <div class="preview-container">
+                    <img id="preview-image" class="preview-img" alt="Converted Preview">
+                </div>
+                <button id="download-btn" class="download-btn">Download JPG</button>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section">
+            <h2>How to Convert PNG to JPG Online</h2>
+            <ol>
+                <li><strong>Select File:</strong> Click the upload box or drag your PNG image onto the page.</li>
+                <li><strong>Adjust Quality:</strong> Use the slider to choose the quality of the output JPG (default is 90%). Lower quality means smaller file size.</li>
+                <li><strong>Convert:</strong> Click the "Convert to JPG" button. The tool will handle the background transparency automatically.</li>
+                <li><strong>Download:</strong> View your new image and click "Download JPG" to save it to your device.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Why Use Our PNG to JPG Converter?</h2>
+            <ul>
+                <li><strong>Smart Transparency Handling:</strong> PNGs often have transparent backgrounds. Since JPG doesn't support transparency, our tool automatically fills transparency with white, ensuring your image looks perfect.</li>
+                <li><strong>100% Free & Secure:</strong> No subscriptions, no watermarks, and no server uploads. Your photos are processed securely within your own browser.</li>
+                <li><strong>Reduce File Size:</strong> JPGs are generally much smaller than PNGs. Converting allows you to save storage space and improve website loading speeds.</li>
+                <li><strong>Universal Compatibility:</strong> JPG is the most widely supported image format in the world, working on every device, browser, and social media platform.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Understanding Image Formats: PNG vs JPG</h2>
+            <p>Choosing the right image format is crucial for web performance, storage optimization, and visual quality. The two most popular formats on the internet are PNG (Portable Network Graphics) and JPG/JPEG (Joint Photographic Experts Group). Understanding when to use which can make a significant difference in your digital workflow.</p>
+
+            <h3>Why Convert PNG to JPG?</h3>
+            <p>PNG is a lossless format, meaning it retains all image data and supports transparency. This makes it ideal for logos, icons, and graphics with sharp edges. However, this high quality comes at a cost: large file sizes. For complex photographs, PNG files can be massive, slowing down website load times and eating up bandwidth.</p>
+            <p>JPG, on the other time, is a "lossy" compressed format. It is designed specifically for photographs. By converting a photo from PNG to JPG, you can often reduce the file size by 50% to 80% with barely noticeable loss in quality. This makes JPG the preferred format for blog posts, social media uploads, and email attachments.</p>
+
+            <h3>Handling Transparency</h3>
+            <p>One challenge when converting PNG to JPG is transparency. JPG does not support transparent pixels. If you simply change the file extension, transparent areas might turn black or display artifacts. Our <strong>PNG to JPG Converter</strong> solves this by intelligently detecting transparent areas and filling them with a clean white background, ensuring the final image looks professional and ready for use.</p>
+
+            <h3>Optimization for SEO</h3>
+            <p>Search engines like Google prioritize fast-loading websites. Since images often make up the bulk of a webpage's weight, optimizing them is a key SEO strategy. Converting heavy PNGs to optimized JPGs is one of the quickest wins for improving your Core Web Vitals and search rankings.</p>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this tool free? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, this PNG to JPG converter is completely free to use without any limits.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">What happens to the transparent background? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">JPG does not support transparency. Our tool automatically replaces transparent areas with a white background, which is the standard practice for converting logos and graphics.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is it safe? Are my photos uploaded? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Your privacy is guaranteed. The conversion happens entirely in your browser using JavaScript. No files are ever uploaded to our servers.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Can I convert other formats? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">This tool is optimized for PNG to JPG, but it will likely work if you upload BMP or WEBP files as well, converting them to standard JPG format.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does image quality decrease? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">JPG is a compressed format, so there is technically some quality loss, but it is usually not visible to the human eye. You can adjust the quality slider to balance between file size and image clarity.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: 30/12/2025</strong></p>
+            <p>Your privacy is important to us. This Privacy Policy explains our practices regarding your information.</p>
+            <p><strong>1. Data Processing:</strong> This tool operates entirely on the "client-side". When you upload an image, it is processed by your own web browser's memory. We do not transmit, store, or view your images on our servers.</p>
+            <p><strong>2. Cookies:</strong> We use standard cookies to analyze traffic and improve user experience. You can manage cookie preferences in your browser settings.</p>
+            <p><strong>3. Third-Party Ads (Google AdSense):</strong> We may use Google AdSense to display advertisements. Google uses cookies (including the DoubleClick cookie) to serve ads based on your visits to this and other websites. You can opt-out of personalized advertising by visiting Google's Ad Settings.</p>
+            <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to collect anonymous usage data (e.g., page views, browser type) to help us improve the website.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> You are free to use this tool for personal and commercial purposes. You agree not to use the site for any illegal activities.</p>
+            <p><strong>2. Modifications:</strong> We reserve the right to modify or discontinue the service at any time without prior notice.</p>
+            <p><strong>3. Liability:</strong> We are not liable for any damages or data loss that may occur from the use of this tool.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>This PNG to JPG Converter is provided "as is" without any warranties, express or implied. While we strive for accuracy and reliability, we do not guarantee that the tool will meet your specific requirements or be error-free. Users are responsible for maintaining backups of their original files.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        // DOM Elements
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const errorMsg = document.getElementById('error-msg');
+        const resultArea = document.getElementById('result-area');
+        const previewImage = document.getElementById('preview-image');
+        const downloadBtn = document.getElementById('download-btn');
+        const qualityInput = document.getElementById('quality');
+        const qualityValue = document.getElementById('quality-value');
+        
+        // State
+        let originalFile = null;
+        let currentDataUrl = null;
+
+        // --- Event Listeners ---
+
+        // File Selection
+        dropZone.addEventListener('click', () => fileInput.click());
+        fileInput.addEventListener('change', handleFileSelect);
+
+        // Quality Slider
+        qualityInput.addEventListener('input', (e) => {
+            qualityValue.textContent = e.target.value;
+        });
+
+        // Drag & Drop
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            if (e.dataTransfer.files.length) {
+                fileInput.files = e.dataTransfer.files;
+                handleFileSelect();
+            }
+        });
+
+        // Download Click (Blob Logic for Mobile compatibility)
+        downloadBtn.addEventListener('click', downloadImage);
+
+        // --- Functions ---
+
+        function handleFileSelect() {
+            const file = fileInput.files[0];
+            if (!file) return;
+
+            // Validate type (Allow PNG, but also generic images if user makes mistake)
+            if (!file.type.match('image.*')) {
+                showError("Please select a valid image file.");
+                return;
+            }
+
+            originalFile = file;
+            errorMsg.style.display = 'none';
+            resultArea.style.display = 'none';
+            dropZone.querySelector('p strong').textContent = `Selected: ${file.name}`;
+        }
+
+        function processConversion() {
+            if (!originalFile) {
+                showError("Please select a PNG file first.");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+
+                    // IMPORTANT: Fill background with white to handle transparency
+                    ctx.fillStyle = '#FFFFFF';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                    // Draw image
+                    ctx.drawImage(img, 0, 0);
+
+                    // Convert to JPG
+                    const quality = parseInt(qualityInput.value) / 100;
+                    currentDataUrl = canvas.toDataURL('image/jpeg', quality);
+
+                    // Update UI
+                    previewImage.src = currentDataUrl;
+                    
+                    // Calculate rough size estimate (Base64 length * 0.75)
+                    const sizeInBytes = Math.ceil((currentDataUrl.length - 'data:image/jpeg;base64,'.length) * 3 / 4);
+                    const sizeInKb = (sizeInBytes / 1024).toFixed(2);
+                    document.getElementById('size-info').textContent = `Output Size: ~${sizeInKb} KB`;
+
+                    resultArea.style.display = 'block';
+                    resultArea.scrollIntoView({ behavior: 'smooth' });
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(originalFile);
+        }
+
+        // Robust Download Function (Blob implementation)
+        function downloadImage() {
+            if(!currentDataUrl) return;
+
+            // Convert Base64 to Blob
+            const byteString = atob(currentDataUrl.split(',')[1]);
+            const mimeString = 'image/jpeg';
+            const ab = new ArrayBuffer(byteString.length);
+            const ia = new Uint8Array(ab);
+            for (let i = 0; i < byteString.length; i++) {
+                ia[i] = byteString.charCodeAt(i);
+            }
+            const blob = new Blob([ab], {type: mimeString});
+            
+            // Create URL
+            const url = URL.createObjectURL(blob);
+            
+            // Naming
+            let fileName = 'converted-image.jpg';
+            if(originalFile && originalFile.name) {
+                const nameParts = originalFile.name.split('.');
+                nameParts.pop(); // remove extension
+                fileName = nameParts.join('.') + '.jpg';
+            }
+
+            // Trigger Download
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Cleanup
+            setTimeout(() => URL.revokeObjectURL(url), 100);
+        }
+
+        function showError(msg) {
+            errorMsg.textContent = msg;
+            errorMsg.style.display = 'block';
+        }
+
+        // Accordion
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const toggle = el.querySelector('.faq-toggle');
+            
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+                toggle.textContent = '+';
+            } else {
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    const t = i.querySelector('.faq-toggle');
+                    if(t) t.textContent = '+';
+                });
+                item.classList.add('active');
+                toggle.textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Privacy Policy Generator by VIP Tool. Create a GDPR, CCPA, and AdSense compliant privacy policy for your website or blog instantly. No registration required.">
+    <title>Privacy Policy Generator - Free GDPR & AdSense Ready | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Privacy Policy Generator",
+      "url": "https://viptool.online/privacy-policy-generator",
+      "description": "Generate a professional, legal privacy policy for your website in seconds. Includes clauses for Google AdSense, Cookies, and GDPR compliance.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Privacy Policy Generator"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is this privacy policy AdSense compliant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our generator includes specific clauses regarding DoubleClick DART cookies and third-party ad vendors, which are required for Google AdSense compliance."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do I need to sign up to use this tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, the Privacy Policy Generator is completely free and requires no registration or email address."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does this cover GDPR?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the generated policy includes standard GDPR data protection rights sections suitable for most blogs and content websites."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Where should I put the privacy policy on my site?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is best practice to link to your Privacy Policy in the footer of every page on your website."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="ad-section" id="ad-top">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <h1>Privacy Policy Generator</h1>
+        <p class="subtitle">Create a professional, customized Privacy Policy for your website, blog, or app instantly.</p>
+
+        <div class="tool-card">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="companyName">Website / Company Name</label>
+                    <input type="text" id="companyName" placeholder="e.g. VIP Tool">
+                </div>
+                <div class="form-group">
+                    <label for="websiteUrl">Website URL</label>
+                    <input type="url" id="websiteUrl" placeholder="e.g. https://viptool.online">
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Contact Email</label>
+                    <input type="email" id="contactEmail" placeholder="e.g. support@viptool.online">
+                </div>
+            </div>
+
+            <div class="checkbox-group">
+                <label style="margin-bottom:10px;">Select Preferences:</label>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="cookiesCheck" checked>
+                    <label for="cookiesCheck" style="font-weight:normal; margin:0;">Do you use Cookies?</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="adsenseCheck" checked>
+                    <label for="adsenseCheck" style="font-weight:normal; margin:0;">Do you show Google AdSense ads?</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="thirdPartyCheck" checked>
+                    <label for="thirdPartyCheck" style="font-weight:normal; margin:0;">Do you show ads from other third parties?</label>
+                </div>
+            </div>
+
+            <button onclick="generatePolicy()">Generate Privacy Policy</button>
+
+            <div id="outputArea">
+                <div class="tabs">
+                    <div class="tab active" onclick="switchTab('html')">HTML Code</div>
+                    <div class="tab" onclick="switchTab('text')">Text / Word</div>
+                    <div class="tab" onclick="switchTab('preview')">Live Preview</div>
+                </div>
+
+                <div id="html-view">
+                    <textarea id="policyResult" class="result-box" readonly></textarea>
+                </div>
+
+                <div id="text-view" style="display:none;">
+                    <textarea id="policyResultText" class="result-box" readonly placeholder="Text format for MS Word..."></textarea>
+                </div>
+
+                <div id="preview-view" style="display:none;">
+                    <div id="previewContent" class="preview-box"></div>
+                </div>
+
+                <button class="btn-secondary" id="copyBtn" onclick="copyToClipboard()">Copy HTML Code</button>
+            </div>
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/terms-and-conditions-generator" class="related-link-item">Terms & Conditions Generator</a>
+                <a href="https://viptool.online/disclaimer-generator" class="related-link-item">Disclaimer Generator</a>
+                <a href="https://viptool.online/about-us-generator" class="related-link-item">About Us Generator</a>
+                <a href="https://viptool.online/sitemap-generator" class="related-link-item">Sitemap Generator</a>
+                <a href="https://viptool.online/word-counter" class="related-link-item">Word Counter</a>
+            </div>
+        </section>
+
+        <div class="ad-section" id="ad-mid">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <div class="content-section">
+            <h2>Why Your Website Needs a Privacy Policy</h2>
+            <p>In today's digital landscape, trust is everything. A <strong>Privacy Policy</strong> is not just a legal document; it's a statement to your visitors that you respect their data. Whether you run a personal blog, an e-commerce store, or a small business website, transparency regarding data collection is mandatory in many jurisdictions.</p>
+            
+            <h3>Compliance with AdSense and GDPR</h3>
+            <p>If you plan to monetize your website using <strong>Google AdSense</strong>, a privacy policy is strictly required. Google's policies mandate that you disclose the use of cookies, specifically the DoubleClick DART cookie, to your users. Failure to have a compliant policy can lead to your AdSense account being rejected or banned.</p>
+            <p>Furthermore, regulations like the <strong>GDPR (General Data Protection Regulation)</strong> in Europe and <strong>CCPA (California Consumer Privacy Act)</strong> in the US require websites to inform users about their rights regarding personal data. The <span style="color:var(--primary-color);">VIP Tool Privacy Policy Generator</span> helps you create a document that covers these essential bases automatically.</p>
+
+            <h2>How to Use This Generator</h2>
+            <ol>
+                <li><strong>Enter Details:</strong> Fill in your website name, URL, and contact email address.</li>
+                <li><strong>Select Options:</strong> Check the boxes if you use cookies, AdSense, or third-party advertisers.</li>
+                <li><strong>Generate:</strong> Click the button to instantly create your custom policy.</li>
+                <li><strong>Copy or Preview:</strong> Use the tabs to choose between HTML code or Text format for Word documents.</li>
+            </ol>
+
+            <div class="ad-section" id="ad-bottom">
+                <div class="ad-label">Advertisement</div>
+                </div>
+
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <h3>1. Is this policy legally binding?</h3>
+            <p>While this tool generates a standard privacy policy covering common scenarios, we are not a law firm. For specific legal advice tailored to your unique business model, consultation with a legal professional is recommended.</p>
+
+            <h3>2. Does it include cookie consent?</h3>
+            <p>The policy includes a disclosure about cookie usage. However, for full GDPR compliance, you may also need a "Cookie Consent Banner" on your website to get active user permission.</p>
+
+            <h3>3. Can I edit the generated text?</h3>
+            <p>Absolutely. The output is provided as raw HTML. You are encouraged to read through it and make any necessary adjustments to fit your specific needs.</p>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, user privacy is paramount. This Privacy Policy Generator tool operates entirely client-side. We do not collect, store, or transmit the data you enter into the form. Google AdSense and Analytics are used on this page to serve ads and monitor traffic; they may use cookies in accordance with their own privacy policies.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>This tool is provided "as-is" for informational and utility purposes. VIP Tool makes no warranties regarding the legal accuracy or suitability of the generated documents for your specific jurisdiction. Users assume full responsibility for using the generated content.</p>
+
+                <h3>Disclaimer</h3>
+                <p>VIP Tool is not a law firm and does not provide legal advice. The documents generated by this tool are templates intended to be used as a starting point. We recommend having your legal documents reviewed by a qualified attorney.</p>
+            </div>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    function generatePolicy() {
+        // Get Inputs
+        const name = document.getElementById('companyName').value.trim();
+        const url = document.getElementById('websiteUrl').value.trim();
+        const email = document.getElementById('contactEmail').value.trim();
+        
+        const hasCookies = document.getElementById('cookiesCheck').checked;
+        const hasAdsense = document.getElementById('adsenseCheck').checked;
+        const hasThirdParty = document.getElementById('thirdPartyCheck').checked;
+
+        if (!name || !url || !email) {
+            alert("Please fill in all the text fields (Name, URL, Email).");
+            return;
+        }
+
+        // Current Date
+        const date = new Date().toDateString();
+
+        // ------------------
+        // BUILD HTML VERSION
+        // ------------------
+        let policyHTML = `<h1>Privacy Policy for ${name}</h1>
+<p>At ${name}, accessible from ${url}, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by ${name} and how we use it.</p>
+
+<p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
+
+<p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in ${name}. This policy is not applicable to any information collected offline or via channels other than this website.</p>
+
+<h2>Consent</h2>
+<p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+
+<h2>Information we collect</h2>
+<p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
+<p>If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.</p>
+
+<h2>Log Files</h2>
+<p>${name} follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>`;
+
+        // ------------------
+        // BUILD TEXT VERSION
+        // ------------------
+        let policyText = `PRIVACY POLICY FOR ${name.toUpperCase()}\n\n`;
+        policyText += `At ${name}, accessible from ${url}, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by ${name} and how we use it.\n\n`;
+        policyText += `If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.\n\n`;
+        policyText += `This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in ${name}. This policy is not applicable to any information collected offline or via channels other than this website.\n\n`;
+        
+        policyText += `--- CONSENT ---\n`;
+        policyText += `By using our website, you hereby consent to our Privacy Policy and agree to its terms.\n\n`;
+        
+        policyText += `--- INFORMATION WE COLLECT ---\n`;
+        policyText += `The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.\n`;
+        policyText += `If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.\n\n`;
+        
+        policyText += `--- LOG FILES ---\n`;
+        policyText += `${name} follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.\n\n`;
+
+
+        // CONDITIONAL SECTIONS
+        if (hasCookies) {
+            // HTML
+            policyHTML += `
+<h2>Cookies and Web Beacons</h2>
+<p>Like any other website, ${name} uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>`;
+            
+            // Text
+            policyText += `--- COOKIES AND WEB BEACONS ---\n`;
+            policyText += `Like any other website, ${name} uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.\n\n`;
+        }
+
+        if (hasAdsense) {
+            // HTML
+            policyHTML += `
+<h2>Google DoubleClick DART Cookie</h2>
+<p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL â€“ <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>`;
+            
+            // Text
+            policyText += `--- GOOGLE DOUBLECLICK DART COOKIE ---\n`;
+            policyText += `Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL â€“ https://policies.google.com/technologies/ads \n\n`;
+        }
+
+        if (hasThirdParty || hasAdsense) {
+            // HTML
+            policyHTML += `
+<h2>Our Advertising Partners</h2>
+<p>Some of advertisers on our site may use cookies and web beacons. Our advertising partners are listed below. Each of our advertising partners has their own Privacy Policy for their policies on user data. For easier access, we hyperlinked to their Privacy Policies below.</p>
+<ul>
+    <li>Google: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></li>
+</ul>`;
+            
+            // Text
+            policyText += `--- OUR ADVERTISING PARTNERS ---\n`;
+            policyText += `Some of advertisers on our site may use cookies and web beacons. Our advertising partners are listed below. Each of our advertising partners has their own Privacy Policy for their policies on user data.\n`;
+            policyText += `- Google: https://policies.google.com/technologies/ads \n\n`;
+        }
+
+        // STANDARD CLOSING SECTIONS (HTML)
+        policyHTML += `
+<h2>Third Party Privacy Policies</h2>
+<p>${name}'s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
+<p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.</p>
+
+<h2>CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
+<p>Under the CCPA, among other rights, California consumers have the right to:</p>
+<ul>
+    <li>Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</li>
+    <li>Request that a business delete any personal data about the consumer that a business has collected.</li>
+    <li>Request that a business that sells a consumer's personal data, not sell the consumer's personal data.</li>
+</ul>
+<p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
+
+<h2>GDPR Data Protection Rights</h2>
+<p>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
+<ul>
+    <li>The right to access â€“ You have the right to request copies of your personal data. We may charge you a small fee for this service.</li>
+    <li>The right to rectification â€“ You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.</li>
+    <li>The right to erasure â€“ You have the right to request that we erase your personal data, under certain conditions.</li>
+    <li>The right to restrict processing â€“ You have the right to request that we restrict the processing of your personal data, under certain conditions.</li>
+    <li>The right to object to processing â€“ You have the right to object to our processing of your personal data, under certain conditions.</li>
+    <li>The right to data portability â€“ You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</li>
+</ul>
+<p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
+
+<h2>Children's Information</h2>
+<p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+<p>${name} does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+<hr />
+<p>Last updated: ${date}</p>
+<p>Contact: ${email}</p>`;
+
+        // STANDARD CLOSING SECTIONS (TEXT)
+        policyText += `--- THIRD PARTY PRIVACY POLICIES ---\n`;
+        policyText += `${name}'s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information.\n\n`;
+        
+        policyText += `--- CCPA PRIVACY RIGHTS ---\n`;
+        policyText += `Under the CCPA, among other rights, California consumers have the right to:\n`;
+        policyText += `- Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.\n`;
+        policyText += `- Request that a business delete any personal data about the consumer that a business has collected.\n`;
+        policyText += `- Request that a business that sells a consumer's personal data, not sell the consumer's personal data.\n`;
+        policyText += `If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.\n\n`;
+        
+        policyText += `--- GDPR DATA PROTECTION RIGHTS ---\n`;
+        policyText += `We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:\n`;
+        policyText += `- The right to access â€“ You have the right to request copies of your personal data.\n`;
+        policyText += `- The right to rectification â€“ You have the right to request that we correct any information you believe is inaccurate.\n`;
+        policyText += `- The right to erasure â€“ You have the right to request that we erase your personal data, under certain conditions.\n`;
+        policyText += `- The right to restrict processing â€“ You have the right to request that we restrict the processing of your personal data, under certain conditions.\n`;
+        policyText += `- The right to object to processing â€“ You have the right to object to our processing of your personal data, under certain conditions.\n`;
+        policyText += `- The right to data portability â€“ You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.\n`;
+        policyText += `If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.\n\n`;
+        
+        policyText += `--- CHILDREN'S INFORMATION ---\n`;
+        policyText += `Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.\n`;
+        policyText += `${name} does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.\n\n`;
+        
+        policyText += `Last updated: ${date}\nContact: ${email}`;
+
+        // OUTPUT RESULTS
+        document.getElementById('policyResult').value = policyHTML;
+        document.getElementById('policyResultText').value = policyText;
+        document.getElementById('previewContent').innerHTML = policyHTML;
+        
+        document.getElementById('outputArea').style.display = 'block';
+        
+        // Scroll to result
+        document.getElementById('outputArea').scrollIntoView({behavior: 'smooth'});
+        
+        // Default View
+        switchTab('html');
+    }
+
+    function switchTab(tab) {
+        const htmlView = document.getElementById('html-view');
+        const textView = document.getElementById('text-view');
+        const previewView = document.getElementById('preview-view');
+        const tabs = document.querySelectorAll('.tab');
+        const btn = document.getElementById('copyBtn');
+
+        // Reset
+        htmlView.style.display = 'none';
+        textView.style.display = 'none';
+        previewView.style.display = 'none';
+        tabs.forEach(t => t.classList.remove('active'));
+
+        if (tab === 'html') {
+            htmlView.style.display = 'block';
+            tabs[0].classList.add('active');
+            btn.innerText = "Copy HTML Code";
+            btn.style.display = 'inline-block';
+        } else if (tab === 'text') {
+            textView.style.display = 'block';
+            tabs[1].classList.add('active');
+            btn.innerText = "Copy Text";
+            btn.style.display = 'inline-block';
+        } else {
+            previewView.style.display = 'block';
+            tabs[2].classList.add('active');
+            btn.style.display = 'none'; // No copy button for preview usually, or can set to copy text
+        }
+    }
+
+    function copyToClipboard() {
+        let copyElement;
+        const htmlView = document.getElementById('html-view');
+        
+        // Check which tab is visible
+        if (htmlView.style.display !== 'none') {
+            copyElement = document.getElementById("policyResult");
+        } else {
+            // Default to text box if in text mode
+            copyElement = document.getElementById("policyResultText");
+        }
+
+        if(copyElement && copyElement.value !== "") {
+            copyElement.select();
+            copyElement.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyElement.value).then(() => {
+                alert("Content copied to clipboard!");
+            });
+        }
+    }
+
+    // ADSENSE AUTO-VISIBILITY LOGIC
+    window.addEventListener('load', function() {
+        const adSections = document.querySelectorAll('.ad-section');
+        adSections.forEach(section => {
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (section.children.length > 1 || section.offsetHeight > 20) {
+                        section.classList.add('visible');
+                        observer.disconnect(); 
+                    }
+                });
+            });
+            observer.observe(section, { childList: true, subtree: true, attributes: true });
+        });
+    });
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,367 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <link rel="canonical" href="https://viptool.online/seo-analyzer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online SEO Analyzer Tool. Check your Meta Titles, Descriptions, and Keyword Density instantly. Improve your on-page SEO and search engine rankings.">
+    <meta name="keywords" content="seo analyzer, seo audit tool, on-page seo checker, meta tag analyzer, keyword density calculator, free seo tool, website analysis">
+    <meta name="author" content="SEO Analyzer Tool">
+    <meta name="robots" content="index, follow">
+    <title>Free SEO Analyzer Tool - Audit Your On-Page SEO</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section tool-wrapper">
+            <p style="background: #e0f2fe; padding: 10px; border-radius: 5px; color: #0284c7; font-size: 0.9rem; margin-bottom: 20px;">
+                <strong>Note:</strong> This tool runs in your browser. No data is sent to any server. Paste your content below to analyze.
+            </p>
+
+            <div class="input-group">
+                <label for="target-keyword">Target Keyword</label>
+                <input type="text" id="target-keyword" placeholder="e.g. best coffee maker">
+                <div class="hint">The main keyword you want to rank for.</div>
+            </div>
+
+            <div class="input-group">
+                <label for="seo-title">SEO Title Tag</label>
+                <input type="text" id="seo-title" placeholder="Paste your page title here...">
+                <div class="hint">Recommended: 50-60 characters.</div>
+            </div>
+
+            <div class="input-group">
+                <label for="seo-desc">Meta Description</label>
+                <textarea id="seo-desc" rows="3" placeholder="Paste your meta description here..."></textarea>
+                <div class="hint">Recommended: 150-160 characters.</div>
+            </div>
+
+            <button class="btn-primary" onclick="analyzeSEO()">Analyze SEO Score</button>
+
+            <div id="result-area">
+                <div class="score-card">
+                    <div class="score-number" id="final-score">0/100</div>
+                    <div class="score-label">SEO Optimization Score</div>
+                </div>
+                <div id="analysis-list">
+                    </div>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section">
+            <h2>How to Use This SEO Analyzer</h2>
+            <ol>
+                <li><strong>Enter Target Keyword:</strong> Type the main phrase you want your page to rank for in Google.</li>
+                <li><strong>Paste Title Tag:</strong> Enter the title of your webpage (what appears in the browser tab and search results).</li>
+                <li><strong>Paste Meta Description:</strong> Enter the short summary of your page.</li>
+                <li><strong>Click Analyze:</strong> Hit the button to get an instant audit of your on-page SEO factors.</li>
+                <li><strong>Optimize:</strong> Use the feedback to adjust your lengths and keyword usage for maximum impact.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Why Use Our SEO Tool?</h2>
+            <ul>
+                <li><strong>Instant Feedback:</strong> Get real-time analysis of your SEO tags without waiting for a site crawl.</li>
+                <li><strong>Privacy First:</strong> Your data never leaves your browser. We don't store your keywords or content.</li>
+                <li><strong>Best Practices:</strong> We use the latest Google-friendly guidelines for character limits and keyword usage.</li>
+                <li><strong>100% Free:</strong> No subscriptions, no limits. Use it as many times as you need.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>The Importance of On-Page SEO</h2>
+            <p>Search Engine Optimization (SEO) is the process of improving your website to increase its visibility for relevant searches. The better visibility your pages have in search results, the more likely you are to garner attention and attract prospective and existing customers to your business.</p>
+
+            <h3>Why Meta Tags Matter</h3>
+            <p>Meta tags are snippets of text that describe a page's content; the meta tags don't appear on the page itself, but only in the page's source code. The two most important meta tags for SEO are the <strong>Title Tag</strong> and the <strong>Meta Description</strong>.</p>
+            <p>The <strong>Title Tag</strong> is the first thing a user sees in the search results. It is a major ranking factor. A well-optimized title should include your target keyword and be compelling enough to encourage clicks.</p>
+            <p>The <strong>Meta Description</strong> acts as a pitch to potential visitors. While it is not a direct ranking factor, a good description improves your Click-Through Rate (CTR), which indirectly signals to search engines that your content is valuable.</p>
+
+            <h3>Understanding Keyword Density</h3>
+            <p>Keyword density refers to the number of times a keyword appears on a webpage compared to the total word count. While "keyword stuffing" (overusing keywords) can hurt your rankings, it is essential to include your target keyword in strategic places, such as the beginning of your title and within your meta description.</p>
+            
+            <h3>Character Limits in SERPs</h3>
+            <p>Google typically displays the first 50-60 characters of a title tag. If you keep your titles under 60 characters, you can expect about 90% of your titles to display properly. For meta descriptions, the sweet spot is generally between 150-160 characters. Our <strong>SEO Analyzer</strong> helps you stay within these safe zones to ensure your message isn't cut off.</p>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this SEO tool free? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, this On-Page SEO Analyzer is completely free to use. You can check as many titles and descriptions as you like.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">What is the ideal length for a Title Tag? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">The ideal length is between 50 and 60 characters. Titles longer than 60 characters may get truncated (cut off) in Google search results.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Do keywords in Meta Descriptions help ranking? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Google has stated that keywords in the meta description do not directly help rankings. However, they appear in bold in search results if they match the user's query, which increases the click-through rate.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does this tool save my data? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">No. This tool works entirely in your browser using JavaScript. We do not send or save your data on any server.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Why is my SEO score low? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">A low score usually means your tags are either too short, too long, or missing the target keyword. Check the detailed feedback list to see exactly what to fix.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: 30/12/2025</strong></p>
+            <p>Your privacy is important to us. This Privacy Policy explains how we handle information.</p>
+            <p><strong>1. Data Collection:</strong> We do not collect, store, or transmit any data you enter into the tool. All analysis is performed client-side.</p>
+            <p><strong>2. Cookies:</strong> We may use cookies to improve user experience. You can disable cookies in your browser settings.</p>
+            <p><strong>3. Third-Party Ads (Google AdSense):</strong> We use third-party advertising companies to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you.</p>
+            <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to understand traffic trends. This data is anonymous.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> This tool is provided for personal and commercial use. You agree not to use it for any illegal activities.</p>
+            <p><strong>2. Liability:</strong> We are not responsible for any ranking changes or damages resulting from the use of this tool. SEO is complex and this tool provides general guidelines only.</p>
+            <p><strong>3. Modifications:</strong> We reserve the right to modify or discontinue the service at any time without notice.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>The materials on this website are provided "as is". We make no warranties, expressed or implied, and hereby disclaims and negates all other warranties. The SEO advice provided by this tool is based on general best practices and does not guarantee specific search engine rankings.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        function analyzeSEO() {
+            const keyword = document.getElementById('target-keyword').value.trim().toLowerCase();
+            const title = document.getElementById('seo-title').value.trim();
+            const desc = document.getElementById('seo-desc').value.trim();
+            const resultArea = document.getElementById('result-area');
+            const list = document.getElementById('analysis-list');
+            const scoreDisplay = document.getElementById('final-score');
+
+            if (!keyword || !title) {
+                alert("Please enter both a Target Keyword and a Title Tag.");
+                return;
+            }
+
+            let score = 0;
+            let maxScore = 5; // Total number of checks
+            let results = [];
+
+            // 1. Title Length Check
+            if (title.length >= 50 && title.length <= 60) {
+                score++;
+                results.push({
+                    status: 'pass',
+                    title: 'Title Length is Perfect',
+                    msg: `Great job! Your title is ${title.length} characters long (Ideal: 50-60).`
+                });
+            } else if (title.length < 50) {
+                results.push({
+                    status: 'warn',
+                    title: 'Title is too short',
+                    msg: `Your title is ${title.length} characters. Try to add more descriptive words (Target: 50-60).`
+                });
+            } else {
+                results.push({
+                    status: 'fail',
+                    title: 'Title is too long',
+                    msg: `Your title is ${title.length} characters. Google may cut it off (Limit: 60).`
+                });
+            }
+
+            // 2. Keyword in Title Check
+            if (title.toLowerCase().includes(keyword)) {
+                score++;
+                results.push({
+                    status: 'pass',
+                    title: 'Keyword found in Title',
+                    msg: `The keyword "${keyword}" appears in your title tag.`
+                });
+            } else {
+                results.push({
+                    status: 'fail',
+                    title: 'Keyword missing from Title',
+                    msg: `You should include the exact keyword "${keyword}" in your title.`
+                });
+            }
+
+            // 3. Keyword at start of Title (Bonus Check)
+            if (title.toLowerCase().indexOf(keyword) === 0) {
+                // Bonus point logic could go here, but keeping it simple
+                results.push({
+                    status: 'pass',
+                    title: 'Keyword at the beginning',
+                    msg: 'Excellent! Putting the keyword first helps CTR and ranking.'
+                });
+            }
+
+            // 4. Description Length Check
+            if (desc.length === 0) {
+                results.push({
+                    status: 'fail',
+                    title: 'Meta Description Missing',
+                    msg: 'You have not provided a meta description.'
+                });
+            } else if (desc.length >= 150 && desc.length <= 160) {
+                score++;
+                results.push({
+                    status: 'pass',
+                    title: 'Description Length is Perfect',
+                    msg: `Your description is ${desc.length} characters long (Ideal: 150-160).`
+                });
+            } else if (desc.length < 150) {
+                results.push({
+                    status: 'warn',
+                    title: 'Description is short',
+                    msg: `It is ${desc.length} characters. Use up the space to sell your click (Target: 150-160).`
+                });
+            } else {
+                results.push({
+                    status: 'warn',
+                    title: 'Description is too long',
+                    msg: `It is ${desc.length} characters. It might get truncated.`
+                });
+            }
+
+            // 5. Keyword in Description
+            if (desc.length > 0) {
+                if (desc.toLowerCase().includes(keyword)) {
+                    score++;
+                    results.push({
+                        status: 'pass',
+                        title: 'Keyword found in Description',
+                        msg: `The keyword "${keyword}" is present in your description.`
+                    });
+                } else {
+                    results.push({
+                        status: 'warn',
+                        title: 'Keyword missing from Description',
+                        msg: `Consider adding "${keyword}" to your description to bold it in search results.`
+                    });
+                }
+            }
+
+            // Render Results
+            list.innerHTML = '';
+            results.forEach(item => {
+                let icon = '';
+                if(item.status === 'pass') icon = 'âœ…';
+                if(item.status === 'warn') icon = 'âš ï¸';
+                if(item.status === 'fail') icon = 'âŒ';
+
+                const div = document.createElement('div');
+                div.className = 'analysis-item';
+                div.innerHTML = `
+                    <div class="status-icon status-${item.status}">${icon}</div>
+                    <div class="analysis-content">
+                        <h4>${item.title}</h4>
+                        <p>${item.msg}</p>
+                    </div>
+                `;
+                list.appendChild(div);
+            });
+
+            // Calculate Percentage Score (Simplified logic)
+            // If description is missing, max score attainable reduces
+            let finalPercentage = 0;
+            if(desc.length > 0) {
+                finalPercentage = Math.round((score / 4) * 100); // 4 main checks
+            } else {
+                finalPercentage = Math.round((score / 4) * 100); 
+            }
+            
+            // Cap at 100
+            if (finalPercentage > 100) finalPercentage = 100;
+            
+            scoreDisplay.textContent = `${finalPercentage}/100`;
+            
+            // Color code score
+            if(finalPercentage >= 80) scoreDisplay.style.color = '#10b981';
+            else if(finalPercentage >= 50) scoreDisplay.style.color = '#f59e0b';
+            else scoreDisplay.style.color = '#ef4444';
+
+            resultArea.style.display = 'block';
+            resultArea.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleFaq(element) {
+            const parent = element.parentElement;
+            const isOpen = parent.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-toggle').textContent = '+';
+            });
+
+            // Open clicked if it wasn't open
+            if (!isOpen) {
+                parent.classList.add('active');
+                element.querySelector('.faq-toggle').textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

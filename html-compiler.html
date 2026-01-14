@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>HTML Compiler - Online Live Code Editor & Viewer | VIP Tool</title>
+    <meta name="description" content="Use VIP Tool's free Online HTML Compiler. Write HTML, CSS, and JavaScript code and view the result instantly. Mobile-friendly, split-screen editor similar to W3Schools.">
+    <meta name="keywords" content="html compiler, online html editor, live code viewer, run html online, viptool, html css js runner">
+    <link rel="canonical" href="https://viptool.online/html-compiler">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://viptool.online/html-compiler">
+    <meta property="og:title" content="HTML Compiler - Online Live Code Editor">
+    <meta property="og:description" content="Write and run HTML/CSS/JS code instantly on mobile or desktop with VIP Tool.">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SWZKBP3TTS');
+    </script>
+
+    
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "HTML Compiler",
+      "url": "https://viptool.online/html-compiler",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "publisher": {
+        "@type": "Organization",
+        "name": "VIP Tool",
+        "url": "https://viptool.online"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="workspace-wrapper">
+        <div class="control-bar">
+            <button class="btn btn-clear" onclick="clearCode()">ðŸ—‘ Clear</button>
+            <button class="btn btn-black" onclick="downloadCode()">â¬‡ Save</button>
+            <button class="btn" onclick="runCode()">â–¶ Run</button>
+        </div>
+
+        <div class="split-view">
+            <div class="editor-pane">
+                <div class="tabs">
+                    <button class="tab active" onclick="switchTab('html', this)">index.html</button>
+                    <button class="tab" onclick="switchTab('css', this)">style.css</button>
+                    <button class="tab" onclick="switchTab('js', this)">script.js</button>
+                </div>
+                
+                <textarea id="html-code" class="code-input active" placeholder="<div class='container'>
+  <h1>Hello VIP Tool</h1>
+  <p>Edit this code and click Run!</p>
+</div>"></textarea>
+                <textarea id="css-code" class="code-input" placeholder="/* CSS Here */
+body { font-family: sans-serif; padding: 20px; }
+.container { text-align: center; color: #333; }
+h1 { color: #04AA6D; }"></textarea>
+                <textarea id="js-code" class="code-input" placeholder="// JS Here
+console.log('Welcome to VIP Tool Compiler');"></textarea>
+            </div>
+
+            <div class="preview-pane">
+                <div class="preview-label">Preview Output</div>
+                <iframe id="output-frame"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <main class="content-container">
+        
+        <div class="ad-box"></div>
+
+        <article class="seo-text">
+            <h1>Free Online HTML Compiler & Editor</h1>
+            <p>Welcome to <strong>VIP Tool's HTML Compiler</strong>. This is a robust, mobile-friendly development environment designed for students, bloggers, and web developers. Unlike other editors, our tool offers a <strong>Split-Screen View</strong> optimized for Android and iOS devices, allowing you to code and preview results simultaneously without endless scrolling.</p>
+            
+            <h2>How to Use</h2>
+            <ul>
+                <li><strong>HTML Tab:</strong> Write your document structure here. No need for doctype declarations.</li>
+                <li><strong>CSS Tab:</strong> Add styling to make your page look beautiful.</li>
+                <li><strong>JS Tab:</strong> Add interactivity using JavaScript.</li>
+                <li><strong>Run Button:</strong> Click "Run" to instantly compile and render your code in the Preview pane.</li>
+                <li><strong>Save Button:</strong> Download your work as a single <code>.html</code> file to your device.</li>
+            </ul>
+
+            <h2>Why Choose VIP Tool?</h2>
+            <p>Most online editors are hard to use on mobile phones because the keyboard hides the preview. We solved this with our dynamic <strong>50/50 Split Layout</strong>, giving you full control over your code on any screen size. All processing happens locally in your browser, ensuring speed and privacy.</p>
+        </article>
+
+        <div class="ad-box"></div>
+    </main>
+
+    
+
+    <script>
+        const htmlCode = document.getElementById('html-code');
+        const cssCode = document.getElementById('css-code');
+        const jsCode = document.getElementById('js-code');
+        const outputFrame = document.getElementById('output-frame');
+
+        // Tab Switching
+        function switchTab(type, btn) {
+            document.querySelectorAll('.code-input').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(el => el.classList.remove('active'));
+            
+            if(type === 'html') document.getElementById('html-code').classList.add('active');
+            if(type === 'css') document.getElementById('css-code').classList.add('active');
+            if(type === 'js') document.getElementById('js-code').classList.add('active');
+            
+            btn.classList.add('active');
+        }
+
+        // Compilation Logic
+        function runCode() {
+            const html = htmlCode.value;
+            const css = ``;
+            const js = `<script>${jsCode.value}<\/script>`;
+            
+            const source = `
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    ${css}
+                    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+                <body>
+                    ${html}
+                    ${js}
+                    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+                </html>
+            `;
+            
+            const frameDoc = outputFrame.contentWindow.document;
+            frameDoc.open();
+            frameDoc.write(source);
+            frameDoc.close();
+        }
+
+        // Download Logic
+        function downloadCode() {
+            const fullCode = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>VIP Tool Project</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+${htmlCode.value}
+<script>${jsCode.value}<\/script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>`;
+            
+            const blob = new Blob([fullCode], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'viptool-project.html';
+            a.click();
+        }
+
+        function clearCode() {
+            if(confirm("Are you sure you want to delete all code?")) {
+                htmlCode.value = ""; cssCode.value = ""; jsCode.value = "";
+                runCode();
+            }
+        }
+
+        // Dark Mode Logic
+        const themeBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        if(localStorage.getItem('theme') === 'dark') {
+            body.setAttribute('data-theme', 'dark');
+            themeBtn.innerText = "â˜€ï¸ Light Mode";
+        }
+
+        themeBtn.addEventListener('click', () => {
+            if(body.getAttribute('data-theme') === 'dark') {
+                body.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                themeBtn.innerText = "ðŸŒ— Dark Mode";
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeBtn.innerText = "â˜€ï¸ Light Mode";
+            }
+        });
+
+        // Initialize
+        window.onload = runCode;
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

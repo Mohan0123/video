@@ -1,0 +1,478 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Monthly Expenses Analyser by VIP Tool. Track your spending, manage your budget, and download PDF reports. Simple, secure, and client-side only.">
+    <title>Monthly Expenses Analyser - Track & Download Report | VIP Tool</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Monthly Expenses Analyser",
+      "url": "https://viptool.online/monthly-expenses-analyser",
+      "description": "A free online tool to track monthly expenses, calculate total spending, and analyze budget vs income. Includes PDF export feature.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Monthly Expenses Analyser"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is my financial data stored on your server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The Monthly Expenses Analyser runs entirely in your browser (client-side). Your income and expense details are never sent to our servers."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I download my expense report?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can click the 'Download PDF' button to generate a professional PDF report of your monthly summary and expense list."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I switch currencies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can select major currencies like USD, INR, EUR, GBP, etc. The tool will format the numbers accordingly."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this tool free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, VIP Tool provides this Monthly Expenses Analyser completely free of charge."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Monthly Expenses Analyser</h1>
+        <p class="subtitle">Track your income, log daily expenses, and download your monthly financial report.</p>
+
+        <div class="tool-card">
+            
+            <div class="input-section">
+                <div class="form-group">
+                    <label for="currencySelect">Currency</label>
+                    <select id="currencySelect" onchange="updateUI()">
+                        <option value="USD">USD ($)</option>
+                        <option value="INR">INR (â‚¹)</option>
+                        <option value="EUR">EUR (â‚¬)</option>
+                        <option value="GBP">GBP (Â£)</option>
+                        <option value="CAD">CAD ($)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="monthlyIncome">Monthly Income (Budget)</label>
+                    <input type="number" id="monthlyIncome" placeholder="e.g. 50000" min="0" step="0.01" oninput="updateUI()">
+                </div>
+            </div>
+
+            <div class="dashboard">
+                <div class="dash-card income">
+                    <div class="dash-label">Total Income</div>
+                    <div class="dash-value" id="disp-income">0.00</div>
+                </div>
+                <div class="dash-card expenses">
+                    <div class="dash-label">Total Expenses</div>
+                    <div class="dash-value" id="disp-expense" style="color:var(--danger-color)">0.00</div>
+                </div>
+                <div class="dash-card balance">
+                    <div class="dash-label">Remaining Balance</div>
+                    <div class="dash-value" id="disp-balance">0.00</div>
+                </div>
+            </div>
+
+            <div class="add-expense-row">
+                <div class="form-group" style="flex:2;">
+                    <label for="expName">Expense Description</label>
+                    <input type="text" id="expName" placeholder="e.g. Grocery, Rent">
+                </div>
+                <div class="form-group">
+                    <label for="expAmount">Amount</label>
+                    <input type="number" id="expAmount" placeholder="0.00" min="0" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="expCategory">Category</label>
+                    <select id="expCategory">
+                        <option value="Housing">Housing</option>
+                        <option value="Food">Food</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Utilities">Utilities</option>
+                        <option value="Health">Health</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+                <button class="btn-add" onclick="addExpense()">+ Add</button>
+            </div>
+
+            <div class="bar-container" id="categoryBars">
+                </div>
+
+            <div class="expense-list-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expenseTableBody">
+                        <tr><td colspan="4" style="text-align:center; color:#999;">No expenses added yet.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn-reset" onclick="resetAll()">Reset All Data</button>
+                <button class="btn-pdf" onclick="downloadPDF()">Download PDF</button>
+            </div>
+
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Finance Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/hourly-calculator" class="related-link-item">Hourly Calculator</a>
+                <a href="https://viptool.online/gst-calculator" class="related-link-item">GST Calculator</a>
+                <a href="https://viptool.online/simple-interest-calculator" class="related-link-item">Simple Interest Calculator</a>
+                <a href="https://viptool.online/percentage-calculator" class="related-link-item">Percentage Calculator</a>
+                <a href="https://viptool.online/emi-calculator" class="related-link-item">EMI Calculator</a>
+                <a href="https://viptool.online/discount-calculator" class="related-link-item">Discount Calculator</a>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement
+        </div>
+
+        <div class="content-section">
+            <h2>How to Use the Monthly Expenses Analyser</h2>
+            <p>Taking control of your finances starts with tracking. The VIP Tool Expenses Analyser is designed to be simple yet powerful.</p>
+            <ol>
+                <li><strong>Set Your Currency & Income:</strong> Start by selecting your preferred currency and entering your total monthly income or budget.</li>
+                <li><strong>Log Expenses:</strong> Whenever you spend money, enter the description, amount, and choose a category (like Food or Transport). Click "Add".</li>
+                <li><strong>Analyze in Real-Time:</strong> Watch the dashboard update instantly. The tool calculates your total spending and shows how much of your budget remains.</li>
+                <li><strong>Download Report:</strong> Click "Download PDF" to save a snapshot of your finances for your records.</li>
+            </ol>
+
+            <h2>Why Budgeting is Essential</h2>
+            <p>Understanding where your money goes is the first step toward financial freedom. Using an <a href="https://viptool.online/tools" style="color:var(--primary-color);">online expense tracker</a> helps you avoid overspending and encourages saving.</p>
+            <ul>
+                <li><strong>Identifies Leaks:</strong> Small daily purchases (like coffee or snacks) add up. Tracking them reveals these "leaks".</li>
+                <li><strong>Reduces Stress:</strong> Knowing you have enough budget for bills prevents end-of-month panic.</li>
+                <li><strong>Goal Achievement:</strong> Whether it's a vacation or a new car, tracking expenses helps you allocate funds toward your goals.</li>
+            </ul>
+
+            <div class="ad-placeholder">
+                Advertisement
+            </div>
+
+            <h2>Features of VIP Tool Expenses Analyser</h2>
+            <p>Our tool is built for speed and privacy:</p>
+            <ul>
+                <li><strong>Client-Side Security:</strong> Your data never leaves your browser. It is processed locally on your device.</li>
+                <li><strong>PDF Export:</strong> Easily download your expense sheet to print or save.</li>
+                <li><strong>Multi-Currency Support:</strong> Whether you use Dollars, Rupees, or Euros, the tool formats everything correctly.</li>
+                <li><strong>Instant Feedback:</strong> No page reloads. Calculations happen instantly as you type.</li>
+            </ul>
+
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <h3>1. Can I save my data?</h3>
+            <p>Since this tool prioritizes privacy and runs without a database, data is lost if you refresh the page. We highly recommend using the "Download PDF" feature to save your work before closing.</p>
+
+            <h3>2. What categories should I use?</h3>
+            <p>We provide standard categories like Housing, Food, and Utilities. If an expense doesn't fit, use "Others" or group it with the closest match.</p>
+
+            <h3>3. Is this useful for business expenses?</h3>
+            <p>Yes, freelancers and small business owners can use this to quickly tally up monthly operational costs and print a report.</p>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, user privacy is paramount. This Monthly Expenses Analyser functions entirely within your web browser using JavaScript. We do not collect, store, or transmit your financial data to any server. Google AdSense and Analytics are used on this page to serve ads and monitor traffic; they may use cookies in accordance with their own privacy policies.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>This tool is provided for personal informational purposes only. While we strive for accuracy, VIP Tool is not responsible for any calculation errors or financial decisions made based on this tool. The tool is provided "as-is" without warranty of any kind.</p>
+
+                <h3>Disclaimer</h3>
+                <p>VIP Tool is not a financial advisor. The results from this calculator should not be considered professional financial advice. Please consult a qualified accountant or financial planner for specific advice regarding your situation.</p>
+            </div>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    let expenses = [];
+
+    function formatMoney(amount) {
+        const currency = document.getElementById('currencySelect').value;
+        let locale = 'en-US';
+        if (currency === 'INR') locale = 'en-IN';
+        else if (currency === 'EUR') locale = 'de-DE';
+        else if (currency === 'GBP') locale = 'en-GB';
+        
+        return amount.toLocaleString(locale, {
+            style: 'currency',
+            currency: currency,
+            minimumFractionDigits: 2
+        });
+    }
+
+    function addExpense() {
+        const name = document.getElementById('expName').value.trim();
+        const amount = parseFloat(document.getElementById('expAmount').value);
+        const category = document.getElementById('expCategory').value;
+
+        if (!name || isNaN(amount) || amount <= 0) {
+            alert("Please enter a valid description and a positive amount.");
+            return;
+        }
+
+        const expense = {
+            id: Date.now(),
+            name: name,
+            amount: amount,
+            category: category
+        };
+
+        expenses.push(expense);
+        
+        // Clear inputs
+        document.getElementById('expName').value = '';
+        document.getElementById('expAmount').value = '';
+        document.getElementById('expName').focus();
+
+        updateUI();
+    }
+
+    function deleteExpense(id) {
+        expenses = expenses.filter(exp => exp.id !== id);
+        updateUI();
+    }
+
+    function updateUI() {
+        const incomeInput = parseFloat(document.getElementById('monthlyIncome').value) || 0;
+        let totalExpense = 0;
+        let categoryTotals = {};
+
+        // Calculate Totals & Group Categories
+        expenses.forEach(exp => {
+            totalExpense += exp.amount;
+            if (categoryTotals[exp.category]) {
+                categoryTotals[exp.category] += exp.amount;
+            } else {
+                categoryTotals[exp.category] = exp.amount;
+            }
+        });
+
+        const balance = incomeInput - totalExpense;
+
+        // Update Dashboard
+        document.getElementById('disp-income').innerText = formatMoney(incomeInput);
+        document.getElementById('disp-expense').innerText = formatMoney(totalExpense);
+        document.getElementById('disp-balance').innerText = formatMoney(balance);
+
+        // Color Logic for Balance
+        const balElem = document.getElementById('disp-balance');
+        if (balance < 0) balElem.style.color = 'var(--danger-color)';
+        else balElem.style.color = 'var(--success-color)';
+
+        // Update Table
+        const tbody = document.getElementById('expenseTableBody');
+        tbody.innerHTML = '';
+
+        if (expenses.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="4" style="text-align:center; color:#999; padding:20px;">No expenses added yet. Start by adding one above.</td></tr>';
+        } else {
+            // Show recent first
+            const reversedExpenses = [...expenses].reverse();
+            reversedExpenses.forEach(exp => {
+                const row = `<tr>
+                    <td>${exp.name}</td>
+                    <td><span style="background:#eee; padding:2px 6px; border-radius:4px; font-size:0.85rem;">${exp.category}</span></td>
+                    <td style="font-weight:bold;">${formatMoney(exp.amount)}</td>
+                    <td><button class="delete-btn" onclick="deleteExpense(${exp.id})">Remove</button></td>
+                </tr>`;
+                tbody.innerHTML += row;
+            });
+        }
+
+        // Update Category Bars
+        const barsContainer = document.getElementById('categoryBars');
+        barsContainer.innerHTML = '';
+        
+        if (totalExpense > 0) {
+            for (const [cat, amt] of Object.entries(categoryTotals)) {
+                const percent = (amt / totalExpense) * 100;
+                const barHtml = `
+                    <div class="bar-row">
+                        <div class="bar-label">${cat}</div>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: ${percent}%;"></div>
+                        </div>
+                        <div class="bar-val">${Math.round(percent)}%</div>
+                    </div>
+                `;
+                barsContainer.innerHTML += barHtml;
+            }
+        }
+    }
+
+    function resetAll() {
+        if(confirm("Are you sure you want to clear all data?")) {
+            expenses = [];
+            document.getElementById('monthlyIncome').value = '';
+            document.getElementById('expName').value = '';
+            document.getElementById('expAmount').value = '';
+            updateUI();
+        }
+    }
+
+    // PDF GENERATION LOGIC
+    async function downloadPDF() {
+        if(expenses.length === 0) {
+            alert("Please add some expenses before downloading the report.");
+            return;
+        }
+
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        const currency = document.getElementById('currencySelect').value;
+        const income = document.getElementById('disp-income').innerText;
+        const totalExp = document.getElementById('disp-expense').innerText;
+        const balance = document.getElementById('disp-balance').innerText;
+
+        // Header
+        doc.setFontSize(18);
+        doc.text("Monthly Expenses Report", 14, 20);
+        
+        doc.setFontSize(10);
+        doc.text("Generated by VIP Tool (https://viptool.online)", 14, 28);
+        doc.text("Date: " + new Date().toLocaleDateString(), 14, 34);
+
+        // Summary Box
+        doc.setDrawColor(200);
+        doc.setFillColor(245, 245, 245);
+        doc.rect(14, 40, 180, 25, 'FD');
+
+        doc.setFontSize(12);
+        doc.text(`Income: ${income}`, 20, 50);
+        doc.text(`Expenses: ${totalExp}`, 20, 58);
+        doc.text(`Balance: ${balance}`, 80, 50);
+
+        // Table
+        const tableData = expenses.map(exp => [
+            exp.name,
+            exp.category,
+            `${currency} ${exp.amount.toFixed(2)}`
+        ]);
+
+        doc.autoTable({
+            startY: 70,
+            head: [['Description', 'Category', 'Amount']],
+            body: tableData,
+            theme: 'striped',
+            headStyles: { fillColor: [0, 123, 255] },
+        });
+
+        // Save file
+        doc.save('VIPTool_Monthly_Expenses.pdf');
+    }
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

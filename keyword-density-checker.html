@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Keyword Density Checker. Analyze your SEO content, detect keyword stuffing, and optimize word frequency instantly. Fast, accurate, and secure.">
+    <meta name="keywords" content="keyword density checker, seo tool, content analysis, keyword frequency, seo writing tool, check keyword stuffing, word counter">
+    <meta name="author" content="Keyword Density Tool">
+    <meta name="robots" content="index, follow">
+    <title>Free Keyword Density Checker - Analyze SEO Content Online</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section tool-wrapper">
+            <div class="input-group">
+                <label for="text-input">Paste Your Content Here:</label>
+                <textarea id="text-input" placeholder="Paste your article, blog post, or text here to analyze keyword usage..."></textarea>
+            </div>
+
+            <div class="options-bar">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="exclude-stops" checked> Exclude Stop Words (the, and, is, etc.)
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="min-char-limit" checked> Ignore words with < 3 characters
+                </label>
+            </div>
+
+            <button class="btn-primary" onclick="analyzeKeywords()">Analyze Text</button>
+            <p class="error-msg" id="error-msg"></p>
+
+            <div id="result-area">
+                <h3>Analysis Results</h3>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="total-words">0</div>
+                        <div class="stat-label">Total Words</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="unique-words">0</div>
+                        <div class="stat-label">Unique Keywords</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="top-density">0%</div>
+                        <div class="stat-label">Top Density</div>
+                    </div>
+                </div>
+
+                <h4>Top Keywords found:</h4>
+                <div class="table-container">
+                    <table id="results-table">
+                        <thead>
+                            <tr>
+                                <th width="40%">Keyword</th>
+                                <th width="20%">Count</th>
+                                <th width="40%">Density</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section">
+            <h2>How to Use This Keyword Density Checker</h2>
+            <ol>
+                <li><strong>Paste Content:</strong> Copy your text from your document or website and paste it into the large text box above.</li>
+                <li><strong>Configure Settings:</strong> By default, the tool excludes "stop words" (common words like "the", "a", "in") to give you meaningful SEO data. You can uncheck this if you want a raw count.</li>
+                <li><strong>Analyze:</strong> Click the <strong>"Analyze Text"</strong> button.</li>
+                <li><strong>Review Results:</strong> See the total word count, unique words, and a detailed list of the most frequently used keywords along with their percentage density.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Why Check Keyword Density?</h2>
+            <ul>
+                <li><strong>Prevent Keyword Stuffing:</strong> Google penalizes content that unnaturally repeats keywords. This tool helps you keep your density within a safe range (typically 1-2%).</li>
+                <li><strong>Improve Relevance:</strong> Ensure your content actually focuses on the topics you want to rank for. If your target keyword isn't in the top 5, you may need to edit your text.</li>
+                <li><strong>Competitor Analysis:</strong> Paste text from a competitor's ranking page to see what keywords they are using most frequently.</li>
+                <li><strong>Editorial Balance:</strong> Find overused words that might make your writing repetitive and boring to read.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Understanding Keyword Density in Modern SEO</h2>
+            <p>Keyword density refers to the percentage of times a keyword or phrase appears on a web page compared to the total number of words on the page. In the early days of Search Engine Optimization (SEO), webmasters would "stuff" keywords to rank higher. Today, search algorithms are much smarter.</p>
+
+            <h3>What is the Ideal Keyword Density?</h3>
+            <p>There is no single "perfect" number, but most SEO experts agree that a keyword density between <strong>1% and 2%</strong> is ideal. If your main keyword appears more than 3% or 4% of the time, it may trigger spam filters. Conversely, if it appears less than 0.5%, search engines might not understand that your page is authoritative on that topic.</p>
+
+            <h3>LSI Keywords and Semantic Search</h3>
+            <p>Modern SEO isn't just about repeating one word. It's about context. This tool helps you identify your primary keywords, but you should also look for related terms (LSI keywords). If you are writing about "Apple" (the brand), your text should naturally contain words like "iPhone," "Mac," "Technology," and "iOS." Our density checker helps you visualize the semantic map of your content.</p>
+
+            <h3>How to Fix High Keyword Density</h3>
+            <p>If this tool shows a density higher than 3% for your target term, try using synonyms. For example, instead of repeating "best running shoes," use "top jogging footwear," "athletic sneakers," or simply "shoes." This improves readability for humans and relevance for search engines.</p>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this tool free to use? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, this Keyword Density Checker is 100% free and requires no signup or installation.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does it check for 2-word or 3-word phrases? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Currently, this tool focuses on single-word frequency to provide a quick snapshot of your vocabulary usage. We are working on phrase analysis for future updates.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">What are "stop words"? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Stop words are common words like "the," "is," "at," "which," and "on." They don't carry significant meaning for SEO, so we exclude them by default to show you the keywords that actually matter.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does this tool store my content? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">No. All analysis happens in your browser using JavaScript. Your text is never sent to our servers or stored anywhere. It is completely private.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does keyword density still matter for SEO? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, but not as a raw ranking factor. It matters for "topical relevance." It ensures search engines understand what your page is about without viewing it as spammy.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: 30/12/2025</strong></p>
+            <p>Your privacy is important to us. This Privacy Policy explains how we handle information.</p>
+            <p><strong>1. Data Collection:</strong> We do not collect, store, or transmit the text you enter into the tool. All processing is done locally on your device via the browser (Client-side).</p>
+            <p><strong>2. Cookies:</strong> We may use cookies to improve user experience. You can disable cookies in your browser settings.</p>
+            <p><strong>3. Third-Party Ads (Google AdSense):</strong> We use third-party advertising companies to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you. If you would like more information about this practice and to know your choices about not having this information used by these companies, please visit Google's ad settings.</p>
+            <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to understand traffic trends. This data is anonymous and does not link to your inputted content.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> This tool is provided for personal and commercial use. You agree not to use it for any illegal activities.</p>
+            <p><strong>2. Liability:</strong> We are not responsible for any decisions made based on the data provided by this tool. SEO is complex and density is just one factor.</p>
+            <p><strong>3. Modifications:</strong> We reserve the right to modify or discontinue the service at any time without notice.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>The materials on this website are provided "as is". We make no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights. Further, we do not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        // Common English Stop Words
+        const stopWords = new Set([
+            "a", "about", "above", "after", "again", "against", "all", "am", "an", "and", "any", "are", "aren't", "as", "at", "be", "because", "been", "before", "being", "below", "between", "both", "but", "by", "can't", "cannot", "could", "couldn't", "did", "didn't", "do", "does", "doesn't", "doing", "don't", "down", "during", "each", "few", "for", "from", "further", "had", "hadn't", "has", "hasn't", "have", "haven't", "having", "he", "he'd", "he'll", "he's", "her", "here", "here's", "hers", "herself", "him", "himself", "his", "how", "how's", "i", "i'd", "i'll", "i'm", "i've", "if", "in", "into", "is", "isn't", "it", "it's", "its", "itself", "let's", "me", "more", "most", "mustn't", "my", "myself", "no", "nor", "not", "of", "off", "on", "once", "only", "or", "other", "ought", "our", "ours", "ourselves", "out", "over", "own", "same", "shan't", "she", "she'd", "she'll", "she's", "should", "shouldn't", "so", "some", "such", "than", "that", "that's", "the", "their", "theirs", "them", "themselves", "then", "there", "there's", "these", "they", "they'd", "they'll", "they're", "they've", "this", "those", "through", "to", "too", "under", "until", "up", "very", "was", "wasn't", "we", "we'd", "we'll", "we're", "we've", "were", "weren't", "what", "what's", "when", "when's", "where", "where's", "which", "while", "who", "who's", "whom", "why", "why's", "with", "won't", "would", "wouldn't", "you", "you'd", "you'll", "you're", "you've", "your", "yours", "yourself", "yourselves"
+        ]);
+
+        function analyzeKeywords() {
+            const textInput = document.getElementById('text-input').value;
+            const excludeStops = document.getElementById('exclude-stops').checked;
+            const minCharLimit = document.getElementById('min-char-limit').checked;
+            const errorMsg = document.getElementById('error-msg');
+            const resultArea = document.getElementById('result-area');
+            const tableBody = document.getElementById('table-body');
+
+            // Reset
+            errorMsg.style.display = 'none';
+            resultArea.style.display = 'none';
+            tableBody.innerHTML = '';
+
+            if (!textInput.trim()) {
+                errorMsg.textContent = "Please paste some text to analyze.";
+                errorMsg.style.display = 'block';
+                return;
+            }
+
+            // Clean text: remove special chars, extra spaces, lowercase
+            // We replace hyphens with space to separate words like "long-term"
+            const cleanText = textInput.toLowerCase()
+                .replace(/[\n\r\t]/g, ' ')
+                .replace(/[^a-z0-9\s]/g, '')
+                .trim();
+
+            const words = cleanText.split(/\s+/).filter(w => w.length > 0);
+            
+            if (words.length === 0) {
+                errorMsg.textContent = "No valid words found.";
+                errorMsg.style.display = 'block';
+                return;
+            }
+
+            // Frequency Logic
+            const frequency = {};
+            let totalValidWords = 0;
+
+            words.forEach(word => {
+                // Filters
+                if (minCharLimit && word.length < 3) return;
+                if (excludeStops && stopWords.has(word)) return;
+
+                // Count
+                frequency[word] = (frequency[word] || 0) + 1;
+                totalValidWords++;
+            });
+
+            if (totalValidWords === 0) {
+                errorMsg.textContent = "No keywords found after applying filters (Check your text or uncheck filters).";
+                errorMsg.style.display = 'block';
+                return;
+            }
+
+            // Convert to Array and Sort
+            const sortedKeywords = Object.keys(frequency).map(key => {
+                return {
+                    word: key,
+                    count: frequency[key],
+                    density: ((frequency[key] / words.length) * 100).toFixed(2) // Density against TOTAL words (standard practice)
+                };
+            }).sort((a, b) => b.count - a.count);
+
+            // Update Stats
+            document.getElementById('total-words').textContent = words.length; // Raw count
+            document.getElementById('unique-words').textContent = sortedKeywords.length;
+            document.getElementById('top-density').textContent = sortedKeywords.length > 0 ? sortedKeywords[0].density + '%' : '0%';
+
+            // Populate Table (Top 20)
+            const topKeywords = sortedKeywords.slice(0, 20);
+            
+            topKeywords.forEach(item => {
+                const tr = document.createElement('tr');
+                
+                tr.innerHTML = `
+                    <td class="keyword-cell">${item.word}</td>
+                    <td>${item.count}</td>
+                    <td>
+                        ${item.density}%
+                        <div class="density-bar-container">
+                            <div class="density-bar-fill" style="width: ${Math.min(item.density * 10, 100)}%"></div>
+                        </div>
+                    </td>
+                `;
+                tableBody.appendChild(tr);
+            });
+
+            // Show Results
+            resultArea.style.display = 'block';
+            
+            // Scroll to results
+            resultArea.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Accordion Function
+        function toggleFaq(element) {
+            const parent = element.parentElement;
+            const isOpen = parent.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-toggle').textContent = '+';
+            });
+
+            // Open clicked if it wasn't open
+            if (!isOpen) {
+                parent.classList.add('active');
+                element.querySelector('.faq-toggle').textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

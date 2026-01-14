@@ -1,0 +1,290 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online Money Counter tool. Count cash by denomination instantly. Features total value and total note count. Mobile-friendly, secure, and print-ready.">
+    <meta name="keywords" content="count money by denomination, cash calculator, cash tally, denomination counter, cash drawer count, money counter with remarks">
+    <meta name="author" content="MoneyTools">
+    <meta name="robots" content="index, follow">
+    <title>Count Money by Denomination - Cash Tally Sheet</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-space">AdSense Placeholder</div>
+
+        <main class="tool-card">
+            <div class="top-controls">
+                <div>
+                    <label for="currency-select" style="font-weight: 600; font-size: 0.9rem;">Currency:</label>
+                    <select id="currency-select" onchange="loadCurrency()">
+                        </select>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-reset" onclick="resetForm()">Reset</button>
+                    <button class="btn-print" onclick="window.print()">Print / PDF</button>
+                </div>
+            </div>
+
+            <div class="meta-inputs">
+                <div class="form-group">
+                    <label>Payer Name / Cashier</label>
+                    <input type="text" id="payer-name" placeholder="e.g. John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Category / Remarks</label>
+                    <input type="text" id="remarks" placeholder="e.g. Day Closing, Shop 1">
+                </div>
+            </div>
+
+            <div style="display: flex; padding: 0 10px 10px; border-bottom: 2px solid #eee; font-weight: 700; color: #9ca3af; font-size: 0.8rem; text-transform: uppercase;">
+                <div style="width:35%">Denom</div>
+                <div style="width:30%; text-align:center;">Count</div>
+                <div style="width:35%; text-align:right;">Amount</div>
+            </div>
+
+            <div id="denomination-list">
+                </div>
+
+            <div class="totals-bar">
+                <div class="total-box">
+                    <small>Total Items (N)</small>
+                    <div class="value" id="total-count">0</div>
+                </div>
+                <div class="total-box money-box">
+                    <small>Grand Total</small>
+                    <div class="value large" id="grand-total">0.00</div>
+                </div>
+            </div>
+        </main>
+
+        <section class="content-box">
+            <h2>About This Cash Tally Tool</h2>
+            <p>This <strong>Money Counter by Denomination</strong> is designed to help cashiers, shop owners, and individuals quickly tally up cash. Instead of manually adding numbers on a calculator, simply count how many notes or coins you have for each denomination, enter the number, and let the tool do the math.</p>
+            
+            <h3>How to Use</h3>
+            <ul>
+                <li><strong>Select Currency:</strong> Choose from USD, INR, EUR, GBP, and others.</li>
+                <li><strong>Enter Details:</strong> Optionally add a name or remark (useful for printed records).</li>
+                <li><strong>Input Counts:</strong> Enter the number of notes in the center box for each row (e.g., 500 x <b>5</b>).</li>
+                <li><strong>Get Totals:</strong> See the total items (N) and total value instantly at the bottom.</li>
+            </ul>
+        </section>
+
+        <div class="ad-space">AdSense Placeholder</div>
+
+        <section class="content-box">
+            <h2>Why Use a Denomination Calculator?</h2>
+            <p>Using a denomination-based counter significantly reduces human error. When closing a cash drawer, the most common mistakes happen during multiplication or manual addition. This tool standardizes the process.</p>
+            <p><strong>Features:</strong></p>
+            <ul>
+                <li><strong>Clean Interface:</strong> Distraction-free white theme for professional use.</li>
+                <li><strong>Privacy First:</strong> No data leaves your browser. It is a client-side tool.</li>
+                <li><strong>Print Ready:</strong> Generates a clean report when you press Print/Save PDF.</li>
+            </ul>
+        </section>
+
+        <section class="content-box" id="faq">
+            <h3>Frequently Asked Questions</h3>
+            <p><strong>Q: Is my data saved?</strong><br>
+            A: No. Everything is calculated instantly on your device. Refreshing the page clears the data.</p>
+            <p><strong>Q: Can I use this offline?</strong><br>
+            A: Yes, once the page is loaded, it works without an internet connection.</p>
+        </section>
+
+        <section class="legal-section">
+            <div id="privacy">
+                <h2>Privacy Policy</h2>
+                <p>We do not collect personal data. This tool runs locally in your browser. Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to your website or other websites.</p>
+            </div>
+            <div id="terms">
+                <h2>Terms & Conditions</h2>
+                <p>By using this tool, you agree that it is provided "as is". We are not responsible for any financial discrepancies or losses resulting from its use. Always verify cash counts manually if unsure.</p>
+            </div>
+            <div id="disclaimer">
+                <h2>Disclaimer</h2>
+                <p>This website is a free utility tool. It does not provide professional financial advice.</p>
+            </div>
+        </section>
+
+        
+
+    </div>
+
+    <script>
+        // Currency Data
+        const currencies = {
+            'INR': {
+                name: 'Indian Rupee',
+                symbol: 'â‚¹',
+                locale: 'en-IN',
+                // Standard Indian denominations
+                denominations: [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1]
+            },
+            'USD': {
+                name: 'US Dollar',
+                symbol: '$',
+                locale: 'en-US',
+                denominations: [100, 50, 20, 10, 5, 2, 1, 0.50, 0.25, 0.10, 0.05, 0.01]
+            },
+            'EUR': {
+                name: 'Euro',
+                symbol: 'â‚¬',
+                locale: 'de-DE',
+                denominations: [500, 200, 100, 50, 20, 10, 5, 2, 1, 0.50, 0.20, 0.10, 0.05]
+            },
+            'GBP': {
+                name: 'British Pound',
+                symbol: 'Â£',
+                locale: 'en-GB',
+                denominations: [50, 20, 10, 5, 2, 1, 0.50, 0.20, 0.10, 0.05]
+            }
+        };
+
+        const selectEl = document.getElementById('currency-select');
+        const listEl = document.getElementById('denomination-list');
+        const grandTotalEl = document.getElementById('grand-total');
+        const totalCountEl = document.getElementById('total-count');
+
+        // Init
+        function init() {
+            // Populate select
+            for (const [code, data] of Object.entries(currencies)) {
+                const opt = document.createElement('option');
+                opt.value = code;
+                opt.textContent = `${data.symbol} - ${code}`;
+                selectEl.appendChild(opt);
+            }
+            loadCurrency();
+        }
+
+        // Load Rows
+        function loadCurrency() {
+            const code = selectEl.value;
+            const currency = currencies[code];
+            listEl.innerHTML = '';
+
+            currency.denominations.forEach(val => {
+                const row = document.createElement('div');
+                row.className = 'denom-row';
+
+                // Left: Label + 'x'
+                const left = document.createElement('div');
+                left.className = 'denom-left';
+                left.innerHTML = `<span>${val}</span> <span class="symbol-x">Ã—</span>`;
+
+                // Center: Input
+                const center = document.createElement('div');
+                center.className = 'denom-center';
+                const input = document.createElement('input');
+                input.type = 'number';
+                input.min = '0';
+                input.placeholder = '0';
+                input.dataset.value = val;
+                input.addEventListener('input', calculate);
+                input.addEventListener('wheel', e => e.preventDefault());
+                center.appendChild(input);
+
+                // Right: '=' + Total
+                const right = document.createElement('div');
+                right.className = 'denom-right';
+                // Using a span for the calculated value to update easily
+                right.innerHTML = `<span class="symbol-eq">=</span> <span class="row-total">0</span>`;
+
+                row.appendChild(left);
+                row.appendChild(center);
+                row.appendChild(right);
+                listEl.appendChild(row);
+            });
+            calculate();
+        }
+
+        // Calculation Logic
+        function calculate() {
+            const code = selectEl.value;
+            const currency = currencies[code];
+            const inputs = listEl.querySelectorAll('input');
+            let grandTotal = 0;
+            let totalItems = 0;
+
+            inputs.forEach(input => {
+                const count = parseInt(input.value) || 0;
+                const denom = parseFloat(input.dataset.value);
+                const sub = count * denom;
+                
+                totalItems += count;
+                grandTotal += sub;
+
+                // Update row text
+                const rowTotalSpan = input.parentElement.nextElementSibling.querySelector('.row-total');
+                // Simple formatting for row totals to keep it clean (no symbol repeated)
+                rowTotalSpan.textContent = sub.toLocaleString(currency.locale, {
+                    minimumFractionDigits: code === 'JPY' ? 0 : (sub % 1 === 0 ? 0 : 2),
+                    maximumFractionDigits: 2
+                });
+            });
+
+            // Update Footer
+            totalCountEl.textContent = totalItems;
+            grandTotalEl.textContent = grandTotal.toLocaleString(currency.locale, {
+                style: 'currency',
+                currency: code
+            });
+        }
+
+        function resetForm() {
+            document.getElementById('payer-name').value = '';
+            document.getElementById('remarks').value = '';
+            const inputs = listEl.querySelectorAll('input');
+            inputs.forEach(i => i.value = '');
+            calculate();
+        }
+
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

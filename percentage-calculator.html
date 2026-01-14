@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Percentage Calculator. Calculate the percentage of a number, find percentage increase/decrease, and solve what percent X is of Y instantly.">
+    <meta name="keywords" content="percentage calculator, calculate percentage, percentage increase calculator, percentage decrease tool, math calculator, finance calculator, online percent tool">
+    <meta name="author" content="Percentage Calculator Tool">
+    <meta name="robots" content="index, follow">
+    <title>Free Percentage Calculator - Calculate %, Increase & Decrease Online</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section tool-wrapper">
+            
+            <div class="calc-mode">
+                <h3>Calculate Percentage of a Number</h3>
+                <div class="input-row">
+                    <span class="static-text">What is</span>
+                    <div class="input-wrapper">
+                        <input type="number" id="mode1-percent" placeholder="%">
+                    </div>
+                    <span class="static-text">% of</span>
+                    <div class="input-wrapper">
+                        <input type="number" id="mode1-number" placeholder="Number">
+                    </div>
+                </div>
+                <button class="action-btn" onclick="calcMode1()">Calculate</button>
+                <div class="error-msg" id="error1">Please enter valid numbers.</div>
+                <div class="result-box" id="result1">
+                    Result: <span class="result-value" id="res1-val">0</span>
+                </div>
+            </div>
+
+            <div class="calc-mode">
+                <h3>Calculate What Percent X is of Y</h3>
+                <div class="input-row">
+                    <div class="input-wrapper">
+                        <input type="number" id="mode2-num1" placeholder="Number">
+                    </div>
+                    <span class="static-text">is what % of</span>
+                    <div class="input-wrapper">
+                        <input type="number" id="mode2-num2" placeholder="Total">
+                    </div>
+                </div>
+                <button class="action-btn" onclick="calcMode2()">Calculate</button>
+                <div class="error-msg" id="error2">Please enter valid numbers (Total cannot be 0).</div>
+                <div class="result-box" id="result2">
+                    Result: <span class="result-value" id="res2-val">0%</span>
+                </div>
+            </div>
+
+            <div class="calc-mode">
+                <h3>Percentage Increase / Decrease</h3>
+                <div class="input-row">
+                    <span class="static-text">From</span>
+                    <div class="input-wrapper">
+                        <input type="number" id="mode3-from" placeholder="Old Value">
+                    </div>
+                    <span class="static-text">to</span>
+                    <div class="input-wrapper">
+                        <input type="number" id="mode3-to" placeholder="New Value">
+                    </div>
+                </div>
+                <button class="action-btn" onclick="calcMode3()">Calculate Change</button>
+                <div class="error-msg" id="error3">Please enter valid numbers.</div>
+                <div class="result-box" id="result3">
+                    Result: <span class="result-value" id="res3-val">0%</span>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section">
+            <h2>How to Use This Percentage Calculator</h2>
+            <p>Our tool is designed to solve the most common percentage math problems quickly. Just choose the section that matches your question:</p>
+            <ol>
+                <li><strong>Percentage of a Number:</strong> Use the first calculator if you want to know "What is 20% of 150?". Enter the percentage and the total number.</li>
+                <li><strong>What Percent is X of Y:</strong> Use the second calculator to find out the percentage relation between two numbers. For example, "25 is what percent of 200?".</li>
+                <li><strong>Percentage Increase/Decrease:</strong> Use the third calculator to compare values over time. Enter the original value and the new value to see if it's an increase or decrease.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Why Use Our Online Percentage Tool?</h2>
+            <ul>
+                <li><strong>100% Free:</strong> Perform unlimited calculations without any cost or registration.</li>
+                <li><strong>Instant Results:</strong> No waiting time. The JavaScript engine calculates answers immediately.</li>
+                <li><strong>Mobile Friendly:</strong> Works perfectly on smartphones, tablets, and desktop computers.</li>
+                <li><strong>Privacy Focused:</strong> All calculations happen in your browser. We do not collect your data.</li>
+                <li><strong>Multiple Modes:</strong> Covers the three most common mathematical percentage scenarios in one place.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>The Importance of Understanding Percentages</h2>
+            <p>Percentages are a fundamental part of daily life and are used in almost every industry. From calculating discounts during a shopping sale to determining interest rates on loans, understanding how to work with percentages is a vital skill. However, doing the math in your head can sometimes be tricky or prone to error. That's where our <strong>Percentage Calculator</strong> comes in handy.</p>
+
+            <h3>Percentages in Finance</h3>
+            <p>In the financial world, percentages dictate everything. Whether you are calculating the return on investment (ROI), the interest accrued on a savings account, or the EMI for a home loan, you are dealing with percentages. A small error in these calculations can lead to significant financial discrepancies. Our tool ensures accuracy for these critical computations.</p>
+
+            <h3>Percentages in Shopping</h3>
+            <p>We all love a good sale. Seeing "30% OFF" is exciting, but knowing exactly how much you save and what the final price will be is important for budgeting. By using the "Percentage of a Number" feature, you can quickly determine the discount amount and the final price tag before you reach the checkout counter.</p>
+
+            <h3>Mathematical Concept</h3>
+            <p>The term "percent" comes from the Latin "per centum," meaning "by the hundred." It is a dimensionless number (pure number) that is used to express ratios. For example, 50% means 50 per 100, or simply half. This standardized way of expressing fractions makes it easier to compare different quantities, such as test scores, growth rates, or nutritional values.</p>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">How do I calculate a percentage manually? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">To find X% of Y manually, convert the percentage to a decimal (divide by 100) and multiply by Y. For example, to find 20% of 50: 0.20 * 50 = 10.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">What is the formula for percentage increase? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">The formula is: ((New Value - Old Value) / Old Value) * 100. If the result is positive, it's an increase; if negative, it's a decrease.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this tool accurate? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, this tool uses standard mathematical formulas processed by your browser's computing engine to ensure precise results.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does this calculate reverse percentages? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Currently, this tool focuses on finding percentages, what percent one number is of another, and percentage changes. We plan to add reverse percentage tools in the future.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is my data saved? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">No. We do not store any of the numbers you enter. All calculations are performed temporarily on your device.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: 30/12/2025 </strong></p>
+            <p>Your privacy is important to us. This Privacy Policy explains how we handle information.</p>
+            <p><strong>1. Data Collection:</strong> We do not collect, store, or transmit any personal data or calculation inputs entered into this tool. All processing is done locally on your device via client-side JavaScript.</p>
+            <p><strong>2. Cookies:</strong> We may use cookies to improve user experience. You can disable cookies in your browser settings at any time.</p>
+            <p><strong>3. Third-Party Ads (Google AdSense):</strong> We use third-party advertising companies to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you. If you would like more information about this practice and to know your choices about not having this information used by these companies, please visit Google's ad settings.</p>
+            <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to understand traffic trends. This data is aggregated and anonymous.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> This tool is provided for personal, educational, and informational use only. You agree not to use it for any illegal activities.</p>
+            <p><strong>2. Liability:</strong> We are not responsible for any financial losses, calculation errors, or damages resulting from the use of this tool. Always verify important calculations with a professional.</p>
+            <p><strong>3. Modifications:</strong> We reserve the right to modify or discontinue the service at any time without notice.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>The Percentage Calculator provided on this website is for estimation and convenience purposes only. While we strive for accuracy, we cannot guarantee that the results will meet your specific requirements in every instance. Users are responsible for verifying the accuracy of results before using them for critical financial or academic purposes. The tool is provided "as-is" without any warranties.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        // Helper function to format numbers
+        function formatNum(num) {
+            return parseFloat(num.toFixed(2));
+        }
+
+        // Mode 1: What is X% of Y?
+        function calcMode1() {
+            const percent = parseFloat(document.getElementById('mode1-percent').value);
+            const number = parseFloat(document.getElementById('mode1-number').value);
+            const error = document.getElementById('error1');
+            const resultBox = document.getElementById('result1');
+            const resultVal = document.getElementById('res1-val');
+
+            if (isNaN(percent) || isNaN(number)) {
+                error.style.display = 'block';
+                resultBox.style.display = 'none';
+                return;
+            }
+
+            error.style.display = 'none';
+            const res = (percent / 100) * number;
+            resultVal.textContent = formatNum(res);
+            resultBox.style.display = 'block';
+        }
+
+        // Mode 2: X is what percent of Y?
+        function calcMode2() {
+            const num1 = parseFloat(document.getElementById('mode2-num1').value);
+            const num2 = parseFloat(document.getElementById('mode2-num2').value);
+            const error = document.getElementById('error2');
+            const resultBox = document.getElementById('result2');
+            const resultVal = document.getElementById('res2-val');
+
+            if (isNaN(num1) || isNaN(num2) || num2 === 0) {
+                error.style.display = 'block';
+                resultBox.style.display = 'none';
+                return;
+            }
+
+            error.style.display = 'none';
+            const res = (num1 / num2) * 100;
+            resultVal.textContent = formatNum(res) + "%";
+            resultBox.style.display = 'block';
+        }
+
+        // Mode 3: Percentage Increase/Decrease
+        function calcMode3() {
+            const from = parseFloat(document.getElementById('mode3-from').value);
+            const to = parseFloat(document.getElementById('mode3-to').value);
+            const error = document.getElementById('error3');
+            const resultBox = document.getElementById('result3');
+            const resultVal = document.getElementById('res3-val');
+
+            if (isNaN(from) || isNaN(to) || from === 0) {
+                error.style.display = 'block';
+                error.textContent = (from === 0) ? "Start value cannot be zero for % change." : "Please enter valid numbers.";
+                resultBox.style.display = 'none';
+                return;
+            }
+
+            error.style.display = 'none';
+            const diff = to - from;
+            const res = (diff / from) * 100;
+            
+            let text = formatNum(res) + "%";
+            if (res > 0) text += " (Increase)";
+            else if (res < 0) text += " (Decrease)";
+            else text += " (No Change)";
+
+            resultVal.textContent = text;
+            resultBox.style.display = 'block';
+        }
+
+        // Accordion Logic
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const toggle = el.querySelector('.faq-toggle');
+            
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+                toggle.textContent = '+';
+            } else {
+                // Close others
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    const t = i.querySelector('.faq-toggle');
+                    if(t) t.textContent = '+';
+                });
+                item.classList.add('active');
+                toggle.textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <link rel="canonical" href="https://viptool.online/base64-encoder-decoder">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Base64 Encoder / Decoder Tool. Convert text to Base64 strings or decode Base64 back to text instantly. Secure, fast, and developer-friendly.">
+    <meta name="keywords" content="base64 encoder, base64 decoder, base64 converter, text to base64, base64 to text, online tool, developer tools, decode base64">
+    <meta name="author" content="Base64 Tool">
+    <meta name="robots" content="index, follow">
+    <title>Base64 Encoder / Decoder - Convert Text Online</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section tool-wrapper">
+            
+            <div class="tabs">
+                <button class="tab-btn active" id="tab-encode" onclick="switchMode('encode')">Encode</button>
+                <button class="tab-btn" id="tab-decode" onclick="switchMode('decode')">Decode</button>
+            </div>
+
+            <div class="input-group">
+                <label for="input-text" id="input-label">Enter Text to Encode:</label>
+                <textarea id="input-text" placeholder="Type or paste content here..."></textarea>
+            </div>
+
+            <div class="actions">
+                <button class="btn-primary" onclick="processConversion()" id="action-btn">Encode to Base64</button>
+                <button class="btn-outline" onclick="copyResult()">Copy Result</button>
+                <button class="btn-outline" onclick="clearFields()">Clear All</button>
+            </div>
+
+            <div class="error-msg" id="error-msg">Invalid Base64 string detected.</div>
+
+            <div class="input-group">
+                <label for="output-text" id="output-label">Base64 Result:</label>
+                <textarea id="output-text" readonly style="background-color: #f8fafc;" placeholder="Result will appear here..."></textarea>
+            </div>
+
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section">
+            <h2>How to Use This Tool</h2>
+            <p>Using our Base64 Encoder/Decoder is simple and secure. Follow these steps:</p>
+            <ol>
+                <li><strong>Select Mode:</strong> Click "Encode" to convert plain text to Base64, or "Decode" to convert a Base64 string back to text.</li>
+                <li><strong>Enter Data:</strong> Paste or type your content into the top box.</li>
+                <li><strong>Convert:</strong> Click the main button (Encode/Decode) to process the data instantly.</li>
+                <li><strong>Copy:</strong> Use the "Copy Result" button to save the output to your clipboard.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Why Use Our Base64 Tool?</h2>
+            <ul>
+                <li><strong>Client-Side Processing:</strong> Your data never leaves your browser. All encoding and decoding happen locally via JavaScript, ensuring maximum privacy.</li>
+                <li><strong>UTF-8 Support:</strong> Unlike basic tools, ours handles special characters and emojis correctly.</li>
+                <li><strong>Fast & Responsive:</strong> Works instantly on mobile, tablet, and desktop devices without page reloads.</li>
+                <li><strong>Developer Friendly:</strong> Ideal for debugging, data transfer, and handling binary data in text formats.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Understanding Base64 Encoding</h2>
+            <p>Base64 is a group of binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation. It is extremely common in the world of web development and data transmission.</p>
+
+            <h3>Why is Base64 Used?</h3>
+            <p>The primary purpose of Base64 is to transmit binary data across channels that only support text content. Common use cases include:</p>
+            <ul>
+                <li><strong>Email Attachments:</strong> Sending images or files via SMTP (email protocols) often requires converting binary files into text.</li>
+                <li><strong>Data URLs:</strong> Embedding small images directly into HTML or CSS files using `data:image/png;base64,...` syntax to reduce HTTP requests.</li>
+                <li><strong>APIs & JSON:</strong> Transmitting binary data inside JSON payloads which only support text strings.</li>
+            </ul>
+
+            <h3>How Does Base64 Work?</h3>
+            <p>Base64 operates by breaking binary data into 6-bit chunks. Each 6-bit chunk maps to a specific character in the Base64 alphabet, which consists of `A-Z`, `a-z`, `0-9`, `+`, and `/`. The equals sign `=` is used as padding at the end of the encoded string to ensure the length is a multiple of 4.</p>
+
+            <h3>Is Base64 Encryption?</h3>
+            <p>No, <strong>Base64 is not encryption</strong>. It is an encoding scheme. It does not provide security or confidentiality. Anyone can decode a Base64 string back to its original form. Do not use Base64 to hide sensitive information like passwords or keys without proper encryption layers.</p>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this tool free? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, this Base64 Encoder / Decoder is 100% free to use for personal and commercial purposes.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is my data safe? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Absolutely. This tool runs entirely in your web browser. No data is sent to our servers, ensuring your information remains private.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Can I encode images with this? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">This specific tool is optimized for text. While the algorithm is the same, converting large image files directly in a text box may be slow. We recommend using specialized Image to Base64 tools for files.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Why do I see "=" at the end of the string? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">The "=" sign is a padding character used in Base64 encoding to ensure the output string length is a multiple of 4 bytes.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does it support UTF-8 characters? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, our tool handles UTF-8 characters (like emojis and non-Latin scripts) correctly by properly encoding URI components before conversion.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: [Current Date]</strong></p>
+            <p>Your privacy is important to us. This Privacy Policy explains how we handle information.</p>
+            <p><strong>1. Data Collection:</strong> We do not collect, store, or transmit any data entered into the tool. All processing is done locally on your device via JavaScript.</p>
+            <p><strong>2. Cookies:</strong> We may use cookies to improve user experience. You can disable cookies in your browser settings.</p>
+            <p><strong>3. Third-Party Ads (Google AdSense):</strong> We use third-party advertising companies to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you.</p>
+            <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to understand traffic trends. This data is anonymous.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> This tool is provided for personal and informational use only.</p>
+            <p><strong>2. Liability:</strong> We are not responsible for any errors, data loss, or damages resulting from the use of this tool.</p>
+            <p><strong>3. Modifications:</strong> We reserve the right to modify or discontinue the service at any time.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>The Base64 Encoder / Decoder is provided "as is" without any warranties. While we strive for accuracy, we cannot guarantee that the tool will be error-free in all scenarios. Users are responsible for verifying the output before using it in critical applications.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        // DOM Elements
+        const inputText = document.getElementById('input-text');
+        const outputText = document.getElementById('output-text');
+        const errorMsg = document.getElementById('error-msg');
+        const tabEncode = document.getElementById('tab-encode');
+        const tabDecode = document.getElementById('tab-decode');
+        const inputLabel = document.getElementById('input-label');
+        const outputLabel = document.getElementById('output-label');
+        const actionBtn = document.getElementById('action-btn');
+
+        let currentMode = 'encode';
+
+        // Switch Mode Function
+        function switchMode(mode) {
+            currentMode = mode;
+            errorMsg.style.display = 'none';
+            inputText.value = '';
+            outputText.value = '';
+
+            if (mode === 'encode') {
+                tabEncode.classList.add('active');
+                tabDecode.classList.remove('active');
+                inputLabel.textContent = 'Enter Text to Encode:';
+                outputLabel.textContent = 'Base64 Result:';
+                actionBtn.textContent = 'Encode to Base64';
+                inputText.placeholder = 'Type plain text here...';
+            } else {
+                tabEncode.classList.remove('active');
+                tabDecode.classList.add('active');
+                inputLabel.textContent = 'Enter Base64 String to Decode:';
+                outputLabel.textContent = 'Decoded Text:';
+                actionBtn.textContent = 'Decode to Text';
+                inputText.placeholder = 'Paste Base64 string here...';
+            }
+        }
+
+        // Convert Function (UTF-8 Safe)
+        function processConversion() {
+            const input = inputText.value;
+            errorMsg.style.display = 'none';
+            outputText.value = '';
+
+            if (!input.trim()) {
+                return;
+            }
+
+            try {
+                if (currentMode === 'encode') {
+                    // Safe Encode: Text -> Base64
+                    const encoded = btoa(unescape(encodeURIComponent(input)));
+                    outputText.value = encoded;
+                } else {
+                    // Safe Decode: Base64 -> Text
+                    // Remove whitespace/newlines which might break decode
+                    const cleanInput = input.replace(/\s/g, '');
+                    const decoded = decodeURIComponent(escape(window.atob(cleanInput)));
+                    outputText.value = decoded;
+                }
+            } catch (e) {
+                console.error(e);
+                errorMsg.style.display = 'block';
+                if (currentMode === 'decode') {
+                    errorMsg.textContent = 'Error: The input string is not a valid Base64 string.';
+                } else {
+                    errorMsg.textContent = 'Error: Could not encode this text.';
+                }
+            }
+        }
+
+        // Copy Result Function
+        function copyResult() {
+            if (!outputText.value) return;
+            
+            outputText.select();
+            document.execCommand('copy');
+            
+            // Temporary feedback
+            const originalBtnText = document.querySelector('button[onclick="copyResult()"]').textContent;
+            const btn = document.querySelector('button[onclick="copyResult()"]');
+            btn.textContent = 'Copied!';
+            setTimeout(() => {
+                btn.textContent = originalBtnText;
+            }, 1500);
+        }
+
+        // Clear Fields
+        function clearFields() {
+            inputText.value = '';
+            outputText.value = '';
+            errorMsg.style.display = 'none';
+        }
+
+        // Auto-resize textarea logic (optional nice-to-have)
+        inputText.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+            // Limit max height if needed
+            if(this.scrollHeight > 300) this.style.height = '300px';
+        });
+
+        // FAQ Accordion Logic
+        function toggleFaq(el) {
+            const item = el.parentElement;
+            const toggle = el.querySelector('.faq-toggle');
+            
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+                toggle.textContent = '+';
+            } else {
+                // Close others
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    const t = i.querySelector('.faq-toggle');
+                    if(t) t.textContent = '+';
+                });
+                item.classList.add('active');
+                toggle.textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online GST Calculator by VIP Tool. Instantly calculate GST inclusive and exclusive amounts. Supports 5%, 12%, 18%, and 28% tax rates for India.">
+    <title>GST Calculator - Add or Remove GST Online | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "GST Calculator",
+      "url": "https://viptool.online/gst-calculator",
+      "description": "Calculate inclusive and exclusive GST amounts instantly. Supports standard Indian GST rates.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "GST Calculator"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How do I calculate GST Inclusive amount?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To calculate GST inclusive amount (removing GST from a total), use the formula: Original Cost = Total Amount / (1 + (GST Rate / 100))."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are the standard GST rates in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The standard GST tax slabs in India are 5%, 12%, 18%, and 28%. Some essential goods are exempt (0%)."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I use this for IGST, CGST, and SGST?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The total GST amount calculated here can be split. For intra-state transactions, split the GST amount equally between CGST and SGST. For inter-state, the total is IGST."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this calculator free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the VIP Tool GST Calculator is 100% free to use for unlimited calculations."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How to calculate GST Exclusive amount?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To add GST to a base amount, use the formula: GST Amount = (Original Cost * GST Rate) / 100. Then add this to the Original Cost."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>GST Calculator</h1>
+        <p class="subtitle">Quickly add or remove GST from any amount. Accurate calculations for 5%, 12%, 18%, and 28% rates.</p>
+
+        <div class="tool-card">
+            <div class="input-group">
+                <label for="amount">Initial Amount (â‚¹)</label>
+                <input type="number" id="amount" placeholder="Enter amount..." min="0" step="0.01">
+            </div>
+
+            <div class="input-group">
+                <label>Select GST Rate (%)</label>
+                <div class="rate-buttons" id="rateContainer">
+                    <div class="rate-btn" onclick="setRate(5)">5%</div>
+                    <div class="rate-btn" onclick="setRate(12)">12%</div>
+                    <div class="rate-btn active" onclick="setRate(18)">18%</div>
+                    <div class="rate-btn" onclick="setRate(28)">28%</div>
+                    <input type="number" id="customRate" placeholder="Custom" style="padding: 8px; border: 1px solid #dee2e6; border-radius: 4px;" oninput="clearRateBtns()">
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-add" onclick="calculate('add')">+ Add GST</button>
+                <button class="btn-remove" onclick="calculate('remove')">- Remove GST</button>
+                <button class="btn-reset" onclick="resetTool()">Reset</button>
+            </div>
+
+            <div class="result-section">
+                <div class="result-box">
+                    <div class="result-label">Net Amount</div>
+                    <div class="result-value" id="res-net">â‚¹0.00</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-label">GST Amount</div>
+                    <div class="result-value" id="res-gst">â‚¹0.00</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-label">Total Amount</div>
+                    <div class="result-value total-val" id="res-total">â‚¹0.00</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Finance Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/percentage-calculator" class="related-link-item">Percentage Calculator</a>
+                <a href="https://viptool.online/discount-calculator" class="related-link-item">Discount Calculator</a>
+                <a href="https://viptool.online/emi-calculator" class="related-link-item">EMI Calculator</a>
+                <a href="https://viptool.online/simple-interest-calculator" class="related-link-item">Simple Interest Calculator</a>
+                <a href="https://viptool.online/hourly-calculator" class="related-link-item">Hourly Wage Calculator</a>
+                <a href="https://viptool.online/monthly-expenses-analyser" class="related-link-item">Expenses Analyser</a>
+            </div>
+        </section>
+
+        <div class="ad-section">
+            </div>
+
+        <div class="content-section">
+            <h2>How to Use the GST Calculator</h2>
+            <p>The VIP Tool GST Calculator is designed for both business owners and consumers. It allows you to perform two main functions:</p>
+            <ol>
+                <li><strong>Add GST (Exclusive):</strong> Use this when you have a net amount and need to calculate the final bill including tax. Enter the amount, select the rate, and click "+ Add GST".</li>
+                <li><strong>Remove GST (Inclusive):</strong> Use this when you have a total bill amount and want to find out the original price before tax. Enter the total amount, select the rate, and click "- Remove GST".</li>
+            </ol>
+
+            <h3>Why Use an Online GST Calculator?</h3>
+            <p>Manually calculating Goods and Services Tax (GST) can be prone to errors, especially when dealing with reverse calculations (removing tax). Our tool ensures precision for invoices, tax filings, and budget planning. It supports all major Indian tax slabs including 5%, 12%, 18%, and 28%.</p>
+            <p>Check out our <a href="https://viptool.online/percentage-calculator" style="color: var(--primary-color);">Percentage Calculator</a> if you need to work with other custom rates.</p>
+
+            <div class="ad-section">
+                </div>
+
+            <h2>Benefits of VIP Tool GST Calculator</h2>
+            <ul>
+                <li><strong>Instant Results:</strong> No need to remember complex formulas.</li>
+                <li><strong>Dual Mode:</strong> Calculate both Inclusive and Exclusive tax instantly.</li>
+                <li><strong>Mobile Friendly:</strong> Works perfectly on smartphones for on-the-go calculations.</li>
+                <li><strong>AdSense Compliant:</strong> Clean layout with no intrusive pop-ups.</li>
+            </ul>
+
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <h3>1. What is the formula for adding GST?</h3>
+            <p>To add GST: <code>GST Amount = (Original Cost x GST Rate) / 100</code>. <br>Then, <code>Total Amount = Original Cost + GST Amount</code>.</p>
+
+            <h3>2. What is the formula for removing GST?</h3>
+            <p>To remove GST (Inclusive): <code>Original Cost = Total Amount / (1 + (GST Rate / 100))</code>. <br>Then, <code>GST Amount = Total Amount - Original Cost</code>.</p>
+
+            <h3>3. How is GST split in India?</h3>
+            <p>For intra-state sales (within the same state), the GST is split equally between CGST (Central) and SGST (State). For inter-state sales, it is charged as IGST (Integrated).</p>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, your privacy is our priority. This GST Calculator operates entirely on the client-side (in your browser). We do not collect, store, or transmit the financial data you input. We may use third-party services like Google AdSense to display ads and Google Analytics to monitor site traffic. These services may use cookies in accordance with their own privacy policies.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>This tool is provided for general informational purposes only. While we strive for accuracy, VIP Tool guarantees no warranty regarding the results. Users should verify calculations before using them for official tax filings or legal documents. We reserve the right to modify the tool at any time.</p>
+
+                <h3>Disclaimer</h3>
+                <p>VIP Tool is not a financial advisor or government-affiliated entity. The results generated by this calculator are estimates. Users are solely responsible for how they use this data. VIP Tool is not liable for any financial loss resulting from the use of this tool.</p>
+            </div>
+        </div>
+
+        <div class="ad-section">
+            </div>
+
+    </main>
+
+    
+</div>
+
+<script>
+    let currentRate = 18; // Default
+
+    function setRate(rate) {
+        currentRate = rate;
+        
+        // Reset UI
+        document.querySelectorAll('.rate-btn').forEach(btn => btn.classList.remove('active'));
+        document.getElementById('customRate').value = '';
+        
+        // Find button with this rate and make active
+        const btns = document.querySelectorAll('.rate-btn');
+        btns.forEach(btn => {
+            if(btn.innerText.includes(rate + '%')) {
+                btn.classList.add('active');
+            }
+        });
+    }
+
+    function clearRateBtns() {
+        document.querySelectorAll('.rate-btn').forEach(btn => btn.classList.remove('active'));
+        currentRate = parseFloat(document.getElementById('customRate').value) || 0;
+    }
+
+    function calculate(mode) {
+        // Get custom rate if input has value
+        const customInput = document.getElementById('customRate').value;
+        if(customInput) {
+            currentRate = parseFloat(customInput);
+        }
+
+        const amount = parseFloat(document.getElementById('amount').value);
+
+        if(isNaN(amount) || amount < 0) {
+            alert("Please enter a valid amount.");
+            return;
+        }
+
+        let netAmount, gstAmount, totalAmount;
+
+        if (mode === 'add') {
+            // Exclusive Calculation
+            netAmount = amount;
+            gstAmount = (amount * currentRate) / 100;
+            totalAmount = netAmount + gstAmount;
+        } else {
+            // Inclusive Calculation (Remove GST)
+            totalAmount = amount;
+            netAmount = amount / (1 + (currentRate / 100));
+            gstAmount = totalAmount - netAmount;
+        }
+
+        // Update UI
+        document.getElementById('res-net').innerText = formatCurrency(netAmount);
+        document.getElementById('res-gst').innerText = formatCurrency(gstAmount);
+        document.getElementById('res-total').innerText = formatCurrency(totalAmount);
+    }
+
+    function formatCurrency(num) {
+        return 'â‚¹' + num.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    }
+
+    function resetTool() {
+        document.getElementById('amount').value = '';
+        document.getElementById('res-net').innerText = 'â‚¹0.00';
+        document.getElementById('res-gst').innerText = 'â‚¹0.00';
+        document.getElementById('res-total').innerText = 'â‚¹0.00';
+        setRate(18); // Reset to default 18%
+    }
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

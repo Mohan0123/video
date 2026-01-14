@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <link rel="canonical" href="https://viptool.online/age-calculator">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Age Calculator. This free age calculator online helps you calculate your exact age 
+by date of birth in years, months and days. 
+VIPTool Online age calculator is fast, accurate and mobile-friendly.">
+    <meta name="keywords" content="age calculator, date of birth calculator, calculate age, chronological age, birthday calculator, how old am i">
+    <meta name="author" content="Age Calculator Tool">
+    <meta name="robots" content="index, follow">
+    <title>Free Age Calculator Online â€“ Exact Age by Date of Birth | VIPTool Online</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            <span>Advertisement Space</span>
+        </div>
+
+        <section class="section tool-wrapper">
+            
+            <div class="input-group">
+                <label for="dob-input">Date of Birth</label>
+                <input type="date" id="dob-input" class="input-control">
+            </div>
+
+            <div class="input-group">
+                <label for="target-date">Calculate Age At (Optional, defaults to Today)</label>
+                <input type="date" id="target-date" class="input-control">
+            </div>
+
+            <button class="btn-primary" onclick="calculateAge()">Calculate Age</button>
+            
+            <p class="error-msg" id="error-msg">Please enter a valid Date of Birth.</p>
+
+            <div id="result-area">
+                <h3>Your Exact Age:</h3>
+                <div class="age-cards">
+                    <div class="age-card">
+                        <span class="age-value" id="res-years">0</span>
+                        <span class="age-label">Years</span>
+                    </div>
+                    <div class="age-card">
+                        <span class="age-value" id="res-months">0</span>
+                        <span class="age-label">Months</span>
+                    </div>
+                    <div class="age-card">
+                        <span class="age-value" id="res-days">0</span>
+                        <span class="age-label">Days</span>
+                    </div>
+                </div>
+
+                <div class="extra-stats">
+                    <div class="stat-row">
+                        <span>Total Months:</span>
+                        <strong id="total-months">0</strong>
+                    </div>
+                    <div class="stat-row">
+                        <span>Total Weeks:</span>
+                        <strong id="total-weeks">0</strong>
+                    </div>
+                    <div class="stat-row">
+                        <span>Total Days:</span>
+                        <strong id="total-days">0</strong>
+                    </div>
+                    <div class="stat-row">
+                        <span>Total Hours (Approx):</span>
+                        <strong id="total-hours">0</strong>
+                    </div>
+                </div>
+
+                <div class="next-birthday" id="next-bday-msg">
+                    </div>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            <span>Advertisement Space</span>
+        </div>
+
+        <section class="section">
+            <h2>How to Use This Age Calculator</h2>
+            <ol>
+                <li><strong>Select Date of Birth:</strong> Click on the calendar icon or type your birth date in the "Date of Birth" field.</li>
+                <li><strong>Select Target Date (Optional):</strong> By default, the tool calculates your age as of today. You can change this date to calculate how old you were in the past or will be in the future.</li>
+                <li><strong>Click Calculate:</strong> Press the button to generate the results.</li>
+                <li><strong>View Results:</strong> See your age displayed in Years, Months, and Days, along with a detailed breakdown of total weeks and hours.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Benefits of Using Our Tool</h2>
+            <ul>
+                <li><strong>Precision:</strong> Get the exact calculation including leap years and varying month lengths.</li>
+                <li><strong>Speed:</strong> Instant results without manual math or counting on fingers.</li>
+                <li><strong>Versatility:</strong> Use it to calculate age differences, work anniversaries, or duration between two dates.</li>
+                <li><strong>Privacy:</strong> All calculations are done in your browser. No data is sent to any server.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Why Use an Online Age Calculator?</h2>
+            <p>Determining someone's exact age might seem simple, but the varying number of days in months and the occurrence of leap years every four years can make manual calculation tricky. An <strong>Age Calculator</strong> simplifies this process by providing a precise chronological age based on the Gregorian calendar.</p>
+
+            <h3>Chronological vs. Biological Age</h3>
+            <p>This tool calculates your <em>chronological age</em>, which is the amount of time that has passed from your birth to the given date. This is different from biological age, which depends on health, genetics, and lifestyle factors. Chronological age is the standard used for legal documents, school admissions, retirement planning, and government IDs.</p>
+
+            <h3>Common Uses for Age Calculation</h3>
+            <p>Beyond just curiosity, accurately knowing an age or duration is useful in many scenarios:</p>
+            <ul>
+                <li><strong>Administrative Forms:</strong> Filling out job applications, insurance forms, or medical records often requires precise age details.</li>
+                <li><strong>Event Planning:</strong> Calculating upcoming milestone birthdays (like 18th, 21st, or 50th) to plan parties in advance.</li>
+                <li><strong>Human Resources:</strong> Determining retirement dates or calculating tenure and experience for employees.</li>
+                <li><strong>Astrology:</strong> Finding exact age down to the day for horoscope charts.</li>
+            </ul>
+
+            <h3>How Accurate is the Calculation?</h3>
+            <p>Our tool uses standard Javascript Date objects which account for leap years (29 days in February) and the specific number of days in every month (30 or 31). This ensures that the result is mathematically correct according to the international date standard.</p>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this tool free to use? <span>+</span></div>
+                <div class="faq-answer">Yes, this Age Calculator is 100% free and open for everyone to use as many times as needed.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does it account for leap years? <span>+</span></div>
+                <div class="faq-answer">Absolutely. The calculator logic automatically adjusts for leap years to provide the correct number of days.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Do you store my date of birth? <span>+</span></div>
+                <div class="faq-answer">No. This tool runs entirely on the "client-side" (in your browser). We do not collect, store, or share your personal data.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Can I calculate age for a future date? <span>+</span></div>
+                <div class="faq-answer">Yes, simply change the "Calculate Age At" date to a future date to see how old you will be at that specific time.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">What format is the age displayed in? <span>+</span></div>
+                <div class="faq-answer">The primary output is in Years, Months, and Days. We also provide a breakdown of total months, weeks, and days.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: 30/12/2025</strong></p>
+            <p>Your privacy is important to us. This Privacy Policy explains how we handle information.</p>
+            <p><strong>1. Data Collection:</strong> We do not collect, store, or transmit any personal data entered into the calculator (such as Date of Birth). All calculations are performed locally on your device.</p>
+            <p><strong>2. Cookies:</strong> We may use cookies to improve user experience. You can disable cookies in your browser settings.</p>
+            <p><strong>3. Third-Party Ads (Google AdSense):</strong> We use third-party advertising companies to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you. If you would like more information about this practice and to know your choices about not having this information used by these companies, please visit Google's ad settings.</p>
+            <p><strong>4. Analytics:</strong> We may use tools like Google Analytics to understand traffic trends. This data is anonymous.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> This tool is provided for personal and educational use.</p>
+            <p><strong>2. Liability:</strong> We are not responsible for any errors or damages resulting from the use of this tool. While we strive for accuracy, users should verify critical calculations.</p>
+            <p><strong>3. Modifications:</strong> We reserve the right to modify or discontinue the service at any time without notice.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>The materials on this website are provided "as is". We make no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        // Set default date for "Target Date" to today
+        document.getElementById('target-date').valueAsDate = new Date();
+
+        function calculateAge() {
+            const dobInput = document.getElementById('dob-input').value;
+            const targetInput = document.getElementById('target-date').value;
+            const errorMsg = document.getElementById('error-msg');
+            const resultArea = document.getElementById('result-area');
+
+            // Validation
+            if (!dobInput) {
+                errorMsg.style.display = 'block';
+                resultArea.style.display = 'none';
+                return;
+            }
+
+            const birthDate = new Date(dobInput);
+            const targetDate = targetInput ? new Date(targetInput) : new Date();
+
+            if (birthDate > targetDate) {
+                errorMsg.textContent = "Date of Birth cannot be in the future relative to the target date.";
+                errorMsg.style.display = 'block';
+                resultArea.style.display = 'none';
+                return;
+            }
+
+            errorMsg.style.display = 'none';
+
+            // Calculate Difference
+            let years = targetDate.getFullYear() - birthDate.getFullYear();
+            let months = targetDate.getMonth() - birthDate.getMonth();
+            let days = targetDate.getDate() - birthDate.getDate();
+
+            // Adjust for negative days (borrow from previous month)
+            if (days < 0) {
+                months--;
+                // Get days in previous month
+                const prevMonth = new Date(targetDate.getFullYear(), targetDate.getMonth(), 0);
+                days += prevMonth.getDate();
+            }
+
+            // Adjust for negative months (borrow from previous year)
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            // Calculate Total Stats
+            const diffTime = Math.abs(targetDate - birthDate);
+            const totalDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            const totalWeeks = Math.floor(totalDays / 7);
+            const totalMonths = (years * 12) + months; // approx
+            const totalHours = totalDays * 24;
+
+            // Calculate Next Birthday
+            const currentYear = targetDate.getFullYear();
+            let nextBirthday = new Date(birthDate);
+            nextBirthday.setFullYear(currentYear);
+
+            if (nextBirthday < targetDate) {
+                nextBirthday.setFullYear(currentYear + 1);
+            } else if (nextBirthday.getDate() === targetDate.getDate() && nextBirthday.getMonth() === targetDate.getMonth()) {
+                // Today is birthday
+                nextBirthday = null; 
+            }
+
+            // Update UI
+            document.getElementById('res-years').textContent = years;
+            document.getElementById('res-months').textContent = months;
+            document.getElementById('res-days').textContent = days;
+
+            document.getElementById('total-months').textContent = totalMonths.toLocaleString();
+            document.getElementById('total-weeks').textContent = totalWeeks.toLocaleString();
+            document.getElementById('total-days').textContent = totalDays.toLocaleString();
+            document.getElementById('total-hours').textContent = totalHours.toLocaleString();
+
+            // Next Birthday Message
+            const nextBdayMsg = document.getElementById('next-bday-msg');
+            if (nextBirthday === null) {
+                nextBdayMsg.innerHTML = "ðŸŽ‰ Happy Birthday! ðŸŽ‰";
+            } else {
+                const diffNext = nextBirthday - targetDate;
+                const daysToNext = Math.ceil(diffNext / (1000 * 60 * 60 * 24));
+                const dayStr = daysToNext === 1 ? 'day' : 'days';
+                
+                // Format next birthday date
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                nextBdayMsg.innerHTML = `Your next birthday is in <strong>${daysToNext} ${dayStr}</strong><br><span style="font-size:0.9rem; color:#666">(${nextBirthday.toLocaleDateString(undefined, options)})</span>`;
+            }
+
+            resultArea.style.display = 'block';
+        }
+
+        // FAQ Accordion Logic
+        function toggleFaq(element) {
+            const parent = element.parentElement;
+            const isOpen = parent.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-question span').textContent = '+';
+            });
+
+            // Open clicked if it wasn't open
+            if (!isOpen) {
+                parent.classList.add('active');
+                element.querySelector('span').textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online JPG to PNG Converter. Convert JPEG images to high-quality PNG format instantly. Secure, client-side conversion with no file uploads required.">
+    <meta name="keywords" content="jpg to png, jpeg to png converter, image converter, free online converter, change jpg to png, lossless image conversion, browser based tool">
+    <meta name="author" content="JPG to PNG Converter Tool">
+    <meta name="robots" content="index, follow">
+    <title>JPG to PNG Converter - Free Online Image Tool</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section tool-wrapper">
+            <div class="drop-zone" id="drop-zone">
+                <input type="file" id="file-input" accept="image/jpeg, image/jpg" style="display: none;">
+                <div class="drop-icon">&#128444;</div> <p class="file-info" id="file-status">Click to Upload JPG Image</p>
+                <p class="file-note">or drag and drop file here (Max 10MB)</p>
+            </div>
+
+            <div class="action-area">
+                <button class="btn-primary" id="convert-btn" disabled>Convert to PNG</button>
+            </div>
+
+            <p class="error-msg" id="error-msg"></p>
+
+            <div id="result-area">
+                <h3>Conversion Complete!</h3>
+                <div class="preview-container">
+                    <img id="preview-image" class="preview-img" alt="PNG Preview">
+                </div>
+                <button id="download-btn" class="download-btn">Download PNG File</button>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: #64748b;">Format: PNG â€¢ Quality: High</p>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section">
+            <h2>How to Convert JPG to PNG Online</h2>
+            <ol>
+                <li><strong>Select Image:</strong> Click the upload box or drag a JPG/JPEG file onto the screen.</li>
+                <li><strong>Convert:</strong> Once the file is loaded, click the blue <strong>"Convert to PNG"</strong> button.</li>
+                <li><strong>Process:</strong> The tool will instantly convert your file using your browser's technology.</li>
+                <li><strong>Download:</strong> A preview will appear. Click <strong>"Download PNG File"</strong> to save the new image to your device.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Why Use Our JPG to PNG Converter?</h2>
+            <ul>
+                <li><strong>Zero Quality Loss:</strong> We use high-quality rendering to ensure your PNG looks exactly like the original JPG.</li>
+                <li><strong>100% Private:</strong> Unlike other tools, we do not upload your images to a server. Conversion happens locally on your device.</li>
+                <li><strong>Lightning Fast:</strong> No queue times or slow upload speeds. The conversion is instant.</li>
+                <li><strong>Totally Free:</strong> Use this tool as many times as you want without registration or watermarks.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Understanding JPG vs. PNG Formats</h2>
+            <p>In the world of digital images, <strong>JPG (JPEG)</strong> and <strong>PNG</strong> are the two most dominant file formats, but they serve different purposes. Understanding the difference is key to optimizing your images for the web, print, or design projects.</p>
+
+            <h3>Why Convert from JPG to PNG?</h3>
+            <p>JPG is a "lossy" compression format. This means every time you save a JPG, it loses a tiny bit of quality to keep the file size small. It is excellent for photographs but less ideal for images with text, sharp lines, or logos.</p>
+            <p><strong>PNG (Portable Network Graphics)</strong>, on the other hand, is a "lossless" format. Converting your JPG to PNG stops the quality degradation. While converting a standard JPG to PNG won't magically add a transparent background (since the original didn't have one), it prepares the file for higher quality editing. Designers often convert to PNG before adding text or other elements to ensure crisp edges.</p>
+
+            <h3>Browser Compatibility and Performance</h3>
+            <p>Modern web development requires versatility. While WebP is gaining traction, PNG remains the gold standard for high-quality graphics that need to be supported by every browser, operating system, and image viewer. Our <strong>JPG to PNG Converter</strong> ensures that your compatibility needs are met instantly.</p>
+            
+            <h3>Safe and Secure Conversion</h3>
+            <p>Many online converters require you to upload your personal photos to a cloud server. This poses a privacy risk. Our tool eliminates this risk by utilizing HTML5 Canvas technology. Your data never leaves your computer, making it the safest way to convert sensitive documents or personal photos.</p>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this tool free? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes, this JPG to PNG converter is 100% free. There are no limits on the number of files you can convert.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Does this tool support transparency? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">The PNG format supports transparency. However, converting a JPG (which has no transparency) to PNG will result in a solid image. You would need to use an editor to remove the background after conversion.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is my data safe? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Yes. We use client-side processing. Your images are processed within your own browser and are never uploaded to our servers.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Can I use this on mobile? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Absolutely. This website is fully responsive and works on iPhone, Android, tablets, and desktop computers.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">What is the maximum file size? <span class="faq-toggle">+</span></div>
+                <div class="faq-answer">Since the processing is done on your device, the limit depends on your device's memory. However, for best performance, we recommend images under 10MB.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: 30/12/2025</strong></p>
+            <p>Your privacy is important to us. This Privacy Policy explains how we handle your information.</p>
+            <p><strong>1. Data Collection:</strong> We do not collect, store, or transmit any images you upload. All image processing occurs locally on your device using HTML5 technology. We do not have access to your files.</p>
+            <p><strong>2. Cookies:</strong> We use cookies to analyze website traffic and optimize your website experience. By accepting our use of cookies, your data will be aggregated with all other user data.</p>
+            <p><strong>3. Third-Party Ads (Google AdSense):</strong> We use third-party advertising companies to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you.</p>
+            <p><strong>4. Analytics & Firebase:</strong> We may use Google Analytics and Firebase services to monitor infrastructure performance and user engagement. This data is anonymous and aggregate.</p>
+            <p><strong>5. Consent:</strong> By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By accessing this website, you agree to be bound by these Terms and Conditions.</p>
+            <p><strong>1. Usage License:</strong> Permission is granted to use this tool for personal and commercial purposes. You may not modify, copy, or attempt to reverse engineer the code of this tool.</p>
+            <p><strong>2. Disclaimer:</strong> The materials on this website are provided on an 'as is' basis. We make no warranties, expressed or implied, regarding the reliability or accuracy of the tool.</p>
+            <p><strong>3. Limitations:</strong> In no event shall we be liable for any damages (including, without limitation, damages for loss of data or profit) arising out of the use or inability to use the materials on this website.</p>
+            <p><strong>4. Modifications:</strong> We may revise these terms of service for its website at any time without notice.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>This JPG to PNG Converter is a free utility tool. While we strive for perfection, we cannot guarantee 100% accuracy for every file type or browser version. Users are responsible for maintaining backups of their original files. The tool is provided "as is" without warranty of any kind. We are not responsible for any loss of data or quality that may occur during the conversion process.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        // DOM Elements
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const convertBtn = document.getElementById('convert-btn');
+        const errorMsg = document.getElementById('error-msg');
+        const resultArea = document.getElementById('result-area');
+        const previewImage = document.getElementById('preview-image');
+        const downloadBtn = document.getElementById('download-btn');
+        const fileStatus = document.getElementById('file-status');
+
+        // State variables
+        let originalImage = new Image();
+        let originalFileName = '';
+        let generatedBlob = null;
+
+        // --- Event Listeners ---
+
+        // Drag and Drop interaction
+        dropZone.addEventListener('click', () => fileInput.click());
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+
+        dropZone.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            if (e.dataTransfer.files.length > 0) {
+                fileInput.files = e.dataTransfer.files;
+                handleFileSelect();
+            }
+        });
+
+        fileInput.addEventListener('change', handleFileSelect);
+
+        // Convert Button Click
+        convertBtn.addEventListener('click', performConversion);
+
+        // Download Button Click
+        downloadBtn.addEventListener('click', triggerDownload);
+
+        // --- Core Functions ---
+
+        function handleFileSelect() {
+            const file = fileInput.files[0];
+            resetUI();
+
+            if (file) {
+                // Validation: Check if it's an image
+                if (!file.type.match('image/jpeg') && !file.type.match('image/jpg')) {
+                    showError("Please upload a valid JPG or JPEG file.");
+                    return;
+                }
+
+                // Validation: File size (soft limit 10MB just for browser stability)
+                if (file.size > 10 * 1024 * 1024) {
+                    showError("File is too large. Please select an image under 10MB.");
+                    return;
+                }
+
+                originalFileName = file.name;
+                fileStatus.innerHTML = `<strong>Selected:</strong> ${file.name}`;
+                convertBtn.disabled = false;
+                
+                // Load image into memory
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    originalImage.onload = function() {
+                        // Image loaded successfully
+                    };
+                    originalImage.onerror = function() {
+                        showError("The file appears to be corrupted.");
+                    };
+                    originalImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function performConversion() {
+            if (!originalImage.src) return;
+
+            // Use Canvas to draw JPG and export as PNG
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Set canvas size to image size
+            canvas.width = originalImage.width;
+            canvas.height = originalImage.height;
+
+            // Draw image
+            ctx.drawImage(originalImage, 0, 0);
+
+            // Export to Blob (Best for downloading large files)
+            canvas.toBlob(function(blob) {
+                if (blob) {
+                    generatedBlob = blob;
+                    
+                    // Create object URL for preview
+                    const url = URL.createObjectURL(blob);
+                    previewImage.src = url;
+                    
+                    // Show Result Area
+                    resultArea.style.display = 'block';
+                    resultArea.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    showError("Conversion failed. Please try again.");
+                }
+            }, 'image/png', 1.0); // 1.0 = Max quality
+        }
+
+        function triggerDownload() {
+            if (!generatedBlob) return;
+
+            const url = URL.createObjectURL(generatedBlob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            
+            // Construct filename: name.jpg -> name.png
+            const cleanName = originalFileName.replace(/\.[^/.]+$/, "");
+            a.download = `${cleanName}.png`;
+
+            document.body.appendChild(a);
+            a.click();
+            
+            // Cleanup
+            setTimeout(() => {
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            }, 100);
+        }
+
+        function resetUI() {
+            errorMsg.style.display = 'none';
+            resultArea.style.display = 'none';
+            convertBtn.disabled = true;
+            fileStatus.innerHTML = "Click to Upload JPG Image";
+            generatedBlob = null;
+        }
+
+        function showError(message) {
+            errorMsg.textContent = message;
+            errorMsg.style.display = 'block';
+            convertBtn.disabled = true;
+        }
+
+        // FAQ Toggle Logic
+        function toggleFaq(element) {
+            const parent = element.parentElement;
+            const isOpen = parent.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-toggle').textContent = '+';
+            });
+
+            // Open clicked if it wasn't open
+            if (!isOpen) {
+                parent.classList.add('active');
+                element.querySelector('.faq-toggle').textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

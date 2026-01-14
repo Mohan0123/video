@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free QR Code Generator | Create Custom QR Codes Instantly - VIP Tool</title>
+    <meta name="description" content="Generate free, high-quality custom QR codes instantly. No sign-up required. Perfect for URLs, text, WiFi, vCards, and business. Fast, secure, and mobile-friendly.">
+    <meta name="keywords" content="QR code generator, free QR code maker, custom QR code, QR code for URL, online QR tool, download QR code">
+    
+    <script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebApplication",
+"name": "Free QR Code Generator",
+"url": "https://viptool.online/qr-code-generator",
+"description": "Generate free, high-quality custom QR codes instantly. No sign-up required. Perfect for URLs, text, WiFi, vCards, and business.",
+"applicationCategory": "UtilityApplication",
+"operatingSystem": "Any",
+"offers": {
+"@type": "Offer",
+"price": "0",
+"priceCurrency": "USD"
+},
+"author": {
+"@type": "Organization",
+"name": "VIP Tool",
+"url": "https://viptool.online"
+}
+}
+</script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div class="ad-slot">Ad Space Top</div>
+
+        <section class="tool-wrapper">
+            <div class="form-group">
+                <label for="qrText">Enter Content (URL or Text)</label>
+                <textarea id="qrText" placeholder="https://example.com or Type your message here..."></textarea>
+            </div>
+
+            <div class="settings-grid">
+                <div class="form-group">
+                    <label for="qrSize">Size</label>
+                    <select id="qrSize">
+                        <option value="150x150">Small (150px)</option>
+                        <option value="300x300" selected>Medium (300px)</option>
+                        <option value="500x500">Large (500px)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="qrColor">Color</label>
+                    <select id="qrColor">
+                        <option value="000000">Black</option>
+                        <option value="0000FF">Blue</option>
+                        <option value="FF0000">Red</option>
+                        <option value="008000">Green</option>
+                        <option value="4f46e5">Purple</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="btn-generate" onclick="generateQR()">Generate QR Code</button>
+
+            <div id="result-area">
+                <div class="qr-box">
+                    <img id="qrImage" src="" alt="Generated QR Code">
+                </div>
+                <button class="btn-download" onclick="downloadQR()">Download Image</button>
+            </div>
+        </section>
+
+        <div class="internal-links-box">
+            <div class="internal-links-title">More Free Tools</div>
+            <div class="links-grid">
+                <a href="https://viptool.online/privacy-policy-generator" class="internal-link-btn">Privacy Policy Generator</a>
+                <a href="https://viptool.online/terms-and-conditions-generator" class="internal-link-btn">Terms & Conditions Generator</a>
+                <a href="https://viptool.online/disclaimer-generator" class="internal-link-btn">Disclaimer Generator</a>
+                <a href="https://viptool.online/word-counter" class="internal-link-btn">Word Counter</a>
+                <a href="https://viptool.online/about-us-generator" class="internal-link-btn">About Us Generator</a>
+            </div>
+        </div>
+
+        <article class="content-section">
+            <h2>How to make a QR Code?</h2>
+            <ol>
+                <li><strong>Enter Data:</strong> Paste your website URL or type any text in the input box.</li>
+                <li><strong>Customize:</strong> Choose the size and color that fits your design.</li>
+                <li><strong>Generate:</strong> Click the "Generate QR Code" button to see the preview.</li>
+                <li><strong>Download:</strong> Click the download button to save the image (PNG format) to your device.</li>
+            </ol>
+            <p>Our tool is 100% free and works on all devices including Android, iPhone, Windows, and Mac.</p>
+        </article>
+
+        <div class="ad-slot">Ad Space Middle</div>
+
+        <article class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            <h3>Do these QR codes expire?</h3>
+            <p>No. The QR codes generated here are static. They do not have an expiration date and will work forever as long as your link is active.</p>
+
+            <h3>Is it free to use for commercial purpose?</h3>
+            <p>Yes, you can use the generated QR codes for your business cards, flyers, websites, or any commercial project for free.</p>
+
+            <h3>Do you store my data?</h3>
+            <p>No. We respect your privacy. The generation happens in real-time and we do not save your entered text or URLs on our servers.</p>
+        </article>
+
+        <div class="legal-container">
+            <h2 style="text-align:center; margin-bottom:20px; color:var(--secondary-color);">Legal Information</h2>
+            
+            <div class="legal-box" id="privacy-policy">
+                <h3>Privacy Policy</h3>
+                <p><strong>Effective Date:</strong> [Current Date]</p>
+                <p>At VIP Tool, accessible from https://viptool.online, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by VIP Tool and how we use it.</p>
+                <p><strong>Log Files:</strong> We follow a standard procedure of using log files. These files log visitors when they visit websites. The information collected includes IP addresses, browser type, ISP, date/time stamp, and referring/exit pages.</p>
+                <p><strong>Cookies and Web Beacons:</strong> Like any other website, VIP Tool uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. Google, as a third-party vendor, uses cookies to serve ads on our site.</p>
+                <p><strong>Data Collection:</strong> The QR Code Generator tool does not store the text or URLs entered by users. Data is processed temporarily to generate the image and is then discarded.</p>
+            </div>
+
+            <div class="legal-box" id="terms-conditions">
+                <h3>Terms and Conditions</h3>
+                <p><strong>1. Introduction:</strong> These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, VIP Tool.</p>
+                <p><strong>2. Intellectual Property Rights:</strong> Other than the content you own, under these Terms, VIP Tool and/or its licensors own all the intellectual property rights and materials contained in this Website.</p>
+                <p><strong>3. Restrictions:</strong> You are specifically restricted from using this Website in any way that is or may be damaging to this Website; using this Website in any way that impacts user access to this Website.</p>
+                <p><strong>4. No Warranties:</strong> This Website is provided "as is," with all faults, and VIP Tool express no representations or warranties, of any kind related to this Website or the materials contained on this Website.</p>
+            </div>
+
+            <div class="legal-box" id="disclaimer">
+                <h3>Disclaimer</h3>
+                <p>The information provided by VIP Tool ("we," "us," or "our") on https://viptool.online (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.</p>
+                <p><strong>External Links Disclaimer:</strong> The Site may contain (or you may be sent through the Site) links to other websites or content belonging to or originating from third parties. Such external links are not investigated, monitored, or checked for accuracy or validity by us.</p>
+            </div>
+        </div>
+
+    </main>
+
+    
+
+    <script>
+        function generateQR() {
+            // 1. Get Values
+            const text = document.getElementById('qrText').value.trim();
+            const size = document.getElementById('qrSize').value;
+            const color = document.getElementById('qrColor').value;
+            const resultArea = document.getElementById('result-area');
+            const img = document.getElementById('qrImage');
+
+            // 2. Validation
+            if (text === "") {
+                alert("Please enter some text or a URL first!");
+                return;
+            }
+
+            // 3. Construct API URL (Using free QRServer API)
+            // Format color properly (API expects hex without #)
+            const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${size}&data=${encodeURIComponent(text)}&color=${color}&margin=10`;
+
+            // 4. Show Loading State (Optional visual cue)
+            img.style.opacity = 0.5;
+
+            // 5. Load Image
+            img.onload = function() {
+                img.style.opacity = 1;
+                resultArea.style.display = 'block';
+                // Scroll to result
+                resultArea.scrollIntoView({ behavior: 'smooth' });
+            };
+
+            img.src = apiUrl;
+        }
+
+        async function downloadQR() {
+            const img = document.getElementById('qrImage');
+            const imgUrl = img.src;
+
+            if (!imgUrl) {
+                alert("Please generate a QR code first.");
+                return;
+            }
+
+            try {
+                // Fetch the image as a blob to trigger download
+                const response = await fetch(imgUrl);
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                
+                // Create a temporary link
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = 'qrcode-viptool.png'; // Filename
+                
+                document.body.appendChild(a);
+                a.click();
+                
+                // Cleanup
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(a);
+            } catch (error) {
+                // Fallback for security restriction issues
+                alert("Download failed due to browser security. Please right-click the image and select 'Save Image As'.");
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

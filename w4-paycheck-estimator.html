@@ -1,0 +1,462 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free W-4 Paycheck Estimator by VIP Tool. Calculate your federal tax withholding and estimate your take-home pay based on Form W-4 inputs.">
+    <title>W-4 Paycheck Estimator - Calculate Take-Home Pay | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "W-4 Paycheck Estimator",
+      "url": "https://viptool.online/w4-paycheck-estimator",
+      "description": "Estimate your federal income tax withholding and net paycheck based on IRS Form W-4 inputs. Client-side secure calculation.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "W-4 Paycheck Estimator"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How does this W-4 estimator work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This tool simulates the IRS percentage method. It annualizes your pay, applies the standard deduction based on your filing status, calculates tax based on brackets, subtracts dependent credits, and then divides by your pay frequency."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does this tool save my salary information?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The W-4 Paycheck Estimator runs entirely in your browser. No data is sent to any server, ensuring your financial privacy."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does it calculate state taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This specific tool focuses on Federal Income Tax (based on Form W-4) and FICA (Social Security/Medicare). State taxes vary widely and are not included in this estimation."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is Step 4(c) 'Extra Withholding'?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This is an additional dollar amount you request to be withheld from each paycheck, often used to cover taxes on other income (like interest or dividends) or to ensure a refund at tax time."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>W-4 Paycheck Estimator</h1>
+        <p class="subtitle">Estimate your federal tax withholding and take-home pay based on IRS Form W-4 inputs.</p>
+
+        <div class="tool-card">
+            <div class="calc-grid">
+                <div class="input-section">
+                    <h3>1. Filing Status & Pay</h3>
+                    <div class="form-group">
+                        <label for="filingStatus">Filing Status</label>
+                        <select id="filingStatus">
+                            <option value="single">Single or Married Filing Separately</option>
+                            <option value="married">Married Filing Jointly</option>
+                            <option value="head">Head of Household</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="payFrequency">Pay Frequency</label>
+                        <select id="payFrequency">
+                            <option value="52">Weekly (52/year)</option>
+                            <option value="26" selected>Bi-Weekly (26/year)</option>
+                            <option value="24">Semi-Monthly (24/year)</option>
+                            <option value="12">Monthly (12/year)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="grossPay">Gross Pay (Per Paycheck)</label>
+                        <input type="number" id="grossPay" placeholder="e.g. 2500" min="0">
+                    </div>
+
+                    <h3>W-4 Form Information</h3>
+                    <div class="form-group">
+                        <label for="w4Step3">Step 3: Dependents ($)</label>
+                        <input type="number" id="w4Step3" placeholder="e.g. 2000 per child" min="0">
+                        <div class="help-text">Enter the total dollar amount from Step 3.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="w4Step4a">Step 4(a): Other Income ($)</label>
+                        <input type="number" id="w4Step4a" placeholder="Annual amount" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="w4Step4b">Step 4(b): Deductions ($)</label>
+                        <input type="number" id="w4Step4b" placeholder="Annual amount over standard" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="w4Step4c">Step 4(c): Extra Withholding ($)</label>
+                        <input type="number" id="w4Step4c" placeholder="Amount per paycheck" min="0">
+                    </div>
+                    
+                    <button onclick="calculateTax()">Calculate Paycheck</button>
+                    <button class="btn-reset" onclick="resetForm()">Reset</button>
+                </div>
+
+                <div class="results-section" id="resultsArea" style="opacity: 0.6; pointer-events: none;">
+                    <h3>Estimated Paycheck</h3>
+                    
+                    <div class="result-row">
+                        <span class="result-label">Gross Pay</span>
+                        <span class="result-value" id="resGross">$0.00</span>
+                    </div>
+                    
+                    <div class="result-row">
+                        <span class="result-label">Federal Tax Withholding</span>
+                        <span class="result-value" id="resFedTax" style="color:var(--danger-color)">$0.00</span>
+                    </div>
+
+                    <div class="result-row">
+                        <span class="result-label">Social Security (6.2%)</span>
+                        <span class="result-value" id="resSS" style="color:var(--danger-color)">$0.00</span>
+                    </div>
+
+                    <div class="result-row">
+                        <span class="result-label">Medicare (1.45%)</span>
+                        <span class="result-value" id="resMed" style="color:var(--danger-color)">$0.00</span>
+                    </div>
+
+                    <div class="net-pay">
+                        <div class="result-row" style="border:none; padding:0;">
+                            <span class="result-label" style="color:var(--success-color); font-weight:bold;">Net Pay</span>
+                            <span class="result-value" id="resNet">$0.00</span>
+                        </div>
+                        <div class="help-text" style="text-align:right;">(Before state/local taxes & benefits)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/hourly-calculator" class="related-link-item">Hourly Calculator</a>
+                <a href="https://viptool.online/salary-converter" class="related-link-item">Salary Converter</a>
+                <a href="https://viptool.online/percentage-calculator" class="related-link-item">Percentage Calculator</a>
+                <a href="https://viptool.online/gst-calculator" class="related-link-item">GST Calculator</a>
+                <a href="https://viptool.online/word-to-pdf" class="related-link-item">Word to PDF Converter</a>
+            </div>
+        </section>
+
+        <div class="ad-section" id="ad-top">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <div class="content-section">
+            <h2>How to Use the W-4 Paycheck Estimator</h2>
+            <p>Understanding your tax liability can be confusing. The VIP Tool W-4 Estimator simplifies this process by simulating the IRS tax withholding logic.</p>
+            <ol>
+                <li><strong>Select Filing Status:</strong> Choose Single, Married Filing Jointly, or Head of Household as per your tax return.</li>
+                <li><strong>Enter Gross Pay:</strong> Input the amount you earn <em>before</em> taxes for a single pay period.</li>
+                <li><strong>W-4 Details:</strong> 
+                    <ul>
+                        <li><strong>Step 3:</strong> Enter the total dependent credit amount (e.g., $2000 per child under 17).</li>
+                        <li><strong>Step 4(a):</strong> Add other annual income (interest, dividends) that isn't taxed.</li>
+                        <li><strong>Step 4(b):</strong> Enter deductions that exceed the standard deduction.</li>
+                        <li><strong>Step 4(c):</strong> Enter any extra amount you want withheld per paycheck.</li>
+                    </ul>
+                </li>
+                <li><strong>Calculate:</strong> Click the button to see your estimated Federal Tax, FICA deductions, and final Net Pay.</li>
+            </ol>
+
+            <h2>Why is W-4 Estimation Important?</h2>
+            <p>Filling out your <a href="https://viptool.online/tools" style="color:var(--primary-color);">W-4 form</a> correctly ensures that you don't owe a large sum to the IRS at the end of the year, nor do you give them a massive interest-free loan (a huge refund).</p>
+            <ul>
+                <li><strong>Avoid Penalties:</strong> Under-withholding can lead to tax penalties.</li>
+                <li><strong>Cash Flow:</strong> Adjusting your W-4 can increase your monthly take-home pay if you usually get a large refund.</li>
+                <li><strong>Life Changes:</strong> Marriage, children, or a new job are key times to use this estimator.</li>
+            </ul>
+
+            <div class="ad-section" id="ad-mid">
+                <div class="ad-label">Advertisement</div>
+                </div>
+
+            <h2>What is deducted from my paycheck?</h2>
+            <p>Aside from Federal Income Tax, this tool estimates <strong>FICA taxes</strong> which are mandatory for most employees:</p>
+            <ul>
+                <li><strong>Social Security:</strong> 6.2% of your gross pay (up to an annual wage limit).</li>
+                <li><strong>Medicare:</strong> 1.45% of your gross pay (no limit).</li>
+            </ul>
+            <p><em>Note: This tool does not calculate State Income Tax, Local Tax, or benefit deductions (like 401k or Health Insurance).</em></p>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, user privacy is paramount. This W-4 Paycheck Estimator operates entirely client-side. We do not collect, store, or transmit your salary data. Google AdSense and Analytics are used on this page to serve ads and monitor traffic; they may use cookies.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>This tool is provided for educational and estimation purposes only. It uses 2024/2025 tax estimation logic but is not a substitute for official IRS calculators or professional tax advice. VIP Tool assumes no liability for discrepancies in your actual paycheck.</p>
+
+                <h3>Disclaimer</h3>
+                <p>VIP Tool is not affiliated with the Internal Revenue Service (IRS). Tax laws are subject to change. Always consult a certified tax professional (CPA) before making financial decisions.</p>
+            </div>
+        </div>
+
+        <div class="ad-section" id="ad-bottom">
+            <div class="ad-label">Advertisement</div>
+            </div>
+    </main>
+
+    
+</div>
+
+<script>
+    function calculateTax() {
+        const grossPay = parseFloat(document.getElementById('grossPay').value);
+        if (isNaN(grossPay) || grossPay <= 0) {
+            alert("Please enter a valid Gross Pay.");
+            return;
+        }
+
+        const frequency = parseFloat(document.getElementById('payFrequency').value);
+        const status = document.getElementById('filingStatus').value;
+        const w4Step3 = parseFloat(document.getElementById('w4Step3').value) || 0;
+        const w4Step4a = parseFloat(document.getElementById('w4Step4a').value) || 0; // Other Income
+        const w4Step4b = parseFloat(document.getElementById('w4Step4b').value) || 0; // Deductions
+        const w4Step4c = parseFloat(document.getElementById('w4Step4c').value) || 0; // Extra Withholding
+
+        // 1. Annualize Wages
+        let annualGross = grossPay * frequency;
+
+        // 2. Adjust for Other Income (4a) and Deductions (4b)
+        // Adjusted Annual Wage = Annual Gross + Other Income - Deductions
+        let adjustedAnnualWage = annualGross + w4Step4a - w4Step4b;
+        if (adjustedAnnualWage < 0) adjustedAnnualWage = 0;
+
+        // 3. Apply Standard Deduction (2024 Estimates)
+        let standardDeduction = 0;
+        if (status === 'single') standardDeduction = 14600; // Single / MFS
+        else if (status === 'married') standardDeduction = 29200; // MFJ
+        else if (status === 'head') standardDeduction = 21900; // HOH
+
+        // Taxable Income
+        let taxableIncome = adjustedAnnualWage - standardDeduction;
+        if (taxableIncome < 0) taxableIncome = 0;
+
+        // 4. Calculate Annual Tax (Simplified 2024 Brackets)
+        let annualTax = calculateBrackets(taxableIncome, status);
+
+        // 5. Subtract Credits (Step 3)
+        annualTax = annualTax - w4Step3;
+        if (annualTax < 0) annualTax = 0;
+
+        // 6. Convert to Pay Period Tax
+        let periodTax = annualTax / frequency;
+
+        // 7. Add Extra Withholding (Step 4c)
+        let totalFedTax = periodTax + w4Step4c;
+
+        // 8. Calculate FICA
+        // Social Security: 6.2% on first $168,600 (2024 limit)
+        // Medicare: 1.45% on all income
+        let ssTax = 0;
+        if (annualGross < 168600) {
+            ssTax = grossPay * 0.062;
+        } else {
+            // Simplification: Assumes user hits limit eventually, but strictly per check calc:
+            // For estimation, we just show 6.2% unless annual is already high. 
+            // Better logic: Cap annual SS at 10453.20.
+            // Per check cap:
+            let annualSS = annualGross * 0.062;
+            if(annualSS > 10453.20) annualSS = 10453.20;
+            ssTax = annualSS / frequency;
+        }
+
+        let medTax = grossPay * 0.0145;
+
+        // 9. Net Pay
+        let netPay = grossPay - totalFedTax - ssTax - medTax;
+
+        // Display Results
+        document.getElementById('resGross').innerText = formatMoney(grossPay);
+        document.getElementById('resFedTax').innerText = formatMoney(totalFedTax);
+        document.getElementById('resSS').innerText = formatMoney(ssTax);
+        document.getElementById('resMed').innerText = formatMoney(medTax);
+        document.getElementById('resNet').innerText = formatMoney(netPay);
+
+        // Make visible
+        document.getElementById('resultsArea').style.opacity = '1';
+        document.getElementById('resultsArea').style.pointerEvents = 'auto';
+    }
+
+    function calculateBrackets(income, status) {
+        // Simplified 2024 Tax Brackets logic
+        let tax = 0;
+        
+        // Brackets: [Limit, Rate]
+        let brackets = [];
+        
+        if (status === 'single') {
+            brackets = [
+                { limit: 11600, rate: 0.10 },
+                { limit: 47150, rate: 0.12 },
+                { limit: 100525, rate: 0.22 },
+                { limit: 191950, rate: 0.24 },
+                { limit: 243725, rate: 0.32 },
+                { limit: 609350, rate: 0.35 },
+                { limit: Infinity, rate: 0.37 }
+            ];
+        } else if (status === 'married') {
+             brackets = [
+                { limit: 23200, rate: 0.10 },
+                { limit: 94300, rate: 0.12 },
+                { limit: 201050, rate: 0.22 },
+                { limit: 383900, rate: 0.24 },
+                { limit: 487450, rate: 0.32 },
+                { limit: 731200, rate: 0.35 },
+                { limit: Infinity, rate: 0.37 }
+            ];
+        } else { // Head of Household
+             brackets = [
+                { limit: 16550, rate: 0.10 },
+                { limit: 63100, rate: 0.12 },
+                { limit: 100500, rate: 0.22 },
+                { limit: 191950, rate: 0.24 },
+                { limit: 243700, rate: 0.32 },
+                { limit: 609350, rate: 0.35 },
+                { limit: Infinity, rate: 0.37 }
+            ];
+        }
+
+        let previousLimit = 0;
+        for (let i = 0; i < brackets.length; i++) {
+            let limit = brackets[i].limit;
+            let rate = brackets[i].rate;
+            
+            if (income > limit) {
+                tax += (limit - previousLimit) * rate;
+                previousLimit = limit;
+            } else {
+                tax += (income - previousLimit) * rate;
+                break;
+            }
+        }
+        return tax;
+    }
+
+    function formatMoney(num) {
+        return '$' + num.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    }
+
+    function resetForm() {
+        document.getElementById('grossPay').value = '';
+        document.getElementById('w4Step3').value = '';
+        document.getElementById('w4Step4a').value = '';
+        document.getElementById('w4Step4b').value = '';
+        document.getElementById('w4Step4c').value = '';
+        document.getElementById('resultsArea').style.opacity = '0.6';
+        document.getElementById('resultsArea').style.pointerEvents = 'none';
+        
+        document.getElementById('resGross').innerText = '$0.00';
+        document.getElementById('resFedTax').innerText = '$0.00';
+        document.getElementById('resNet').innerText = '$0.00';
+    }
+
+    // ADSENSE AUTO-VISIBILITY
+    window.addEventListener('load', function() {
+        const adSections = document.querySelectorAll('.ad-section');
+        adSections.forEach(section => {
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (section.children.length > 1 || section.offsetHeight > 20) {
+                        section.classList.add('visible');
+                        observer.disconnect(); 
+                    }
+                });
+            });
+            observer.observe(section, { childList: true, subtree: true, attributes: true });
+        });
+    });
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

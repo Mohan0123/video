@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Fuel Cost Converter & Trip Calculator by VIP Tool. Calculate gas, petrol, or diesel cost for your trip. Supports MPG, Km/L, L/100km and multiple currencies.">
+    <title>Fuel Cost Converter - Calculate Trip Gas & Petrol Price | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Fuel Cost Converter",
+      "url": "https://viptool.online/fuel-cost-converter",
+      "description": "Calculate fuel cost for any trip. Converts between MPG, L/100km, and Km/L to estimate total gas or petrol expenses.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Fuel Cost Converter"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How do I calculate fuel cost for a trip?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Enter your trip distance, your vehicle's fuel efficiency (MPG or Km/L), and the current price of fuel. Our tool calculates the total fuel needed and the cost."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does this tool support electric vehicles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Currently, this tool is optimized for liquid fuel (gas, petrol, diesel). However, if you know your cost per km, you can estimate it manually."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is the difference between MPG US and MPG UK?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A UK gallon is larger (4.54 liters) than a US gallon (3.78 liters). Therefore, MPG UK figures are higher than MPG US figures for the same efficiency. Our tool handles this conversion."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this calculator free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the Fuel Cost Converter on VIP Tool is 100% free to use."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Fuel Cost Converter</h1>
+        <p class="subtitle">Accurate Trip Cost Calculator for Cars, Bikes, and Trucks.</p>
+
+        <div class="tool-card">
+            <div class="input-section">
+                <div class="form-group">
+                    <label for="distance">Trip Distance</label>
+                    <div class="input-group">
+                        <input type="number" id="distance" placeholder="e.g. 500" min="0" step="0.1">
+                        <select id="distanceUnit">
+                            <option value="km">Kilometers (km)</option>
+                            <option value="miles">Miles (mi)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="efficiency">Fuel Efficiency / Mileage</label>
+                    <div class="input-group">
+                        <input type="number" id="efficiency" placeholder="e.g. 15" min="0.1" step="0.1">
+                        <select id="efficiencyUnit">
+                            <option value="kmpl">km/L (Kilometers per Liter)</option>
+                            <option value="l100">L/100km (Liters per 100km)</option>
+                            <option value="mpg_us">MPG (US)</option>
+                            <option value="mpg_uk">MPG (UK)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Fuel Price</label>
+                    <div class="input-group">
+                        <input type="number" id="price" placeholder="e.g. 98.50" min="0" step="0.01">
+                        <select id="priceUnit">
+                            <option value="per_liter">Price per Liter</option>
+                            <option value="per_gallon_us">Price per Gallon (US)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="currency">Currency</label>
+                    <select id="currency">
+                        <option value="$">USD ($)</option>
+                        <option value="â‚¹">INR (â‚¹)</option>
+                        <option value="â‚¬">EUR (â‚¬)</option>
+                        <option value="Â£">GBP (Â£)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn-primary" onclick="calculateFuelCost()">Calculate Cost</button>
+                <button class="btn-secondary" onclick="resetForm()">Reset</button>
+            </div>
+
+            <div id="result-area">
+                <div class="result-cards">
+                    <div class="result-card highlight">
+                        <div class="result-label">Total Trip Cost</div>
+                        <div class="result-value" id="res-cost">$0.00</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">Fuel Needed</div>
+                        <div class="result-value" id="res-fuel">0 Liters</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-label">Efficiency (Standard)</div>
+                        <div class="result-value" id="res-efficiency">0 km/L</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Tools You Might Need</div>
+            <div class="related-links">
+                <a href="https://viptool.online/fuel-cost-converter" class="related-link-item">Mileage Calculator</a>
+                <a href="https://viptool.online/speed-converter" class="related-link-item">Speed Converter</a>
+                <a href="https://viptool.online/distance-converter" class="related-link-item">Distance Converter</a>
+                <a href="https://viptool.online/gst-calculator" class="related-link-item">GST Calculator</a>
+                <a href="https://viptool.online/hourly-calculator" class="related-link-item">Hourly Calculator</a>
+                <a href="https://viptool.online/simple-interest-calculator" class="related-link-item">Simple Interest Calculator</a>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement
+        </div>
+
+        <div class="content-section">
+            <h2>How to Use the Fuel Cost Converter</h2>
+            <p>Planning a road trip or just want to know how much your daily commute costs? The VIP Tool Fuel Cost Converter makes it easy. Follow these simple steps:</p>
+            <ol style="margin-left: 20px; margin-bottom: 20px;">
+                <li><strong>Enter Distance:</strong> Input the total distance of your trip and select whether it's in Kilometers (km) or Miles.</li>
+                <li><strong>Enter Fuel Efficiency:</strong> Input your vehicle's mileage. You can use any unit: km/L (common in India/Asia), MPG (US/UK), or L/100km (Europe).</li>
+                <li><strong>Enter Fuel Price:</strong> Input the current price of fuel at the station and select if it is per Liter or per Gallon.</li>
+                <li><strong>Select Currency:</strong> Choose your local currency symbol for the display.</li>
+                <li><strong>Calculate:</strong> Click the button to see the estimated total cost and the amount of fuel required.</li>
+            </ol>
+
+            <h2>Why Calculate Fuel Costs Before Travelling?</h2>
+            <p>Fuel prices fluctuate constantly, and different vehicles have vastly different consumption rates. By using a <a href="https://viptool.online/tools" style="color:var(--primary-color);">reliable trip calculator</a>, you can:</p>
+            <ul>
+                <li><strong>Budget Accurately:</strong> Know exactly how much cash to set aside for gas or petrol.</li>
+                <li><strong>Compare Routes:</strong> Determine if a longer but smoother route is cheaper than a shorter, stop-and-go route.</li>
+                <li><strong>Split Costs:</strong> If carpooling, you can easily calculate the fair share for each passenger.</li>
+            </ul>
+
+            <div class="ad-placeholder">
+                Advertisement
+            </div>
+
+            <h2>Understanding Fuel Efficiency Units</h2>
+            <p>Different regions use different standards to measure how efficient a car is. Our tool handles conversions automatically:</p>
+            <ul>
+                <li><strong>km/L:</strong> Kilometers per Liter. Common in India, Japan, and South America. Higher is better.</li>
+                <li><strong>MPG (US/UK):</strong> Miles Per Gallon. Used in the USA and UK. Note that a UK gallon is larger than a US gallon.</li>
+                <li><strong>L/100km:</strong> Liters per 100 Kilometers. The standard in Europe and Canada. Lower is better.</li>
+            </ul>
+
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <h3>1. Is the calculation 100% accurate?</h3>
+            <p>The tool is mathematically accurate based on your inputs. However, real-world factors like traffic, tire pressure, and driving style (AC usage, speeding) can affect actual fuel consumption.</p>
+
+            <h3>2. How do I convert Miles to Kilometers?</h3>
+            <p>1 Mile is approximately equal to 1.609 Kilometers. Our tool performs this conversion automatically in the background.</p>
+
+            <h3>3. Does this work for Diesel and Petrol?</h3>
+            <p>Yes. The calculator works on the principle of volume and price. It does not matter if the fluid is Petrol, Diesel, or Ethanol, as long as you input the correct price and efficiency.</p>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, we value your privacy. This Fuel Cost Converter functions entirely within your browser. No data about your location, trip details, or vehicle is sent to our servers. We use third-party services like Google Analytics and Google AdSense, which may use cookies to improve user experience and serve relevant ads.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>This tool is provided for informational and estimation purposes only. VIP Tool is not responsible for any discrepancies between the estimated cost and the actual cost incurred. Fuel prices and vehicle performance vary.</p>
+
+                <h3>Disclaimer</h3>
+                <p>The results generated by this tool are estimates. VIP Tool is not affiliated with any fuel provider or automotive authority. Please drive responsibly and obey all traffic laws.</p>
+            </div>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    function calculateFuelCost() {
+        // Inputs
+        const distance = parseFloat(document.getElementById('distance').value);
+        const distanceUnit = document.getElementById('distanceUnit').value;
+        const efficiency = parseFloat(document.getElementById('efficiency').value);
+        const efficiencyUnit = document.getElementById('efficiencyUnit').value;
+        const price = parseFloat(document.getElementById('price').value);
+        const priceUnit = document.getElementById('priceUnit').value;
+        const currency = document.getElementById('currency').value;
+
+        // Validation
+        if (isNaN(distance) || isNaN(efficiency) || isNaN(price) || distance <= 0 || efficiency <= 0 || price < 0) {
+            alert("Please enter valid positive numbers for all fields.");
+            return;
+        }
+
+        // 1. Normalize Distance to Kilometers
+        let distInKm = distance;
+        if (distanceUnit === 'miles') {
+            distInKm = distance * 1.60934;
+        }
+
+        // 2. Calculate Fuel Needed in Liters
+        let litersNeeded = 0;
+        let kmPerLiterDisplay = 0; // For display purposes
+
+        if (efficiencyUnit === 'l100') {
+            // Formula: (Distance / 100) * Efficiency
+            litersNeeded = (distInKm / 100) * efficiency;
+            kmPerLiterDisplay = 100 / efficiency;
+        } 
+        else if (efficiencyUnit === 'kmpl') {
+            // Formula: Distance / Efficiency
+            litersNeeded = distInKm / efficiency;
+            kmPerLiterDisplay = efficiency;
+        } 
+        else if (efficiencyUnit === 'mpg_us') {
+            // Convert MPG US to km/L -> 1 MPG US = 0.425144 km/L
+            let kmpl = efficiency * 0.425144;
+            litersNeeded = distInKm / kmpl;
+            kmPerLiterDisplay = kmpl;
+        } 
+        else if (efficiencyUnit === 'mpg_uk') {
+            // Convert MPG UK to km/L -> 1 MPG UK = 0.5542 km/L (approx) or more precisely via gallons
+            // 1 Imperial Gallon = 4.54609 Liters. 1 Mile = 1.60934 Km.
+            // km/L = MPG * (1.60934 / 4.54609) = MPG * 0.354006
+            let kmpl = efficiency * 0.354006;
+            litersNeeded = distInKm / kmpl;
+            kmPerLiterDisplay = kmpl;
+        }
+
+        // 3. Normalize Price to Price per Liter
+        let pricePerLiter = price;
+        if (priceUnit === 'per_gallon_us') {
+            // 1 US Gallon = 3.78541 Liters
+            pricePerLiter = price / 3.78541;
+        }
+
+        // 4. Calculate Total Cost
+        const totalCost = litersNeeded * pricePerLiter;
+
+        // 5. Update UI
+        document.getElementById('res-cost').innerHTML = `<span class="currency-symbol">${currency}</span>` + totalCost.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        
+        document.getElementById('res-fuel').innerText = litersNeeded.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 2}) + " Liters";
+        
+        document.getElementById('res-efficiency').innerText = kmPerLiterDisplay.toFixed(1) + " km/L";
+
+        // Show Results
+        document.getElementById('result-area').style.display = 'block';
+        
+        // Mobile scroll
+        if(window.innerWidth < 600) {
+            document.getElementById('result-area').scrollIntoView({behavior: 'smooth'});
+        }
+    }
+
+    function resetForm() {
+        document.getElementById('distance').value = '';
+        document.getElementById('efficiency').value = '';
+        document.getElementById('price').value = '';
+        document.getElementById('result-area').style.display = 'none';
+    }
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

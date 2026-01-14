@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <link rel="canonical" href="https://viptool.online/case-converter-tool">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online Case Converter Tool. Instantly convert text to Uppercase, Lowercase, Sentence Case, Title Case, and more. Fast, secure, and mobile-friendly.">
+    <meta name="keywords" content="case converter, text converter, uppercase to lowercase, title case generator, sentence case, caps lock fix, online text tool">
+    <meta name="author" content="Case Converter Tool">
+    <meta name="robots" content="index, follow">
+    <title>Case Converter - Free Online Text Case Transformer Tool</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">
+            A simple, free, and privacy-friendly tool to instantly convert text between uppercase, lowercase, title case, sentence case, and more.
+        </p>
+
+        <div class="tool-wrapper">
+            <div class="controls">
+                <button class="btn" onclick="convert('sentence')">Sentence case</button>
+                <button class="btn" onclick="convert('lower')">lower case</button>
+                <button class="btn" onclick="convert('upper')">UPPER CASE</button>
+                <button class="btn" onclick="convert('capitalized')">Capitalized Case</button>
+                <button class="btn" onclick="convert('alternating')">aLtErNaTiNg cAsE</button>
+                <button class="btn" onclick="convert('title')">Title Case</button>
+                <button class="btn" onclick="convert('inverse')">InVeRsE CaSe</button>
+                <button class="btn action-btn" onclick="downloadText()">Download .txt</button>
+            </div>
+
+            <div class="textarea-container">
+                <textarea id="inputText" placeholder="Type or paste your content here..."></textarea>
+            </div>
+
+            <div class="stats-bar">
+                <span id="charCount">Character Count: 0</span>
+                <span id="wordCount">Word Count: 0</span>
+                <span id="lineCount">Lines: 0</span>
+            </div>
+
+            <div class="controls" style="justify-content: space-between;">
+                <button class="btn primary" onclick="copyToClipboard()">Copy to Clipboard</button>
+                <button class="btn" onclick="clearText()" style="color: #ef4444; border-color: #ef4444;">Clear Text</button>
+            </div>
+
+            <div id="statusMessage" class="message"></div>
+        </div>
+
+        <div class="ad-unit">
+            Advertisement Space
+        </div>
+
+        <section>
+            <h2>How to Use the Case Converter</h2>
+            <p>Using this tool is incredibly straightforward. Follow these simple steps to transform your text:</p>
+            <ol>
+                <li><strong>Paste or Type:</strong> Enter your text into the large text box area above.</li>
+                <li><strong>Select Format:</strong> Click one of the buttons at the top (e.g., "UPPER CASE", "Sentence case") to apply the transformation.</li>
+                <li><strong>Copy or Download:</strong> Once converted, click "Copy to Clipboard" to use the text elsewhere, or "Download .txt" to save it to your device.</li>
+                <li><strong>Clear:</strong> Use the "Clear Text" button to start over.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Why Use This Tool?</h2>
+            <ul>
+                <li><strong>Accidental Caps Lock Fix:</strong> If you accidentally left Caps Lock on, you don't need to retype everything. Just toggle to "Sentence case" or "lower case".</li>
+                <li><strong>Social Media Formatting:</strong> Creating aesthetic captions often requires unique casing like alternating caps or all lowercase.</li>
+                <li><strong>Title Optimization:</strong> For bloggers and SEOs, ensuring headlines are in proper Title Case is essential for click-through rates.</li>
+                <li><strong>Data Cleaning:</strong> Developers and data analysts often need to normalize lists of names or addresses to a uniform format (usually Capitalized Case or Uppercase).</li>
+                <li><strong>Privacy Focused:</strong> Your text is processed entirely in your browser. No data is sent to any server.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>The Importance of Text Case in Digital Communication</h2>
+            <p>In the digital age, how we present text is almost as important as the content itself. "Case" refers to the distinction between uppercase (capital) and lowercase (small) letters. While it seems like a minor grammatical detail, the case you use conveys tone, professionalism, and intent.</p>
+            
+            <h3>Understanding the Different Cases</h3>
+            <p><strong>1. Sentence Case:</strong> This is the standard grammatical format for English sentences. The first letter of the sentence is capitalized, and the rest are lowercase (unless they are proper nouns). It is the easiest to read and most natural for long-form content.</p>
+            
+            <p><strong>2. Title Case:</strong> Commonly used for headlines, book titles, and movie names. In this format, major words are capitalized, while minor words (like "and", "the", "of") remain lowercase. Our tool uses smart logic to ensure your titles look professional.</p>
+            
+            <p><strong>3. Uppercase (All Caps):</strong> USED FOR EMPHASIS OR WARNINGS. However, using it for entire paragraphs is generally discouraged as it appears as though the writer is "shouting" and is harder for the human eye to scan quickly.</p>
+
+            <p><strong>4. Lowercase:</strong> popular in artistic or minimalist designs, poetry, and informal messaging apps. Some brands use all lowercase to appear approachable and modern.</p>
+
+            <h3>SEO and Formatting</h3>
+            <p>For webmasters and SEO specialists, consistency is key. Search engines prefer well-structured content. Having inconsistent casing in your H1 and H2 tags can look unprofessional. Furthermore, when managing databases or email lists, having names stored as "JOHN DOE" or "john doe" looks bad in automated emails. A Case Converter tool allows you to normalize this data to "John Doe" instantly.</p>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            
+            <h3>Is this tool free to use?</h3>
+            <p>Yes, this Case Converter is 100% free to use with no limits on the amount of text you can process.</p>
+
+            <h3>Does this tool save my text?</h3>
+            <p>No. This tool runs locally in your web browser using JavaScript. Your text is never sent to our servers, ensuring your privacy and data security.</p>
+
+            <h3>Can I convert a large document?</h3>
+            <p>Yes, simply copy the text from your document, paste it here, convert it, and copy it back. The tool handles large blocks of text efficiently.</p>
+
+            <h3>What is "Alternating Case"?</h3>
+            <p>Alternating case converts text into a pattern of uppercase and lowercase letters (e.g., "HulLo tHeRe"). It is often used for memes or stylistic expression on social media.</p>
+
+            <h3>Does it handle special characters?</h3>
+            <p>Yes, numbers and punctuation remain unchanged; only alphabetic characters are converted based on the selected mode.</p>
+        </section>
+
+        <div class="ad-unit">
+            Advertisement Space
+        </div>
+
+        <section id="privacy" class="legal-section">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: 30/12/2025</strong></p>
+            <p>At Case Converter, the privacy of our visitors is of extreme importance to us. This privacy policy document outlines the types of personal information that is received and collected by Case Converter and how it is used.</p>
+            <p><strong>Log Files:</strong> Like many other Web sites, Case Converter makes use of log files. The information inside the log files includes internet protocol ( IP ) addresses, type of browser, Internet Service Provider ( ISP ), date/time stamp, referring/exit pages, and number of clicks to analyze trends, administer the site, track user's movement around the site, and gather demographic information. IP addresses and other such information are not linked to any information that is personally identifiable.</p>
+            <p><strong>Cookies and Web Beacons:</strong> We may use cookies to store information about visitors preferences, record user-specific information on which pages the user access or visit, customize Web page content based on visitors browser type or other information that the visitor sends via their browser.</p>
+            <p><strong>DoubleClick DART Cookie:</strong> Google, as a third-party vendor, uses cookies to serve ads on Case Converter. Google's use of the DART cookie enables it to serve ads to users based on their visit to Case Converter and other sites on the Internet. Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy.</p>
+            <p><strong>Consent:</strong> By using our website, you hereby consent to our privacy policy and agree to its terms.</p>
+        </section>
+
+        <section id="terms" class="legal-section">
+            <h3>Terms and Conditions</h3>
+            <p>Welcome to Case Converter. By accessing this website we assume you accept these terms and conditions. Do not continue to use Case Converter if you do not agree to take all of the terms and conditions stated on this page.</p>
+            <p><strong>License:</strong> Unless otherwise stated, Case Converter and/or its licensors own the intellectual property rights for all material on Case Converter. All intellectual property rights are reserved. You may access this from Case Converter for your own personal use subjected to restrictions set in these terms and conditions.</p>
+            <p><strong>User Responsibilities:</strong> You are responsible for the content you input into the tool. We do not monitor user input text.</p>
+            <p><strong>Modifications:</strong> We reserve the right to revise these terms and conditions at any time without prior notice.</p>
+        </section>
+
+        <section id="disclaimer" class="legal-section">
+            <h3>Disclaimer</h3>
+            <p><strong>No Warranties:</strong> The materials on Case Converter's website are provided on an 'as is' basis. Case Converter makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+            <p><strong>Accuracy:</strong> Further, Case Converter does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</p>
+            <p><strong>Liability:</strong> In no event shall Case Converter or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Case Converter's website.</p>
+        </section>
+
+    </main>
+
+    
+
+    <script>
+        // DOM Elements
+        const textArea = document.getElementById('inputText');
+        const charCountDisplay = document.getElementById('charCount');
+        const wordCountDisplay = document.getElementById('wordCount');
+        const lineCountDisplay = document.getElementById('lineCount');
+        const statusMessage = document.getElementById('statusMessage');
+
+        // Main Conversion Function
+        function convert(type) {
+            let text = textArea.value;
+            if (!text) {
+                showMessage("Please enter some text first.", "error");
+                return;
+            }
+
+            switch(type) {
+                case 'upper':
+                    textArea.value = text.toUpperCase();
+                    break;
+                case 'lower':
+                    textArea.value = text.toLowerCase();
+                    break;
+                case 'sentence':
+                    textArea.value = toSentenceCase(text);
+                    break;
+                case 'capitalized':
+                    textArea.value = toCapitalizedCase(text);
+                    break;
+                case 'alternating':
+                    textArea.value = toAlternatingCase(text);
+                    break;
+                case 'title':
+                    textArea.value = toTitleCase(text);
+                    break;
+                case 'inverse':
+                    textArea.value = toInverseCase(text);
+                    break;
+            }
+            updateStats();
+            showMessage("Text converted successfully!", "success");
+        }
+
+        // Helper Functions
+        function toSentenceCase(str) {
+            const result = str.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, function(c) {
+                return c.toUpperCase();
+            });
+            return result;
+        }
+
+        function toCapitalizedCase(str) {
+            return str.toLowerCase().split(' ').map(word => {
+                return word.charAt(0).toUpperCase() + word.slice(1);
+            }).join(' ');
+        }
+
+        function toAlternatingCase(str) {
+            let result = '';
+            for (let i = 0; i < str.length; i++) {
+                if (i % 2 === 0) {
+                    result += str.charAt(i).toLowerCase();
+                } else {
+                    result += str.charAt(i).toUpperCase();
+                }
+            }
+            return result;
+        }
+
+        function toInverseCase(str) {
+            let result = '';
+            for (let i = 0; i < str.length; i++) {
+                let char = str.charAt(i);
+                if (char === char.toUpperCase()) {
+                    result += char.toLowerCase();
+                } else {
+                    result += char.toUpperCase();
+                }
+            }
+            return result;
+        }
+
+        function toTitleCase(str) {
+            const minorWords = ['a', 'an', 'the', 'and', 'but', 'or', 'for', 'nor', 'on', 'at', 'to', 'from', 'by', 'of', 'in'];
+            
+            return str.toLowerCase().replace(/\w\S*/g, (txt, offset) => {
+                if (offset !== 0 && minorWords.includes(txt)) {
+                    return txt;
+                }
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            });
+        }
+
+        // Utility Functions
+        function copyToClipboard() {
+            if (!textArea.value) return;
+            textArea.select();
+            textArea.setSelectionRange(0, 99999); // For mobile devices
+            navigator.clipboard.writeText(textArea.value).then(() => {
+                showMessage("Copied to clipboard!", "success");
+            });
+        }
+
+        function clearText() {
+            textArea.value = "";
+            updateStats();
+            showMessage("", ""); // Hide message
+            statusMessage.style.display = 'none';
+        }
+
+        function downloadText() {
+            if (!textArea.value) {
+                showMessage("Nothing to download.", "error");
+                return;
+            }
+            const blob = new Blob([textArea.value], { type: "text/plain" });
+            const anchor = document.createElement("a");
+            anchor.download = "converted-text.txt";
+            anchor.href = window.URL.createObjectURL(blob);
+            anchor.target = "_blank";
+            anchor.style.display = "none";
+            document.body.appendChild(anchor);
+            anchor.click();
+            document.body.removeChild(anchor);
+        }
+
+        function updateStats() {
+            const text = textArea.value;
+            charCountDisplay.textContent = `Character Count: ${text.length}`;
+            
+            // Word count logic (filter empty strings caused by multiple spaces)
+            const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+            wordCountDisplay.textContent = `Word Count: ${words.length}`;
+            
+            // Line count
+            const lines = text.split(/\r\n|\r|\n/).length;
+            lineCountDisplay.textContent = `Lines: ${text ? lines : 0}`;
+        }
+
+        function showMessage(msg, type) {
+            statusMessage.textContent = msg;
+            statusMessage.className = `message ${type}`;
+            statusMessage.style.display = 'block';
+            
+            if (type === 'success') {
+                setTimeout(() => {
+                    statusMessage.style.display = 'none';
+                }, 3000);
+            }
+        }
+
+        // Event Listeners
+        textArea.addEventListener('input', updateStats);
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

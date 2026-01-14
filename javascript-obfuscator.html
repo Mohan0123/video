@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free JavaScript Obfuscator by VIP Tool. Protect your JavaScript code from theft, reverse engineering, and copying. Fast, secure, and client-side obfuscation.">
+    <title>JavaScript Obfuscator - Protect & Minify JS Code | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "JavaScript Obfuscator",
+      "url": "https://viptool.online/javascript-obfuscator",
+      "description": "A powerful online tool to obfuscate and protect JavaScript code. Prevents theft and reverse engineering by converting code into unreadable formats.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "JavaScript Obfuscator"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is JavaScript Obfuscation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "JavaScript obfuscation is the process of transforming code into a difficult-to-read format while preserving its functionality. This protects the code from being easily understood or stolen."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this obfuscation reversible?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While no client-side code is 100% secure, obfuscation makes it significantly harder and time-consuming for someone to reverse-engineer your logic."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does this tool work offline?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. This tool processes your code entirely within your browser. Your JavaScript code is never sent to our servers."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Will obfuscated code run slower?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Obfuscated code may have a very slight performance overhead due to decoding steps, but for most web applications, the difference is negligible."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="ad-section" id="ad-top">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <h1>JavaScript Obfuscator</h1>
+        <p class="subtitle">Protect your intellectual property. Obfuscate, minify, and secure your JavaScript code instantly.</p>
+
+        <div class="tool-card">
+            <div class="editor-container">
+                <div class="editor-box">
+                    <label for="inputCode">
+                        Input JavaScript
+                        <span id="inputStats" style="font-weight:normal; color:#666; font-size:0.8rem;">0 chars</span>
+                    </label>
+                    <textarea id="inputCode" placeholder="// Paste your JavaScript code here...
+function hello() {
+    console.log('Hello World');
+}" oninput="updateStats()"></textarea>
+                </div>
+                
+                <div class="editor-box">
+                    <label for="outputCode">
+                        Obfuscated Output
+                        <span id="outputStats" style="font-weight:normal; color:#666; font-size:0.8rem;">0 chars</span>
+                    </label>
+                    <textarea id="outputCode" placeholder="Obfuscated code will appear here..." readonly style="background:#f0f0f0;"></textarea>
+                </div>
+
+                <div class="settings-bar">
+                    <label class="checkbox-group">
+                        <input type="checkbox" id="minify" checked> Minify Code (Remove whitespace)
+                    </label>
+                    <label class="checkbox-group">
+                        <input type="checkbox" id="hexEncode" checked> Hex Encode Strings
+                    </label>
+                </div>
+
+                <div class="action-bar">
+                    <button class="btn-primary" onclick="obfuscateJS()">ðŸ”’ Obfuscate Code</button>
+                    <button class="btn-secondary" onclick="copyOutput()">ðŸ“‹ Copy Output</button>
+                    <button class="btn-outline" onclick="clearAll()">â†º Clear</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Developer Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/html-encoder" class="related-link-item">HTML Encoder/Decoder</a>
+                <a href="https://viptool.online/css-minifier" class="related-link-item">CSS Minifier</a>
+                <a href="https://viptool.online/md5-generator" class="related-link-item">MD5 Hash Generator</a>
+                <a href="https://viptool.online/strong-password-generator" class="related-link-item">Strong Password Generator</a>
+                <a href="https://viptool.online/url-encoder-decoder" class="related-link-item">URL Encoder/Decoder</a>
+                <a href="https://viptool.online/character-counter" class="related-link-item">Character Counter</a>
+            </div>
+        </section>
+
+        <div class="ad-section" id="ad-mid">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <div class="content-section">
+            <h2>How to Use the JavaScript Obfuscator</h2>
+            <p>Securing your JavaScript code is essential when deploying web applications. The VIP Tool JavaScript Obfuscator helps you protect your logic in a few simple steps:</p>
+            <ol>
+                <li><strong>Paste Code:</strong> Copy your raw JavaScript code and paste it into the "Input JavaScript" box.</li>
+                <li><strong>Configure:</strong> Ensure "Hex Encode" is checked for better protection. "Minify" helps reduce file size.</li>
+                <li><strong>Obfuscate:</strong> Click the <strong>"Obfuscate Code"</strong> button. The tool will process your code instantly.</li>
+                <li><strong>Deploy:</strong> Click "Copy Output" and replace your original script file with this protected version.</li>
+            </ol>
+
+            <h2>Why Obfuscate JavaScript?</h2>
+            <p>JavaScript runs on the client-side (in the browser), meaning anyone can view source code by simply right-clicking and selecting "Inspect". Obfuscation protects your work by:</p>
+            <ul>
+                <li><strong>Preventing Theft:</strong> Makes it difficult for others to copy-paste your functions.</li>
+                <li><strong>Hiding Logic:</strong> Conceals business logic, algorithms, and API endpoints.</li>
+                <li><strong>Reducing Size:</strong> Minification removes unnecessary spaces and comments, speeding up load times.</li>
+            </ul>
+
+            <h3>How Our Obfuscation Works</h3>
+            <p>This tool uses a technique called <strong>Hexadecimal Encoding</strong> combined with execution wrapping. It converts your readable code into a string of hex values (like <code>\x61\x6c\x65...</code>) and wraps it in an evaluation function. The browser can read and execute it perfectly, but humans will find it extremely difficult to interpret.</p>
+
+            <div class="ad-section" id="ad-bottom">
+                <div class="ad-label">Advertisement</div>
+                </div>
+
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <h3>1. Can obfuscated code be cracked?</h3>
+            <p>Yes, any code that runs on a client's machine can theoretically be reverse-engineered with enough time and effort. However, obfuscation raises the bar significantly, deterring casual thieves and script kiddies.</p>
+
+            <h3>2. Does this tool rename variables?</h3>
+            <p>Our current version uses Hex Encoding wrapping which hides the entire code structure including variable names within an encoded string. It does not structurally parse and rename AST variables in this lightweight version.</p>
+
+            <h3>3. Is it safe to use on production sites?</h3>
+            <p>Yes, the output is standard JavaScript. However, always test the obfuscated code in a staging environment to ensure no functionality is lost before deploying to production.</p>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, user privacy is our priority. This JavaScript Obfuscator operates entirely client-side. We do not collect, store, or transmit your code to any server. Google AdSense and Analytics are used on this page to serve ads and monitor traffic; they may use cookies in accordance with their own privacy policies.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>This tool is provided for utility purposes "as-is". VIP Tool is not responsible for any bugs or errors introduced into your code during the obfuscation process. Users are responsible for testing their code before deployment.</p>
+
+                <h3>Disclaimer</h3>
+                <p>Obfuscation is not encryption. Do not use this tool to hide sensitive data like passwords, private API keys, or database credentials, as they can still be retrieved by determined attackers.</p>
+            </div>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    function updateStats() {
+        const input = document.getElementById('inputCode').value;
+        document.getElementById('inputStats').innerText = input.length + " chars";
+    }
+
+    function obfuscateJS() {
+        const input = document.getElementById('inputCode').value;
+        const minify = document.getElementById('minify').checked;
+        const hexEncode = document.getElementById('hexEncode').checked;
+
+        if (!input.trim()) {
+            alert("Please enter some JavaScript code first.");
+            return;
+        }
+
+        let processed = input;
+
+        // 1. Basic Minification (Remove comments and extra whitespace)
+        // This is a simple regex based minifier for the lightweight tool requirement
+        if (minify) {
+            // Remove single line comments
+            processed = processed.replace(/\/\/[^\n]*\n/g, "");
+            // Remove multi line comments
+            processed = processed.replace(/\/\*[\s\S]*?\*\//g, "");
+            // Remove extra whitespace (simplified)
+            processed = processed.replace(/\s+/g, " ");
+        }
+
+        let output = "";
+
+        if (hexEncode) {
+            // Hex Encoding Logic (Wrapper Method)
+            // We convert the code to hex string and wrap it in an eval()
+            let hex = "";
+            for (let i = 0; i < processed.length; i++) {
+                hex += "\\x" + processed.charCodeAt(i).toString(16).padStart(2, '0');
+            }
+            // The wrapper code
+            output = `eval("${hex}");`;
+        } else {
+            // Just return minified code if hex is off
+            output = processed;
+        }
+
+        document.getElementById('outputCode').value = output;
+        document.getElementById('outputStats').innerText = output.length + " chars";
+    }
+
+    function copyOutput() {
+        const copyText = document.getElementById("outputCode");
+        if(copyText.value === "") return;
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value).then(() => {
+            alert("Obfuscated code copied to clipboard!");
+        });
+    }
+
+    function clearAll() {
+        document.getElementById('inputCode').value = "";
+        document.getElementById('outputCode').value = "";
+        updateStats();
+        document.getElementById('outputStats').innerText = "0 chars";
+    }
+
+    // ADSENSE AUTO-VISIBILITY LOGIC
+    window.addEventListener('load', function() {
+        const adSections = document.querySelectorAll('.ad-section');
+        adSections.forEach(section => {
+            // Check via MutationObserver for dynamic ad injection
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (section.children.length > 1 || section.offsetHeight > 20) {
+                        section.classList.add('visible');
+                        observer.disconnect(); 
+                    }
+                });
+            });
+            observer.observe(section, { childList: true, subtree: true, attributes: true });
+
+            // Initial check
+            const ins = section.querySelector('ins');
+            if (ins && (ins.getAttribute('data-ad-status') === 'filled' || section.offsetHeight > 20)) {
+                section.classList.add('visible');
+            }
+        });
+    });
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

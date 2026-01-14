@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Terms & Conditions Generator by VIP Tool. Create professional, legal terms of service agreements for your website or app instantly. SEO & AdSense friendly.">
+    <title>Terms & Conditions Generator - Free Legal Pages | VIP Tool</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Terms & Conditions Generator",
+      "url": "https://viptool.online/terms-and-conditions-generator",
+      "description": "Generate a custom Terms and Conditions agreement for your website or app in seconds. Essential for AdSense approval and legal protection.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. HTML5.",
+      "author": {
+        "@type": "Organization",
+        "name": "VIP Tool"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Terms & Conditions Generator"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Why do I need a Terms & Conditions page?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Terms & Conditions page acts as a legal contract between you and your users. It sets the rules for using your website, limits your liability, and is often required by third-party services like Google AdSense."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this generator free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the Terms & Conditions Generator on VIP Tool is 100% free to use for both personal and commercial websites."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does this generator create an HTML file?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our tool generates the agreement in HTML format, which you can simply copy and paste directly into your website's editor or CMS (like WordPress)."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I edit the generated text?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. The generated text is a template. We highly recommend reviewing and customizing it to fit the specific needs and laws applicable to your business."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is my data saved?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The generation process happens entirely in your browser. We do not store your company name, email, or URL."
+        }
+      }]
+    }
+    </script>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="ad-section" id="ad-top">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <h1>Terms & Conditions Generator</h1>
+        <p class="subtitle">Instantly generate a professional Terms of Service agreement for your website or app.</p>
+
+        <div class="tool-card">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="companyName">Company / Site Name</label>
+                    <input type="text" id="companyName" placeholder="e.g. VIP Tool">
+                </div>
+                <div class="form-group">
+                    <label for="websiteUrl">Website URL</label>
+                    <input type="url" id="websiteUrl" placeholder="e.g. https://viptool.online">
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" placeholder="e.g. India">
+                </div>
+                <div class="form-group">
+                    <label for="email">Contact Email</label>
+                    <input type="email" id="email" placeholder="e.g. support@viptool.online">
+                </div>
+            </div>
+
+            <div class="action-bar">
+                <button onclick="generateTerms()">Generate T&C</button>
+                <button class="btn-copy" id="copyBtn" onclick="copyToClipboard()">Copy Code</button>
+                <button class="btn-reset" onclick="resetForm()">Reset</button>
+            </div>
+
+            <div id="result-wrapper">
+                <div class="tabs">
+                    <div class="tab active" onclick="switchTab('html')">HTML Code</div>
+                    <div class="tab" onclick="switchTab('text')">Text / Word</div>
+                    <div class="tab" onclick="switchTab('preview')">Live Preview</div>
+                </div>
+                
+                <div id="html-view">
+                    <textarea id="resultBox" class="result-box" readonly></textarea>
+                </div>
+
+                <div id="text-view" style="display:none;">
+                    <textarea id="resultBoxText" class="result-box" readonly placeholder="Text format for MS Word..."></textarea>
+                </div>
+                
+                <div id="preview-view" style="display:none;">
+                    <div id="previewContent" class="preview-box"></div>
+                </div>
+            </div>
+        </div>
+
+        <section class="related-tools-section">
+            <div class="related-title">Related Legal Tools</div>
+            <div class="related-links">
+                <a href="https://viptool.online/privacy-policy-generator" class="related-link-item">Privacy Policy Generator</a>
+                <a href="https://viptool.online/disclaimer-generator" class="related-link-item">Disclaimer Generator</a>
+                <a href="https://viptool.online/about-us-generator" class="related-link-item">About Us Page Generator</a>
+                <a href="https://viptool.online/word-counter" class="related-link-item">Word Counter</a>
+                <a href="https://viptool.online/password-generator" class="related-link-item">Strong Password Generator</a>
+            </div>
+        </section>
+
+        <div class="ad-section" id="ad-mid">
+            <div class="ad-label">Advertisement</div>
+            </div>
+
+        <div class="content-section">
+            <h2>Why Use a Terms & Conditions Generator?</h2>
+            <p>A <strong>Terms and Conditions</strong> agreement (also known as Terms of Service or T&C) is crucial for protecting your business. It acts as a legally binding contract between you and your users. While not required by law in the same strict way as a Privacy Policy, it is essential for:</p>
+            <ul>
+                <li><strong>Preventing Abuse:</strong> Set rules for user behavior and terminate accounts that violate them.</li>
+                <li><strong>Protecting Content:</strong> Assert your intellectual property rights over your logo, content, and branding.</li>
+                <li><strong>Limiting Liability:</strong> Ensure you are not held responsible for errors or downtime.</li>
+                <li><strong>AdSense Approval:</strong> Google often checks for legitimate legal pages to verify a site's professionalism.</li>
+            </ul>
+
+            <h2>How to Use This Tool</h2>
+            <p>The VIP Tool T&C Generator is designed to be fast and simple:</p>
+            <ol>
+                <li><strong>Enter Details:</strong> Fill in your Company Name (or Site Name), Website URL, Country, and Support Email.</li>
+                <li><strong>Generate:</strong> Click the "Generate T&C" button.</li>
+                <li><strong>Copy or Preview:</strong> Use the tabs to choose between HTML code (for websites) or Text format (for MS Word/Docs).</li>
+            </ol>
+
+            <h2>Is this suitable for AdSense?</h2>
+            <p>Yes. A professional website requires standard legal pages. Having a clean, well-formatted Terms & Conditions page increases the trust factor of your site, which is a key metric in Google's quality guidelines and AdSense approval process.</p>
+
+            <div class="ad-section" id="ad-bottom">
+                <div class="ad-label">Advertisement</div>
+                </div>
+
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <h3>1. Can I use this for my e-commerce store?</h3>
+            <p>While this generator provides a standard agreement suitable for blogs and informational sites, e-commerce stores often require specific clauses regarding returns, shipping, and payments. We recommend consulting a legal professional for specific commercial needs.</p>
+
+            <h3>2. Where should I put this page on my website?</h3>
+            <p>It is standard practice to link your Terms & Conditions page in the <strong>footer</strong> of your website so it is accessible from every page.</p>
+
+            <h3>3. Is the generated HTML mobile-friendly?</h3>
+            <p>Yes, the code generated is basic HTML (headings and paragraphs) that will inherit the styling of your website, ensuring it looks good on all devices.</p>
+
+            <hr style="margin: 30px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div id="legal">
+                <h3>Privacy Policy</h3>
+                <p>At VIP Tool, user privacy is paramount. This Terms & Conditions Generator operates entirely client-side. We do not collect, store, or transmit the data you enter into the form. Google AdSense and Analytics are used on this page to serve ads and monitor traffic; they may use cookies in accordance with their own privacy policies.</p>
+
+                <h3>Terms & Conditions</h3>
+                <p>This tool is provided for informational and utility purposes "as-is". VIP Tool is not a law firm and does not provide legal advice. The generated documents are templates and may not cover all specific legal requirements of your jurisdiction. Users are responsible for reviewing the generated content.</p>
+
+                <h3>Disclaimer</h3>
+                <p>Use of this tool does not create an attorney-client relationship. VIP Tool disclaims all liability for any damages resulting from the use of the generated documents.</p>
+            </div>
+        </div>
+    </main>
+
+    
+</div>
+
+<script>
+    function generateTerms() {
+        // 1. Get Values
+        const company = document.getElementById('companyName').value.trim();
+        const url = document.getElementById('websiteUrl').value.trim();
+        const country = document.getElementById('country').value.trim();
+        const email = document.getElementById('email').value.trim();
+
+        // Validation
+        if (!company || !url || !country || !email) {
+            alert("Please fill in all fields to generate the agreement.");
+            return;
+        }
+
+        // 2. Generate Template (HTML)
+        const termsHTML = `<h2><strong>Terms and Conditions</strong></h2>
+
+<p>Welcome to ${company}!</p>
+
+<p>These terms and conditions outline the rules and regulations for the use of ${company}'s Website, located at ${url}.</p>
+
+<p>By accessing this website we assume you accept these terms and conditions. Do not continue to use ${company} if you do not agree to take all of the terms and conditions stated on this page.</p>
+
+<h3><strong>Cookies</strong></h3>
+
+<p>We employ the use of cookies. By accessing ${company}, you agreed to use cookies in agreement with the ${company}'s Privacy Policy.</p>
+
+<h3><strong>License</strong></h3>
+
+<p>Unless otherwise stated, ${company} and/or its licensors own the intellectual property rights for all material on ${company}. All intellectual property rights are reserved. You may access this from ${company} for your own personal use subjected to restrictions set in these terms and conditions.</p>
+
+<p>You must not:</p>
+<ul>
+    <li>Republish material from ${company}</li>
+    <li>Sell, rent or sub-license material from ${company}</li>
+    <li>Reproduce, duplicate or copy material from ${company}</li>
+    <li>Redistribute content from ${company}</li>
+</ul>
+
+<h3><strong>Hyperlinking to our Content</strong></h3>
+
+<p>The following organizations may link to our Website without prior written approval:</p>
+
+<ul>
+    <li>Government agencies;</li>
+    <li>Search engines;</li>
+    <li>News organizations;</li>
+</ul>
+
+<h3><strong>Content Liability</strong></h3>
+
+<p>We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website.</p>
+
+<h3><strong>Disclaimer</strong></h3>
+
+<p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website.</p>
+
+<p>If you have any questions about these Terms, please contact us via email: <strong>${email}</strong>.</p>
+<p>Jurisdiction: These terms are governed by the laws of <strong>${country}</strong>.</p>`;
+
+        // 3. Generate Template (TEXT / WORD)
+        const termsText = `TERMS AND CONDITIONS
+
+Welcome to ${company}!
+
+These terms and conditions outline the rules and regulations for the use of ${company}'s Website, located at ${url}.
+
+By accessing this website we assume you accept these terms and conditions. Do not continue to use ${company} if you do not agree to take all of the terms and conditions stated on this page.
+
+--- COOKIES ---
+We employ the use of cookies. By accessing ${company}, you agreed to use cookies in agreement with the ${company}'s Privacy Policy.
+
+--- LICENSE ---
+Unless otherwise stated, ${company} and/or its licensors own the intellectual property rights for all material on ${company}. All intellectual property rights are reserved. You may access this from ${company} for your own personal use subjected to restrictions set in these terms and conditions.
+
+You must not:
+- Republish material from ${company}
+- Sell, rent or sub-license material from ${company}
+- Reproduce, duplicate or copy material from ${company}
+- Redistribute content from ${company}
+
+--- HYPERLINKING TO OUR CONTENT ---
+The following organizations may link to our Website without prior written approval:
+- Government agencies;
+- Search engines;
+- News organizations;
+
+--- CONTENT LIABILITY ---
+We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website.
+
+--- DISCLAIMER ---
+To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website.
+
+If you have any questions about these Terms, please contact us via email: ${email}.
+
+Jurisdiction: These terms are governed by the laws of ${country}.`;
+
+        // 4. Output
+        document.getElementById('resultBox').value = termsHTML;
+        document.getElementById('resultBoxText').value = termsText;
+        document.getElementById('previewContent').innerHTML = termsHTML;
+        
+        // 5. Show UI
+        document.getElementById('result-wrapper').style.display = 'block';
+        document.getElementById('copyBtn').style.display = 'inline-block';
+        
+        // Default to HTML view on generation
+        switchTab('html');
+    }
+
+    function copyToClipboard() {
+        let copyElement;
+        const htmlView = document.getElementById('html-view');
+        
+        // Check which tab is visible
+        if (htmlView.style.display !== 'none') {
+            copyElement = document.getElementById("resultBox");
+        } else {
+            // Default to text box if in text or preview mode
+            copyElement = document.getElementById("resultBoxText");
+        }
+
+        copyElement.select();
+        copyElement.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyElement.value).then(() => {
+            alert("Content Copied to Clipboard!");
+        });
+    }
+
+    function resetForm() {
+        document.getElementById('companyName').value = '';
+        document.getElementById('websiteUrl').value = '';
+        document.getElementById('country').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('resultBox').value = '';
+        document.getElementById('resultBoxText').value = '';
+        document.getElementById('previewContent').innerHTML = '';
+        document.getElementById('result-wrapper').style.display = 'none';
+        document.getElementById('copyBtn').style.display = 'none';
+    }
+
+    function switchTab(tab) {
+        const htmlView = document.getElementById('html-view');
+        const textView = document.getElementById('text-view');
+        const previewView = document.getElementById('preview-view');
+        const tabs = document.querySelectorAll('.tab');
+
+        // Reset all views
+        htmlView.style.display = 'none';
+        textView.style.display = 'none';
+        previewView.style.display = 'none';
+        
+        // Reset all tabs active state
+        tabs.forEach(t => t.classList.remove('active'));
+
+        if (tab === 'html') {
+            htmlView.style.display = 'block';
+            tabs[0].classList.add('active');
+            document.getElementById('copyBtn').innerText = "Copy HTML Code";
+        } else if (tab === 'text') {
+            textView.style.display = 'block';
+            tabs[1].classList.add('active');
+            document.getElementById('copyBtn').innerText = "Copy Text";
+        } else {
+            previewView.style.display = 'block';
+            tabs[2].classList.add('active');
+            document.getElementById('copyBtn').innerText = "Copy Text";
+        }
+    }
+
+    // ADSENSE AUTO-VISIBILITY LOGIC
+    window.addEventListener('load', function() {
+        const adSections = document.querySelectorAll('.ad-section');
+        adSections.forEach(section => {
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (section.children.length > 1 || section.offsetHeight > 20) {
+                        section.classList.add('visible');
+                        observer.disconnect(); 
+                    }
+                });
+            });
+            observer.observe(section, { childList: true, subtree: true, attributes: true });
+        });
+    });
+</script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+

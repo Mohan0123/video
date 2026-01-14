@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <link rel="canonical" href="https://viptool.online/sitemap-generator">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Online XML Sitemap Generator. Create Google-compliant sitemaps instantly by pasting your URLs. Boost your SEO and fast-track indexing.">
+    <meta name="keywords" content="sitemap generator, xml sitemap creator, free seo tool, google sitemap builder, site index tool, url to xml">
+    <meta name="author" content="Sitemap Generator Tool">
+    <meta name="robots" content="index, follow">
+    <title>Free XML Sitemap Generator - Create Google Sitemaps Online</title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section tool-wrapper">
+            <div class="input-group">
+                <label for="url-input">Paste URLs (One per line):</label>
+                <textarea id="url-input" placeholder="https://example.com/
+https://example.com/about
+https://example.com/contact"></textarea>
+            </div>
+
+            <div class="options-grid">
+                <div class="input-group">
+                    <label for="freq-select">Change Frequency</label>
+                    <select id="freq-select">
+                        <option value="daily">Daily</option>
+                        <option value="weekly" selected>Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="always">Always</option>
+                        <option value="never">Never</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="priority-select">Default Priority</label>
+                    <select id="priority-select">
+                        <option value="1.0">1.0 (High)</option>
+                        <option value="0.8" selected>0.8 (Standard)</option>
+                        <option value="0.5">0.5 (Medium)</option>
+                        <option value="0.3">0.3 (Low)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="date-input">Last Modified (Optional)</label>
+                    <input type="date" id="date-input">
+                </div>
+            </div>
+
+            <button class="btn-primary" onclick="generateSitemap()">Generate XML Sitemap</button>
+            <p id="error-msg" class="error-msg"></p>
+
+            <div id="result-area">
+                <h3>Your Sitemap Code</h3>
+                <div class="result-actions">
+                    <button class="btn-secondary" onclick="downloadSitemap()">Download sitemap.xml</button>
+                    <button class="btn-outline" onclick="copyToClipboard()">Copy to Clipboard</button>
+                </div>
+                <pre><code id="xml-output"></code></pre>
+            </div>
+        </section>
+
+        <div class="ad-placeholder">
+            Advertisement Space
+        </div>
+
+        <section class="section">
+            <h2>How to Use This XML Sitemap Generator</h2>
+            <ol>
+                <li><strong>Collect URLs:</strong> Copy the list of URLs from your website (you can use a spreadsheet or a crawl report).</li>
+                <li><strong>Paste:</strong> Paste the URLs into the text box above. Ensure there is one URL per line.</li>
+                <li><strong>Configure:</strong> Set the "Change Frequency" (how often content updates) and "Priority" (importance relative to other pages). Optionally set a "Last Modified" date.</li>
+                <li><strong>Generate:</strong> Click the "Generate XML Sitemap" button.</li>
+                <li><strong>Download:</strong> Click "Download sitemap.xml" to save the file to your computer.</li>
+                <li><strong>Upload:</strong> Upload this file to your website's root directory and submit it to Google Search Console.</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Why You Need an XML Sitemap</h2>
+            <ul>
+                <li><strong>Faster Indexing:</strong> It helps search engine bots (Googlebot, Bingbot) discover and index your new pages faster.</li>
+                <li><strong>Better SEO:</strong> It tells Google which pages are most important on your site using the priority tag.</li>
+                <li><strong>Deep Linking:</strong> It ensures that pages buried deep within your site structure are found by search engines.</li>
+                <li><strong>Error Free:</strong> Our tool generates valid XML syntax that is ready for Google Search Console.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Understanding Sitemaps and SEO</h2>
+            <p>An **XML Sitemap** is essentially a roadmap of your website that leads Google to all your important pages. XML stands for Extensible Markup Language. Unlike an HTML sitemap which is designed for humans to navigate a website, an XML sitemap is designed specifically for search engine crawlers.</p>
+
+            <h3>Why are Sitemaps Crucial for New Websites?</h3>
+            <p>For new websites, getting indexed can take time because there are few backlinks pointing to the site. A sitemap allows you to bypass the reliance on external links for discovery. By submitting your sitemap directly to **Google Search Console**, you are actively inviting Google to crawl your content.</p>
+
+            <h3>The Structure of a Sitemap</h3>
+            <p>A standard sitemap protocol includes the URL location (`loc`), the last modification date (`lastmod`), the change frequency (`changefreq`), and the priority (`priority`). Our **Sitemap Generator Tool** handles all these technical tags for you automatically. You don't need to know how to code to create a professional sitemap.</p>
+            
+            <h3>Maintenance and Updates</h3>
+            <p>It is good practice to update your sitemap whenever you add significant new content or change the structure of your website. While CMS platforms like WordPress often have plugins for this, static sites and custom-built applications often require manual sitemap generation. This tool bridges that gap, allowing developers and SEOs to quickly format lists of links into valid XML.</p>
+        </section>
+
+        <section class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Is this tool free? <span>+</span></div>
+                <div class="faq-answer">Yes, this XML Sitemap Generator is 100% free to use. There are no limits on the number of URLs you can process.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Do you crawl my website? <span>+</span></div>
+                <div class="faq-answer">No. This is a "list-to-XML" converter. We do not crawl your site. You paste your links, and we format them into the correct XML syntax. This ensures your privacy and speed.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">Where do I put the sitemap file? <span>+</span></div>
+                <div class="faq-answer">Ideally, you should upload the `sitemap.xml` file to the root directory of your domain (e.g., `https://yourwebsite.com/sitemap.xml`).</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">How do I tell Google about my sitemap? <span>+</span></div>
+                <div class="faq-answer">You should log in to **Google Search Console**, go to the "Sitemaps" section in the menu, and enter the URL of your sitemap.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">What is the maximum number of URLs? <span>+</span></div>
+                <div class="faq-answer">While Google allows up to 50,000 URLs per sitemap, your browser might slow down if you paste tens of thousands of lines at once. This tool is optimized for lists up to 5,000 URLs.</div>
+            </div>
+        </section>
+
+        <div class="legal-section" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p><strong>Last Updated: [Current Date]</strong></p>
+            <p>Your privacy is important to us. This Privacy Policy explains how we handle information.</p>
+            <p><strong>1. Data Collection:</strong> We do not store the URLs you paste. All processing happens locally in your browser (Client-Side).</p>
+            <p><strong>2. Cookies:</strong> We use cookies to enhance user experience. You can disable them in your browser settings.</p>
+            <p><strong>3. Third-Party Ads (Google AdSense):</strong> We use third-party advertising companies to serve ads. These companies may use information (not including your name, email, or phone number) about your visits to this and other websites to provide advertisements about goods and services of interest to you.</p>
+            <p><strong>4. Analytics:</strong> We may use Google Analytics to monitor traffic trends. This data is anonymized.</p>
+        </div>
+
+        <div class="legal-section" id="terms">
+            <h3>Terms and Conditions</h3>
+            <p>By using this website, you agree to the following terms:</p>
+            <p><strong>1. Usage:</strong> This tool is for personal and commercial use. Illegal activities are prohibited.</p>
+            <p><strong>2. No Guarantee:</strong> We do not guarantee that search engines will index your site even if you use a sitemap generated here.</p>
+            <p><strong>3. Liability:</strong> We are not liable for any damages or ranking losses resulting from the use of this tool.</p>
+        </div>
+
+        <div class="legal-section" id="disclaimer">
+            <h3>Disclaimer</h3>
+            <p>This tool is provided "as is". We make no warranties regarding accuracy or reliability. Users are responsible for verifying the output before submitting it to search engines. We are not affiliated with Google or any search engine.</p>
+        </div>
+
+    </div>
+
+    
+
+    <script>
+        // DOM Elements
+        const urlInput = document.getElementById('url-input');
+        const freqSelect = document.getElementById('freq-select');
+        const prioritySelect = document.getElementById('priority-select');
+        const dateInput = document.getElementById('date-input');
+        const xmlOutput = document.getElementById('xml-output');
+        const resultArea = document.getElementById('result-area');
+        const errorMsg = document.getElementById('error-msg');
+
+        // Set today's date as default max
+        dateInput.max = new Date().toISOString().split("T")[0];
+
+        // XML Escaping Function
+        function escapeXml(unsafe) {
+            return unsafe.replace(/[<>&'"]/g, function (c) {
+                switch (c) {
+                    case '<': return '&lt;';
+                    case '>': return '&gt;';
+                    case '&': return '&amp;';
+                    case '\'': return '&apos;';
+                    case '"': return '&quot;';
+                }
+            });
+        }
+
+        // Generate Sitemap
+        function generateSitemap() {
+            const rawText = urlInput.value.trim();
+            if (!rawText) {
+                showError("Please paste at least one URL.");
+                return;
+            }
+
+            const urls = rawText.split(/\n+/).map(u => u.trim()).filter(u => u.length > 0);
+            
+            // Validate first URL roughly
+            if (!urls[0].startsWith('http')) {
+                showError("URLs must start with http:// or https://");
+                return;
+            }
+
+            errorMsg.style.display = 'none';
+
+            const freq = freqSelect.value;
+            const priority = prioritySelect.value;
+            const lastMod = dateInput.value ? dateInput.value : new Date().toISOString().split("T")[0];
+
+            let xmlContent = '<?xml version="1.0" encoding="UTF-8"?>\n';
+            xmlContent += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+
+            urls.forEach(url => {
+                xmlContent += '  <url>\n';
+                xmlContent += `    <loc>${escapeXml(url)}</loc>\n`;
+                xmlContent += `    <lastmod>${lastMod}</lastmod>\n`;
+                xmlContent += `    <changefreq>${freq}</changefreq>\n`;
+                xmlContent += `    <priority>${priority}</priority>\n`;
+                xmlContent += '  </url>\n';
+            });
+
+            xmlContent += '</urlset>';
+
+            xmlOutput.textContent = xmlContent;
+            resultArea.style.display = 'block';
+            resultArea.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Download Function
+        function downloadSitemap() {
+            const content = xmlOutput.textContent;
+            if (!content) return;
+
+            const blob = new Blob([content], { type: 'text/xml' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'sitemap.xml';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Copy Function
+        function copyToClipboard() {
+            const content = xmlOutput.textContent;
+            if (!content) return;
+
+            navigator.clipboard.writeText(content).then(() => {
+                const btn = document.querySelector('.btn-outline');
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = originalText, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+        // Error Display
+        function showError(msg) {
+            errorMsg.textContent = msg;
+            errorMsg.style.display = 'block';
+        }
+
+        // FAQ Accordion
+        function toggleFaq(element) {
+            const parent = element.parentElement;
+            const isOpen = parent.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-question span').textContent = '+';
+            });
+
+            if (!isOpen) {
+                parent.classList.add('active');
+                element.querySelector('span').textContent = '-';
+            }
+        }
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

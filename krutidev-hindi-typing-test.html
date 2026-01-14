@@ -1,0 +1,385 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SWZKBP3TTS');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Kruti Dev Typing Test | Practice & Speed Check Online</title>
+    <meta name="description" content="Master Hindi typing with our Free Kruti Dev Typing Test. Real-time WPM, accuracy calculation, and timed exams (2, 5, 10 min) for government exam preparation.">
+    <meta name="keywords" content="Kruti Dev Typing Test, Hindi Typing Practice, Online Typing Test, Kruti Dev 010, Government Exam Typing, CPCT Typing Test, LDC Typing">
+    <meta name="author" content="VIP Tool">
+    <meta property="og:title" content="Free Kruti Dev Typing Test - Boost Your Speed">
+    <meta property="og:description" content="Practice Kruti Dev Hindi typing online. Timed tests, real-time results, and exam-ready interface.">
+    <meta property="og:type" content="website">
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.8L19.5 19h-15L12 5.8z"/></svg>
+                VIP Tool
+            </a>
+            <button class="mobile-toggle" id="mobile-menu-btn">â˜°</button>
+            <nav class="nav-links">
+                <a href="index.html#calculators">Calculators</a>
+                <a href="index.html#images">Images</a>
+                <a href="index.html#seo">SEO</a>
+                <a href="index.html#text">Text</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <main class="tool-card">
+            
+            <div class="controls">
+                <button class="btn active" onclick="setTime(2)">2 Min</button>
+                <button class="btn" onclick="setTime(3)">3 Min</button>
+                <button class="btn" onclick="setTime(5)">5 Min</button>
+                <button class="btn" onclick="setTime(15)">15 Min</button>
+            </div>
+
+            <div class="timer-display" id="timer">02:00</div>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-value" id="wpm">0</span>
+                    <span class="stat-label">Net WPM</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="gwpm">0</span>
+                    <span class="stat-label">Gross WPM</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="accuracy">100%</span>
+                    <span class="stat-label">Accuracy</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="charCount">0</span>
+                    <span class="stat-label">Typed Chars</span>
+                </div>
+            </div>
+
+            <div class="typing-container">
+                <textarea id="sourceText" class="text-box source-text" readonly></textarea>
+                
+                <textarea id="inputText" class="text-box input-text" placeholder="Click Start Test to begin typing..." disabled></textarea>
+            </div>
+
+            <div class="controls" style="margin-top: 1.5rem;">
+                <button class="btn btn-primary" id="startBtn" onclick="startTest()">Start Test</button>
+                <button class="btn btn-danger" id="resetBtn" onclick="resetTest()">Reset</button>
+            </div>
+
+        </main>
+
+        <div class="ad-placeholder">Advertisement Space</div>
+
+        <section class="content-section">
+            <h2>How to Use the Kruti Dev Typing Test</h2>
+            <ol style="margin-left: 1.5rem; color: var(--text-light); space-y: 0.5rem;">
+                <li>Select your desired time duration (2, 3, 5, or 15 minutes).</li>
+                <li>Review the Hindi text displayed in the left (or top) box. This is your source material.</li>
+                <li>Click the <strong>Start Test</strong> button to activate the typing area.</li>
+                <li>Type the text exactly as shown. The timer will begin counting down immediately.</li>
+                <li>Monitor your WPM (Words Per Minute) and Accuracy in real-time.</li>
+                <li>The test will automatically stop when the timer reaches zero.</li>
+                <li>Review your detailed performance card at the end.</li>
+            </ol>
+        </section>
+
+        <section class="content-section">
+            <h2>Benefits of Kruti Dev Typing Practice</h2>
+            <p>Kruti Dev is one of the most widely used Hindi font layouts in northern India. Practicing with this tool offers several advantages:</p>
+            <ul style="margin-left: 1.5rem; color: var(--text-light);">
+                <li><strong>Government Exam Readiness:</strong> Essential for CPCT, SSC, UP Police Computer Operator, and High Court LDC exams.</li>
+                <li><strong>Layout Familiarity:</strong> Helps build muscle memory for the Remington (Typewriter) keyboard layout.</li>
+                <li><strong>Speed Improvement:</strong> Regular timed tests help you push past your current WPM limits.</li>
+                <li><strong>Accuracy Training:</strong> Real-time feedback helps you identify and correct repetitive mistakes.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>About Kruti Dev 010 and Hindi Typing</h2>
+            <p>In the digital landscape of India, Hindi typing remains a critical skill for administrative and government roles. While Unicode (Mangal) is gaining popularity, <strong>Kruti Dev 010</strong> remains the standard for many state-level examinations and legacy data entry systems.</p>
+            
+            <h3>Why is Kruti Dev Still Relevant?</h3>
+            <p>Kruti Dev is a non-Unicode font that uses the Remington typewriter keyboard layout. Unlike Inscript (used by Unicode/Mangal), the Remington layout is often preferred by typists who transitioned from physical typewriters. Many state public service commissions in Bihar, Uttar Pradesh, Madhya Pradesh, and Rajasthan still mandate or offer Kruti Dev as an option for their typing skill tests.</p>
+
+            <h3>Who Should Use This Tool?</h3>
+            <p>This online tool is designed for students, job seekers, and data entry professionals. Whether you are preparing for the MP CPCT (Madhya Pradesh Computer Proficiency Certification Test), UPSSSC exams, or simply want to improve your Hindi typing speed for freelance work, this environment simulates the pressure of a timed exam.</p>
+
+            <h3>How Speed is Calculated</h3>
+            <p>We use standard typing test formulas used in government exams:</p>
+            <ul>
+                <li><strong>Gross Speed:</strong> Total Characters Typed / 5 / Time (min).</li>
+                <li><strong>Net Speed:</strong> (Total Characters - Errors) / 5 / Time (min).</li>
+                <li><strong>Accuracy:</strong> Percentage of correct characters against total characters typed.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+            
+            <h3>1. Do I need to install Kruti Dev font to use this test?</h3>
+            <p>No, this tool uses web standard fonts to display Hindi. However, if you have Kruti Dev 010 installed on your computer, the text area will prioritize that font for a native experience. If not, it works perfectly with standard Hindi display.</p>
+
+            <h3>2. Is this tool free to use?</h3>
+            <p>Yes, this Kruti Dev Typing Test is 100% free and open for unlimited practice sessions.</p>
+
+            <h3>3. How is WPM calculated?</h3>
+            <p>We assume an average word length of 5 characters. Your Gross WPM is the total characters typed divided by 5, divided by the time elapsed.</p>
+
+            <h3>4. Can I use this on mobile?</h3>
+            <p>Yes, the website is fully responsive. However, for the best typing speed results, we recommend using a physical keyboard connected to a desktop or laptop.</p>
+
+            <h3>5. Which exams require Kruti Dev typing?</h3>
+            <p>Exams like MP CPCT, UP Police Computer Operator, Rajasthan High Court LDC, and various SSC clerical exams often use or allow Kruti Dev (Remington layout).</p>
+        </section>
+
+        <div class="ad-placeholder">Advertisement Space</div>
+
+        <section class="content-section" id="privacy">
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated: December 2025</strong></p>
+            <p>At viptool.online, we prioritize your privacy. This Privacy Policy outlines how we handle your data.</p>
+            <h3>1. Data Collection</h3>
+            <p>We do not collect or store any personal data. All typing tests are processed "client-side" within your web browser. The text you type is never sent to our servers.</p>
+            <h3>2. Cookies</h3>
+            <p>We use standard local storage cookies to remember your preferences (like selected test duration). We may use third-party cookies via Google AdSense to serve relevant advertisements.</p>
+            <h3>3. Third-Party Services</h3>
+            <p>We use Google AdSense to display ads. Google may use cookies to serve ads based on your prior visits to this website or other websites. You can opt-out of personalized advertising by visiting Google's Ad Settings.</p>
+            <h3>4. Consent</h3>
+            <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+        </section>
+
+        <section class="content-section" id="terms">
+            <h2>Terms and Conditions</h2>
+            <p>By accessing this website, you agree to be bound by these Website Terms and Conditions of Use.</p>
+            <h3>1. Usage License</h3>
+            <p>Permission is granted to temporarily use the materials on viptool.online for personal, non-commercial transitory viewing only.</p>
+            <h3>2. Disclaimer</h3>
+            <p>The materials on this website are provided "as is". We make no warranties, expressed or implied, regarding the accuracy of the typing test results compared to official government exam software.</p>
+            <h3>3. Limitations</h3>
+            <p>In no event shall viptool.online or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit) arising out of the use or inability to use the materials on this website.</p>
+        </section>
+
+        <section class="content-section" id="disclaimer">
+            <h2>Disclaimer</h2>
+            <p>This tool is for practice purposes only. While we strive for accuracy, the WPM and Accuracy scores generated here may differ slightly from official examination software due to differences in calculation algorithms. This website is not affiliated with any government body or official examination authority (such as CPCT, SSC, or UPSSSC). Users are advised to use this tool as a supplementary practice aid.</p>
+        </section>
+
+    </div>
+
+    <div class="result-overlay" id="resultModal">
+        <div class="result-card">
+            <h2 style="color: var(--primary); margin-bottom: 1rem;">Test Completed!</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Net Speed: <strong id="finalWpm">0</strong> WPM</p>
+            <p style="margin-bottom: 0.5rem;">Accuracy: <strong id="finalAcc">0</strong>%</p>
+            <p style="margin-bottom: 1.5rem;">Total Keystrokes: <strong id="finalChars">0</strong></p>
+            <button class="btn btn-primary" onclick="closeModal()">Close & Reset</button>
+        </div>
+    </div>
+
+    
+
+    <script>
+        // Hindi Sample Texts (Unicode)
+        // Note: Users practicing Kruti Dev usually map keys to these chars physically or visually.
+        // We provide Unicode so the browser renders it correctly without font files.
+        const sampleTexts = [
+            "à¤­à¤¾à¤°à¤¤ à¤à¤• à¤µà¤¿à¤¶à¤¾à¤² à¤¦à¥‡à¤¶ à¤¹à¥ˆà¥¤ à¤‡à¤¸à¤•à¥€ à¤¸à¤‚à¤¸à¥à¤•à¥ƒà¤¤à¤¿ à¤”à¤° à¤ªà¤°à¤‚à¤ªà¤°à¤¾à¤à¤‚ à¤¬à¤¹à¥à¤¤ à¤ªà¥à¤°à¤¾à¤¨à¥€ à¤¹à¥ˆà¤‚à¥¤ à¤¹à¤®à¥‡à¤‚ à¤…à¤ªà¤¨à¥‡ à¤¦à¥‡à¤¶ à¤ªà¤° à¤—à¤°à¥à¤µ à¤¹à¥ˆà¥¤ à¤¯à¤¹à¤¾à¤ à¤µà¤¿à¤­à¤¿à¤¨à¥à¤¨ à¤§à¤°à¥à¤®à¥‹à¤‚ à¤•à¥‡ à¤²à¥‹à¤— à¤®à¤¿à¤²à¤œà¥à¤² à¤•à¤° à¤°à¤¹à¤¤à¥‡ à¤¹à¥ˆà¤‚à¥¤",
+            "à¤¶à¤¿à¤•à¥à¤·à¤¾ à¤œà¥€à¤µà¤¨ à¤•à¤¾ à¤†à¤§à¤¾à¤° à¤¹à¥ˆà¥¤ à¤¬à¤¿à¤¨à¤¾ à¤¶à¤¿à¤•à¥à¤·à¤¾ à¤•à¥‡ à¤®à¤¨à¥à¤·à¥à¤¯ à¤•à¤¾ à¤œà¥€à¤µà¤¨ à¤…à¤§à¥‚à¤°à¤¾ à¤¹à¥ˆà¥¤ à¤¹à¤®à¥‡à¤‚ à¤¸à¤¦à¥ˆà¤µ à¤¨à¤¿à¤¤à¥à¤¯ à¤¨à¤ˆ à¤šà¥€à¤œà¥‡à¤‚ à¤¸à¥€à¤–à¤¨à¥€ à¤šà¤¾à¤¹à¤¿à¤à¥¤ à¤¸à¤®à¤¯ à¤•à¤¾ à¤¸à¤¦à¥à¤ªà¤¯à¥‹à¤— à¤•à¤°à¤¨à¤¾ à¤¹à¥€ à¤¸à¤«à¤²à¤¤à¤¾ à¤•à¥€ à¤•à¥à¤‚à¤œà¥€ à¤¹à¥ˆà¥¤",
+            "à¤ªà¥à¤°à¤¦à¥‚à¤·à¤£ à¤†à¤œ à¤•à¥‡ à¤¸à¤®à¤¯ à¤•à¥€ à¤à¤• à¤—à¤‚à¤­à¥€à¤° à¤¸à¤®à¤¸à¥à¤¯à¤¾ à¤¹à¥ˆà¥¤ à¤¹à¤®à¥‡à¤‚ à¤…à¤ªà¤¨à¥‡ à¤ªà¤°à¥à¤¯à¤¾à¤µà¤°à¤£ à¤•à¥‹ à¤¸à¥à¤µà¤šà¥à¤› à¤°à¤–à¤¨à¥‡ à¤•à¤¾ à¤ªà¥à¤°à¤¯à¤¾à¤¸ à¤•à¤°à¤¨à¤¾ à¤šà¤¾à¤¹à¤¿à¤à¥¤ à¤µà¥ƒà¤•à¥à¤·à¤¾à¤°à¥‹à¤ªà¤£ à¤•à¤°à¤¨à¤¾ à¤¹à¤®à¤¾à¤°à¤¾ à¤•à¤°à¥à¤¤à¤µà¥à¤¯ à¤¹à¥ˆà¥¤",
+            "à¤µà¤¿à¤œà¥à¤žà¤¾à¤¨ à¤¨à¥‡ à¤¹à¤®à¤¾à¤°à¥‡ à¤œà¥€à¤µà¤¨ à¤•à¥‹ à¤¬à¤¹à¥à¤¤ à¤†à¤¸à¤¾à¤¨ à¤¬à¤¨à¤¾ à¤¦à¤¿à¤¯à¤¾ à¤¹à¥ˆà¥¤ à¤•à¤‚à¤ªà¥à¤¯à¥‚à¤Ÿà¤° à¤”à¤° à¤‡à¤‚à¤Ÿà¤°à¤¨à¥‡à¤Ÿ à¤†à¤œ à¤•à¥€ à¤œà¤°à¥‚à¤°à¤¤ à¤¬à¤¨ à¤—à¤ à¤¹à¥ˆà¤‚à¥¤ à¤¤à¤•à¤¨à¥€à¤•à¥€ à¤œà¥à¤žà¤¾à¤¨ à¤•à¥‡ à¤¬à¤¿à¤¨à¤¾ à¤ªà¥à¤°à¤—à¤¤à¤¿ à¤¸à¤‚à¤­à¤µ à¤¨à¤¹à¥€à¤‚ à¤¹à¥ˆà¥¤",
+            "à¤¸à¥à¤µà¤¾à¤¸à¥à¤¥à¥à¤¯ à¤¹à¥€ à¤§à¤¨ à¤¹à¥ˆà¥¤ à¤…à¤šà¥à¤›à¤¾ à¤¸à¥à¤µà¤¾à¤¸à¥à¤¥à¥à¤¯ à¤¬à¤¨à¤¾à¤ à¤°à¤–à¤¨à¥‡ à¤•à¥‡ à¤²à¤¿à¤ à¤µà¥à¤¯à¤¾à¤¯à¤¾à¤® à¤”à¤° à¤¸à¤‚à¤¤à¥à¤²à¤¿à¤¤ à¤†à¤¹à¤¾à¤° à¤†à¤µà¤¶à¥à¤¯à¤• à¤¹à¥ˆà¥¤ à¤¸à¥à¤¬à¤¹ à¤•à¥€ à¤¸à¥ˆà¤° à¤¶à¤°à¥€à¤° à¤•à¥‡ à¤²à¤¿à¤ à¤¬à¤¹à¥à¤¤ à¤²à¤¾à¤­à¤¦à¤¾à¤¯à¤• à¤¹à¥‹à¤¤à¥€ à¤¹à¥ˆà¥¤"
+        ];
+
+        let timeLeft = 120; // default 2 mins
+        let initialTime = 120;
+        let timerInterval = null;
+        let isTyping = false;
+        let charCount = 0;
+        let correctCharCount = 0;
+        let selectedTime = 2;
+
+        // DOM Elements
+        const timerDisplay = document.getElementById('timer');
+        const sourceTextEl = document.getElementById('sourceText');
+        const inputTextEl = document.getElementById('inputText');
+        const startBtn = document.getElementById('startBtn');
+        const wpmEl = document.getElementById('wpm');
+        const gwpmEl = document.getElementById('gwpm');
+        const accEl = document.getElementById('accuracy');
+        const charCountEl = document.getElementById('charCount');
+        const resultModal = document.getElementById('resultModal');
+        const timeButtons = document.querySelectorAll('.controls .btn:not(.btn-primary):not(.btn-danger)');
+
+        // Initialize with random text
+        function setRandomText() {
+            const randomIndex = Math.floor(Math.random() * sampleTexts.length);
+            // Repeat text to ensure it covers 15 mins
+            sourceTextEl.value = (sampleTexts[randomIndex] + " ").repeat(20); 
+        }
+
+        // Time Selection
+        function setTime(minutes) {
+            if (isTyping) return;
+            selectedTime = minutes;
+            timeLeft = minutes * 60;
+            initialTime = timeLeft;
+            updateTimerDisplay();
+            
+            // Update UI
+            timeButtons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function updateTimerDisplay() {
+            const m = Math.floor(timeLeft / 60);
+            const s = timeLeft % 60;
+            timerDisplay.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        }
+
+        function startTest() {
+            if (isTyping) return;
+            
+            setRandomText();
+            inputTextEl.value = '';
+            inputTextEl.disabled = false;
+            inputTextEl.focus();
+            isTyping = true;
+            startBtn.disabled = true;
+            
+            // Reset Stats
+            charCount = 0;
+            correctCharCount = 0;
+            updateStats();
+
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                updateStats(); // Update stats every second for live feel
+
+                if (timeLeft <= 0) {
+                    endTest();
+                }
+            }, 1000);
+        }
+
+        function endTest() {
+            clearInterval(timerInterval);
+            isTyping = false;
+            inputTextEl.disabled = true;
+            startBtn.disabled = false;
+            
+            // Show Result
+            document.getElementById('finalWpm').textContent = wpmEl.textContent;
+            document.getElementById('finalAcc').textContent = accEl.textContent;
+            document.getElementById('finalChars').textContent = charCountEl.textContent;
+            resultModal.style.display = 'flex';
+        }
+
+        function resetTest() {
+            clearInterval(timerInterval);
+            isTyping = false;
+            timeLeft = initialTime;
+            updateTimerDisplay();
+            inputTextEl.value = '';
+            inputTextEl.disabled = true;
+            startBtn.disabled = false;
+            charCount = 0;
+            correctCharCount = 0;
+            updateStats();
+        }
+
+        function closeModal() {
+            resultModal.style.display = 'none';
+            resetTest();
+        }
+
+        function updateStats() {
+            const typedText = inputTextEl.value;
+            const sourceText = sourceTextEl.value;
+            
+            charCount = typedText.length;
+            
+            // Calculate Correct Chars
+            let matchCount = 0;
+            for(let i=0; i < typedText.length; i++) {
+                if(i < sourceText.length && typedText[i] === sourceText[i]) {
+                    matchCount++;
+                }
+            }
+            correctCharCount = matchCount;
+
+            // Calculate Time Elapsed in Minutes
+            const timeElapsed = initialTime - timeLeft;
+            const timeInMinutes = timeElapsed / 60;
+
+            if (timeInMinutes > 0) {
+                // Gross WPM: (All typed chars / 5) / time
+                const grossWpm = Math.round((charCount / 5) / timeInMinutes);
+                
+                // Net WPM: ((All typed - errors) / 5) / time
+                // Errors = Total - Correct
+                const errors = charCount - correctCharCount;
+                const netWpm = Math.round(((charCount - errors) / 5) / timeInMinutes);
+
+                wpmEl.textContent = netWpm > 0 ? netWpm : 0;
+                gwpmEl.textContent = grossWpm > 0 ? grossWpm : 0;
+            }
+
+            // Accuracy
+            const accuracy = charCount > 0 ? Math.round((correctCharCount / charCount) * 100) : 100;
+            accEl.textContent = accuracy + '%';
+            charCountEl.textContent = charCount;
+        }
+
+        // Event Listener for Typing
+        inputTextEl.addEventListener('input', () => {
+            if(!isTyping && inputTextEl.value.length > 0) {
+                // Edge case handling if they somehow type without start (though disabled prevents this)
+            }
+            updateStats();
+        });
+
+        // Prevent pasting
+        inputTextEl.addEventListener('paste', (e) => {
+            e.preventDefault();
+            alert("Pasting is not allowed during the test!");
+        });
+
+        // Initialize
+        setRandomText();
+        updateTimerDisplay();
+
+    </script>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#disclaimer">Disclaimer</a>
+            </div>
+            <p class="copyright">&copy; 2025 VIP Tool. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
