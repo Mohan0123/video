@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Maker Tool - Create Professional CVs Online Free | VIP Tool</title>
+    <meta name="description" content="Create a professional resume in minutes with the free Resume Maker Tool by VIP Tool. Easy to use, ATS-friendly templates, and instant PDF download. No login required.">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWZKBP3TTS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-SWZKBP3TTS');
+    </script>
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Resume Maker Tool",
+      "url": "https://viptool.online/resume-maker-tool",
+      "description": "Free online resume builder to create professional CVs instantly.",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "All",
+      "publisher": {
+        "@type": "Organization",
+        "name": "VIP Tool",
+        "url": "https://viptool.online"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://viptool.online"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://viptool.online/tools"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Resume Maker Tool"
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is this Resume Maker Tool free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, VIP Tool's Resume Maker is 100% free to use with no hidden charges or watermarks."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I download my resume as a PDF?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! Once you create your resume, simply click the 'Print / Download PDF' button to save it instantly."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do I need to sign up?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No registration is required. You can start building your resume immediately."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is my data saved on your server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All data processing happens in your browser. We do not store any of your personal information."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is the resume format ATS-friendly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our clean and professional layout is designed to be easily readable by Applicant Tracking Systems (ATS)."
+        }
+      }]
+    }
+    </script>
+    <style>
+        /* CSS Variables & Theme */
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg-color: #f8fafc;
+            --surface-color: #ffffff;
+            --text-color: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            --resume-bg: #fff;
+            --resume-text: #000;
+        }
+        [data-theme="dark"] {
+            --primary-color: #60a5fa;
+            --primary-hover: #3b82f6;
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --text-color: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+            /* Resume stays white for print accuracy, or can be dark for view. Usually resumes are white. We'll keep preview white-ish or neutral for realism */
+            --resume-bg: #fff; 
+            --resume-text: #000;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-family); background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; transition: background-color 0.3s, color 0.3s; }
+        /* Helpers */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; cursor: pointer; border: none; transition: all 0.2s; font-size: 1rem; }
+        .btn-primary { background-color: var(--primary-color); color: white; }
+        .btn-primary:hover { background-color: var(--primary-hover); }
+        .btn-outline { background-color: transparent; border: 2px solid var(--border-color); color: var(--text-color); }
+        .btn-outline:hover { border-color: var(--primary-color); color: var(--primary-color); }
+        
+        /* Header */
+        header { background-color: var(--surface-color); border-bottom: 1px solid var(--border-color); padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary-color); text-decoration: none; }
+        .logo span { color: var(--text-color); }
+        /* Theme Toggle */
+        .theme-toggle { background: none; border: none; cursor: pointer; color: var(--text-color); padding: 0.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .theme-toggle:hover { background-color: var(--bg-color); }
+        
+        /* Main Layout */
+        .tool-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+        @media (max-width: 900px) { .tool-layout { grid-template-columns: 1fr; } }
+        
+        /* Input Section */
+        .input-panel { background-color: var(--surface-color); border-radius: 1rem; padding: 1.5rem; box-shadow: var(--card-shadow); border: 1px solid var(--border-color); }
+        .section-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; color: var(--text-color); }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; font-size: 0.9rem; }
+        .form-control { width: 100%; padding: 0.75rem; border-radius: 0.5rem; border: 1px solid var(--border-color); background-color: var(--bg-color); color: var(--text-color); font-family: inherit; font-size: 1rem; transition: border-color 0.2s; }
+        .form-control:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+        textarea.form-control { resize: vertical; min-height: 100px; }
+        
+        /* Dynamic List Items */
+        .dynamic-list { display: flex; flex-direction: column; gap: 1rem; }
+        .dynamic-item { border: 1px solid var(--border-color); padding: 1rem; border-radius: 0.5rem; position: relative; background-color: var(--bg-color); }
+        .remove-btn { position: absolute; top: 0.5rem; right: 0.5rem; color: #ef4444; background: none; border: none; cursor: pointer; font-size: 0.9rem; }
+        
+        /* Preview Section */
+        .preview-panel { position: sticky; top: 6rem; height: calc(100vh - 8rem); overflow-y: auto; background-color: #525659; padding: 2rem; border-radius: 1rem; display: flex; justify-content: center; }
+        .resume-page { background: white; color: black; width: 210mm; min-height: 297mm; padding: 20mm; box-shadow: 0 0 20px rgba(0,0,0,0.5); font-family: 'Times New Roman', Times, serif; }
+        /* Simple Resume Styles */
+        .res-header { text-align: center; margin-bottom: 2rem; border-bottom: 2px solid #333; padding-bottom: 1rem; }
+        .res-name { font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem; text-transform: uppercase; }
+        .res-contact { font-size: 1rem; color: #555; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .res-section { margin-bottom: 1.5rem; }
+        .res-section-title { font-size: 1.2rem; font-weight: bold; border-bottom: 1px solid #ccc; margin-bottom: 0.8rem; padding-bottom: 0.2rem; text-transform: uppercase; color: #333; }
+        .res-item { margin-bottom: 1rem; }
+        .res-item-header { display: flex; justify-content: space-between; align-items: baseline; font-weight: bold; }
+        .res-item-sub { font-style: italic; color: #444; margin-bottom: 0.3rem; }
+        .res-skills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .res-skill-tag { background: #eee; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.9rem; }
+        
+        /* Actions */
+        .actions { margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; }
+        /* Ads */
+        .ad-container { text-align: center; margin: 2rem 0; background: var(--border-color); padding: 1rem; border-radius: 0.5rem; display: none; /* Auto-hidden */ }
+        .ad-container.active { display: block; }
+        /* Related Tools */
+        .related-tools { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color); }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+        .tool-card { background: var(--surface-color); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid var(--border-color); text-decoration: none; color: var(--text-color); transition: transform 0.2s, box-shadow 0.2s; text-align: center; }
+        .tool-card:hover { transform: translateY(-3px); box-shadow: var(--card-shadow); border-color: var(--primary-color); }
+        .tool-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+        .tool-name { font-weight: 600; }
+        /* Content Sections */
+        .text-content { max-width: 800px; margin: 4rem auto; font-size: 1.1rem; }
+        .text-content h2 { font-size: 2rem; margin-bottom: 1.5rem; margin-top: 3rem; color: var(--text-color); }
+        .text-content h3 { font-size: 1.5rem; margin-bottom: 1rem; margin-top: 2rem; }
+        .text-content p { margin-bottom: 1.5rem; }
+        .text-content ul { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+        .text-content li { margin-bottom: 0.5rem; }
+        /* FAQ */
+        .faq-item { border-bottom: 1px solid var(--border-color); padding: 1.5rem 0; }
+        .faq-question { font-weight: 700; font-size: 1.1rem; cursor: pointer; display: flex; justify-content: space-between; }
+        .faq-answer { margin-top: 1rem; display: none; color: var(--text-muted); }
+        .faq-item.active .faq-answer { display: block; }
+        /* Footer */
+        footer { background-color: var(--surface-color); padding: 3rem 0; margin-top: 4rem; border-top: 1px solid var(--border-color); }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
+        .footer-links a { text-decoration: none; color: var(--text-muted); transition: color 0.2s; }
+        .footer-links a:hover { color: var(--primary-color); }
+        .copyright { text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+        /* Print Styles */
+        @media print {
+            body { background: white; color: black; }
+            header, .input-panel, .actions, .ad-container, .related-tools, .text-content, footer, .theme-toggle { display: none !important; }
+            .tool-layout { display: block; margin: 0; }
+            .preview-panel { position: static; height: auto; padding: 0; background: white; border: none; overflow: visible; display: block; }
+            .resume-page { width: 100%; box-shadow: none; margin: 0; padding: 0; min-height: auto; }
+            @page { margin: 10mm; size: auto; }
+        }
+        @media (max-width: 900px) {
+            .preview-panel {
+                position: relative;
+                height: auto;
+                background: var(--border-color);
+                top: 0;
+            }
+            .resume-page {
+                font-size: 14px; /* Scale down for mobile preview */
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container header-content">
+        <a href="https://viptool.online" class="logo">VIP <span>Tool</span></a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+            <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+    </div>
+</header>
+<div class="container">
+    <!-- Top Ad -->
+    <div class="ad-container">
+        <!-- AdSense Ad Placeholder (Auto-hidden if empty) -->
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+        <h1 style="font-size: 2.5rem; color: var(--primary-color);">Resume Maker Tool</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin-top: 0.5rem;">Create a clean, professional resume in minutes. Print friendly & ATS ready.</p>
+    </div>
+    <div class="tool-layout">
+        <!-- Input Section -->
+        <div class="input-panel">
+            <div class="res-section">
+                <div class="section-title">Personal Information</div>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Job Title</label>
+                    <input type="text" class="form-control" id="inputTitle" placeholder="Software Engineer">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" class="form-control" id="inputPhone" placeholder="+1 234 567 8900">
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" class="form-control" id="inputLocation" placeholder="New York, USA">
+                </div>
+                <div class="form-group">
+                    <label>Website / LinkedIn</label>
+                    <input type="text" class="form-control" id="inputLink" placeholder="linkedin.com/in/john">
+                </div>
+            </div>
+            <div class="res-section">
+                <div class="section-title">Professional Summary</div>
+                <textarea class="form-control" id="inputSummary" placeholder="Experienced professional with..."></textarea>
+            </div>
+            <div class="res-section">
+                <div class="section-title">Experience <button class="btn btn-outline" style="font-size:0.8rem; padding:0.2rem 0.5rem; margin-left: auto;" onclick="addExperience()">+ Add</button></div>
+                <div id="experienceList" class="dynamic-list"></div>
+            </div>
+            <div class="res-section">
+                <div class="section-title">Education <button class="btn btn-outline" style="font-size:0.8rem; padding:0.2rem 0.5rem; margin-left: auto;" onclick="addEducation()">+ Add</button></div>
+                <div id="educationList" class="dynamic-list"></div>
+            </div>
+            <div class="res-section">
+                <div class="section-title">Skills <button class="btn btn-outline" style="font-size:0.8rem; padding:0.2rem 0.5rem; margin-left: auto;" onclick="addSkill()">+ Add</button></div>
+                <div id="skillsList" class="dynamic-list"></div>
+            </div>
+            
+            <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="window.print()">Download PDF / Print</button>
+        </div>
+        <!-- Preview Section -->
+        <div class="preview-panel">
+            <div class="resume-page" id="resumePreview">
+                <header class="res-header">
+                    <div class="res-name" id="previewName">John Doe</div>
+                    <div class="res-contact">
+                        <span id="previewTitle">Software Engineer</span>
+                    </div>
+                    <div class="res-contact" style="margin-top: 0.5rem; font-size: 0.9rem;">
+                        <span id="previewEmail">john@example.com</span> |
+                        <span id="previewPhone">+1 234 567 8900</span> |
+                        <span id="previewLocation">New York, USA</span>
+                    </div>
+                    <div class="res-contact" style="margin-top: 0.2rem; font-size: 0.9rem;">
+                        <span id="previewLink">linkedin.com/in/john</span>
+                    </div>
+                </header>
+                <div class="res-section">
+                    <div class="res-section-title">Summary</div>
+                    <p id="previewSummary">Experienced professional with a demonstrated history of working in the industry...</p>
+                </div>
+                <div class="res-section">
+                    <div class="res-section-title">Experience</div>
+                    <div id="previewExperience">
+                        <!-- Dynamic Content -->
+                    </div>
+                </div>
+                <div class="res-section">
+                    <div class="res-section-title">Education</div>
+                    <div id="previewEducation">
+                        <!-- Dynamic Content -->
+                    </div>
+                </div>
+                <div class="res-section">
+                    <div class="res-section-title">Skills</div>
+                    <div class="res-skills" id="previewSkills">
+                        <!-- Dynamic Content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Related Tools -->
+    <div class="related-tools">
+        <h3 style="font-weight: 600; font-size: 1.5rem; margin-bottom: 1rem;">Related Tools</h3>
+        <div class="tools-grid">
+            <a href="https://viptool.online/word-counter" class="tool-card">
+                <span class="tool-icon">📝</span>
+                <span class="tool-name">Word Counter</span>
+            </a>
+            <a href="https://viptool.online/password-generator" class="tool-card">
+                <span class="tool-icon">🔒</span>
+                <span class="tool-name">Password Generator</span>
+            </a>
+            <a href="https://viptool.online/age-calculator" class="tool-card">
+                <span class="tool-icon">📅</span>
+                <span class="tool-name">Age Calculator</span>
+            </a>
+            <a href="https://viptool.online/qr-code-generator" class="tool-card">
+                <span class="tool-icon">📱</span>
+                <span class="tool-name">QR Code Generator</span>
+            </a>
+        </div>
+    </div>
+    <!-- Mid Ad -->
+    <div class="ad-container">
+        <!-- AdSense Ad Placeholder -->
+    </div>
+    <!-- SEO Content -->
+    <article class="text-content">
+        <h2>Free Online Resume Maker Tool</h2>
+        <p>Creating a professional resume doesn't have to be complicated. With the <strong>VIP Tool Resume Maker</strong>, you can build a stunning, standardized CV in just a few minutes. Whether you are a student, a fresher, or an experienced professional, our tool helps you format your information correctly for maximum impact.</p>
+        
+        <h3>Why Use Our Resume Builder?</h3>
+        <ul>
+            <li><strong>Instant & Free:</strong> No sign-ups, no paywalls. Just fill in your details and download.</li>
+            <li><strong>ATS Friendly:</strong> Our simple, clean format is designed to pass through Applicant Tracking Systems.</li>
+            <li><strong>Privacy Focused:</strong> Everything creates in your browser. We don't store your personal data.</li>
+            <li><strong>Real-time Preview:</strong> See your changes instantly as you type.</li>
+        </ul>
+        <h3>How to Create Your Resume</h3>
+        <ol>
+            <li><strong>Enter Personal Details:</strong> Start with your name, contact info, and professional title.</li>
+            <li><strong>Add Summary:</strong> Write a brief overview of your career goals and achievements.</li>
+            <li><strong>List Experience & Education:</strong> Add your job history and academic qualifications in reverse chronological order.</li>
+            <li><strong>Add Skills:</strong> Highlight your key technical and soft skills.</li>
+            <li><strong>Download:</strong> Click the "Download PDF" button to save your resume to your device or print it directly.</li>
+        </ol>
+        <p>This tool is part of the <a href="https://viptool.online">VIP Tool</a> suite, designed to provide simple, efficient online utilities for everyone.</p>
+    </article>
+    <!-- FAQ -->
+    <section class="text-content" style="margin-top: 2rem;">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="faq-question">Is this resume builder really free? <span>+</span></div>
+            <div class="faq-answer">Yes, it is completely free. You can create and download as many resumes as you like without any cost.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Will my data be saved? <span>+</span></div>
+            <div class="faq-answer">No, for your privacy, we do not save any data on our servers. All information remains in your browser session. If you refresh the page, the data will be lost, so make sure to download your resume when done.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Can I edit my resume later? <span>+</span></div>
+            <div class="faq-answer">Since we don't store data, you cannot log in to edit later. However, you can keep the tab open to make adjustments before closing it.</div>
+        </div>
+    </section>
+    <!-- Privacy & Policies (Summarized for Single Page) -->
+    <section class="text-content" style="font-size: 0.9rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 2rem;">
+        <h3>Privacy Policy & Terms</h3>
+        <p><strong>Privacy:</strong> We utilize local storage to save your theme preference. No personal data entered in the form is transmitted to our servers. We use Google Analytics for site usage statistics.</p>
+        <p><strong>Terms:</strong> This tool is provided "as is" without warranties. VIP Tool is not responsible for any errors or employment outcomes.</p>
+        <p><strong>Disclaimer:</strong> This tool is for informational and utility purposes only.</p>
+    </section>
+    <!-- Bottom Ad -->
+    <div class="ad-container">
+        <!-- AdSense Ad Placeholder -->
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Disclaimer</a>
+            <a href="https://viptool.online">All Tools</a>
+        </div>
+        <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> VIP Tool. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    // Theme Logic
+    const themeToggle = document.getElementById('themeToggle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+    
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (theme === 'dark') {
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+        } else {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+        }
+    }
+    const savedTheme = localStorage.getItem('theme');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    setTheme(savedTheme || systemTheme);
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+    // FAQ Logic
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', () => {
+            const parent = item.parentElement;
+            parent.classList.toggle('active');
+            const span = item.querySelector('span');
+            span.textContent = parent.classList.contains('active') ? '-' : '+';
+        });
+    });
+    // Resume Logic
+    const inputs = {
+        name: 'previewName',
+        title: 'previewTitle',
+        email: 'previewEmail',
+        phone: 'previewPhone',
+        location: 'previewLocation',
+        link: 'previewLink',
+        summary: 'previewSummary'
+    };
+    // Attach listeners to static inputs
+    Object.keys(inputs).forEach(id => {
+        const el = document.getElementById('input' + id.charAt(0).toUpperCase() + id.slice(1));
+        if (el) {
+            el.addEventListener('input', (e) => {
+                const target = document.getElementById(inputs[id]);
+                if (target) target.textContent = e.target.value || target.getAttribute('data-placeholder') || '';
+            });
+        }
+    });
+    // Experience
+    let expCount = 0;
+    function addExperience() {
+        expCount++;
+        const div = document.createElement('div');
+        div.className = 'dynamic-item';
+        div.innerHTML = `
+            <button class="remove-btn" onclick="this.parentElement.remove(); updatePreview();">✕ Remove</button>
+            <div class="form-group"><label>Job Title</label><input type="text" class="form-control exp-title" placeholder="Job Title" oninput="updatePreview()"></div>
+            <div class="form-group"><label>Company</label><input type="text" class="form-control exp-company" placeholder="Company Name" oninput="updatePreview()"></div>
+            <div class="form-group"><label>Date Range</label><input type="text" class="form-control exp-date" placeholder="Jan 2020 - Present" oninput="updatePreview()"></div>
+            <div class="form-group"><label>Description</label><textarea class="form-control exp-desc" placeholder="Responsibilities..." oninput="updatePreview()"></textarea></div>
+        `;
+        document.getElementById('experienceList').appendChild(div);
+        updatePreview();
+    }
+    // Education
+    function addEducation() {
+        const div = document.createElement('div');
+        div.className = 'dynamic-item';
+        div.innerHTML = `
+            <button class="remove-btn" onclick="this.parentElement.remove(); updatePreview();">✕ Remove</button>
+            <div class="form-group"><label>Degree / Major</label><input type="text" class="form-control edu-degree" placeholder="B.Sc. Computer Science" oninput="updatePreview()"></div>
+            <div class="form-group"><label>University / School</label><input type="text" class="form-control edu-school" placeholder="University Name" oninput="updatePreview()"></div>
+            <div class="form-group"><label>Year</label><input type="text" class="form-control edu-year" placeholder="2018 - 2022" oninput="updatePreview()"></div>
+        `;
+        document.getElementById('educationList').appendChild(div);
+        updatePreview();
+    }
+    // Skills
+    function addSkill() {
+        const div = document.createElement('div');
+        div.className = 'dynamic-item';
+        div.innerHTML = `
+            <button class="remove-btn" onclick="this.parentElement.remove(); updatePreview();">✕</button>
+            <div class="form-group" style="margin:0;"><input type="text" class="form-control skill-input" placeholder="Skill (e.g. JavaScript)" oninput="updatePreview()"></div>
+        `;
+        document.getElementById('skillsList').appendChild(div);
+        updatePreview();
+    }
+    // Master Update Function
+    function updatePreview() {
+        // Experience
+        const expContainer = document.getElementById('previewExperience');
+        expContainer.innerHTML = '';
+        document.querySelectorAll('#experienceList .dynamic-item').forEach(item => {
+            const title = item.querySelector('.exp-title').value;
+            const company = item.querySelector('.exp-company').value;
+            const date = item.querySelector('.exp-date').value;
+            const desc = item.querySelector('.exp-desc').value;
+            if (title || company) {
+                expContainer.innerHTML += `
+                    <div class="res-item">
+                        <div class="res-item-header"><span>${title}</span> <span>${date}</span></div>
+                        <div class="res-item-sub">${company}</div>
+                        <div>${desc}</div>
+                    </div>
+                `;
+            }
+        });
+        // Education
+        const eduContainer = document.getElementById('previewEducation');
+        eduContainer.innerHTML = '';
+        document.querySelectorAll('#educationList .dynamic-item').forEach(item => {
+            const degree = item.querySelector('.edu-degree').value;
+            const school = item.querySelector('.edu-school').value;
+            const year = item.querySelector('.edu-year').value;
+            if (degree || school) {
+                eduContainer.innerHTML += `
+                    <div class="res-item">
+                        <div class="res-item-header"><span>${degree}</span> <span>${year}</span></div>
+                        <div class="res-item-sub">${school}</div>
+                    </div>
+                `;
+            }
+        });
+        // Skills
+        const skillsContainer = document.getElementById('previewSkills');
+        skillsContainer.innerHTML = '';
+        document.querySelectorAll('#skillsList .dynamic-item').forEach(item => {
+            const skill = item.querySelector('.skill-input').value;
+            if (skill) {
+                skillsContainer.innerHTML += `<span class="res-skill-tag">${skill}</span>`;
+            }
+        });
+    }
+    // Initialize with one empty field for user convenience
+    window.addEventListener('load', () => {
+        if(document.getElementById('experienceList').children.length === 0) addExperience();
+        if(document.getElementById('educationList').children.length === 0) addEducation();
+        if(document.getElementById('skillsList').children.length === 0) addSkill();
+    });
+</script>
+</body>
+</html>
